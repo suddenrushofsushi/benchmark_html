@@ -1,0 +1,2121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" id="vbulletin_html">
+<head>
+	<script type="text/javascript">
+
+function bodyClick(url) {
+    // Extends clickable area of BODY-tag not only to initial viewport render
+    // However, #page-cover gets needs to inherit min-height and height of BODY-tag
+    $('body').css({ 'min-height':'100%', 'height':'auto', 'cursor':'pointer' });
+    $('#page').css({ 'min-height':'100%', 'height':'auto', 'cursor':'default', 'width': '1000px' });
+    $('body').click(function(e) {
+        var obj = (e.target ? e.target : e.srcElement);
+        if (obj.id != 'main-page') return true;
+        window.open(url);
+        return false;
+    });
+}
+if (typeof console !== 'undefined') { console.firebug = 1; }
+</script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta property="fb:page_id" content="132326176778287" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="http://www.mmo-champion.com" />
+<base href="http://www.mmo-champion.com/" /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.2.1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js&2.9.0/build/element/element-min.js&2.9.0/build/tabview/tabview-min.js"></script>
+
+
+	
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js"></script>
+	
+
+<script type="text/javascript">
+<!--Flush Cache
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=421"><\/script>');
+		document.write('<script type="text/javascript" src="clientscript/yui/connection/connection-min.js?v=421"><\/script>');
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = 'http://ajax.googleapis.com/ajax/libs/yui/2.9.0/build';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/connection/connection-min.js?v=421"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "421";
+	var BBURL = "http://www.mmo-champion.com";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "threads/1123707-Decorating-my-room";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "http://www.mmo-champion.com/";
+// -->
+</script>
+<script type="text/javascript" src="http://www.mmo-champion.com/clientscript/vbulletin-core.js?v=421"></script>
+
+
+
+	
+		<link rel="alternate" type="application/rss+xml" title="MMO-Champion RSS Feed" href="http://www.mmo-champion.com/external.php?type=RSS2" />
+	
+	
+		<link rel="alternate" type="application/rss+xml" title="MMO-Champion - General Off-Topic - RSS Feed" href="http://www.mmo-champion.com/external.php?type=RSS2&amp;forumids=315" />
+	
+
+
+
+<link rel="stylesheet" type="text/css" href="http://media.mmo-champion.com/images/news/2014/june/navwod.css?5"/>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/static/css/v3.css?20141112"/>
+
+
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=9&amp;langid=1&amp;d=1409102193&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin-formcontrols.css," />
+
+<link rel="stylesheet" type="text/css" href="/static/css/thickbox.css"/>
+<!--  -->
+<script type="text/javascript" src="http://static.mmo-champion.com/js/modernizr-1.6.min.js"></script>
+<script type="text/javascript" src="http://www.mmo-champion.com/clientscript/jquery/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script> 
+<script type="text/javascript" src="http://www.mmo-champion.com/static/jquery.cookie.js"></script>
+
+<!--<script type="text/javascript" src="http://media.mmo-champion.com/js/hearth.js"></script>-->
+
+<!--<script type="text/javascript" src="http://static-hearth.cursecdn.com/current/js/syndication/tt.js"></script>-->
+
+<script type="text/javascript" src="http://static-azeroth.cursecdn.com/current/js/syndication/tt.js"></script>
+<!--<script type="text/javascript" src="http://static-azeroth.cursecdn.com/1-0-5574-18838/js/syndication/tt.js"></script>-->
+
+<script type="text/javascript" src="http://static-azeroth.cursecdn.com/1-0-5574-18838/js/syndication/mv.js"></script>
+<script type="text/javascript" src="http://static.mmo-champion.com/mmoc/Themes/mmo3/scripts/menu2.js"></script>
+<script type="text/javascript" src="http://www.mmo-champion.com/clientscript/thickbox-compressed.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+//Tooltips
+    $(".tip_trigger").hover(function(){
+        tip = $(this).find('.tip');
+        tip.show(); //Show tooltip
+    }, function() {
+        tip.hide(); //Hide tooltip
+    }).mousemove(function(e) {
+        var mousex = e.pageX - 480; //Get X coodrinates
+        var mousey = e.pageY + 17; //Get Y coordinates
+        var tipWidth = tip.width(); //Find width of tooltip
+        var tipHeight = tip.height(); //Find height of tooltip
+
+        //Distance of element from the right edge of viewport
+        var tipVisX = $(window).width() - (mousex + tipWidth);
+        //Distance of element from the bottom of viewport
+        var tipVisY = $(window).height() - (mousey + tipHeight);
+
+        if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+            mousex = e.pageX - tipWidth - 20;
+        } if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+            mousey = e.pageY - tipHeight - 20;
+        }
+        //Absolute position the tooltip according to mouse position
+        tip.css({  top: mousey, left: mousex });
+    });
+});
+</script>
+
+<script type="text/javascript" src="http://static.mmo-champion.com/js/gallery/mmogallery.js?20141030"></script>
+<script type="text/javascript" src="/curse/filters/filters.php"></script>
+<script type="text/javascript" src="http://www.mmo-champion.com/clientscript/ytiframe.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        Azeroth.ModelViewer.initialize();
+    });
+
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="/static/filters.css?10"/>
+<link rel="stylesheet" type="text/css" href="http://static.mmo-champion.com/js/gallery/mmogallery.css" />
+
+
+	
+		<script id='factorem' async="" type="text/javascript" src="http://cdm.cursecdn.com/js/mmo-champion/cdmfactorem_min.js"></script>
+	
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css.php?styleid=9&amp;langid=1&amp;d=1409102193&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+	<meta name="keywords" content="the, room, and, but, make, black, its, this, not, photo, like, for, pick, done, thought, has, wall, others, city, landscape, look, colors, first, what, white, bright, same, anyone, advice, please, tell, before, never, want, some, add, color, yellow, ive, cab, second, going, own, design, grey, with, also, accessoires, permission, got" />
+	<meta name="description" content="I'll be moving to a new place soon and got the permission to 'design' my own room. I'm going for a grey room with black accessoires. 
+I'm also allowed to pick a mural art photo (not sure if this is how it's called, but it's basically a giant photo covering an entire wall). I'm having trouble picking the right one. I know I want to go for a city landscape but not what colors to pick. 
+ 
+First thought: make it black and white, to make it look like the others wall of the room 
+second thought: add" />
+
+	<title> Decorating my room</title>
+<!--JavaScript Tag // Tag for network 5259: Curse.com // Website: mmo-champion // Page: Forums // Placement: Forums-Above-600 x 400 (1363939) // created at: Jun 28, 2011 3:01:12 PM-->
+<script language="javascript">
+<!--
+if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+}
+document.write('<scr'+'ipt language="javascript1.1" src="http://adserver.adtechus.com/addyn/3.0/5259.1/1363939/0/1238/ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://adserver.adtechus.com/adlink/3.0/5259.1/1363939/0/1238/ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://adserver.adtechus.com/adserv/3.0/5259.1/1363939/0/1238/ADTECH;loc=300;key=key1+key2+key3+key4" border="0" width="600" height="400"></a></noscript>
+<!-- End of JavaScript Tag -->
+	<link rel="canonical" href="threads/1123707-Decorating-my-room" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="css.php?styleid=9&amp;langid=1&amp;d=1409102193&amp;td=ltr&amp;sheet=toolsmenu.css,postlist.css,showthread.css,postbit.css,options.css,attachment.css,poll.css,lightbox.css" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="css.php?styleid=9&amp;langid=1&amp;d=1409102193&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="css.php?styleid=9&amp;langid=1&amp;d=1409102193&amp;td=ltr&amp;sheet=additional.css" />
+
+</head>
+
+<body class="site-mmo-champion">
+
+<a name="top"></a>
+<div id="page">
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="header floatcontainer doc_header">
+	<a id="logo" href="http://www.mmo-champion.com/"><img src="http://static.mmo-champion.com/images/tranquilizing/logo.png" alt="MMO-Champion" title="MMO-Champion" /></a>
+	<ins class="logo-shadow"></ins>
+
+	
+	<div id="globalsearch" class="globalsearch">
+		<form action="search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+			<input type="hidden" name="s" value="" />
+			<input type="hidden" name="securitytoken" value="guest" />
+			<input type="hidden" name="do" value="process" />
+			<span class="textboxcontainer"><input type="text" value="" name="query" class="textbox" tabindex="99"/>
+			<input type="submit" value="Search" id="search_submit" tabindex="100" /></span>
+			<!-- <a href="search.php" accesskey="4" class="navbar_advanced_search">[+]</a> -->
+		</form>
+	</div>
+	
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md5.js?v=421"></script>
+			<form id="navbar_loginform" action="login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#000000';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+			
+				<li><div>Need an account? <a href="register.php" rel="nofollow">Register Now.</a></div></li>
+			
+				<li><a rel="help" href="faq.php">?</a></li>
+				
+			</ul>
+		
+	</div>
+
+	
+</div>
+<div>
+<script>
+var _prum = [['id', '5436bf43abe53def4b1f3f62'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
+</div>
+<div id="navbar" class="navbar">
+
+<ul id="navtabs" class="navtabs floatcontainer">
+
+
+
+    <li class="dropdown"><a href="sendmessage.php" rel="nofollow" accesskey="9">Contact Us</a></li>
+
+
+
+<li><a class="navtab" href="content.php" accesskey="1">Home</a></li>
+    <li class="selected"><a class="navtab" href="forum.php">Forum</a>
+        
+        
+        
+        
+   <!-- Replaced FAQ link text with "Rules"
+ <li><a rel="help" href="faq.php" accesskey="5">FAQ</a></li> -->
+<li><a rel="help" href="faq.php" accesskey="5">Rules</a></li>
+    
+    
+    
+    <li class="popupmenu">
+        <a href="javascript://" class="popupctrl">Forum Actions</a>
+        <ul class="popupbody popuphover">
+            <li>
+                <a href="forumdisplay.php?do=markread&amp;markreadhash=guest" onclick="return confirm('')">Mark Forums Read</a>
+            </li>
+            
+        </ul>
+    </li>
+    
+    <li><a href="http://www.youtube.com/user/MMOChampionWoW " target="_blank">Videos</a></li>
+    <li class="popupmenu">
+        
+    </li>
+    
+
+    </li>
+    
+
+
+    <li><a class="navtab" href="search.php?do=getdaily&amp;contenttype=vBForum_Post" accesskey="2">What's New?</a></li>
+
+
+
+
+
+
+
+</ul>
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+	
+
+	    <div id="ad-horizontal-header">
+	        <div class="atflb">
+<div id='cdm-zone-01'></div>
+	        </div>
+	        
+	            <span class="hr"></span>
+	        
+	    </div>
+	
+    
+        <div id="breadcrumb" class="breadcrumb">
+            <ul class="floatcontainer">
+                <li class="navbit"><a href="index.php" accesskey="1"><img src="images/misc/navbit-home.png" alt="Home" /> MMO-Champion</a></li>
+                
+<li class="navbit">&raquo; <a href="forum.php">Forum</a></li>
+
+<li class="navbit">&raquo; <a href="forums/251-Off-Topic-Forums">Off-Topic Forums</a></li>
+
+<li class="navbit">&raquo; <a href="forums/315-General-Off-Topic">General Off-Topic</a></li>
+
+                <span style="float: left; padding-left: 5px;">»</span>
+                <a href="javascript:history.go(0)">
+<li class="navbit lastnavbit"><span> Decorating my room</span></li>
+</a>
+            </ul>
+        </div>
+    
+     
+    
+
+    
+
+
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Thread: <span class="threadtitle"><a href="threads/1123707-Decorating-my-room" title="Reload this Page">Decorating my room</a></span>
+			
+		</h1>
+	</div>
+<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?t=1123707&amp;pp=20&amp;page=1" accesskey="3" rel="nofollow">Show Printable Version</a></li>
+					
+						<li><a href="sendmessage.php?do=sendtofriend&amp;t=1123707" rel="nofollow">Email this Page&hellip;</a></li>
+					
+					<li>
+						
+							<a href="subscription.php?do=addsubscription&amp;t=1123707" rel="nofollow">Subscribe to this Thread&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+
+			
+			</ul>
+		</div>
+	</div>
+	<div id="above_postlist" class="above_postlist">
+		
+	<div id="pagination_top" class="pagination_top">
+		
+		</div>	
+	</div>
+<div id="postlist" class="postlist restrain">
+	
+
+	
+			<ol id="posts" class="posts border" start="1">
+				
+<li class="postbitlegacy postbitim postcontainer old" id="post_16613096">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">2012-04-28,&nbsp;<span class="time">09:13 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post16613096" href="threads/1123707-Decorating-my-room?p=16613096&amp;viewfull=1#post16613096" class="postcounter">#1</a><a id="postcount16613096" name="1"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="members/708849-Klojo" title="Klojo is offline"><strong>Klojo</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+                        <img src="images/site_icons/profile.png" alt="" />
+			<a href="members/708849-Klojo">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+                        <img src="images/site_icons/forum.png" alt="" />
+			<a href="search.php?do=finduser&amp;userid=708849&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+                        <img src="images/site_icons/message.png" alt="" />
+			<a href="private.php?do=newpm&amp;u=708849" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+
+                <li class="right">
+                        <img src="images/site_icons/forum.png" alt="" />
+                        <a href="search.php?do=finduser&amp;u=708849&amp;starteronly=1&amp;contenttype=vBForum_Thread">
+                                 View Started Threads
+                        </a>
+                </li>
+		
+		
+		
+		<!---->
+		
+		<!--
+		<li class="right">
+                        <img src="images/site_icons/article.png" alt="" />
+			<a href="http://www.mmo-champion.com/list/author/708849-Klojo" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		-->
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Klojo is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Field Marshal
+			</span>
+			
+			
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Dec 2010</dd>
+					<dt>Location</dt> <dd>Belgium</dd>
+					
+					<dt>Posts</dt> <dd>64</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<h2 class="title icon">
+					Decorating my room
+				</h2>
+				
+
+
+						
+							
+							
+						
+						
+				<div class="content">
+					<div id="post_message_16613096">
+						<blockquote class="postcontent restore ">
+							I'll be moving to a new place soon and got the permission to 'design' my own room. I'm going for a grey room with black accessoires.<br />
+I'm also allowed to pick a mural art photo (not sure if this is how it's called, but it's basically a giant photo covering an entire wall). I'm having trouble picking the right one. I know I want to go for a city landscape but not what colors to pick.<br />
+<br />
+First thought: make it black and white, to make it look like the others wall of the room<br />
+second thought: add some bright color to it, like a yellow cab<br />
+<br />
+I've never done this before so if anyone has done the same and has advice, please do tell <img src="images/smilies/wink.png" border="0" alt="" title="Wink" class="inlineimg" />
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_16613096" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_16613096" class="newreply" href="newreply.php?do=newreply&amp;p=16613096" rel="nofollow" title="Reply With Quote"><img id="quoteimg_16613096" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_16613280">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">2012-04-28,&nbsp;<span class="time">09:52 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post16613280" href="threads/1123707-Decorating-my-room?p=16613280&amp;viewfull=1#post16613280" class="postcounter">#2</a><a id="postcount16613280" name="2"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="members/541828-ita" title="ita is offline"><strong>ita</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+                        <img src="images/site_icons/profile.png" alt="" />
+			<a href="members/541828-ita">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+                        <img src="images/site_icons/forum.png" alt="" />
+			<a href="search.php?do=finduser&amp;userid=541828&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+                        <img src="images/site_icons/message.png" alt="" />
+			<a href="private.php?do=newpm&amp;u=541828" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+
+                <li class="right">
+                        <img src="images/site_icons/forum.png" alt="" />
+                        <a href="search.php?do=finduser&amp;u=541828&amp;starteronly=1&amp;contenttype=vBForum_Thread">
+                                 View Started Threads
+                        </a>
+                </li>
+		
+		
+		
+		<!---->
+		
+		<!--
+		<li class="right">
+                        <img src="images/site_icons/article.png" alt="" />
+			<a href="http://www.mmo-champion.com/list/author/541828-ita" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		-->
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="ita is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				I am Murloc!
+			</span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="members/541828-ita" title="ita is offline">
+				<img src="customavatars/avatar541828_4.gif" alt="ita's Avatar" title="ita's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Oct 2008</dd>
+					<dt>Location</dt> <dd>Malmö</dd>
+					
+					<dt>Posts</dt> <dd>5,170</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_16613280">
+						<blockquote class="postcontent restore ">
+							I wouldn't advice going with black. I love that color too, wear black clothes as much as I can but a gray and black room? Wouldn't that be too depressing? I'd suggest at least adding some bright colors.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer">Remember remember the fifth of November<br />
+Gunpowder, treason and plot.<br />
+I see no reason why gunpowder, treason<br />
+Should ever be forgot...</div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_16613280" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_16613280" class="newreply" href="newreply.php?do=newreply&amp;p=16613280" rel="nofollow" title="Reply With Quote"><img id="quoteimg_16613280" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_16614261">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">2012-04-28,&nbsp;<span class="time">12:37 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post16614261" href="threads/1123707-Decorating-my-room?p=16614261&amp;viewfull=1#post16614261" class="postcounter">#3</a><a id="postcount16614261" name="3"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="members/730874-Osyrus" title="Osyrus is offline"><strong>Osyrus</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+                        <img src="images/site_icons/profile.png" alt="" />
+			<a href="members/730874-Osyrus">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+                        <img src="images/site_icons/forum.png" alt="" />
+			<a href="search.php?do=finduser&amp;userid=730874&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+                        <img src="images/site_icons/message.png" alt="" />
+			<a href="private.php?do=newpm&amp;u=730874" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+
+                <li class="right">
+                        <img src="images/site_icons/forum.png" alt="" />
+                        <a href="search.php?do=finduser&amp;u=730874&amp;starteronly=1&amp;contenttype=vBForum_Thread">
+                                 View Started Threads
+                        </a>
+                </li>
+		
+		
+		
+		<!---->
+		
+		<!--
+		<li class="right">
+                        <img src="images/site_icons/article.png" alt="" />
+			<a href="http://www.mmo-champion.com/list/author/730874-Osyrus" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		-->
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Osyrus is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Mechagnome
+			</span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="members/730874-Osyrus" title="Osyrus is offline">
+				<img src="customavatars/avatar730874_3.gif" alt="Osyrus's Avatar" title="Osyrus's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Feb 2011</dd>
+					<dt>Location</dt> <dd>Boston, MA</dd>
+					
+					<dt>Posts</dt> <dd>654</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_16614261">
+						<blockquote class="postcontent restore ">
+							doing the accent wall can do one of two things:<br />
+<br />
+look bloody awesome<br />
+make the room look tiny<br />
+<br />
+just watch it. good luck! dont forget black and grey are slimming colors - the room might be tiny looking- box like<br />
+personal opinion- watch the grey i would do mostly a light grey with accents of black and a BRIGHT color.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_16614261" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_16614261" class="newreply" href="newreply.php?do=newreply&amp;p=16614261" rel="nofollow" title="Reply With Quote"><img id="quoteimg_16614261" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_16614374">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">2012-04-28,&nbsp;<span class="time">12:54 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post16614374" href="threads/1123707-Decorating-my-room?p=16614374&amp;viewfull=1#post16614374" class="postcounter">#4</a><a id="postcount16614374" name="4"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="members/627957-Reyzzz" title="Reyzzz is offline"><strong>Reyzzz</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+                        <img src="images/site_icons/profile.png" alt="" />
+			<a href="members/627957-Reyzzz">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+                        <img src="images/site_icons/forum.png" alt="" />
+			<a href="search.php?do=finduser&amp;userid=627957&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+                        <img src="images/site_icons/message.png" alt="" />
+			<a href="private.php?do=newpm&amp;u=627957" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+
+                <li class="right">
+                        <img src="images/site_icons/forum.png" alt="" />
+                        <a href="search.php?do=finduser&amp;u=627957&amp;starteronly=1&amp;contenttype=vBForum_Thread">
+                                 View Started Threads
+                        </a>
+                </li>
+		
+		
+		
+		<!---->
+		
+		<!--
+		<li class="right">
+                        <img src="images/site_icons/article.png" alt="" />
+			<a href="http://www.mmo-champion.com/list/author/627957-Reyzzz" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		-->
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Reyzzz is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Herald of the Titans
+			</span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="members/627957-Reyzzz" title="Reyzzz is offline">
+				<img src="customavatars/avatar627957_2.gif" alt="Reyzzz's Avatar" title="Reyzzz's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Apr 2010</dd>
+					
+					
+					<dt>Posts</dt> <dd>2,647</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_16614374">
+						<blockquote class="postcontent restore ">
+							Free piece of advice: Whatever you do with life, avoid grey color at any cost.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_16614374" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_16614374" class="newreply" href="newreply.php?do=newreply&amp;p=16614374" rel="nofollow" title="Reply With Quote"><img id="quoteimg_16614374" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_16615635">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">2012-04-28,&nbsp;<span class="time">03:53 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post16615635" href="threads/1123707-Decorating-my-room?p=16615635&amp;viewfull=1#post16615635" class="postcounter">#5</a><a id="postcount16615635" name="5"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="members/659813-c1nn4m0n" title="c1nn4m0n is offline"><strong>c1nn4m0n</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+                        <img src="images/site_icons/profile.png" alt="" />
+			<a href="members/659813-c1nn4m0n">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+                        <img src="images/site_icons/forum.png" alt="" />
+			<a href="search.php?do=finduser&amp;userid=659813&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		<li class="left">
+                        <img src="images/site_icons/message.png" alt="" />
+			<a href="private.php?do=newpm&amp;u=659813" rel="nofollow">
+				Private Message
+			</a>
+		</li>
+		
+
+                <li class="right">
+                        <img src="images/site_icons/forum.png" alt="" />
+                        <a href="search.php?do=finduser&amp;u=659813&amp;starteronly=1&amp;contenttype=vBForum_Thread">
+                                 View Started Threads
+                        </a>
+                </li>
+		
+		
+		
+		<!---->
+		
+		<!--
+		<li class="right">
+                        <img src="images/site_icons/article.png" alt="" />
+			<a href="http://www.mmo-champion.com/list/author/659813-c1nn4m0n" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		-->
+
+		
+
+		
+		
+	</ul>
+</div>
+				<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="c1nn4m0n is offline" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Stood in the Fire
+			</span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="members/659813-c1nn4m0n" title="c1nn4m0n is offline">
+				<img src="customavatars/avatar659813_9.gif" alt="c1nn4m0n's Avatar" title="c1nn4m0n's Avatar" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<dt>Join Date</dt> <dd>Jul 2010</dd>
+					<dt>Location</dt> <dd>Australia</dd>
+					
+					<dt>Posts</dt> <dd>371</dd>	
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+
+
+						
+						
+							
+						
+				<div class="content">
+					<div id="post_message_16615635">
+						<blockquote class="postcontent restore ">
+							Maybe you could use crackle paint with grey and another colour, turquoise perhaps?<br />
+<br />
+<img src="http://image.shutterstock.com/display_pic_with_logo/94486/94486,1183726522,2/stock-photo-crackled-paint-background-black-and-red-artwork-is-created-and-painted-by-myself-3687544.jpg" border="0" alt="" />
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_16615635" src="images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_16615635" class="newreply" href="newreply.php?do=newreply&amp;p=16615635" rel="nofollow" title="Reply With Quote"><img id="quoteimg_16615635" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+			</ol>
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="threads/1123707-Decorating-my-room?goto=nextoldest" rel="nofollow">Previous Thread</a>
+	|
+	<a href="threads/1123707-Decorating-my-room?goto=nextnewest" rel="nofollow">Next Thread</a>
+
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+</div>
+<div id="below_postlist" class="noinlinemod below_postlist">
+
+	
+<div id="pagination_bottom" class="pagination_bottom">
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="threads/1123707-Decorating-my-room" class="popupctrl"><span class="ctrlcontainer">General Off-Topic</span></a>
+		<a href="threads/1123707-Decorating-my-room#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.php">Settings</a></li>
+		<li><a href="private.php">Private Messages</a></li>
+		<li><a href="subscription.php">Subscriptions</a></li>
+		<li><a href="online.php">Who's Online</a></li>
+		<li><a href="search.php">Search Forums</a></li>
+		<li><a href="forum.php">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forums/242-News">News</a>
+					<ol>
+						
+		
+			
+				<li><a href="forums/252-News">News</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/245-World-of-Warcraft">World of Warcraft</a>
+					<ol>
+						
+		
+			
+				<li><a href="forums/266-General-Discussions">General Discussions</a></li>
+			
+		
+			
+				<li><a href="forums/268-Raids-amp-Dungeons">Raids &amp; Dungeons</a></li>
+			
+		
+			
+				<li><a href="forums/279-Professions-amp-Garrisons">Professions &amp; Garrisons</a></li>
+			
+		
+			
+				<li><a href="forums/255-PvP">PvP</a></li>
+			
+		
+			
+				<li><a href="forums/314-Achievements-Pet-Battles-and-Transmogrification">Achievements, Pet Battles, and Transmogrification</a></li>
+			
+		
+			
+				<li><a href="forums/254-Interface-amp-Macros">Interface &amp; Macros</a></li>
+			
+		
+			
+				<li><a href="forums/347-Lore">Lore</a>
+					<ol>
+						
+		
+			
+				<li><a href="forums/300-Role-Playing">Role Playing</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/344-Hearthstone-Heroes-of-Warcraft-Online-Cardgame">Hearthstone: Heroes of Warcraft Online Cardgame</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/247-Class-Discussions">Class Discussions</a>
+					<ol>
+						
+		
+			
+				<li><a href="forums/269-Death-Knight">Death Knight</a></li>
+			
+		
+			
+				<li><a href="forums/270-Druid">Druid</a></li>
+			
+		
+			
+				<li><a href="forums/271-Hunter">Hunter</a></li>
+			
+		
+			
+				<li><a href="forums/272-Mage">Mage</a></li>
+			
+		
+			
+				<li><a href="forums/341-Monk">Monk</a></li>
+			
+		
+			
+				<li><a href="forums/273-Paladin">Paladin</a></li>
+			
+		
+			
+				<li><a href="forums/274-Priest">Priest</a></li>
+			
+		
+			
+				<li><a href="forums/275-Rogue">Rogue</a></li>
+			
+		
+			
+				<li><a href="forums/276-Shaman">Shaman</a></li>
+			
+		
+			
+				<li><a href="forums/277-Warlock">Warlock</a></li>
+			
+		
+			
+				<li><a href="forums/278-Warrior">Warrior</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/251-Off-Topic-Forums">Off-Topic Forums</a>
+					<ol>
+						
+		
+			
+				<li><a href="forums/315-General-Off-Topic">General Off-Topic</a></li>
+			
+		
+			
+				<li><a href="forums/316-Fun-Stuff">Fun Stuff</a></li>
+			
+		
+			
+				<li><a href="forums/342-Chat-Zone">Chat Zone</a></li>
+			
+		
+			
+				<li><a href="forums/290-Computer">Computer</a>
+					<ol>
+						
+		
+			
+				<li><a href="forums/332-Computer-Build-Upgrade-Help">Computer Build / Upgrade Help</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/317-Sports-amp-Fitness">Sports &amp; Fitness</a></li>
+			
+		
+			
+				<li><a href="forums/292-Cinema-TV-Shows-Music-Books">Cinema / TV Shows / Music / Books</a></li>
+			
+		
+			
+				<li><a href="forums/253-Suggestions-amp-Feedback">Suggestions &amp; Feedback</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/333-Video-Games">Video Games</a>
+					<ol>
+						
+		
+			
+				<li><a href="forums/293-Video-Games-Discussion">Video Games Discussion</a></li>
+			
+		
+			
+				<li><a href="forums/352-Overwatch">Overwatch</a></li>
+			
+		
+			
+				<li><a href="forums/334-Diablo-3">Diablo 3</a></li>
+			
+		
+			
+				<li><a href="forums/351-Heroes-of-the-Storm">Heroes of the Storm</a></li>
+			
+		
+			
+				<li><a href="forums/345-Dota-2">Dota 2</a></li>
+			
+		
+			
+				<li><a href="forums/346-Final-Fantasy-XIV">Final Fantasy XIV</a></li>
+			
+		
+			
+				<li><a href="forums/335-Guild-Wars-2">Guild Wars 2</a></li>
+			
+		
+			
+				<li><a href="forums/336-League-of-Legends">League of Legends</a></li>
+			
+		
+			
+				<li><a href="forums/337-Minecraft">Minecraft</a></li>
+			
+		
+			
+				<li><a href="forums/338-Rift">Rift</a></li>
+			
+		
+			
+				<li><a href="forums/339-Star-Wars-The-Old-Republic">Star Wars: The Old Republic</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/244-Guild-Recruitment">Guild Recruitment</a>
+					<ol>
+						
+		
+			
+				<li><a href="forums/259-Guild-Recruitment-US-Servers">Guild Recruitment - US Servers</a></li>
+			
+		
+			
+				<li><a href="forums/330-Guild-Recruitment-US-Oceanic-Servers">Guild Recruitment - US Oceanic Servers</a></li>
+			
+		
+			
+				<li><a href="forums/260-Guild-Recruitment-EU-English-Servers">Guild Recruitment - EU-English Servers</a></li>
+			
+		
+			
+				<li><a href="forums/262-Guild-Recruitment-EU-German-Servers">Guild Recruitment - EU-German Servers</a></li>
+			
+		
+			
+				<li><a href="forums/264-Guild-Recruitment-EU-French-Servers">Guild Recruitment - EU-French Servers</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/249-Archives">Archives</a>
+					<ol>
+						
+		
+			
+				<li><a href="forums/320-Contest">Contest</a>
+					<ol>
+						
+		
+			
+				<li><a href="forums/322-Guides-Submission-Uncommon">Guides Submission - Uncommon</a></li>
+			
+		
+			
+				<li><a href="forums/323-Guides-Submission-Rare">Guides Submission - Rare</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/282-Raids-US-First-kills">Raids US First kills</a></li>
+			
+		
+			
+				<li><a href="forums/280-Raids-EU-First-kills">Raids EU First kills</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+	</div>
+</div>
+
+
+<div id="breadcrumb_two" class="breadcrumb" style="margin-bottom:10px">
+			<ul class="floatcontainer">
+				<li class="navbit"><a href="index.php" ><img src="images/misc/navbit-home.png" alt="Home" /> MMO-Champion</a></li>
+				
+<li class="navbit">&raquo; <a href="forum.php">Forum</a></li>
+
+<li class="navbit">&raquo; <a href="forums/251-Off-Topic-Forums">Off-Topic Forums</a></li>
+
+<li class="navbit">&raquo; <a href="forums/315-General-Off-Topic">General Off-Topic</a></li>
+
+				<span style="float: left; padding-left:5px;">»</span>
+				<a href="javascript:history.go(0)">
+<li class="navbit lastnavbit"><span> Decorating my room</span></li>
+</a>
+			</ul>
+		</div><!-- spot for breadcrumbs -->
+
+
+
+
+
+	
+	
+	
+	
+<div id="ad_forum_below_threadlist" class="btflb"><!--JavaScript Tag // Tag for network 5259: Curse.com // Website: mmo-champion // Page: Forums // Placement: Forums-Below-728 x 90 (1363935) // created at: Jul 13, 2010 3:21:14 PM-->
+<script type="text/javascript">
+<!--
+if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+}
+document.write('<scr'+'ipt type="text/javascript" src="http://adserver.adtechus.com/addyn/3.0/5259.1/1363935/0/225/ADTECH;loc=100;target=_blank;key=key1+key2+key3+key4;grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script><noscript><a href="http://adserver.adtechus.com/adlink/3.0/5259.1/1363935/0/225/ADTECH;loc=300;key=key1+key2+key3+key4" target="_blank"><img src="http://adserver.adtechus.com/adserv/3.0/5259.1/1363935/0/225/ADTECH;loc=300;key=key1+key2+key3+key4" border="0" alt="advertisement"/></a></noscript>
+<!-- End of JavaScript Tag --></div>
+
+<div id="thread_info" class="thread_info">
+	
+	<div class="options_block_container">
+		
+		<div class="options_block">
+			<h4 class="collapse blockhead options_correct">
+				<a class="collapse" id="collapse_posting_rules" href="threads/1123707-Decorating-my-room#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				Posting Permissions
+			</h4>
+			<div id="posting_rules" class="thread_info">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock2">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+		<li>&nbsp;</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul class="bbcodeblock">
+			<li><a href="misc.php?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc.php?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li><a href="misc.php?do=bbcode#videocode" target="_blank">[VIDEO]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+ 
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="forum.php" method="get" id="footer_select" class="footer_select">
+<!--
+		
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser"><option class="hidden"></option></optgroup>
+				
+					
+					<optgroup label="&nbsp;Standard Styles">
+									
+					
+	<option value="9" class="" selected="selected">-- v3.0</option>
+
+					
+					</optgroup>
+										
+				
+				
+					
+					<optgroup label="&nbsp;Mobile Styles">
+					
+					
+	<option value="10" class="" >-- Default Mobile Style</option>
+
+					
+					</optgroup>
+										
+				
+			</select>	
+		
+-->		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.php" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="http://www.mmo-champion.com/">MMO Champion</a></li>
+		
+		
+		<li><a href="archive/index.php">Archive</a></li>
+		
+		
+		
+		<li><a href="threads/1123707-Decorating-my-room#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT. The time now is <span class="time">04:02 PM</span>.</div>
+
+</div>
+
+<!-- Begin comScore Tag -->
+<script>
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "6035118" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=6035118&cv=2.0&cj=1"; />
+</noscript>
+<!-- End comScore Tag -->
+<!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(
+        ['_setAccount', 'UA-1045810-27'],
+        ['_setDomainName', 'mmo-champion.com'],
+        ['_addIgnoredRef', 'mmo-champion.com'],
+        ['_trackPageview'],
+        ['b._setAccount', 'UA-1045810-22'],
+        ['b._setDomainName', 'mmo-champion.com'],
+        ['b._addIgnoredRef', 'mmo-champion.com'],
+        ['b._trackPageview'],
+        ['c._setAccount', 'UA-1555148-1'],
+        ['c._setDomainName', 'mmo-champion.com'],
+        ['c._addIgnoredRef', 'mmo-champion.com'],
+        ['c._trackPageview']
+);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<!-- End Google Analytics -->
+<!-- START Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2010 Nielsen Online -->
+<script type="text/javascript">
+  (function () {
+    var d = new Image(1, 1);
+    d.onerror = d.onload = function () {
+      d.onerror = d.onload = null;
+    };
+    d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-603339h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+  })();
+</script>
+<noscript>
+  <div>
+    <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-603339h&amp;cg=0&amp;cc=1&amp;ts=noscript"
+    width="1" height="1" alt="" />
+  </div>
+</noscript>
+<!-- END Nielsen Online SiteCensus V6.0 -->
+<!--Adblock Check--> 
+<script type="text/javascript" src="http://media.curse.com/Content/Ads/JS/BSAds.js"></script> <script type="text/javascript"> $(document).ready(checkAds()); function checkAds(){if (document.getElementById('adsense')!=undefined){document.write("<script>_gaq.push(['_trackEvent', 'Adblock', 'Unblocked', 'false',,true]);</sc" + "ript>");}else{document.write("<script>_gaq.push(['_trackEvent', 'Adblock', 'Blocked', 'true',,true]);</sc" + "ript>");}} </script>
+ <!--End Adblock Check-->
+<!--Standard Javascript Tag (GroupID) // Tag for network 5259: Curse.com // Website: Mmo-champion // Page: Retarget // Placement: Mmo-champion_Retarget_Default_2x2 (2731913) // created at: Jan 30, 2013 12:37:35 PM-->
+<script language="javascript">
+<!--
+if (window.adgroupid == undefined) {
+	window.adgroupid = Math.round(Math.random() * 1000);
+}
+document.write('<scr'+'ipt language="javascript1.1" src="http://adserver.adtechus.com/addyn/3.0/5259.1/2731913/0/277/ADTECH;loc=100;target=_blank;key=[keywords];grp='+window.adgroupid+';misc='+new Date().getTime()+'"></scri'+'pt>');
+//-->
+</script>
+<!-- End of JavaScript Tag -->
+
+
+<!-- Social Network Integration -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+<script type="text/javascript" src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=269483649759378"></script>
+
+<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+
+<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+
+
+<iframe src="/count.php?tid=" height="0" width="0" style="display: none;"></iframe>
+
+
+</div> 
+ 
+
+</div>
+
+	<div class='show-ads'>
+		<footer role="complimentary" id="footer" class="main t-footer u-icon u-icon-a group">
+			<div class="t-footer-wrapper">	
+				<div class="t-footer-curseInfo">
+					<hgroup>
+						<h1>Curse</h1>
+						<h2><strong>Enjoy the game</strong></h2>
+					</hgroup>
+					<div class="t-footer-signUp">
+						<h4>Not a Member?</h4>
+						<h5>Get your Free Account!</h5>
+						<a class="u-button u-button-a" href="http://www.curse.com">Sign up for Free!</a>
+					</div>
+					<ul class="t-footer-socialLinks">
+						<li><a href="http://www.youtube.com/cursenetwork"><i class="u-icon-youtube"></i></a></li>
+						<li><a href="http://www.twitter.com/#!/cursenetwork"><i class="u-icon-twitter"></i></a></li>
+						<li><a href="http://www.facebook.com/CurseNetwork"><i class="u-icon-facebook"></i></a></li>
+						<li><a href="http://www.curse.com/news.rss"><i class="u-icon-rss"></i></a></li>
+					</ul>
+				</div>
+				<div class="t-footer-curseNetwork">
+					<header><h4>Featured Sites</h4><a class="t-footer-jumpLink" href="http://www.curse.com">More</a></header>
+					<ul class="t-footer-featured group">
+						<li class="t-footer-featureItem site-gw2g">
+							<a href="http://www.guildwars2guru.com">
+								<h4>Guild Wars 2 Guru</h4>
+								<dl>
+									<dt><i class="u-icon-gw2g"></i>Guild Wars 2 Guru</dt>
+									<dd>The latest and greatest on Tyria.</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="t-footer-featureItem site-lolpro">
+							<a href="http://www.lolpro.com">
+								<h4>LoL Pro</h4>
+								<dl>
+									<dt><i class="u-icon-lolpro"></i>LoL Pro</dt>
+									<dd>Dominate with Pro LoL guides.</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="t-footer-featureItem site-mmoc">
+							<a href="http://www.mmo-champion.com">
+								<h4>MMO-Champion</h4>
+								<dl>
+									<dt><i class="u-icon-mmoc"></i>MMO-Champion</dt>
+									<dd>Keep ahead with the champions of WoW coverage.</dd>
+								</dl>
+							</a>
+						</li>
+						<li class="t-footer-featureItem site-gw2db">
+							<a href="http://www.gw2db.com">
+								<h4>GW2DB</h4>
+								<dl>
+									<dt><i class="u-icon-gw2db"></i>GW2DB</dt>
+									<dd>Explore Tyria with Curse and GW2DB.</dd>
+								</dl>
+							</a>
+						</li>
+					</ul>
+					<header><h4>Browse</h4></header>
+					<ul class="t-footer-browse">
+						<li class="j-footer-item t-footer-coreLinks">
+							<a class="j-selected" href="">Core</a>
+							<ul class="j-list-selected">
+								<li><a href="http://www.curse.com/">Curse</a></li>
+								<li><a href="http://www.mmo-champion.com/">MMO-Champion</a></li>
+								<li><a href="http://www.curseforge.com/">CurseForge</a></li>
+								<li><a href="http://www.wowace.com/">WowAce</a></li>
+								<li><a href="http://www.skyrimforge.com/">SkyrimForge</a></li>
+								<li><a href="http://www.sc2mapster.com/">SC2Mapster</a></li>
+		<li><a href="http://www.lolpro.com/">LoLPro</a></li>
+		<li><a href="http://www.exilepro.com">ExilePro</a></li>
+							</ul>
+						</li>
+						<li class="j-footer-item t-footer-communityLinks">
+							<a href="">Community</a>
+							<ul>
+								<li><a href="http://www.minecraftforum.net/">Minecraft Forum</a></li>
+								<li><a href="http://www.terrariaonline.com/">Terraria Online</a></li>
+								<li><a href="http://www.arenajunkies.com/">Arena Junkies</a></li>
+								<li><a href="http://guildwars2guru.com/">Guild Wars 2 Guru</a></li>
+								<li><a href="http://www.diablofans.com/">DiabloFans</a></li>
+								<li><a href="http://www.fpsgeneral.com/">FPS General</a></li>
+								<li><a href="http://www.darthhater.com/">DarthHater</a></li>
+		                                                <li><a href="http://www.defianceforum.com/">Defiance Forum</a></li>
+		                                                <li><a href="http://www.wildstarforums.com/">Wildstar Forums</a></li>
+							</ul>
+						</li>
+						<li class="j-footer-item t-footer-databaseLinks">
+							<a href="">Database</a>
+							<ul>
+		                                                <li><a href="http://www.gw2db.com/">Guild Wars 2 DB</a></li>
+								<li><a href="http://www.zybez.net/">Zybez</a></li>
+								<li><a href="http://db.darthhater.com/">DarthHater DB</a></li>
+								<li><a href="http://www.aionarmory.com/">Aion Armory</a></li>
+								<li><a href="http://www.wowdb.com/">WoW Database</a></li>
+		                                                <li><a href="http://www.marriland.com">Marriland</a></li>
+							</ul>
+						</li>
+	  <li class="j-footer-item t-footer-wikiLinks">
+                <a href="">Wiki</a>
+                <ul>
+                    <li><a href="http://www.gamepedia.com/">Gamepedia</a></li>
+                    <li><a href="http://www.minecraftwiki.net/">Minecraft Wiki</a></li>
+                    <li><a href="http://www.dota2wiki.com/">Dota 2 Wiki</a></li>
+                    <li><a href="http://www.wowpedia.org/">Wowpedia</a></li>
+                    <li><a href="http://wiki.terrariaonline.com/">Terraria Wiki</a></li>
+                    <li><a href="http://neverwinter.gamepedia.com/">Neverwinter Wiki</a></li>
+                    <li><a href="http://dayz.gamepedia.com/">DayZ Wiki</a></li>
+                    <li><a href="http://hearthstone.gamepedia.com/">Hearthstone Wiki</a></li>
+                    <li><a href="http://wildstar.gamepedia.com/">Wildstar Wiki</a></li>
+                </ul>
+            </li>
+					</ul>
+				</div>
+				<span class="return-to-top"><a href="#top">Back to Top</a></span>
+				</div>
+				<div class="t-footer-curseLinks">
+					<ul>
+						<li><a href="http://www.curse.com/about">About Us</a></li>
+						<li><a href="http://www.curse.com/advertising/overview">Advertising</a></li>
+						<li><a href="http://www.curse.com/privacy">Privacy Policy</a></li>
+						<li><a href="http://www.curse.com/terms">Terms of Service</a></li>
+						<li><a href="http://www.curse.com/premiumterms">Premium Terms of Service</a></li>
+						<li><a href="http://www.curse.com/newsletter">Curse Newsletter</a></li>
+						<li><a href="http://www.curse.com/jobs">Jobs at Curse</a></li>
+					</ul>
+				</div>
+				<div class="t-footer-createdBy">
+					<div class="curse-logo"></div>
+					<p class="happy-pants">Handcrafted in San Francisco <span>&amp;</span> Huntsville</p>
+				</div>
+				<script type="text/javascript">
+				jQuery(function () {
+					if (jQuery(".t-footer-browse").length > 0) {
+						jQuery(".t-footer-browse").delegate(".j-footer-item > a", "click", function (g) {
+							g.preventDefault();
+							var f = jQuery(this).closest(".t-footer-browse");
+							f.find(".j-footer-item ul").removeClass("j-list-selected");
+							f.find(".j-footer-item > a").removeClass("j-selected");
+							jQuery(this).parent().find("ul").addClass("j-list-selected");
+							jQuery(this).addClass("j-selected")
+						})
+					}
+				});
+				</script>
+		</footer>
+		<div class="page-block footer-ad-medRect">
+<div id='cdm-zone-03'></div>
+		</div>
+	</div>
+
+			<div id="netbar" class="t-netbar u-icon u-icon-z">
+	<!-- CURSE INFO -->
+	<div class="t-netbar-curseInfo">
+		<!-- DISCOVER -->
+		<ul class="t-netbar-discover t-netbar-section" role="directory">
+			<li style="z-index: 9998;">
+				<a href="#" class="t-netbar-label">Curse Sites <i class="u-icon-dropDown"></i></a>
+				<ul>
+					<li><a href="http://www.curse.com/"><i class="u-icon-curse"></i>Curse.com</a></li>
+					<li><a href="http://www.mmo-champion.com/"><i class="u-icon-mmoc"></i>MMO-Champion</a></li>
+					<li><a href="http://www.arenajunkies.com/"><i class="u-icon-arenajunkies"></i>Arena Junkies</a></li>
+					<li><a href="http://www.minecraftforums.net/"><i class="u-icon-minecraftforums"></i>Minecraft Forums</a></li>
+					<li><a href="http://www.diablofans.com/"><i class="u-icon-diablofans"></i>DiabloFans</a></li>
+					<li><a href="http://www.terrariaonline.com/"><i class="u-icon-terraria"></i>Terraria Online</a></li>
+					<li><a href="http://www.minecraftwiki.net/"><i class="u-icon-minecraftwiki"></i>Minecraft Wiki</a></li>
+					<li><a href="http://www.bukkit.org/"><i class="u-icon-bukkit"></i>Bukkit</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- Lotame -->
+<script src="http://tags.crwdcntrl.net/c/3613/cc.js?ns=_cc3613" id="LOTCC_3613"></script>
+<script>
+_cc3613.bcp();
+</script>
+<img src="http://bcp.crwdcntrl.net/5/c=3613" width="1" height="1"/>
+<!-- End Lotame -->
+<script type="text/javascript">
+  var vglnk = { key: '6126447b189396018ab8687f827bf291' };
+
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = '//cdn.viglink.com/api/vglnk.js';
+
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script>
+
+<div id='cdm-zone-skin'></div>
+<div id="cdm-zone-end"></div><div id="footer_copyright" class="shade footer_copyright"><!--VBOCR--></div>
+</body>
+</html>

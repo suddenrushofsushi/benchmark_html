@@ -1,0 +1,2428 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+<html lang="en">
+<head>
+    <title>Flynn, Theresa / Financial Literacy </title>
+    <!--
+    <PageMap>
+    <DataObject type="document">
+    <Attribute name="siteid">183</Attribute>
+    </DataObject>
+    </PageMap>
+    -->
+
+
+    
+    <!-- Begin swuc.GlobalJS -->
+<script type="text/javascript">
+ staticURL = "http://www.pascack.k12.nj.us/Static/V2_10_01/";
+ SessionTimeout = "0";
+</script>
+<!-- End swuc.GlobalJS -->
+    
+    
+    <!-- Stylesheets -->
+
+    <link rel="Stylesheet" type="text/css" href="http://www.pascack.k12.nj.us/Static/V2_10_01/App_Themes/SW/jquery.jgrowl.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.pascack.k12.nj.us/Static/V2_10_01//site/assets/styles/system.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.pascack.k12.nj.us/Static/V2_10_01//site/assets/styles/apps.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.pascack.k12.nj.us/Static/V2_10_01/App_Themes/SW/jQueryUI.css" />
+    
+    
+    <!-- Scripts -->
+    
+
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
+    <script src='http://www.pascack.k12.nj.us/Static/V2_10_01/GlobalAssets/Scripts/min/jquery-migrate-1.2.1.js' type='text/javascript'></script>
+
+    <script src='http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js' type='text/javascript'></script>
+
+    
+
+   <!--  -->
+    
+<script type="text/javascript">
+    $(document).ready(function() {
+        SetCookie('SWScreenWidth', screen.width);
+        SetCookie('SWClientWidth', document.body.clientWidth);
+
+        //If small browser window and responsive template and first load, reload to get the off-canvas menu
+        var isResponsiveTemplatePreInit = 'False';
+        var isResponsive = 'False';
+
+        if (isResponsiveTemplatePreInit == 'False' && isResponsive == 'True' && document.body.clientWidth < 1024) {
+            window.location.reload(true);
+        } 
+
+        $("div.ui-article:last").addClass("last-article");
+        $("div.region .app:last").addClass("last-app");
+    });
+
+    // ADA SKIP NAV
+    $(document).ready(function() {
+        $(document).on('focus', '#skipLink', function() {
+            $("div.sw-skipnav-outerbar").animate({
+                marginTop: "0px"
+            }, 500);
+        });
+
+        $(document).on('blur', '#skipLink', function() {
+            $("div.sw-skipnav-outerbar").animate({
+                marginTop: "-30px"
+            }, 500);
+        });
+    });
+
+    // ADA MYSTART
+    $(document).ready(function () {
+        var top_level_nav = $('.sw-mystart-nav');
+ 
+        // Set tabIndex to -1 so that top_level_links can't receive focus until menu is open
+        // school dropdown
+        $(top_level_nav).find('ul').find('a').attr('tabIndex', -1);
+
+        // my account dropdown
+        $(top_level_nav).next('ul').find('a').attr('tabIndex', -1);
+ 
+        $(top_level_nav).focus(function() {
+            // hide open menus
+            hideMyStartBarMenu();
+ 
+            // show school dropdown
+            if ($(this).find('ul').length > 0) {
+                $(this).find('.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false');
+            }
+
+            // show my account dropdown
+            if ($(this).next('ul').length > 0) {
+                $(this).next('.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false');
+                $('#sw-mystart-account').addClass("clicked-state");
+            }
+        });
+ 
+        // Bind arrow keys for navigation
+        $(top_level_nav).keydown(function(e) {
+            if (e.keyCode == 37) { //key left
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).prev('.sw-mystart-nav').length == 0) {
+                    $(this).parents('div').find('.sw-mystart-nav').last().focus();
+                } else {
+                    $(this).prev('.sw-mystart-nav').focus();
+                }
+            } else if(e.keyCode == 38) { //key up
+                e.preventDefault();
+
+                // show school dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('div.sw-dropdown').css('display', 'block').find('ul').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+
+                // show my account dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('ul.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+            } else if(e.keyCode == 39) { //key right
+                e.preventDefault();
+
+                // This is the last item
+                if ($(this).next('.sw-mystart-nav').length == 0) {
+                    $(this).parents('div').find('.sw-mystart-nav').first().focus();
+                } else {
+                    $(this).next('.sw-mystart-nav').focus();
+                }
+            } else if(e.keyCode == 40) { //key down
+                e.preventDefault();
+
+                // show school dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('div.sw-dropdown').css('display', 'block').find('ul').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+                }
+
+                // show my account dropdown
+                if ($(this).next('ul').length > 0) {
+                    $(this).next('ul.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+                }
+            } else if(e.keyCode == 13 || e.keyCode == 32) { //enter key
+                // If submenu is hidden, open it
+                e.preventDefault();
+
+                $(this).parent('li').find('ul[aria-hidden=true]').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+            } else if (e.keyCode == 27) { //escape key
+                e.preventDefault();
+                hideMyStartBarMenu();
+            } else {
+                $(this).parent('.sw-mystart-nav').find('ul[aria-hidden=false] a').each(function() {
+                    if ($(this).text().substring(0,1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        return false;
+                    }
+                });
+            }
+        });
+       
+        // school dropdown
+        var startbarlinks = $(top_level_nav).find('ul').find('a');
+        bindMyStartBarLinks(startbarlinks);
+
+        // my account dropdown
+        var myaccountlinks = $(top_level_nav).next('ul').find('a');
+        bindMyStartBarLinks(myaccountlinks);
+ 
+        function bindMyStartBarLinks(links) {
+            $(links).keydown(function(e) {
+                e.stopPropagation();
+
+                if (e.keyCode == 38) { //key up
+                    e.preventDefault();
+
+                    // This is the first item
+                    if ($(this).parent('li').prev('li').length == 0) {
+                        if ($(this).parents('ul').parents('.sw-mystart-nav').length > 0) {
+                            $(this).parents('ul').parents('.sw-mystart-nav').focus();
+                        } else {
+                            $(this).parents('ul').prev('.sw-mystart-nav').focus();
+                        }
+                    } else {
+                        $(this).parent('li').prev('li').find('a').first().focus();
+                    }
+                } else if (e.keyCode == 40) { //key down
+                    e.preventDefault();
+                    
+                    if ($(this).parent('li').next('li').length == 0) {
+                        if ($(this).parents('ul').parents('.sw-mystart-nav').length > 0) {
+                            $(this).parents('ul').parents('.sw-mystart-nav').focus();
+                        } else {
+                            $(this).parents('ul').prev('.sw-mystart-nav').focus();
+                        }
+                    } else {
+                        $(this).parent('li').next('li').find('a').first().attr('tabIndex', 0);
+                        $(this).parent('li').next('li').find('a').first().focus();
+                    }
+                } else if (e.keyCode == 27 || e.keyCode == 37) { // escape key or key left
+                    e.preventDefault();
+                    hideMyStartBarMenu();
+                } else if (e.keyCode == 32) { //enter key
+                    e.preventDefault();
+                    window.location = $(this).attr('href');
+                } else {
+                    var found = false;
+
+                    $(this).parent('div').nextAll('li').find('a').each(function() {
+                        if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                            $(this).focus();
+                            found = true;
+                            return false;
+                        }
+                    });
+                   
+                    if (!found) {
+                        $(this).parent('div').prevAll('li').find('a').each(function() {
+                            if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                                $(this).focus();
+                                return false;
+                            }
+                        });
+                    }
+                }
+            });
+        }
+ 
+        // Hide menu if click or focus occurs outside of navigation
+        $('#sw-mystart-inner').find('.sw-mystart-nav').last().keydown(function(e) { 
+            if (e.keyCode == 9) {
+                // If the user tabs out of the navigation hide all menus
+                hideMyStartBarMenu();
+            }
+        });
+
+        /*$(document).click(function() { 
+            hideMyStartBarMenu();
+        });*/
+
+        // try to capture as many custom MyStart bars as possible
+        $('.sw-mystart-button').find('a').focus(function() {
+            hideMyStartBarMenu();
+        });
+       
+        $('#sw-mystart-inner').click(function(e) {
+            e.stopPropagation();
+        });
+
+        $('ul.sw-dropdown-list').blur(function() {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-mypasskey').focus(function() {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-sitemanager').focus(function() {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-myview').focus(function() {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-signin').focus(function() {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-register').focus(function() {
+            hideMyStartBarMenu();
+        });
+
+        // button click events
+        $('div.sw-mystart-button.home a').keydown(function(e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.pw a').keydown(function(e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.manage a').keydown(function(e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('#sw-mystart-account').keydown(function(e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).addClass('clicked-state');
+                $('#sw-myaccount-list').show();
+            }
+        });
+
+        $('#sw-mystart-mypasskey a').keydown(function(e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.signin a').keydown(function(e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.register a').keydown(function(e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+    });
+
+    function hideMyStartBarMenu() {
+        $('.sw-dropdown').attr('aria-hidden', 'true').css('display', 'none').find('a').attr('tabIndex', -1);
+        $('#sw-mystart-account').removeClass("clicked-state");
+    }
+
+    // ADA CHANNEL NAV
+    $(document).ready(function() {
+        var settings = {
+            menuHoverClass: 'hover'
+        };
+
+        // Add ARIA role to menubar and menu items
+        $('#channel-navigation').attr('role', 'menubar').find('li').attr('role', 'menuitem');
+
+        var top_level_links = $('#channel-navigation').find('> li > a');
+
+        // Set tabIndex to -1 so that top_level_links can't receive focus until menu is open
+        $(top_level_links).next('ul').attr({ 'aria-hidden': 'true', 'role': 'menu' }).find('a').attr('tabIndex', -1);
+
+        // Adding aria-haspopup for appropriate items
+        $(top_level_links).each(function() {
+            if ($(this).next('ul').length > 0)
+                $(this).parent('li').attr('aria-haspopup', 'true');
+        });
+
+        $(top_level_links).focus(function() {
+            //hide open menus
+            hideChannelMenu();
+
+            if ($(this).parent('li').find('ul').length > 0) {
+                $(this).parent('li').addClass(settings.menuHoverClass).find('ul').css('display', 'block');
+            }
+        });
+
+        // Bind arrow keys for navigation
+        $(top_level_links).keydown(function(e) {
+            if (e.keyCode == 37) { //key left
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).parent('li').prev('li').length == 0) {
+                    $(this).parents('ul').find('> li').last().find('a').first().focus();
+                } else {
+                    $(this).parent('li').prev('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 38) { //key up
+                e.preventDefault();
+
+                if ($(this).parent('li').find('ul').length > 0) {
+                    $(this).parent('li').addClass(settings.menuHoverClass).find('ul').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+            } else if (e.keyCode == 39) { //key right
+                e.preventDefault();
+
+                // This is the last item
+                if ($(this).parent('li').next('li').length == 0) {
+                    $(this).parents('ul').find('> li').first().find('a').first().focus();
+                } else {
+                    $(this).parent('li').next('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 40) { //key down
+                e.preventDefault();
+
+                if ($(this).parent('li').find('ul').length > 0) {
+                    $(this).parent('li')
+                         .addClass(settings.menuHoverClass)
+                         .find('ul').css('display', 'block')
+                         .attr('aria-hidden', 'false')
+                         .find('a').attr('tabIndex', 0)
+                         .first().focus();
+                }
+            } else if (e.keyCode == 13 || e.keyCode == 32) { //enter key
+                // If submenu is hidden, open it
+                e.preventDefault();
+
+                $(this).parent('li').find('ul[aria-hidden=true]').attr('aria-hidden', 'false').addClass(settings.menuHoverClass).find('a').attr('tabIndex', 0).first().focus();
+            } else if (e.keyCode == 27) { //escape key
+                e.preventDefault();
+                hideChannelMenu();
+            } else {
+                $(this).parent('li').find('ul[aria-hidden=false] a').each(function() {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        return false;
+                    }
+                });
+            }
+        });
+
+        var links = $(top_level_links).parent('li').find('ul').find('a');
+
+        $(links).keydown(function(e) {
+            if (e.keyCode == 38) {
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).parent('li').prev('li').length == 0) {
+                    $(this).parents('ul').parents('li').find('a').first().focus();
+                } else {
+                    $(this).parent('li').prev('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 40) {
+                e.preventDefault();
+
+                if ($(this).parent('li').next('li').length == 0) {
+                    $(this).parents('ul').parents('li').find('a').first().focus();
+                } else {
+                    $(this).parent('li').next('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 27 || e.keyCode == 37) {
+                e.preventDefault();
+
+                $(this).parents('ul').first().prev('a').focus().parents('ul').first().find('.' + settings.menuHoverClass).attr('aria-hidden', 'true').removeClass(settings.menuHoverClass).find('a').attr('tabIndex', -1);
+            } else if (e.keyCode == 32) {
+                e.preventDefault();
+                window.location = $(this).attr('href');
+            } else {
+                var found = false;
+
+                $(this).parent('li').nextAll('li').find('a').each(function() {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        found = true;
+                        return false;
+                    }
+                });
+
+                if (!found) {
+                    $(this).parent('li').prevAll('li').find('a').each(function() {
+                        if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                            $(this).focus();
+                            return false;
+                        }
+                    });
+                }
+            }
+        });
+
+        function hideChannelMenu() {
+            $('li.sw-channel-item.' + settings.menuHoverClass).attr('aria-hidden', 'true').removeClass(settings.menuHoverClass).find('ul').css('display', 'none').find('a').attr('tabIndex', -1);
+        }
+
+        // Hide menu if click or focus occurs outside of navigation
+        $('#channel-navigation').find('a').last().keydown(function(e) {
+            if (e.keyCode == 9) {
+                // If the user tabs out of the navigation hide all menus
+                hideChannelMenu();
+            }
+        });
+
+        $('#channel-navigation').find('a').first().keydown(function(e) {
+            if (e.keyCode == 9) {
+                // hide open MyStart Bar menus
+                hideMyStartBarMenu();
+            }
+        });
+
+        /*$(document).click(function() {
+            hideChannelMenu();
+        });*/
+
+        $('#channel-navigation').click(function(e) {
+            e.stopPropagation();
+        });
+    });
+    </script>
+    
+    <!-- Page -->
+    
+    <style type="text/css">/* GroupBegin Mystart */
+div.sw-mystart-dropdown.schoollist {
+	display: none;
+}
+div.sw-mystart-button:hover, #sw-mystart-account:hover {
+	background-color: #FFF;
+	color: #333;
+}
+div.sw-mystart-button:hover a, #sw-mystart-account:hover a {
+	color: #333;
+}
+div.sw-mystart-button.home {
+	display: none;
+}
+#sw-footer-outer {
+	display: none;
+}
+#sw-mystart-outer {
+	height: 34px;
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/mystart-bg.png") repeat-x scroll top left;
+}
+#sw-mystart-inner {
+	height: 34px;
+}
+#sw-mystart-left, #sw-mystart-right {
+	height: 34px;
+	text-align: left;
+}
+#sw-search-input:focus {
+	outline: none;
+}
+div#schoolLinks ul {
+	margin: 0px;
+	padding: 10px 0px 0px 0px;
+}
+div#schoolLinks ul li {
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/schoolLink-bullet.png") no-repeat scroll left 1px;
+	display: inline;
+	list-style-type: none;
+	padding-right: 15px;
+}
+div#schoolLinks ul li a {
+	padding-left: 10px;
+	color: #FFF;
+	font-family: Droid Sans, Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.sw-mystart-dropdown {
+	background-color: #FFF;
+	color: #333;
+}
+.sw-mystart-dropdown .sw-dropdown-arrow {
+	background: none;
+	right: -2px;
+	top: 4px;
+	border: 0px none;
+}
+.sw-mystart-dropdown .sw-dropdown {
+	background-color: #FFF;
+	color: #333;
+}
+.sw-mystart-dropdown .sw-dropdown-list li a {
+	color: #333;
+}
+.sw-mystart-dropdown .sw-dropdown-selected {
+	color: #333;
+}
+#sw-myaccount-list li:hover a {
+	color: #FFF;
+}
+/* GroupEnd */  
+/* GroupBegin Global */
+body {
+	background-color: #CCCCCC;
+}
+div#gb-header-outer {
+	width: 100%;
+	height: 150px;
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/gb-header-bg.png") repeat-x scroll bottom left;
+}
+div#gb-header {
+	width: 960px;
+        height: 150px;
+        margin: 0px auto 0px auto;
+}
+div#gb-logo {
+	width: 960px;
+        height: 150px;
+        background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/gb-logo-bg.png") no-repeat scroll top left;
+}
+div#gb-channel-list-outer {
+	width: 100%;
+	height: auto;
+	min-height: 42px;
+	background: #FFF url("/cms/lib5/NJ01000238/Centricity/Template/6/gb-channel-outer-bg.png") no-repeat scroll top center;
+	border-top: 1px solid #FFF;
+	background-color: #FFF;
+}
+div#gb-footer-outer {
+	width: 100%;
+	height: 95px;
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/gb-footer-outer-bg.png") no-repeat scroll top center
+}
+div#gb-footer{
+	width: 960px;
+	height: 95px;
+	margin: 0px auto 0px auto;
+	position: relative;
+}
+div.gb.footer {
+	float: left;
+	height: 75px;
+	width: 470px;
+	font-size: 10px;
+	color: #333;
+	padding: 10px 10px 10px 0px;
+}
+div.gb.footer a {
+	font-size: 10px;
+	color: #333;
+	text-decoration: none;
+}
+div.gb.footer.left {
+	text-align: left;
+}
+div.gb.footer.right {
+	text-align: right;
+	padding-top: 28px;
+	height: 43px;
+}
+div.gb.footer.right a.questions {
+	display: block;
+}
+div.gb.footer.right a.policies {
+	padding-right: 5px;	
+}
+div.gb.footer.right a.terms {
+	padding-left: 5px;
+}
+div#gb-footer-copyright {
+	margin-top: 10px;
+}
+div#directions {
+	width: 150px;
+	float: left;
+	padding-top: 20px;
+	padding-left: 5px;
+	height: 75px;
+}
+div#address {
+	width: 300px;
+	float: left;
+	height: 80px;
+	padding-left: 15px;
+	padding-top: 15px;
+}
+div#address p {
+	margin: 0px;
+	padding: 0px 0px 3px 0px;
+	font-size: 11px;
+}
+div#address p.schoolName {
+	font-weight: bold;
+	font-size: 12px;
+}
+div#gb-footer a.vimeo {
+	position: absolute;
+	top: -19px;
+	left: 10px;
+	display: none;
+}
+/* GroupEnd */
+/* GroupBegin App Styles */
+div.ui-widget.app {
+	
+}
+div.ui-widget.app div.ui-widget-header h1, div.ui-widget.app.navigation div.ui-widget-header h1 {
+	margin: 0px;
+	font-family: 'EB Garamond', serif;;
+	font-size: 22px;
+	font-weight: normal;
+}
+div.ui-widget-title h1 {
+	/*STYLE LIKE H1*/
+}
+h1.ui-article-title {
+	font-size: 12px;
+	font-weight: bold;
+}
+h1.ui-article-title a {
+	color: #333;
+}
+div.ui-article p {
+	margin: 10px 0px;
+}
+.upcomingevents .sw-calendar-block-time {
+	font-size: 10px;
+}
+.upcomingevents .sw-calendar-block-title a {
+	font-size: 12px;
+}
+.upcomingevents a.view-calendar-link { 
+	font-size: 12px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+#hp-content div.ui-widget.app .ui-widget-header {
+	-webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+	behavior: url(/cms/lib02/PA01001942/Centricity/Template/115/scripts/PIE.htc);
+	height: 42px;
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/app-header-bg.png") repeat-x scroll top left;
+}
+div#hp-content div.ui-widget.app .ui-widget-header h1 {
+	color: #FFF;
+	padding: 5px 20px;
+}
+div#hp-content div.ui-widget.app .ui-widget-detail {
+	padding: 10px 20px 0px 20px;
+	width: 277px;
+}
+div#hp-content div.ui-widget.app .ui-widget-footer {
+	padding: 0px 20px 0px 20px;
+	width: 277px;
+}
+div.hp.column.one div.ui-widget.app .ui-widget-detail, div.hp.column.one div.ui-widget.app .ui-widget-footer {
+	border-right: 1px solid #CCC;
+}
+div.hp.column.three div.ui-widget.app .ui-widget-detail, div.hp.column.three div.ui-widget.app .ui-widget-footer {
+	border-left: 1px solid #CCC;
+}
+div.ui-widget.app.announcements .ui-article p {
+	margin: 0px;
+	padding: 0px;
+}
+div#hp-slideshow #sw-content-container1 div.ui-widget.app .ui-widget-header {
+	display: none;
+} 
+div#hp-slideshow #sw-content-container1 {
+	width: 225px;
+	height: 237px;
+	padding: 0px 0px 0px 15px;
+	margin-top: 7px;
+	font-size: 36px;
+	font-family: Qwigley;
+	overflow: hidden;
+}
+div#hp-slideshow #sw-content-container1 div.ui-widget.app.siteshortcuts li {
+	border-bottom: 2px solid #D2D5E8;
+	line-height: 20px;
+	margin: 0px;
+	padding: 0px;
+}
+div#hp-slideshow #sw-content-container1 div.ui-widget.app.siteshortcuts li a {
+	padding: 14px 0px 3px 0px;
+}
+div.sp.column.one div.ui-widget.app {
+	z-index: 6000;
+}
+div.sp.column.one div.ui-widget.app .ui-widget-header {
+	min-height: 38px;
+}
+div.sp.column.one div.ui-widget.app .ui-widget-header h1 {
+	color: #FFF;
+	z-index: 6001;
+	padding: 5px 17px; 
+	font-family: Carme;
+	font-size: 22px;
+	font-weight: normal;
+}
+div.sp.column.one div.ui-widget.app .ui-widget-detail {
+	color: #333;
+	padding: 5px 17px; 
+}
+div.sp.column.one div.ui-widget.app .ui-widget-detail a {
+	color: #333;
+}
+div.sp.column.two div.ui-widget.app, div#spn-content div.ui-widget.app {
+	padding: 0px 7.5px 5px 7.5px; 
+}
+div.sp.column.one div.ui-widget.app.navigation.pagenavigation .ui-widget-detail > ul {
+	position: relative;
+	z-index: 200;
+}
+div#spn-content div#searchresults-pnl-main div.ui-widget-header {
+	padding: 0px;
+}
+/* GroupEnd */
+/* GroupBegin Homepage */
+div#hp-search {
+	width: 240px;
+	height: 49px;
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/search.png") no-repeat scroll 10px center;
+}
+div#sw-mystart-search {
+	font-size: 10px;
+	color: #333;
+	margin: 16px 3px 0px 14px;
+	background-color: transparent;
+	width: 219px;
+}
+div#hp-search #sw-search-input {
+	background: transparent;
+	width: 180px;
+	height: 17px;
+	margin: 0px;
+	padding: 2px 5px 0px 5px;
+	border: 0px;
+	color: #333;
+}
+div#hp-search #sw-search-button {
+	width: 27px;
+	height: 18px;
+	margin: 1px 0px 0px 0px;
+	border-left: 0px none #333;
+}
+#sw-search-button span img {
+	display: none;
+}
+div.column {
+	float: left;
+}
+div#hp-content-outer {
+	width: 100%;
+	background-color: #FFF;
+}
+div#hp-content {
+	width: 960px;
+	height: auto;
+	margin: 0px auto 0px auto;
+	padding-bottom: 30px;
+}
+div#hp-content a {
+	color: #333;
+}
+div.hp.column.one {
+	width: 318px;
+	height: auto;
+}
+div.hp.column.two {
+	width: 318px;
+	height: auto;
+	margin: 0px 3px;
+}
+div.hp.column.three {
+	width: 318px;
+	height: auto;
+}
+/* GroupEnd */
+/* GroupBegin Photo Area */
+div#hp-slideshow-outer {
+	width: 100%;
+	height: 300px;
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/slideshow-outer-bg.png") repeat-x scroll top left;
+}
+div#hp-slideshow {
+	width: 960px;
+	height: 300px;
+	margin: 0px auto 0px auto;
+	position: relative;
+}
+div#hp-slideshow-bg {
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/slideshow-bg.png") no-repeat scroll top left;
+	height: 300px;
+	width: 1004px;
+	position: absolute;
+	bottom: 0px;
+	left: -23px;
+}
+div#hp-slideshow-left {
+	width: 240px;
+	height: 300px;
+	float: left;
+}
+div#hp-slideshow-right {
+	width: 720px;
+	height: 300px;
+	float: left;
+	position: relative;
+}
+div#sw-content-container10 {
+	width: 720px;
+	height: 300px;
+	overflow: hidden;
+	float: right;
+}
+/* GroupEnd */ 
+/* GroupBegin Subpage */
+div#sp-content-outer {
+	width: 100%;
+	position: relative;
+	background-color: #FFF;
+}
+div#sp-middle-bg {
+	width: 100%;
+	height: 300px;
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/slideshow-outer-bg.png") repeat-x scroll top left;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+div#sp-content {
+	width: 960px;
+	height: auto;
+	margin: 0px auto 0px auto;
+	position: relative;
+	min-height: 500px;
+	overflow: hidden;
+	padding-bottom: 30px;
+}
+div#sp-search {
+	width: 240px;
+	height: 47px;
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/sp-search.png") no-repeat scroll 0px 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 101;
+}
+div#sp-search #sw-search-input {
+	background: transparent;
+	width: 178px;
+	height: 17px;
+	margin: 0px;
+	padding: 0px 3px 0px 5px;
+	border: 0px;
+	color: #333;
+}
+div#sp-search #sw-search-button {
+	width: 27px;
+	height: 18px;
+	margin: 0px 0px 0px 0px;
+	border-left: 0px none #333;
+}
+div.sp.column.one {
+	width: 240px;
+	height: auto;
+	margin-top: 47px;
+	margin-bottom: -3000px;
+	padding-bottom: 3000px;
+	position: relative;
+}
+div#shadow-overlay {
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/sp-column-one-shadow.png") no-repeat scroll top left;
+	height: 304px;
+	width: 240px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+div#grad-overlay {
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/sp-column-one-bg.png") no-repeat scroll top left;
+	height: 373px;
+	width: 240px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+div.sp.column.two {
+	width: 690px;
+	height: auto;
+	margin-bottom: -3000px;
+	padding: 15px 15px 3000px 15px;
+	background: #FFF url("/cms/lib5/NJ01000238/Centricity/Template/6/sp-column-one-border.png") repeat-y scroll top left;
+	position: relative;
+}
+div#sp-column-two-shadow {
+	background: #FFF url("/cms/lib5/NJ01000238/Centricity/Template/6/sp-column-two-shadow.png") no-repeat scroll top right;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 11px;
+	height: 296px;
+}
+/* GroupEnd */
+/* GroupBegin Subpage No Nav */
+div#spn-content {
+	width: 930px;
+	height: auto;
+	margin: 0px auto 0px auto;
+	background-color: #FFF;
+	position: relative;
+	padding: 10px 15px 30px 15px;
+	min-height: 500px;
+}
+div#spn-content #sw-content-layout-wrapper {
+	margin-top: 47px;
+}
+/* GroupEnd */ 
+/* GroupBegin Navigation Styles */
+div.sp.column.one div.ui-widget.app.navigation.pagenavigation li div.bullet{
+	background-position: 0px 2px;
+	background-image: url("/cms/lib5/NJ01000238/Centricity/Template/6/sp-bullet.png");
+}
+div#hp-content div.ui-widget.app.navigation.siteshortcuts li div.bullet{
+	background-position: 0px 0px;
+	background-image: url("/cms/lib5/NJ01000238/Centricity/Template/6/bullet.png");
+}
+div#hp-slideshow-left #sw-content-container1 div.ui-widget.app.navigation li div.bullet{
+	background-position: 0px 14px;
+	background-image: url("/cms/lib5/NJ01000238/Centricity/Template/6/bullet2.png");
+	height: 25px;
+}
+/* GroupEnd */
+ 
+/* GroupBegin Channel Bar Styles */
+#sw-channel-list-container {
+	display: block;
+	width: 960px;
+	margin: 0px auto 0px auto;
+	min-height: 43px;
+}
+ul.sw-channel-list {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+ul.sw-channel-list li.sw-channel-item {
+	float: left;
+	height: 43px;
+	list-style: none outside none;
+	margin: 0;
+	position: relative;
+}
+li.sw-channel-item > a {
+	color: #333;
+	display: block;
+	height: 100%;
+	padding: 0 15px 0 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: Carme;
+	font-size: 14px;
+}
+li.sw-channel-item > a span {
+	display: block;
+	padding: 15px 0 14px 15px;
+}
+li.sw-channel-item.hover > a {
+	color: #333;
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/channel_active.png") repeat-x scroll top left;
+}
+li.sw-channel-item.hover > a span {
+}
+li.sw-channel-item.active > a {
+	color: #333;
+	background: transparent url("/cms/lib5/NJ01000238/Centricity/Template/6/channel_active.png") repeat-x scroll top left;
+}
+li.sw-channel-item.active > a span {
+}
+/* GroupEnd */ 
+/* GroupBegin Channel Bar Dropdown Styles */
+ul.sw-channel-dropdown {
+	background: none repeat scroll 0 0 #F3F3F3;
+	border-top: 0px none #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	display: none;
+	font-size: 12px;
+	font-weight: normal;
+	left: -1px;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 43px;
+	width: 180px;
+	z-index: 7001;
+}
+ul.sw-channel-dropdown li {
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;
+	display: block;
+	height: auto;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	white-space: pre-wrap;
+	width: 180px;
+}
+ul.sw-channel-dropdown li a {
+	background: none repeat scroll 0 0 transparent;
+	color: #FFF;
+	display: block;
+	padding: 7px 10px;
+	text-decoration: none;
+	width: 160px;
+}
+ul.sw-channel-dropdown li a:hover {
+	background: none repeat scroll 0 0 #E2E2E2;
+	color: #333;
+}
+.sw-channel-more-li {
+	background-color: #333333;
+	background-image: url("http://c2.creative.schoolwires.net//GlobalAssets/Images/Backgrounds/sw-channel-more-chevron.png");
+	background-position: right top;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+ul.sw-channel-dropdown li.sw-channel-more-li a:hover {
+	background-color: #333333;
+	background-image: url("http://c2.creative.schoolwires.net//GlobalAssets/Images/Backgrounds/sw-channel-more-chevron.png");
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+.sw-channel-more-span {
+	color: #FFFFFF;
+}       
+/* GroupEnd */  
+/* GroupBegin EditorStyles */
+body {
+	font-family: Arial, Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #333;
+}
+h1 {
+	font-size: 20px;
+	line-height: 1.5;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h2 {
+	font-size: 18px;
+	line-height: 1.5;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h3 {
+	font-size: 16px;
+	line-height: 1.2;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+}
+h4 {
+	font-size: 14px;
+	line-height: 1.2;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+}
+h5 {
+	font-size: 12px;
+	line-height: 1;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: bold;
+}
+h6 {
+	font-size: 12px;
+	line-height: 1;		
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+	font-style: italic;
+}
+.title {
+	font-weight:bold;
+}
+.subtitle {
+	font-style:italic;
+}     
+/* GroupEnd */         
+
+/* GroupBegin HEADLINES */
+div.joey-headline-container {
+	position: relative;
+	width: 720px;
+	height: 300px;
+	margin: 0px;
+	padding: 0px;
+}
+div#hp-slideshow div.joey-headline-container ul.pictures {
+	position: relative;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	width: 720px;
+	height: 300px;
+	overflow: hidden;
+}
+div#hp-slideshow div.joey-headline-container ul.pictures li.imgHolder {
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: list-item;
+}
+div#hp-slideshow div.joey-headline-container ul.pictures li img {
+	width: 720px;
+	height: 300px;
+}
+div#hp-slideshow div.joey-headline-container div.description {
+	height: 28px;
+	left: 0px;
+	position: absolute;
+	bottom: 0px;
+	width: 585px;
+	z-index: 100;
+	overflow: hidden;
+	background: #000;
+	padding: 7px 15px;
+}
+div.joey-headline-container div.description span {
+	font-family: Arial, san-serif;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 14px;
+	margin: 0px;
+	color: #FFF;
+}
+div.joey-headline-container div.readmore {
+	bottom: 0px;
+	height: 42px;
+	right: 0px;
+	position: absolute;
+	width: 107px;
+	z-index: 101;
+	background: #666 url("/cms/lib5/NJ01000238/Centricity/Template/6/readmore-bg.png") repeat-x scroll top left;
+}
+div.joey-headline-container a.readmore-link {
+	cursor: pointer;
+	font-family: Arial, san-serif;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 14px;
+	margin: 0px 0px 0px 0px;
+	color: #333333;
+	padding: 0px 0px 0px 0px;
+	text-decoration: none;
+}
+div.joey-headline-container a.readmore-link span {
+	display: block;
+	font-family: Times New Roman, serif;
+	font-size: 20px;
+	font-weight: normal;
+	font-style: italic;
+	line-height: 14px;
+	margin: 0px 0px 0px 0px;
+	color: #fff;
+	padding: 13px 0px 0px 12px;
+	text-transform: lowercase;
+}
+div#sw-content-container10.region.ui-hp div.ui-widget.app.headlines {
+	display: none;
+}
+
+/* GroupEnd */       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </style>
+    <link href='http://fonts.googleapis.com/css?family=Carme|Droid+Sans|Qwigley|EB+Garamond' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="/cms/lib5/NJ01000238/Centricity/Template/6/scripts/jquery.ba-resize.min.js"></script>
+<script language="javascript" src="/cms/lib5/NJ01000238/Centricity/Template/6/scripts/joey.Headlines.Rotate.jQuery.js"></script>
+<script type="text/javascript" src="/cms/lib5/NJ01000238/Centricity/Template/6/setup/default.txt"></script>
+<script type="text/javascript" src="/cms/lib5/NJ01000238/Centricity/Template/6/setup/pascackvhs.txt"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		sameHeight();
+		searchText();
+		dynamicStylesheet();
+		dynamicContent();
+		addFramesetTranslate();
+		useChannelForSection();
+		addSchoolLinks();
+		showHideVimeo();
+		
+		$("#sw-content-container10.region.ui-hp div.ui-widget.app.headlines").simpleHeadlines({
+			"delay"			: 8,
+			"fadeSpeed"		: 2,
+			"useTitles"		: "no",
+			"useDescriptions"	: "yes",
+			"useLinks"		: "yes",
+			"useLiOverlays"		: "no",
+			"controls"		: "no",
+			"removeStyles"		: "yes"
+		});
+		
+		$("div#hp-slideshow #sw-content-container1 div.ui-widget.app.siteshortcuts li:last").css("border-bottom" , "0px none");
+		$(".sw-dropdown-arrow").text("▼");
+		$("div.sw-mystart-dropdown.translate").before("<div class='sw-mystart-button email'><a href='https://webmail.pascack.k12.nj.us' target='_blank'><span>Email</span></a></div>");
+		$("div.joey-headline-container div.description").appendTo("div#hp-slideshow-right");
+		
+	});
+	function dynamicStylesheet() {
+		var dynStyleSheet = document.createElement('style');
+		if(dynStyleSheet) {
+			dynStyleSheet.setAttribute('type', 'text/css');
+			var head = document.getElementsByTagName('head')[0];
+			if(head) {
+	      			head.appendChild(dynStyleSheet);
+			}
+			var dynStyles = "li.sw-channel-item.active > a, li.sw-channel-item.hover > a {" +
+					"	background-color: " + secondaryColor + ";" +
+					"}" + 
+					".sw-mystart-dropdown .sw-dropdown-list li:hover, #sw-myaccount-list li:hover {" +
+					"	background-color: " + primaryColor + ";" +
+					"}";
+			var rules = document.createTextNode(dynStyles);
+			if(dynStyleSheet.styleSheet){// IE
+				dynStyleSheet.styleSheet.cssText = dynStyles;
+			} else {
+				dynStyleSheet.appendChild(rules);
+			}
+		}
+	}
+	function dynamicContent() {
+		
+        	//CHANGE COLORS
+        	$("#sw-mystart-outer, #gb-header-outer, #hp-slideshow-outer, div#sp-middle-bg, div#sp-search").css("background-color" , primaryColor);
+        	$("div#hp-slideshow #sw-content-container1 div.ui-widget.app.siteshortcuts li a").css("color" , primaryColor);
+        	
+        	$("#hp-content div.ui-widget.app .ui-widget-header, ul.sw-channel-dropdown, div#grad-overlay, div.sp.column.one div.ui-widget.app .ui-widget-header").css("background-color" , secondaryColor);
+        }
+        function addSchoolLinks() {
+        	$("<div id='schoolLinks'><ul><li><a href='/'>District</a></li><li><a href='/pascackhhs'>Pascack Hills HS</a></li><li><a href='/pascackvhs'>Pascack Valley HS</a></li></ul></div>").prependTo("#sw-mystart-left");
+        }
+        function showHideVimeo() {
+        	if(showVimeo == "on") {
+        		$("#gb-footer a.vimeo").css("display" , "block");
+        	} else {
+        	}
+        }
+        function addFramesetTranslate(){
+		var pageURL = window.location.href;
+		var translateDropdown = '<div class="sw-mystart-dropdown translate">' +
+							'<div class="selector">Translate this page...</div>' +
+							'<div class="sw-dropdown" style="display: none;">' +
+								'<div class="sw-dropdown-selected">Translate this page...</div>' +
+								'<ul class="sw-dropdown-list">' +
+									'<li>' +
+										'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|es&hl=en&anno=0&ie=UTF8">English to Spanish</a>' +
+									'</li>' +
+									'<li>' +
+										'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ar&hl=en&anno=0&ie=UTF8">English to Arabic</a>' +
+									'</li>' +
+									'<li>' +
+										'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|zh-CN&hl=en&anno=0&ie=UTF8">English to Chinese (Simplified)</a>' +
+									'</li>' +
+									'<li>' +
+										'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|zh-TW&hl=en&anno=0&ie=UTF8">English to Chinese (Traditional)</a>' +
+									'</li>' +
+									'<li>' +
+										'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|fr&hl=en&anno=0&ie=UTF8">English to French</a>' +
+									'</li>' +
+									'<li>' +
+										'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|de&hl=en&anno=0&ie=UTF8">English to German</a>' +
+									'</li>' +
+									'<li>' +
+										'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|it&hl=en&anno=0&ie=UTF8">English to Italian</a>' +
+									'</li>' +
+									'<li>' +
+										'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ja&hl=en&anno=0&ie=UTF8">English to Japanese</a>' +
+									'</li>' +
+									'<li>' +
+										'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ko&hl=en&anno=0&ie=UTF8">English to Korean</a>' +
+									'</li>' +
+									'<li>' +
+										'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|pt&hl=en&anno=0&ie=UTF8">English to Portuguese</a>' +
+									'</li>' +
+									'<li>' +
+										'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ru&hl=en&anno=0&ie=UTF8">English to Russian</a>' +
+									'</li>' +
+								'</ul>' +
+							'</div>' +
+							'<div class="sw-dropdown-arrow"></div>' +
+						'</div>';
+		var pageHost = window.location.host;
+		if(pageHost != "translate.googleusercontent.com")
+		{				
+			$("#sw-mystart-right div.clear").before(translateDropdown);
+			$(".sw-mystart-dropdown.translate").click(function()
+			{
+				$(".sw-dropdown",this).show();
+			});
+			$(".sw-mystart-dropdown.translate").hover(function()
+			{
+			},
+			function()
+			{
+				$(".sw-dropdown",this).hide();
+			});
+		}
+		
+	}
+        function useChannelForSection() {
+	       if(!$("div.sp.column.one .ui-widget-header h1").length > 0) {
+	                   $("div.sp.column.one .ui-widget-header").append("<h1>Faculty</h1>");
+	           }
+	}
+        function searchText() {
+	        //SEARCH TEXT
+	        $("div#sw-mystart-search input#sw-search-input").removeAttr("placeholder");
+		$("div#sw-mystart-search input#sw-search-input").attr("value", "Search...");
+		$("div#sw-mystart-search input#sw-search-input").focus(function() {
+			if($(this).val() == "Search...") {
+				$(this).val("");
+			}
+		});
+		$("div#sw-mystart-search input#sw-search-input").blur(function() {
+			if($(this).val() == "") {
+				$(this).val("Search...");
+			}
+		});
+	}
+	function sameHeight() {
+		if($(".ui-hp").size() > 0) {
+			var contentHeight = $("#hp-content").height();
+			$("div.hp.column .ui-widget-detail").height(contentHeight);
+		}
+	}	
+</script>             
+<!--[if IE 7]>
+<style>
+#hp-slideshow div.ui-widget.app.navigation.siteshortcuts li {
+	display: inline-block;
+}
+div#shadow-overlay {
+	display: none;
+}
+</style>
+<![endif]-->     
+        
+        
+    
+    <!-- App Preview -->
+    
+	
+	
+	<style type="text/css">
+		/* HOMEPAGE EDIT THUMBNAIL STYLES */
+		
+		div.region {
+		    
+		}
+		
+		div.region span.homepage-thumb-region-number {
+		    font: bold 100px verdana;
+		    color: #fff;  
+		}
+		
+		div.homepage-thumb-region {
+		    background: #264867; /*dark blue*/
+		    border: 5px solid #fff;
+		    text-align: center;
+		    padding: 40px 0 40px 0;
+		    display: block;
+		}
+		div.homepage-thumb-region.region-1 {
+		    background: #264867; /*dark blue*/
+		}
+		div.homepage-thumb-region.region-2 {
+		    background: #5C1700; /*dark red*/
+		}
+		div.homepage-thumb-region.region-3 {
+		    background: #335905; /*dark green*/
+		}
+		div.homepage-thumb-region.region-4 {
+		    background: #B45014; /*dark orange*/
+		}
+		div.homepage-thumb-region.region-5 {
+		    background: #51445F; /*dark purple*/
+		}
+		div.homepage-thumb-region.region-6 {
+		    background: #3B70A0; /*lighter blue*/
+		}
+		div.homepage-thumb-region.region-7 {
+		    background: #862200; /*lighter red*/
+		}
+		div.homepage-thumb-region.region-8 {
+		    background: #417206; /*lighter green*/
+		}
+		div.homepage-thumb-region.region-9 {
+		    background: #D36929; /*lighter orange*/
+		}
+		div.homepage-thumb-region.region-10 {
+		    background: #6E5C80; /*lighter purple*/
+		}
+		
+		/* END HOMEPAGE EDIT THUMBNAIL STYLES */
+	</style>
+	
+	<style type="text/css" media="print">
+       .noprint {
+           display: none !important;
+       }
+    </style>
+    
+    
+
+<!-- Begin Schoolwires Traffic Code --> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5173826-6']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+
+    // Added Custom Variable to allow us to filter based on hosting type, so we can see stats for each environment. Pulls from web config.
+  _gaq.push(['_setCustomVar',
+    1,                // This custom var is set to slot #1.  Required parameter.
+    'Hosting Type',    // The name of the custom variable.  Required parameter.
+    'SAASP',        // The value of the custom variable.  Required parameter.
+                      //  (possible values might be Free, Bronze, Gold, and Platinum)
+    1                 // Sets the scope to visitor-level.  Optional parameter.
+  ]);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- End Schoolwires Traffic Code -->  
+ 
+    
+</head>
+<body>
+
+    <!-- ADA Skip Nav -->
+    <div class="sw-skipnav-outerbar">
+        <a href="#sw-maincontent" id="skipLink" class="sw-skipnav">Skip to Main Content</a>
+    </div>
+
+<!-- off-canvas menu enabled-->
+
+
+	
+
+<style type="text/css">
+	/* SPECIAL MODE BAR */
+	div.sw-special-mode-bar {
+		background: #FBC243 url('http://www.pascack.k12.nj.us/Static/V2_10_01//GlobalAssets/Images/special-mode-bar-background.png') no-repeat;
+		height: 30px;
+		text-align: left;
+		font-size: 12px;
+		position: relative;
+		z-index: 10000;
+	}
+	div.sw-special-mode-bar > div {
+		padding: 8px 0 0 55px;
+		font-weight: bold;
+	}
+	div.sw-special-mode-bar > div > a {
+		margin-left: 20px;
+		background: #A0803D;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		color: #fff;
+		padding: 4px 6px 4px 6px;
+		font-size: 11px;
+	}
+	
+	body.blue div.sw-special-mode-bar, body.green div.sw-special-mode-bar, body.red div.sw-special-mode-bar {
+	    display: none;
+	}
+
+	/* END SPECIAL MODE BAR */
+</style>
+
+<script type="text/javascript">
+	
+	function SWEndPreviewMode() { 
+		var data = "{}";
+		var success = "window.location='';";
+		var failure = "CallControllerFailure(result[0].errormessage);";
+		CallController("http://www.pascack.k12.nj.us/site/SiteController.aspx/EndPreviewMode", data, success, failure);
+	}
+	
+	function SWEndEmulationMode() {
+		SetUnescapedCookie('UserID', GetCookie('SourceEmulationUserID'));
+		DeleteCookie('SourceEmulationUserID');
+		window.location = 'http://www.pascack.k12.nj.us/ums/Users/Users.aspx';
+	}
+
+	function SWEndPreviewConfigMode() {
+	    var data = "{}";
+	    var success = "window.location='';";
+	    var failure = "CallControllerFailure(result[0].errormessage);";
+	    CallController("http://www.pascack.k12.nj.us/site/SiteController.aspx/EndPreviewConfigMode", data, success, failure);
+	}
+</script>
+            
+
+    <!-- BEGIN - MYSTART BAR -->
+<div id='sw-mystart-outer' class='noprint'>
+<div id='sw-mystart-inner'>
+<div id='sw-mystart-left'>
+<div class='sw-mystart-nav sw-mystart-button home'><a tabindex="0" href="http://www.pascack.k12.nj.us/Domain/1" alt="District Home" title="Return to the homepage on the district site."><span>District Home<div id='sw-home-icon'></div>
+</span></a></div>
+<div class='sw-mystart-nav sw-mystart-dropdown schoollist' tabindex='0'>
+<div class='selector'>Select a School...</div>
+<div class='sw-dropdown'>
+<div class='sw-dropdown-selected'>Select a School</div>
+<ul class='sw-dropdown-list'>
+<li><a href="/Domain/43">Pascack Hills High School</a></li>
+<li><a href="/Domain/183">Pascack Valley High School</a></li>
+</ul>
+</div>
+<div class='sw-dropdown-arrow'></div>
+</div>
+</div>
+<div id='sw-mystart-right'>
+<div id='ui-btn-signin' class='sw-mystart-button signin'><a href="https://www.pascack.k12.nj.us/site/Default.aspx?PageType=7&SiteID=183&IgnoreRedirect=true" title="Sign in to your website."><span>Sign In</span></a></div>
+<div id='ui-btn-register' class='sw-mystart-button register'><a href="https://www.pascack.k12.nj.us/site/Default.aspx?PageType=10&SiteID=183" title="Register for this site."><span>Register</span></a></div>
+<div id='sw-mystart-search' class='sw-mystart-nav'>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#sw-search-input').keyup(function(e) {        if (e.keyCode == 13) {
+            SWGoToSearchResultsPageswsearchinput();
+        }
+    });
+    $('#sw-search-input').val($('#swsearch-hid-word').val())});
+function SWGoToSearchResultsPageswsearchinput() {
+window.location.href="http://www.pascack.k12.nj.us/site/Default.aspx?PageType=6&SiteID=183&SearchString=" + $('#sw-search-input').val();
+}
+</script>
+<input id="sw-search-input" type="text" title="Type the word to search for and click Search." placeholder="Search this Site..." />
+<a tabindex="0" id="sw-search-button" onclick="SWGoToSearchResultsPageswsearchinput();"><span><img src="http://www.pascack.k12.nj.us/Static/V2_10_01//globalassets/images/sw-mystart-search.png" alt="Search" /></span></a>
+</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+<!-- END - MYSTART BAR -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		modSearch();
+		$("div#grad-overlay").prependTo("div.sp.column.one .ui-widget.app .ui-widget-detail");
+		$("div#shadow-overlay").prependTo("div.sp.column.one");
+	});
+	function modSearch() {
+		$("#sw-mystart-search").prependTo("#sp-search");
+	}
+</script>
+<div id="gb-header-outer">
+	<div id="gb-header">
+		<div id="gb-logo">
+			<a href="/pascackvhs" title="Pascack Valley High School">
+				<img src="/cms/lib5/NJ01000238/Centricity/Template/6/logos/pascackvhs.png" alt="Pascack Valley High School" />
+			</a>		
+		</div>
+	</div>
+</div>
+<div id="gb-channel-list-outer">
+	<div id="sw-channel-list-container">
+<ul id="channel-navigation" class="sw-channel-list">
+<li class="sw-channel-item "><a href="/Page/2632"><span>Home</span></a></li>
+<li class="sw-channel-item ">
+<a href="/domain/185">
+<span>Administration</span></a>
+<ul class="sw-channel-dropdown">
+<li class=""><a href="/domain/185"><span>Administration</span></a></li>
+<li class=""><a href="/domain/291"><span>DeMaio, Thomas</span></a></li>
+<li class=""><a href="/domain/326"><span>Puccio, John</span></a></li>
+<li class=""><a href="/domain/336"><span>Squiccimarri, Debbie</span></a></li>
+<li class=""><a href="/domain/526"><span>PV Wellness</span></a></li>
+</ul>
+</li><li class="sw-channel-item ">
+<a href="/domain/187">
+<span>Alumni</span></a>
+</li><li class="sw-channel-item ">
+<a href="/domain/189">
+<span>Athletics</span></a>
+</li><li class="sw-channel-item ">
+<a href="/domain/197">
+<span>Departments</span></a>
+<ul class="sw-channel-dropdown">
+<li class=""><a href="/domain/197"><span>English</span></a></li>
+<li class=""><a href="/domain/198"><span>Family and Consumer Sciences</span></a></li>
+<li class=""><a href="/domain/199"><span>Fine Arts</span></a></li>
+<li class=""><a href="/domain/200"><span>Guidance</span></a></li>
+<li class=""><a href="/domain/201"><span>Health & Physical Education</span></a></li>
+<li class=""><a href="http://www.pascack.k12.nj.us/Page/141"><span>Instructional Technology</span></a></li>
+<li class=""><a href="/site/Default.aspx?PageID=9187"><span>Mathematics</span></a></li>
+<li class=""><a href="/domain/203"><span>Music</span></a></li>
+<li class=""><a href="/domain/204"><span>Science</span></a></li>
+<li class=""><a href="/domain/205"><span>Social Studies</span></a></li>
+<li class=""><a href="/domain/206"><span>Special Services</span></a></li>
+<li class=""><a href="/domain/207"><span>Technology Education</span></a></li>
+<li class=""><a href="/domain/208"><span>World Languages</span></a></li>
+</ul>
+</li><li class="sw-channel-item active">
+<a href="http://www.pascack.k12.nj.us/site/Default.aspx?PageType=1&SiteID=183&ChannelID=210&DirectoryType=6
+">
+<span>Faculty</span></a>
+</li><li class="sw-channel-item ">
+<a href="http://pvsmokesignal.com">
+<span>SmokeSignal</span></a>
+</li><li class="sw-channel-item ">
+<a href="/domain/351">
+<span>PVHSPFO</span></a>
+</li><li class="sw-channel-item ">
+<a href="http://www.pascack.k12.nj.us/Page/2633">
+<span>Calendar</span></a>
+<ul class="sw-channel-dropdown">
+<li class=""><a href="http://www.pascack.k12.nj.us/Page/2633"><span>Detailed View by Month</span></a></li>
+<li class=""><a href="http://www.pascack.k12.nj.us/cms/lib5/NJ01000238/Centricity/Domain/18/Calendar%20%202013-2014%20%20board%20approved%204-22-13.pdf"><span>District Calendar 2013 2014</span></a></li>
+<li class=""><a href="http://www.pascack.k12.nj.us/cms/lib5/NJ01000238/Centricity/Domain/18/Calendar2014-2015-Approved-1-27-14.pdf"><span>District Calendar 2014-2015</span></a></li>
+</ul>
+</li></ul><div class='clear'></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        channelHoverIE();
+        channelTouch();
+    });
+
+    function channelTouch() {
+        // this will change the dropdown behavior when it is touched vs clicked.
+        // channels will be clickable on second click. first click simply opens the menu.
+        $('#channel-navigation > .sw-channel-item > a').on({
+            'touchstart': function (e) {
+                
+                // see if has menu
+                if ($(this).siblings('ul.sw-channel-dropdown').length > 0) {
+                    var button = $(this);
+
+                    // add href as property if not already set
+                    // then remove href attribute
+                    if (!button.prop('linkHref')) {
+                        button.prop('linkHref', button.attr('href'));
+                        button.removeAttr('href');
+                    }
+
+                    // check to see if menu is already open
+                    if ($(this).siblings('ul.sw-channel-dropdown').is(':visible')) {
+                        // if open go to link
+                        window.location.href = button.prop('linkHref');
+                    } 
+
+                } 
+            }
+        });
+    }
+
+
+    
+    function channelHoverIE(){
+		// set z-index for IE7
+		var parentZindex = $('#channel-navigation').parents('div:first').css('z-index');
+		var zindex = (parentZindex > 0 ? parentZindex : 8000);
+		$(".sw-channel-item").each(function(ind) {
+			$(this).css('z-index', zindex - ind);
+			zindex --;
+		});
+	    $(".sw-channel-item").hover(function(){
+	        var subList = $(this).children('ul');
+	        if ($.trim(subList.html()) !== "") {
+		        subList.show();
+		    }
+		    $(this).addClass("hover");
+	    }, function(){
+		    $(".sw-channel-dropdown").hide();
+		    $(this).removeClass("hover");
+	    });
+    }
+
+</script>
+
+
+</div>
+<div id="sp-content-outer">
+	<div id="sp-middle-bg"></div>
+	<div id="sp-content" class="ui-clear">
+		
+		<div id="sp-search"></div>
+		<div class="sp column one">
+			<div id="shadow-overlay"></div>
+			<div id="grad-overlay"></div>
+			<div class='ui-widget app navigation pagenavigation'>
+<div class="ui-widget-header">
+<h1>
+Flynn, Theresa</h1>
+</div>
+<div class='ui-widget-detail'>
+<ul class="page-navigation">
+<li id="pagenavigation-4507" class="">
+<a href="/Page/4507">
+<span>Overview</span>
+</a>
+</li>
+<li id="pagenavigation-4510" class="">
+<a href="/Page/4510">
+<span>World History</span>
+</a>
+</li>
+<li id="pagenavigation-4509" class="active">
+<a href="/Page/4509">
+<span>Financial Literacy </span>
+</a>
+</li>
+<li id="pagenavigation-4511" class="">
+<a href="/Page/4511">
+<span>Classroom links</span>
+</a>
+</li>
+<li id="pagenavigation-4514" class="">
+<a href="/Page/4514">
+<span>Calendar</span>
+</a>
+</li>
+<li id="pagenavigation-9307" class="">
+<a href="/Page/9307">
+<span>Hand outs -  World History</span>
+</a>
+</li></ul>
+</div>
+<div class="ui-widget-footer">
+</div>
+</div>
+
+		</div>
+		<div class="sp column two">
+			<div id="sp-column-two-shadow"></div>
+			<!-- Start Centricity Content Area --><a id="sw-maincontent" name="sw-maincontent"></a><div id="sw-content-layout-wrapper" class="ui-sp ui-print"><div id="sw-content-layout1"><div id="sw-content-container1" class="ui-column-one region"><div id='pmi-3016'>
+
+
+
+<div id='sw-module-31240'>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var DomainID = '299';
+            var PageID = '4509';
+            var RenderLoc = '0';
+            var MIID = '3124';
+
+            //added to check to make sure moderated content doesn't bleed through the dialog
+            if ($('#dialog-overlay-WindowLargeModal-body.moderateContent').length > 0) {
+                $("#module-content-" + MIID).find(".ui-widget-detail").find(".ui-article").append("<p>&nbsp;</p>");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">$(document).ready(function() {CheckScript('ModuleView');CheckScript('Mustache');
+ });</script>
+    
+    <div id="module-content-3124" >
+<div class="ui-widget app flexpage">
+	<div class="ui-widget-header ui-helper-hidden">
+		
+	</div>
+	
+	<div class="ui-widget-detail">
+		
+<div class="ui-article"><span ><p><a href="http://http://www.irs.gov/Individuals/IRS-Withholding-Calculator" target="_blank">http://http://www.irs.gov/Individuals/IRS-Withholding-Calculator</a>&nbsp;</p><div>Week of:</div>
+
+<p>1/31 - Introduction to class</p>
+
+<ul><li>&nbsp;Complete individual evaluation sheet for weekly simulation.&nbsp; Getting to know you activity.</li><li>"Who wants to me a millionaire?"</li><li>The importance of compounding interest.&nbsp; What is it and how does it 
+benefit me?</li></ul><p>2/7<br /></p><p><span style="text-decoration: underline;">Objectives: </span><br /></p><ul><li>Why save?&nbsp; Examine types of saving and the pros and cons of each along with the interest generally earned.</li><li>Create a chart with a partner on the above information. Discuss with class.</li><li>Set up weekly simulation on paying bills and managing a checkbook.</li><li>Create a chart with a partner on the above information. Discuss with class. Due Wed<br /></li></ul><ul><ul><li>Chart on pros/con of types of savings due by Wed - should include:&nbsp; Basic savings account, Certificate of Deposit (CD's), Gov't bonds, corporate bonds, mutual funds, and stocks.&nbsp;</li></ul></ul><p>2/18 - &nbsp;</p><p>OBJECTIVES:</p><ul><li>HOW TO WRITE A CHECK AND KEEP A REGISTER <br /></li><li>IDENTIFY THE NUMBER ON THE BOTTOM OF A CHECK</li><li>EXAMINE YOUR LIKES AND DISLIKES</li></ul><p> Career test on Livecareer.com - due by friday  </p><p>2/24</p><p>Objectives:</p><ul><li>Resume writing.&nbsp; Due Thursday<br /></li><li>What is a resume and why is it important?</li><li>Formatting a resume<br /></li></ul><p>WEEK 3/2&nbsp;<br /></p><p>Simulation and Resume writing.&nbsp; Resumes will be due by Thursday <br /></p><p>- create a cover letter for an ad you pick from the paper - due friday <br /></p><p>-Interview do's and don'ts of interviewing </p><p><br />WEEK OF 3/9-3/16<br /></p><p>Interviewing for Dummies - Create a pamphlet due Monday <br /></p><p><a href="/cms/lib5/NJ01000238/Centricity/Domain/299/INTERVIEWING FOR DUMMIES.doc">INTERVIEWING FOR DUMMIES</a><br /></p><br /><p>WEEK OF 3/23<br /></p><p>-SIMULATION GRADED FOR MARKING PERIOD</p><p>-Shopping list with pricing due Wed. <br /></p><p>-Obama tax policy and the effect on us in our simulation.&nbsp; Should be placed in simulation folder by the end of this week.</p><p>-rental unit should be placed on an index card and put in your simulation folder.</p><p><span style="font-weight: bold;">WEEK OF &nbsp;3/30</span>&nbsp;- REALTOR.COM AND NJMLS.COM TO FIND OUR DREAM HOUSE - PLACE ON A POSTER</p><p>-Create a powerpoint on the three towns assigned to find real estate in (see attached)</p><p><a href="http://www.pascack.k12.nj.us/cms/lib5/NJ01000238/Centricity/Domain/299/REAL_ESTATE_ACTIVITY2.doc" target="">REAL ESTATE ACTIVITY</a></p><p>Present real estate activity and discuss.&nbsp; <br /></p><p>Create list of closing costs and amount required to purchase a home.</p><p>Continue simulation on Wed and Friday's of each week.</p><p>Chart on closing costs&nbsp; - due wed <br /></p><p>OBJECTIVE:</p><p>-Examine real estate prices and determine what drive the price of a home</p><p>-compare real estate in surrounding area</p><p>-determine closing costs when buying a home.</p><p>-examine strategies to affording a home in Bergen County</p><p>ACTIVITIES:</p><p>-Present real estate activity from last week</p><p>-Discussion on closing costs and options when buying a home - including buying a "fixer upper".&nbsp; (adv/disadv)<br /></p><p>Watch Film "Money Pit" - renovation nightmare.<br /></p><p><span style="font-weight: bold;">Week of </span>4/13<br /></p><p>OBJECTIVE:</p><p>-determine costs of buying a car</p><p>-examine loan options</p><p>ACTIVITIES:<br /></p><p>-Dream car poster <br /></p><p>-Lease vs. buying a car - pros and cons on back of dream car poster.&nbsp; Due by the end of the week.</p><p>Continue simulation on Wed and Friday's of each week.</p><p><br /></p><p>WEEK OF 4/20<br /></p><p>OBJECTIVES:</p><p>-Pros and cons of universal health care</p><p>-identify nations that already have universal health care</p><p>-examine policy terminology and proper use of health care programs</p><p>ACTIVITIES:<br /></p><p>-Continue simulation on Wed and Friday's of each week.</p><p>Identify types on health insurance and create a web to illustrate- discuss</p><p>Universal Health care articles - create a chart of pros/cons<br /></p><p> - Film on problems with health care</p><p><br /></p><p>WEEK OF &nbsp;4/20<br /></p><p>Online banking pros an cons (chart ditto) Due on Wed <br /></p><p>Online banking simulation on Bankrate.com</p><p>Continue simulation on Wed and Friday's of each week.</p><p><br /></p><p>WEEK OF - 4/27<br /></p><p>Continue simulation on Wed and Friday's of each week.</p><p>Examine the great depression and focus on problems in the banking system.</p><p>View film on great depression.<br /></p><p>Lesson one due on thursday<br /></p><p><br /></p><p>WEEK OF 5/4<br /></p><p>-EXAMINE PROS AND CONS FOR UNIVERSAL HEALTH CARE</p><p>-FORM AN EDUCATED OPINION IN SUPPORT OR OPPOSING UHC</p><p>-IDENTIFY THE CONGRESSMAN FOR BERGEN COUNTY</p><p>ACTIVITIES:</p><p>Answer question in regards to UHC - discuss as a class</p><p>Watch "Meeting of the minds" (60 minutes) and complete a chart on pros/cons</p><p>Construct a business letter to your congressman in support of UHC or in opposition to UHC.</p><p>Continue simulation on Wed and Friday's of each week.</p><p><br /></p><p>WEEK OF 5/11<br /></p><p>Continue simulation on Wed and Friday's of each week.</p><p><br /></p><p>WEEK 5/18<br /></p><p>Examine the housing market<br /></p><p>Online banking demo - https://www.wellsfargo.com/per/wfonline/demo_start/index.jhtml<br /></p><p> Examine the pitfalls of the banking system and the correction during the great depression.Film on the Great depression.&nbsp; Examine the values in today's world.&nbsp; Focus specifically on his income throughout the film.<br /></p><br /><p>&nbsp;finish film and use a inflation calculator to examine his income throughout the movie.&nbsp; <br /></p><p>-Discuss the movie and the potential of recovering from the Depression.</p><p>-Examining the myths of Car insurance <br /></p><p>-Identity theft - how to protect yourself.</p><p><br /></p><p>Introduce final assessment&nbsp;</p><p><br /></p><p><span style="color: #ff0000;">FINAL ASSESSMENT IS DUE JUNE 13TH.&nbsp; </span><br /></p><p>REMINDER THAT LAPTOPS WILL BE COLLECTED PRIOR TO DUE DATE.&nbsp; PLEASE TAKE THIS INTO CONSIDERATION WHEN PLANNING.</p><p>LAPTOP RETURN:</p><p>JUNE 8TH - SENIORS</p><p>JUNE 9TH - FRESHMEN</p><p>JUNE 10TH - SOPHMORES</p><p>JUNE 13TH - JUNIORS<br /></p><p><a href="http://www.pascack.k12.nj.us/cms/lib5/NJ01000238/Centricity/Domain/299/final_assesment.doc" target="">Final Assessment</a><br /></p><p>WORK ON FINAL ASSESSMENT PROJECT<br /></p><div>&nbsp;</div><div><p>Objectives:<br /></p><ul><li>Stock investment - track weekly for 8 weeks</li><li>How to read stocks<br /></li><li>Examine credit cards vs. debit cards vs. checking</li><li>How do checks work? Review the Federal Reserve System.</li></ul><p><br /></p>&nbsp;</div><p><br /></p><p><br /></p><p><br /></p><p><br /></p><p><br /></p><br /><p><br /></p><p><br /></p><p><br /></p><p><br />
+</p>
+
+<div></div></span></div> 
+<div class="clear"></div>
+	
+	</div>
+	<div class="ui-widget-footer">
+		
+			
+		
+		<div class="clear"></div>
+	</div>
+</div>
+<input type="hidden" id="hidFullPath" value="http://www.pascack.k12.nj.us/" />
+<input type="hidden" id="hidModuleInstanceID0" value="3124"/>
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.pascack.k12.nj.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=299&PageID=4509&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&EnableQuirksMode=1&ViewID=' + viewToUse + '&Tag=' + tag, container, 2, 'chkSidebar();');
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $('#hid-'+MIID+'-DetailView').val();
+   }
+  GetContent('http://www.pascack.k12.nj.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=299&PageID=4509&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&FlexDataID=' + flexDataID + '&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=1&Tag=' + tag + '&ViewID=' + targetView, container, 2, 'chkSidebar();');
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.pascack.k12.nj.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=299&PageID=4509&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&Tag=' + tag + '&EnableQuirksMode=1&ViewID='+viewToUse, container, 2, 'chkSidebar();');
+}
+</script>
+</div>
+
+</div></div>
+</div><div class="clear"></div></div></div><!-- End Centricity Content Area -->
+		</div>
+	</div> 
+</div>      
+<div id="gb-footer-outer">
+	<div id="gb-footer" class="ui-clear">
+		<a class="vimeo" href="http://vimeo.com/user14100926"><img src="/cms/lib5/NJ01000238/Centricity/Template/6/vimeo.png" /></a>
+		<div class="gb footer left ui-clear">
+			<div id="directions"><a href="/directions"><img src="/cms/lib5/NJ01000238/Centricity/Template/6/directions.png" /></a></div>
+			<div id="address">
+				<p class="schoolName">Pascack Valley High School</p>
+				<p>200 Piermont Avenue • Hillsdale, NJ 07642</p>
+				<p>P: 201-358-7060 • F: 201-358-7102</p>
+			</div>
+		</div>
+		<div class="gb footer right">
+			<a class="questions" title="Click to email the primary contact" href="mailto:implementation@schoolwires.com">Questions or Feedback?</a>
+			<a class="policies" href="http://www.schoolwires.com/policies">Schoolwires Privacy Policy (Updated)</a> | 
+			<a class="terms" href="http://www.schoolwires.com/policies">Terms of Use</a>
+			<div id="gb-footer-copyright">Copyright © 2002-2012 Schoolwires, Inc.    |    All rights reserved.</div>
+		</div>
+	</div>
+</div>        <!-- BEGIN - STANDARD FOOTER -->
+<div id='sw-footer-outer'>
+<div id='sw-footer-inner'>
+<div id='sw-footer-left'></div>
+<div id='sw-footer-right'>
+<div id='sw-footer-links'>
+<ul>
+<li><a title='Click to email the primary contact' href='mailto:webmaster@pascack.k12.nj.us'>Questions or Feedback?</a> | </li>
+<li><a href='http://www.schoolwires.com/privacy' target="_blank">Schoolwires Privacy Policy (Updated)</a> | </li>
+<li><a href='http://www.schoolwires.com/terms' target="_blank">Terms of Use</a></li>
+</ul>
+</div>
+<div id='sw-footer-copyright'>Copyright &copy; 2002-2015 Schoolwires, Inc. All rights reserved.</div>
+<div id='sw-footer-logo'><a href='http://www.schoolwires.com' title="This site is powered by Schoolwires Centricity2.">
+<img src='http://www.pascack.k12.nj.us/Static/V2_10_01//GlobalAssets/Images/sw-footer-logo.png'
+ alt="Powered by Schoolwires Centricity2 logo"/>
+</a></div>
+</div>
+</div>
+</div>
+<!-- END - STANDARD FOOTER -->
+<script type="text/javascript">
+   $(document).ready(function(){
+      var beaconURL='http://analytics.schoolwires.com/analytics.asmx/Insert?AccountNumber=B10y%2fJyGVCJhPyz3QKIYkQ%3d%3d&SessionID=1f6c1b02-ad8c-40d4-a1b9-6eadddd1acaa&SiteID=183&ChannelID=210&SectionID=299&PageID=4509&HitDate=4%2f29%2f2015+4%3a58%3a05+PM&Browser=Chrome+31.0&OS=Unknown&IPAddress=54.162.161.151';
+      try {
+         $.getJSON(beaconURL + '&jsonp=?', function(myData) {});
+      } catch(err) { 
+         // prevent site error for analytics
+      }
+   });
+</script>
+  
+    <input type="hidden" id="hid-pageid" value="4509" />  
+ 
+
+
+
+<div id='dialog-overlay-WindowMedium-base' class='ui-dialog-overlay-base' ><div id='WindowMedium'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowMedium");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowMedium-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowMedium-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowMedium-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowMedium-base').appendTo('body');
+ 		
+		
+    });
+</script>
+<div id='dialog-overlay-WindowSmall-base' class='ui-dialog-overlay-base' ><div id='WindowSmall'  class='ui-dialog-overlay small' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowSmall");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowSmall-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowSmall-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowSmall-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowSmall-base').appendTo('body');
+ 		
+		
+    });
+</script>
+<div id='dialog-overlay-WindowLarge-base' class='ui-dialog-overlay-base' ><div id='WindowLarge'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowLarge");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowLarge-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowLarge-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowLarge-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowLarge-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+<div id='dialog-overlay-WindowMediumModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowMediumModal'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowMediumModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowMediumModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowMediumModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowMediumModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowMediumModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+<div id='dialog-overlay-WindowSmallModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowSmallModal'  class='ui-dialog-overlay small' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowSmallModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowSmallModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowSmallModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowSmallModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowSmallModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+<div id='dialog-overlay-WindowLargeModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowLargeModal'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowLargeModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowLargeModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowLargeModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowLargeModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowLargeModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+<div id='dialog-overlay-WindowXLargeModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowXLargeModal'  class='ui-dialog-overlay xlarge' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowXLargeModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowXLargeModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowXLargeModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowXLargeModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowXLargeModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+<div id='dialog-overlay-MyAccountSubscriptionOverlay-base' class='ui-dialog-overlay-base-modal' ><div id='MyAccountSubscriptionOverlay'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("MyAccountSubscriptionOverlay");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-MyAccountSubscriptionOverlay-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-MyAccountSubscriptionOverlay-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-MyAccountSubscriptionOverlay-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-MyAccountSubscriptionOverlay-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+<div id='dialog-overlay-InsertOverlay-base' class='ui-dialog-overlay-base-modal' ><div id='InsertOverlay'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("InsertOverlay");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-InsertOverlay-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-InsertOverlay-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-InsertOverlay-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-InsertOverlay-base').appendTo('body');
+ 		
+		
+    });
+</script>
+<div id='dialog-overlay-InsertOverlay2-base' class='ui-dialog-overlay-base-modal' ><div id='InsertOverlay2'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("InsertOverlay2");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-InsertOverlay2-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-InsertOverlay2-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-InsertOverlay2-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-InsertOverlay2-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+
+    <script type="text/javascript">
+
+		$(document).ready(function() {
+			removeBrokenImages();
+			checkSidebar();
+			RemoveCookie();
+			
+			$('.navigation li.collapsible').each(function() {
+			    if ($(this).find('ul').length == 0) {
+			        $(this).removeClass('collapsible');
+			    } 
+			});
+			
+			// find page nav state cookie and add open chevron
+			var arrValues = GetCookie('SWPageNavState').split('~');
+
+			$.each(arrValues, function() {
+				if (this != '') {
+					$('#' + this).addClass('collapsible').prepend("<div class='bullet collapsible' />");
+				}
+			});
+
+			// find remaining sub menus and add closed chevron and close menu
+			$('.navigation li > ul').each(function() {
+			    var list = $(this);
+			    
+			    if (list.parent().hasClass('active') && !list.parent().hasClass('collapsible')) {
+			        // open sub for currently selected page                    
+			        list.parent().addClass('collapsible').prepend("<div class='bullet collapsible' />");
+			    } else {
+			        if (list.parent().hasClass('collapsible') && !list.siblings('div').hasClass('collapsible')) {
+			            // open sub for page with auto expand
+			            list.siblings('div.expandable').remove();
+			            list.parent().prepend("<div class='bullet collapsible' />");
+			        }
+			    }
+
+				if (!list.siblings('div').hasClass('collapsible')) {
+				    // keep all closed that aren't already set to open
+					list.parent().addClass('expandable').prepend("<div class='bullet expandable' />");
+					ClosePageSubMenu(list.parent());
+				} else {
+					OpenPageSubMenu(list.parent());
+				}
+			});
+			
+			// remove bullet from hierarchy if no-bullet set
+			$('.navigation li.collapsible').each(function() {
+			    if ($(this).hasClass('no-bullet')) {
+			        if (!$(this).hasClass('navigationgroup')) {$(this).removeClass('collapsible');}
+			        $(this).children('div.collapsible').remove();
+			    }
+			});
+
+			$('.navigation li.expandable').each(function() {
+			    if ($(this).hasClass('no-bullet')) {
+			        if (!$(this).hasClass('navigationgroup')) {$(this).removeClass('expandable');}
+			        $(this).children('div.expandable').remove();
+			    }
+			});
+			
+			$('.navigation li:not(.collapsible,.expandable,.no-bullet)').each(function() {
+			    $(this).prepend("<div class='bullet' />");
+			});
+		
+			$('.navigation li.active').parents('ul').each(function() {
+                if (!$(this).hasClass('page-navigation')) {
+                    OpenPageSubMenu($(this).parent());
+                }
+            });
+		
+			// set click event for chevron
+            $(document).on('click', '.navigation div.collapsible', function() {
+				ClosePageSubMenu($(this).parent());
+			});
+
+            $(document).on('click', '.navigation div.expandable', function() {
+				OpenPageSubMenu($(this).parent());
+            });
+            
+            // set navigation grouping links
+            $(document).on('click', '.navigationgroup.collapsible > a', function() {
+                ClosePageSubMenu($(this).parent());
+            });
+
+            $(document).on('click', '.navigationgroup.expandable > a', function() {
+                OpenPageSubMenu($(this).parent());
+            });				
+			
+			//SW MYSTART DROPDOWNS
+            $(document).on('click', '.sw-mystart-dropdown', function() {
+                $(this).children(".sw-dropdown").css("display", "block");
+			});
+
+		    $(".sw-mystart-dropdown").hover(function() {}, function() {
+		        $(this).children(".sw-dropdown").hide();
+		        $(this).blur();
+            });
+
+		    //SW ACCOUNT DROPDOWN
+		    $(document).on('click', '#sw-mystart-account', function() {
+		        $(this).children("#sw-myaccount-list").show();
+		        $(this).addClass("clicked-state");
+		    });
+
+			$("#sw-mystart-account, #sw-myaccount-list").hover(function() {}, function() {
+				$(this).children("#sw-myaccount-list").hide();
+				$(this).removeClass("clicked-state");
+				$("#sw-myaccount").blur();
+			});
+			   
+		   // set hover class for page and section navigation
+		   $('.ui-widget.app.pagenavigation, .ui-widget.app.sectionnavigation').find('li > a').hover(function() {
+		        $(this).addClass('hover');
+		   }, function() {
+		        $(this).removeClass('hover');
+		   });
+
+		}); // end document ready
+		
+		function OpenPageSubMenu(li) {
+            if (li.prop('tagName').toLowerCase() == "li") {
+			    li.removeClass('expandable').addClass('collapsible');
+			    li.find('div:first').removeClass('expandable').addClass('collapsible');	
+			    li.find('ul:first').show();
+
+			    PageNavigationStateCookie();
+            }
+		}
+		
+		function ClosePageSubMenu(li) {
+            if (li.prop('tagName').toLowerCase() == "li") {
+			    li.removeClass('collapsible').addClass('expandable');
+			    li.find('div:first').removeClass('collapsible').addClass('expandable');	 
+			    li.find('ul:first').hide();
+
+			    PageNavigationStateCookie();
+            }
+		}
+		
+		function PageNavigationStateCookie() {
+		    var strCookie = "";
+
+			$('.pagenavigation li > ul').each(function() {
+			    var item = $(this).parent('li');
+				if (item.hasClass('collapsible') && !item.hasClass('no-bullet')){
+					strCookie += $(this).parent().attr('id') + '~';
+				}
+            });
+
+			SetCookie('SWPageNavState', strCookie);
+		}
+		
+		function checkSidebar(){
+		   $(".ui-widget-sidebar").each(function() {
+			   if($.trim($(this).html()) != ""){
+				   $(this).show();
+				   $(this).siblings(".ui-widget-detail").addClass("with-sidebar");
+			   } 
+		   });
+        }
+
+		function removeBrokenImages(){
+		   //REMOVES ANY BROKEN IMAGES
+		    $("span.img img").each(function() {
+		        if ($(this).attr("src") !== undefined) {
+		            $(this).parent().parent().show();
+		            $(this).parent().parent().siblings().addClass("has-thumb");
+		        } 
+		    });
+		}
+
+		function LoadEventDetailUE(moduleInstanceID, eventDateID, userRegID, isEdit) {
+		    (userRegID === undefined ? userRegID = 0 : '');
+		    (isEdit === undefined ? isEdit = false : '');
+		    OpenDialogOverlay("WindowMediumModal", { LoadType: "U", LoadURL: "http://www.pascack.k12.nj.us//site/UserControls/Calendar/EventDetailWrapper.aspx?ModuleInstanceID=" + moduleInstanceID + "&EventDateID=" + eventDateID + "&UserRegID=" + userRegID + "&IsEdit=" + isEdit });
+		}
+
+		function RemoveCookie() {
+		    // There are no sub page            
+		    if ($('.pagenavigation li li').length == 0) {
+		        //return false;
+		        PageNavigationStateCookie();
+		    }
+		}
+	</script>
+	
+	<script type="text/javascript">
+
+	    function AddOffCanvasMenuHeightForSiteNav() {
+	        var sitenavulHeight = 0;
+
+	        if ($('#sw-pg-sitenav-ul').length > 0) {
+	            sitenavulHeight = parseInt($("#sw-pg-sitenav-ul").height());
+	        }
+
+	        var swinnerwrapHeight = 0;
+
+	        if ($('#sw-inner-wrap').length > 0) {
+	            swinnerwrapHeight = parseInt($("#sw-inner-wrap").height());
+	        }
+
+	        // 360px is abount 5 li height
+	        if (sitenavulHeight + 360 >= swinnerwrapHeight) {
+	            $("#sw-inner-wrap").height(sitenavulHeight + 360);
+	        }
+	    }
+
+	    function AddOffCanvasMenuHeightForSelectSchool() {
+	        var selectschoolulHeight = 0;
+
+	        if ($('#sw-pg-selectschool-ul').length > 0) {
+	            selectschoolulHeight = parseInt($("#sw-pg-selectschool-ul").height());
+	        }
+
+	        var swinnerwrapHeight = 0;
+
+	        if ($('#sw-inner-wrap').length > 0) {
+	            swinnerwrapHeight = parseInt($("#sw-inner-wrap").height());
+	        }
+
+	        // 360px is abount 5 li height
+	        if (selectschoolulHeight + 360 >= swinnerwrapHeight) {
+	            $("#sw-inner-wrap").height(selectschoolulHeight + 360);
+	        }
+	    }
+
+	    $(document).ready(function() {
+	        if ($("#sw-pg-sitenav-a").length > 0) {
+                $(document).on('click', '#sw-pg-sitenav-a', function() {
+	                if ($("#sw-pg-sitenav-ul").hasClass('sw-pgmenu-closed')) {
+	                    AddOffCanvasMenuHeightForSiteNav();
+
+	                    $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+	                    $("#sw-pg-sitenav-ul").removeClass('sw-pgmenu-closed');
+	                    $("#sw-pg-sitenav-ul").addClass('sw-pgmenu-open');
+	                } else {
+	                    $("#sw-pg-sitenav-ul").removeClass('sw-pgmenu-open');
+	                    $("#sw-pg-sitenav-ul").addClass('sw-pgmenu-closed');
+	                }
+	            });
+
+                $(document).on('click', '#sw-pg-selectschool-a', function() {
+	                if ($("#sw-pg-selectschool-ul").hasClass('sw-pgmenu-closed')) {
+	                    AddOffCanvasMenuHeightForSelectSchool();
+
+	                    $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+	                    $("#sw-pg-selectschool-ul").removeClass('sw-pgmenu-closed');
+	                    $("#sw-pg-selectschool-ul").addClass('sw-pgmenu-open');
+	                } else {
+	                    $("#sw-pg-selectschool-ul").removeClass('sw-pgmenu-open');
+	                    $("#sw-pg-selectschool-ul").addClass('sw-pgmenu-closed');
+	                }
+	            });
+
+                $(document).on('click', '#sw-pg-myaccount-a', function() {
+	                if ($("#sw-pg-myaccount-ul").hasClass('sw-pgmenu-closed')) {
+	                    $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+	                    $("#sw-pg-myaccount-ul").removeClass('sw-pgmenu-closed');
+	                    $("#sw-pg-myaccount-ul").addClass('sw-pgmenu-open');
+	                } else {
+	                    $("#sw-pg-myaccount-ul").removeClass('sw-pgmenu-open');
+	                    $("#sw-pg-myaccount-ul").addClass('sw-pgmenu-closed');
+	                }
+	            });
+
+                $(document).on('click', '.pg-list-bullet', function() {
+	                $(this).prev().toggle();
+
+	                if ($(this).hasClass('closed')) {
+	                    AddOffCanvasMenuHeightForSiteNav();
+
+	                    $(this).removeClass('closed');
+	                    $(this).addClass('open');
+	                } else {
+	                    $(this).removeClass('open');
+	                    $(this).addClass('closed');
+	                }
+	            });
+
+                $(document).on('mouseover', '#sw-pg-selectschool', function() {
+	                $("#sw-pg-selectschool-firstli").removeClass('sw-pg-selectschool-firstli-mouseout').addClass('sw-pg-selectschool-firstli-mouseover');
+	                $("#sw-pg-selectschool-firstli a").addClass('sw-pg-selectschool-firstli-a-mouseover').removeClass('sw-pg-selectschool-firstli-a-mouseout');
+	            });
+
+                $(document).on('mouseout', '#sw-pg-selectschool', function() {
+	                $("#sw-pg-selectschool-firstli").removeClass('sw-pg-selectschool-firstli-mouseover').addClass('sw-pg-selectschool-firstli-mouseout');
+	                $("#sw-pg-selectschool-firstli a").addClass('sw-pg-selectschool-firstli-a-mouseout').removeClass('sw-pg-selectschool-firstli-a-mouseover');
+	            });
+
+                $(document).on('mouseover', '#sw-pg-myaccount', function() {
+	                $("#sw-pg-myaccount-firstli").removeClass('sw-pg-myaccount-firstli-mouseout').addClass('sw-pg-myaccount-firstli-mouseover');
+	                $("#sw-pg-myaccount-firstli a").addClass('sw-pg-myaccount-firstli-a-mouseover').removeClass('sw-pg-myaccount-firstli-a-mouseout');
+	            });
+
+                $(document).on('mouseout', '#sw-pg-myaccount', function() {
+	                $("#sw-pg-myaccount-firstli").removeClass('sw-pg-myaccount-firstli-mouseover').addClass('sw-pg-myaccount-firstli-mouseout');
+	                $("#sw-pg-myaccount-firstli a").addClass('sw-pg-myaccount-firstli-a-mouseout').removeClass('sw-pg-myaccount-firstli-a-mouseover');
+	            });
+
+                $(document).on('mouseover', '#sw-pg-sitenav', function() {
+	                $("#sw-pg-sitenav-firstli").removeClass('sw-pg-sitenav-firstli-mouseout').addClass('sw-pg-sitenav-firstli-mouseover');
+	                $("#sw-pg-sitenav-firstli a").addClass('sw-pg-sitenav-firstli-a-mouseover').removeClass('sw-pg-sitenav-firstli-a-mouseout');
+	            });
+
+                $(document).on('mouseout', '#sw-pg-sitenav', function() {
+	                $("#sw-pg-sitenav-firstli").removeClass('sw-pg-sitenav-firstli-mouseover').addClass('sw-pg-sitenav-firstli-mouseout');
+	                $("#sw-pg-sitenav-firstli a").addClass('sw-pg-sitenav-firstli-a-mouseout').removeClass('sw-pg-sitenav-firstli-a-mouseover');
+	            });
+
+                $(document).on('mouseover', '#sw-pg-district', function() {
+	                $("#sw-pg-district-firstli").removeClass('sw-pg-district-firstli-mouseout').addClass('sw-pg-district-firstli-mouseover');
+	                $("#sw-pg-district-firstli a").addClass('sw-pg-district-firstli-a-mouseover').removeClass('sw-pg-district-firstli-a-mouseout');
+	            });
+
+                $(document).on('mouseout', '#sw-pg-district', function() {
+	                $("#sw-pg-district-firstli").removeClass('sw-pg-district-firstli-mouseover').addClass('sw-pg-district-firstli-mouseout');
+	                $("#sw-pg-district-firstli a").addClass('sw-pg-district-firstli-a-mouseout').removeClass('sw-pg-district-firstli-a-mouseover');
+	            });
+	        }
+	    });	
+
+
+</script>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js' type='text/javascript'></script>
+    <script src="http://www.pascack.k12.nj.us/Static/V2_10_01/GlobalAssets/Scripts/min/SW-UI.min.js" type='text/javascript'></script>
+    <script src="http://www.pascack.k12.nj.us/Static/V2_10_01/GlobalAssets/Scripts/Initialize.js" type='text/javascript'></script>
+    <script src="http://www.pascack.k12.nj.us/Static/V2_10_01/GlobalAssets/Scripts/min/swfobject.min.js" type="text/javascript"></script>
+    <script src="http://www.pascack.k12.nj.us/Static/V2_10_01/GlobalAssets/Scripts/min/jquery.ajaxupload.min.js" type="text/javascript"></script> 
+
+<!-- Begin swuc.CheckScript -->
+  <script type="text/javascript" src="http://www.pascack.k12.nj.us/Static/V2_10_01/GlobalAssets/Scripts/ThirdParty/json2.js"></script>
+  <script type="text/javascript" src="http://www.pascack.k12.nj.us/Static/V2_10_01/GlobalAssets/Scripts/CheckScript.js"></script>
+<!-- End swuc.CheckScript -->
+
+
+<!-- Server Load Time (15): 0.0781255 Seconds -->
+
+
+
+<!-- off-canvas menu enabled-->
+
+
+</body>
+</html>

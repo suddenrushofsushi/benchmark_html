@@ -1,0 +1,974 @@
+ <!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<!-- default.jsp -->
+
+
+
+
+<head>
+<!-- head.jspf -->
+<meta charset="utf-8">
+<meta name="description" content="" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<title>Site Safe</title>
+<meta name="description" content="UPDATE DESCRIPTION HERE">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/themes/portal/css/style.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="/system/scripts/jquery-ui.min.js"></script>
+<script src="/system/scripts/jquery.validate.min.js"></script>
+<script src="/system/scripts/jquery.address-1.4.min.js"></script>
+<script src="/themes/portal/js/libs/modernizr-2.0.6.min.js"></script>
+<!--[if lt IE 9]><script src="/themes/portal/js/libs/pie.js"></script><![endif]-->
+
+	<script type="text/javascript" language="Javascript">
+		$(document).ready(function(){
+			$.ajaxSetup({ cache: false });
+			loadtTT();
+			$('#training-type').change(function(){loadtTT()});
+			$('#training-type-submit').click(function(){document.location.href=$('#training-type').val();});
+		});
+
+		function loadtTT() {
+			$.ajax({
+				url: 'DataFilter',
+				data: {
+					Action:'AjaxList',
+					DataFilter_id:'231',
+					PMType:'Calendar',
+					PMId:1,
+					Load:20,
+					Limit:4,
+					DFF_1285:$('#training-type').find('option:selected').text()
+				},
+				success: function(data) {
+					for(var i=0;i<4;i++) {
+						if(data.Items[i]!=undefined){
+							$('#uc'+i).text(data.Items[i].Event_datestart+' '+data.Items[i].Event_city);
+							$('#uca'+i).attr('href','/Event?Action=View&Event_id='+data.Items[i].Event_id).text('More');
+							$('#ucr'+i).show();
+						}else{
+							$('#uc'+i).text('')
+							$('#uca'+i).attr('href','#').text('');
+							$('#ucr'+i).hide();
+						}
+					}
+				}
+			})
+		}
+	</script>
+</head>
+
+<body class="homepage">
+
+	<!-- header.jsp -->
+	<header>
+		<div id="header-inner">
+			<a href="/"><div id="h1"><span class="visuallyhidden">Site Safe</span></div></a>
+			<div id="utility-top" class="clearfix logged-out">
+				<nav id="utility-links-top">
+					<a href="/Category?Action=View&amp;Category_id=693" class="first">Contact Us</a>
+					<a href="/ContactForm?Action=View&amp;ContactForm_id=11" class="first">Subscribe</a>
+					
+				</nav>
+				
+				
+				<form id="search-wrapper" action="Category" method="post" name="searchform">
+					<input type="text" class="searchbox" id="search" name="Search_Terms" value="Search Site" />
+					<input type="submit" class="searchbtn" value=" " />
+					<input name='Action' type='hidden' value='Search'/><input name='Confirm' type='hidden' value='Search'/><input name='Category_id' type='hidden' value='625' />
+				</form>
+				
+				
+				 
+				<form id="login-wrapper" action="/Login" method="post" name="loginform">
+					<h2>Login:</h2>
+					<a href="/RegToken?Action=Register&RegToken_Redir=Section%3FAction%3DView%26Section_id%3D175" class="more">Register</a>
+					<input type="text" id="username" class="loginbox" name="User_name" value="Email Address" />
+					<input type="password" id="userpass" class="loginbox" name="User_password" value="" />
+					<input type="submit" class="loginbtn" value=" " />
+					<input type="hidden" name="Action" value="Login"><input type="hidden" name="Confirm" value="Login">
+					<input type="hidden" name="Redir" value="http://www.sitesafe.org.nz/MainMenu">
+					<input value="true" name="User_Cookie" type="hidden">
+				</form>	
+			
+				<div class="close-utility-bar"></div>				
+			</div>
+			
+			<nav id="utility-bottom">
+				<a href="/ContactForm?Action=View&amp;ContactForm_id=10" class="safety-advisor icon-bg"><span></span>Ask an Advisor</a>
+				<a href="/Calendar?Action=View&amp;Calendar_id=1" class="book-course"><span></span></a>
+				
+			</nav>
+			
+		</div>
+		
+
+
+
+
+<!-- mainnav.jsp -->
+<div id="main-nav-wrapper">
+	<nav id="main-nav">
+		<a href="/" id="mn-home">Home</a>
+		<a href="/training" id="mn-training" class="has-subnav">Training</a>
+		<a href="http://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=627" id="mn-services" class="has-subnav">Other Services</a>
+		<a href="http://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=664" id="mn-info" class="has-subnav">Information &amp; Tools</a>
+		<a href="http://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=629" id="mn-members" class="has-subnav">Members</a>
+		<a href="http://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=666" id="mn-collab" class="has-subnav">Industry Connections</a>
+		<a href="http://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=692" id="mn-about" class="has-subnav">About</a>
+	</nav>
+
+	<nav id="main-nav-mm" class="clearfix">
+		<div id="mm-training" class="mm-menu">
+			<ul>
+				<li style="height: 188px; "><span>Column 1</span>
+<ul>
+	<li>
+		<a href="/Calendar?Action=View&amp;Calendar_id=1">View Training Course Calendar</a>
+		
+	</li>
+
+	<li>
+		<a href=" https://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=646">Training Courses - Passports</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=707">Building Construction</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=720">Civil</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=714">Consultants</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=709">Maintenance</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=715">Electrical</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=1029">Telecommunications Field</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 2</span>
+<ul>
+	<li>
+		<a href="">Training - 1 & 2 day Courses </a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=710">Advanced Passport - Site Safety Plans</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=711">Height & Harness Safety</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=712">Supervisor Gold Card</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=713">Supervisor Gold Card Update</a></li>
+		
+			<li><a href="Category?Action=View&amp;Category_id=717">Contractor Management</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=716">Leadership in Safety</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=718">Health & Safety Rep - Construction</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=719">Health & Safety Rep - General</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 3</span>
+<ul>
+	<li>
+		<a href=" http://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=646">Training continued</a>
+		<ul>
+			<li><a href=" https://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=996">First Aid Construction Safety </a></li>
+		
+			<li><a href="https://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=1034">Low Level Prefabricated Scaffold</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=641">Certificate in Construction Site Safety</a>
+		<ul>
+			<li><a href="/scholarships">Scholarships</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=1054">Safety Awareness Workshops</a>
+		
+	</li>
+</ul>
+				</li>
+				<li class="last" style="height: 188px; "><span>Column 4</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=936">Site Safe Quality Training</a>
+		
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=988">General Training Info </a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=989">Training Prices & CPD Matrix</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=990">Gaining NZQA Unit Standards</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=991">Foreign Language Course Delivery</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=992">Renewing your Site Safe Card</a></li>
+		
+			<li><a href="/ContactForm?Action=View&amp;ContactForm_id=20">Passport replacement & status request form</a></li>
+		
+			<li><a href="https://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=632">Online payment infomation</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="mm-services" class="mm-menu">
+			<ul>
+				<li style="height: 188px; "><span>Column 1</span>
+<ul>
+	<li>
+		<a href="https://www.sitesafe.org.nz/Folder?Action=View%20File&amp;Folder_id=82&amp;File=MASTER%20VERSION_All%20Site%20Safe%20Price%20List%202015-16.pdf">Price list pdf - training, products and services</a>
+		
+	</li>
+
+	<li>
+		<a href=" http://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=660">Safety Plan Products</a>
+		<ul>
+			<li><a href="Category?Action=View&amp;Category_id=659">Small Business Safety Package - Subbie's Site Safety Kit</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=661">Site Specific Safety Plan (SSSP)</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=662">Safety by Steps - paper-based health and safety management plan</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=995">Health and Safety Policy Document</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 2</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=628">Safety Audits</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=628">Benchmarking service </a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=628">Real time audits</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=628">Internationally qualified auditors</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=647">Head of Agreement </a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=647">Specifying Site Safe services for your site</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 3</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=652">Construction Safety Charter Accreditation</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=960">Tier 1</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=961">Tier 2</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=962">Tier 3</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=982">Site Wise</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=982">Contractor management database</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href=" http://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=682">Posters & Signage</a>
+		
+	</li>
+</ul>
+				</li>
+				<li class="last" style="height: 188px; "><span>Column 4</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=655">Consultancy Services</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=697">Meet our Advisors & Consultants</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=934">Consultancy Based Training</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=1035">Scaffold User Safety Induction Course</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/ContactForm?Action=View&amp;ContactForm_id=10">Ask an Advisor - Free advice</a>
+		
+	</li>
+</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="mm-info" class="mm-menu">
+			<ul>
+				<li style="height: 188px; "><span>Column 1</span>
+<ul>
+	<li>
+		<a href=" http://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=1033">The Hub: NZ Workplace Health and Safety Reform</a>
+		<ul>
+			<li><a href="www.sitesafe.org.nz/Category?Action=View&amp;Category_id=1033">WorkSafe NZ</a></li>
+		
+			<li><a href="www.sitesafe.org.nz/Category?Action=View&amp;Category_id=1033">Health & Safety in Employment Act Reform</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=685">Tendering with Safety</a>
+		
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=660">Safety Plan Products</a>
+		
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 2</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=686">Articles & News</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=686">E-Alerts</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=672">Toolbox Talks</a>
+		
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=1042">Research Hub</a>
+		
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=680">Legislation Links</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=680">Health & Safety in Employment Act 1992 & Approved Codes of Practice</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 3</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=924">Best Practice Guidelines</a>
+		<ul>
+			<li><a href="Category?Action=View&amp;Category_id=924">Construction Safety Management</a></li>
+		
+			<li><a href="Category?Action=View&amp;Category_id=924">Working at Height</a></li>
+		
+			<li><a href="Category?Action=View&amp;Category_id=924">Tendering Process</a></li>
+		
+			<li><a href="Category?Action=View&amp;Category_id=924">Safe Scaffolding in NZ</a></li>
+		
+			<li><a href="Category?Action=View&amp;Category_id=924">Construction Clients on Health and Safety</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=865">Practical Safety Factsheets</a>
+		
+	</li>
+</ul>
+				</li>
+				<li class="last" style="height: 188px; "><span>Column 4</span>
+<ul>
+	<li>
+		<a href="Category?Action=View&amp;Category_id=914">Health & Safety FAQs</a>
+		
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=937">Events</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=1059">Site Safe Evening of Celebration</a></li>
+		
+			<li><a href="/Section?Action=View&amp;Section_id=129">All Industry & Trade Events</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=676">Brochures, Forms & Factsheets</a>
+		
+	</li>
+</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="mm-members" class="mm-menu">
+			<ul>
+				<li style="height: 188px; "><span>Column 1</span>
+<ul>
+	<li>
+		<a href="">Types of Site Safe Membership</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=630">Standard Corporate Membership</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=659">Small Business Safety Package Membership</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=652">Charter Accreditation Membership</a></li>
+		
+			<li><a href="Category?Action=View&amp;Category_id=668">Trade Association Hub</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=901">Sign Up</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=901">Sign Up for Site Safe Membership</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 2</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=630">Membership Benefits</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=993">Discounts on training</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=655">Discounts on consultancy and auditing services</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=682">Discounts on Posters </a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 3</span>
+<ul>
+	<li>
+		<a href="Category?Action=View&amp;Category_id=629">Member Only Resources</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=670">Safety Insite Newsletters</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=671">AGM Minutes</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=671">Annual Reports</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=673">Site Safe Member Logo Files</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=672">Toolbox Talks</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li class="last" style="height: 188px; "><span>Column 4</span>
+<ul>
+	<li>
+		<a href="/CompanyProfile?Action=List">Member Directory</a>
+		
+	</li>
+
+	<li>
+		<a href="">Membership Services and Requests</a>
+		<ul>
+			<li><a href="Category?Action=View&amp;Category_id=697">Request Safety Advisory Time</a></li>
+		
+			<li><a href="Category?Action=View&amp;Category_id=693">Membership Certificate Queries</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="mm-collab" class="mm-menu">
+			<ul>
+				<li style="height: 188px; "><span>Column 1</span>
+<ul>
+	<li>
+		<a href="http://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=1069">Evening of Celebration 2015</a>
+		
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=689">Health & Safety Industry Links</a>
+		
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 2</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=690">Client Support</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=690">View the Construction Clients' Best Practice Guide on Health and Safety</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href=" https://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=688">Construction Industry Links</a>
+		
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=691">Partners in Safety</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=691">Site Safe Passport Card Discount Offers</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 3</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=667">Safety Liaison Group Minutes</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=775">Northern</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=776">Bay of Plenty</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=777">Waikato</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=1036">Manawatu</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=778">Wellington</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=779">Otago</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=780">Southern</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li class="last" style="height: 188px; "><span>Column 4</span>
+<ul>
+	<li>
+		<a href=" https://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=967">Canterbury Rebuild Safety</a>
+		<ul>
+			<li><a href=" https://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=968">Forum Timeline Achievements</a></li>
+		
+			<li><a href=" https://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=969">About the Forum</a></li>
+		
+			<li><a href=" https://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=970">Forum Safety Alerts</a></li>
+		
+			<li><a href=" https://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=972">Forum Members</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="Category?Action=View&amp;Category_id=920">ACC Workplace Safety Discount (WSD) Programme</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=920">See how Site Safe can assist you with your ACC levies</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="mm-about" class="mm-menu">
+			<ul>
+				<li style="height: 188px; "><span>Column 1</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=1032">Strategic Plan 2015 - 2020</a>
+		
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=699">About Site Safe</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=699">Read the Site Safe story</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=1068">Careers</a>
+		
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 2</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=697">Contact Advisors & Consultants</a>
+		<ul>
+			<li><a href="Category?Action=View&amp;Category_id=697">View Advisors & Consultants&#39; Profiles</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=694">Contact Site Safe Leadership</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=694">View Leadership Team</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li style="height: 188px; "><span>Column 3</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=695">Board & Governance</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=695">See Board Members</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=695">Site Safe Constitution</a></li>
+		
+			<li><a href="/strategicplan">Site Safe 5 Year Strategic Plan</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+				<li class="last" style="height: 188px; "><span>Column 4</span>
+<ul>
+	<li>
+		<a href="/Category?Action=View&amp;Category_id=693">Contact Us</a>
+		<ul>
+			<li><a href="/Category?Action=View&amp;Category_id=693">All Regional Offices</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=693">General Enquiries</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=693">Media Enquiries</a></li>
+		
+			<li><a href="/ContactForm?Action=View&amp;ContactForm_id=10">Ask an Advisor</a></li>
+		
+			<li><a href="/Category?Action=View&amp;Category_id=693">Finance Enquiries</a></li>
+		</ul>
+	</li>
+</ul>
+				</li>
+			</ul>
+		</div>
+
+	</nav>
+</div>
+
+	
+    </header>
+	
+
+
+	<div id="content-wrapper">
+		<div id="content-header" class="education"></div>
+		<div id="section-header-wrapper" class="clearfix">
+<!-- homepage/tabs.jspf -->
+<div id="homepage-tabs" class="clearfix">
+	<div id="ht-education" class="tab active">
+		Education and Advice
+		<div class="clip orange-wrapper">
+			<div>
+				 <p>Empowering workers with ongoing education and advice is key to promoting a culture of safety.</p>  
+			</div>
+			<span class="speech"></span>
+		</div>
+	</div>
+	<div id="ht-advocacy" class="tab">
+		Advocacy and Leadership
+		<div class="clip orange-wrapper">
+			<div>
+				 <p>Like our members - Site Safe takes the leadership path. As the industry's health and safety advocate - we provide the best developments in adult education, tools and ideas for the workplace.</p>  
+			</div>
+			<span class="speech"></span>
+		</div>
+	</div>
+	<div id="ht-industry" class="tab">
+		Industry Collaboration
+		<div class="clip orange-wrapper">
+			<div>
+				 <p>Through membership relationships, liaison groups, and Charter leadership forums we engage with industry and understand how best to meet its needs.</p> <p> <span style="font-family: Arial; font-size: x-small;"> <br /> </span> </p>  
+			</div>
+			<span class="speech"></span>
+		</div>
+	</div>
+	<div id="ht-bp" class="tab">
+		Best Practice
+		<div class="clip orange-wrapper">
+			<div>
+				 <p>Our services develop industry individuals to 'lift the bar' on safety on the work site.</p>  
+			</div>
+			<span class="speech"></span>
+		</div>
+	</div>
+</div>
+
+		 <p class="intro">We assist construction businesses to improve their health and safety culture; to control hazards and reduce injuries - that's been our goal since 1999. Site Safe is membership based, not-for-profit, and our services cater to the entire construction and related industries. Our nationwide team of health and safety professionals offer safety systems, training, consultancy, audits, resources, information and more.</p> 
+		</div>		
+		
+		<div class="hr">&nbsp;</div>
+		
+		<div id="main" class="clearfix">
+			
+			<div class="homepage-col-wrapper clearfix">
+			
+				<div class="left-col">
+		
+					<div class="two-col-wrapper clearfix">
+						<div class="col">
+<!-- homepage/upcomingcourses.jspf -->
+<a href="/Category?Action=View&Category_id=626"><h2>Training</h2></a>
+<div id="training-selector">
+	<form action="#" method="post" name="training-type-form" id="training-type-form">
+		<select name="training-type" id="training-type">
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Building+Construction+Passport" selected="selected">Building Construction Passport</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Advanced+Passport">Advanced Passport</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Civil+Passport">Civil Passport</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Construction+Management">Construction Management</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Consultants+Passport">Consultants Passport</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Electrical+Passport">Electrical Passport</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=First+Aid+Construction+Safety">First Aid Construction Safety</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Graduates+-+Continued+Professional+Development+Forum">Graduates - Continued Professional Development Forum</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Health+&amp;+Safety+Representative+-+Construction">Health &amp; Safety Representative - Construction</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Health+&amp;+Safety+Representative+-+General+Industry">Health &amp; Safety Representative - General Industry</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Height+and+Harness+Safety">Height and Harness Safety</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Leadership+In+Safety">Leadership In Safety</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Low+Level+Prefabricated+Scaffold">Low Level Prefabricated Scaffold</option>
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Maintenance+Passport">Maintenance Passport</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Safety+Awareness+Workshop+-+Safety+Management+and+Behaviour">Safety Awareness Workshop - Safety Management and Behaviour</option>							
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Safety+Awareness+Workshop+-+Ladders">Safety Awareness Workshop - Ladders</option>							
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Safety+Awareness+Workshop+-+Personal+Protective+Equipment">Safety Awareness Workshop - Personal Protective Equipment</option>							
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Safety+Awareness+Workshop+-+Safety+Planning+and+Task+Analysis">Safety Awareness Workshop - Safety Planning and Task Analysis</option>							
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Safety+Awareness+Workshop+-+Manual+Material+Handling">Safety Awareness Workshop - Manual Material Handling</option>							
+			
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=SCIRT+Civil+Passport">SCIRT Civil Passport</option>
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Supervisor+Gold+Card">Supervisor Gold Card</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Supervisor+Gold+Card+Update">Supervisor Gold Card Update</option>	
+			<option value="/Calendar?Action=View&amp;Calendar_id=1&amp;DFF_22=Telecommunications+Field+Passport">Telecommunications Field Passport</option>
+		</select>
+		<input type="button" class="training-type-submit" id="training-type-submit" name="training-type-submit" value=" " />
+	</form>
+	<h3>Upcoming courses</h3>
+	<table id="upcoming-courses" class="rounded-corners">
+		<tbody>
+			<tr class="odd" id="ucr0"><td id="uc0"></td><td><a id="uca0" href="#" class="more">details</a></td></tr>
+			<tr class="odd" id="ucr1"><td id="uc1"></td><td><a id="uca1" href="#" class="more">details</a></td></tr>
+			<tr class="odd" id="ucr2"><td id="uc2"></td><td><a id="uca2" href="#" class="more">details</a></td></tr>
+			<tr class="odd" id="ucr3"><td id="uc3"></td><td><a id="uca3" href="#" class="more">details</a></td></tr>
+		</tbody>
+	</table>
+</div>
+<p class="view-all">
+	<a href="/Calendar?Action=View&Calendar_id=1" class="more">View All Courses</a>
+</p>
+
+
+						</div>
+						<div class="col">
+<!-- homepage/sitespecificsafetyplan.jspf -->
+<div class="sidebar-widget safety-plan sidebar-with-icon">
+	<h2>Site Specific Safety Plan</h2>
+	<a href="/Category?Action=View&Category_id=661" class="icon"></a>
+	<div class="content">
+		 <p>Filled with a <strong>hazard register</strong>, <strong>accident register</strong>, <strong>toolbox talk</strong> <strong>template</strong> and <strong>more!</strong> SSSP is a common request on NZ sites. <a href="/Category?Action=View&Category_id=661" shape="rect">More</a></p> 
+	</div>
+</div>		
+
+<!-- upcomingevents.jspf -->
+<h3>Upcoming events</h3>
+
+<table id="upcoming-events" class="rounded-corners">
+<tbody>
+	
+
+	
+
+	<tr class="odd">
+		<td rowspan="1" colspan="1">LBP Roadshow Building Skills Maintenance<br clear="none"></td>
+
+		<td rowspan="1" colspan="1"><a class="more" href="http://www.bsm.org.nz/">details</a></td>
+	</tr>
+
+	<tr class="even">
+		<td rowspan="1" colspan="1">Safety Liaison Group Meetings, Ongoing Nationally <br clear="none"></td>
+
+		<td rowspan="1" colspan="1"><a class="more" href="/Category?Action=View&amp;Category_id=667">details</a></td>
+	</tr>
+</tbody>
+</table>
+
+<p class="view-all">
+	<a href="/Section?Action=View&Section_id=129" class="more">View All Events</a>
+</p>
+						</div>
+<!-- quote.jspf -->
+<div class="head">
+<blockquote>...There is a real notable difference in attitude from people on site after you win an award. This award will drive innovation, change, and cause people to re-evaluate the health and safety problems which we face daily</blockquote> <p class="quote">Scott McLeod - Managing Director, McLeod Cranes</p> <hr> <table border="0"> <tbody> <tr> <td rowspan="1" colspan="1"> <div> <object height="315" width="560"> <param name="movie" value="//www.youtube.com/v/cJiz8EMKpm8?version=3&amp;hl=en_GB" valuetype="data"> <param name="allowFullScreen" value="true" valuetype="data"> <img style="" src="/Folder?Action=View File&amp;Folder_id=448&amp;File=SiteWise Website Promo.jpg"><br> </object> </div> <h3><br></h3><h3><a href="https://www.sitesafe.org.nz/sitewise">Visit SiteWise<br></a></h3>  </td> </tr> </tbody> </table>
+
+</div>
+
+					</div>
+					
+				</div>
+					
+				<div class="col right-col">
+				
+<!-- news.jspf -->
+<div class="homepage-news">
+	<a href="Section?Action=View&Section_id=34"><h2>News</h2><a/>
+	<div class="news-item">
+		<h3><a href="http://www.sitesafe.org.nz/Story?Action=View&amp;Story_id=2379 ">Tickets now on sale for the Evening of Celebration</a></h3>
+		<p><p>The evening hosts 
+Site Safe's Graduation and Construction Health and Safety Awards and is 
+about recognising and awarding people and organisations.<br></p>
+<a href="http://www.sitesafe.org.nz/Story?Action=View&amp;Story_id=2379" class="more">More</a></p>
+	</div>
+	<div class="news-item">
+		<h3><a href="http://www.sitesafe.org.nz/Story?Action=View&amp;Story_id=2378 ">Finalists announced - Site Safe Construction Health and Safety Awards 2015</a></h3>
+		<p><p>Click to find out who are the finalists for the four award categories.<br></p>
+<a href="http://www.sitesafe.org.nz/Story?Action=View&amp;Story_id=2378" class="more">More</a></p>
+	</div>
+	
+	<p class="view-all"><a href="http://www.sitesafe.org.nz/Section?Action=View&amp;Section_id=34" class="more">View All News</a></p>
+	
+</div>
+
+<!-- safetyinsightnewsletter.jspf -->
+<div class="sidebar-widget">
+	<div class="safety-insight">
+		<a href="/Category?Action=View&Category_id=670" class="icon"></a>
+		<div class="content">
+			 <h4> <a href="/Category?Action=View&Category_id=670" >Safety Insite Newsletter</a> </h4> <p>Site Safe's quarterly exclusive membership newsletter - the best way to stay informed. <a class="more" href="/Category?Action=View&Category_id=670" >More</a></p> 
+		</div>
+	</div>
+</div>
+
+<!-- ealerts.jspf -->
+<div class="sidebar-widget">
+	<div class="e-alerts">
+		<a href="/Category?Action=View&Category_id=836" class="icon"></a>
+		<div class="content">
+			<h4> <a href="/Category?Action=View&amp;Category_id=686">e-Alerts</a></h4> <p>Regular, topical, health and safety stories of innovation and success from Kiwi companies- free <a class="more" href="/ContactForm?Action=View&amp;ContactForm_id=11">Sign up</a></p>
+
+		</div>
+	</div>
+</div>
+
+
+				</div>				
+			</div>
+			
+<!-- homepage/promos.jspf -->
+<div class="homepage-promo-wrapper">
+	<div class="promo-tile drop-shadow">
+		<a href="http://www.sitesafe.org.nz/Promo?Action=ClickThru&amp;Promo_id=1&amp;r=1568057131"><img src="http://www.sitesafe.org.nz/Image?Action=View&amp;Image_id=100068" width="71" height="71" alt="" /></a>
+		<div class="content">
+			<h4><a href="http://www.sitesafe.org.nz/Promo?Action=ClickThru&amp;Promo_id=1&amp;r=1568057131"The Hub: NZ Workplace Health and Safety Reform</a></h4>
+			 <p>A snap shot of WorkSafe NZ & the HSE Act Reform.</p> <a href="http://www.sitesafe.org.nz/Promo?Action=ClickThru&amp;Promo_id=1&amp;r=1568057131" class="more">More</a>
+		</div>
+	</div>
+
+	<div class="promo-tile drop-shadow">
+		<a href="http://www.sitesafe.org.nz/Promo?Action=ClickThru&amp;Promo_id=2&amp;r=686022793"><img src="http://www.sitesafe.org.nz/Image?Action=View&amp;Image_id=100193" width="71" height="71" alt="" /></a>
+		<div class="content">
+			<h4><a href="http://www.sitesafe.org.nz/Promo?Action=ClickThru&amp;Promo_id=2&amp;r=686022793"Health and Safety Awards</a></h4>
+			<p>Site Safe Construction Health and Safety Awards</p><a href="http://www.sitesafe.org.nz/Promo?Action=ClickThru&amp;Promo_id=2&amp;r=686022793" class="more">More</a>
+		</div>
+	</div>
+	
+	<div class="promo-tile drop-shadow last">
+		<a href="http://www.sitesafe.org.nz/Promo?Action=ClickThru&amp;Promo_id=3&amp;r=-1357760338"><img src="http://www.sitesafe.org.nz/Image?Action=View&amp;Image_id=100330" width="71" height="71" alt="" /></a>
+		<div class="content">
+			<h4><a href="http://www.sitesafe.org.nz/Promo?Action=ClickThru&amp;Promo_id=3&amp;r=-1357760338"Site Safe Evening of Celebration</a></h4>
+			<p>Site Safe Evening of Celebration<br></p><a href="http://www.sitesafe.org.nz/Promo?Action=ClickThru&amp;Promo_id=3&amp;r=-1357760338" class="more">More</a>
+		</div>
+	</div>				
+</div>
+
+		
+		</div>
+	
+	</div>
+	
+	<!-- footer.jspf -->
+    <footer>
+		<div id="footer-inner">
+			<div class="col">
+				<h3>Training</h3>
+				<a href="/Calendar?Action=View&amp;Calendar_id=1">Course Calendar</a>
+				<a href="/Category?Action=View&amp;Category_id=632">Site Safe Online Payment Options</a>
+				<a href="/Category?Action=View&amp;Category_id=641">Certificate in Construction Safety</a>
+				<a href="/Category?Action=View&amp;Category_id=646">Training Course Information</a>
+				
+			</div><div class="col">
+				<h3>Other Services</h3>
+				<a href="/Category?Action=View&amp;Category_id=652">Charter Accreditation</a>
+				<a href="/Category?Action=View&amp;Category_id=655">Consultancy Services</a>
+				<a href="/Category?Action=View&amp;Category_id=628">Safety Audits</a>
+				<a href="/Category?Action=View&amp;Category_id=628">Benchmarking: Compare Audits</a>
+				<a href="http://sitewise.co.nz/">SiteWise</a>
+				
+			</div><div class="col">
+				<h3>Information & Tools</h3>
+				<a href="Category?Action=View&amp;Category_id=924">Best Practice Guides</a>
+				<a href="/Category?Action=View&amp;Category_id=660">Safety Plans</a>
+				<a href="/Category?Action=View&amp;Category_id=661">Site Specific Safety Plan (SSSP)</a>
+				<a href="Category?Action=View&amp;Category_id=672">Toolbox Talks (Safety Meetings)</a>
+				
+			</div><div class="col">
+				<h3>Members</h3>
+				<a href="/Category?Action=View&amp;Category_id=668">Trade Associations</a>
+				<a href="/Category?Action=View&amp;Category_id=630">Member Benefits</a>
+				<a href="/Category?Action=View&amp;Category_id=670">Member Newsletters</a>
+				
+			</div><div class="col">
+				<h3>Industry Connections</h3>
+				<a href="/Category?Action=View&amp;Category_id=667">Safety Liaison Group Minutes</a>
+				<a href="/Category?Action=View&amp;Category_id=688">Construction Industry Links</a>
+				<a href="/Category?Action=View&amp;Category_id=689">Health & Safety Industry Links</a>
+				<a href="/Category?Action=View&amp;Category_id=690">Client Support</a>
+				
+			</div><div class="col right-col">
+				<h3>About</h3>
+				<a href="/Category?Action=View&amp;Category_id=1032">Strategic Plan</a>
+				<a href="/Category?Action=View&amp;Category_id=699">About Site Safe</a>
+				<a href="/Category?Action=View&amp;Category_id=693">Contact Us</a>
+				<a href="/Category?Action=View&amp;Category_id=695">Our Board & Governance</a>
+				<a href="/Category?Action=View&amp;Category_id=697">Our Advisors</a>
+				<a href="http://www.sitesafe.org.nz/Category?Action=View&amp;Category_id=700">Working at Site Safe</a>
+				
+			</div>
+
+			<div id="footer-utility" class="clearfix">
+				<a href="/Category?Action=View&amp;Category_id=693">Contact Us</a>
+
+				<a href="Category?Action=View&amp;Category_id=635">Terms & Conditions</a>
+
+				<a href="/Section?Action=View&amp;Section_id=28">Intellectual Property Information</a>
+
+				<a href="/Section?Action=View&amp;Section_id=26">Privacy Information</a>
+
+				<a href="/Section?Action=View&amp;Section_id=27" class="last">Legal Information</a>
+
+				
+				<div id="social">
+					<!-- <a href="#rss" class="footer-rss"><span class="visuallyhidden">Subscribe to our RSS feed</span></a>
+					<a href="#sub" class="footer-email"><span class="visuallyhidden">Subscribe to our email newsletter</span></a>
+					<a href="#twit" class="footer-twitter"><span class="visuallyhidden">Follow us on Twitter</span></a> -->
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script defer src="/themes/portal/js/plugins.js"></script>
+	<script defer src="/themes/portal/js/script.js"></script>
+	<!--[if lt IE 7 ]>
+		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+	<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try{var pageTracker = _gat._getTracker("UA-42217458-1");pageTracker._trackPageview();} catch(err) {}</script>
+
+
+  
+</body>
+</html>

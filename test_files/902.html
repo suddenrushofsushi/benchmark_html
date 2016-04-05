@@ -1,0 +1,494 @@
+<!doctype html >
+<!--[if IE 8]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
+<head>
+<title>Bootstrap or jQuery Mobile - Pros and Cons - Part 2</title>
+<meta charset="UTF-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="pingback" href="http://www.gajotres.net/xmlrpc.php"/>
+<meta property="og:image" content="http://www.gajotres.net/wp-content/uploads/2014/12/Bootstrap-or.jpg"/><meta name="author" content="Gajotres">
+<link rel="icon" type="image/png" href="http://www.gajotres.net/wp-content/uploads/2015/02/fav_icon.png.pagespeed.ce.a85tRnAJmc.png">
+<link rel="author" href="https://plus.google.com/+DraganGaić"/>
+<meta name="description" itemprop="description" content="In this article we discuss differences between jQuery Mobile and Bootstrap."/>
+<meta name="keywords" itemprop="keywords" content="jquery mobile review,bootstrap review,twitter bootstrap review,jquery mobile vs bootstrap,jquery mobile or bootstrap,jquery mobile pros cons,bootstrap pros cons,jquery-mobile,blog,mobile development,web development"/>
+<link rel='prev' href='http://www.gajotres.net/bootstrap-or-jquery-mobile-pros-and-cons/'/>
+<link rel="canonical" href="http://www.gajotres.net/bootstrap-or-jquery-mobile-pros-and-cons/2/"/>
+<link rel="alternate" type="application/rss+xml" title="Gajotres.net &raquo; Feed" href="http://www.gajotres.net/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="Gajotres.net &raquo; Comments Feed" href="http://www.gajotres.net/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="Gajotres.net &raquo; Bootstrap or jQuery Mobile &#8211; Pros and Cons Comments Feed" href="http://www.gajotres.net/bootstrap-or-jquery-mobile-pros-and-cons/feed/"/>
+<style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-.1em!important;background:none!important;padding:0!important}</style><link rel='stylesheet' id='download-button-shortcode-css-css' href='http://www.gajotres.net/wp-content/plugins/download-button-shortcode/css/A.downloadbutton.css,qver=4.2.2.pagespeed.cf.bYhC0dsHLw.css' type='text/css' media='all'/><link rel='stylesheet' id='bbp-default-css' href='http://www.gajotres.net/wp-content/plugins/bbpress/templates/default/css/A.bbpress.css,qver=2.5.7-5693.pagespeed.cf.UDybPq-xWG.css' type='text/css' media='screen'/><style id='cptch_stylesheet-css' media='all'>.cptch_example_fields_actions{float:left;height:18px;width:140px;position:relative;top:-7px;padding:2px 0}.cptch_example_fields_actions img{position:relative;width:30px;top:6px}.cptch_block{direction:ltr}input.cptch_settings_input{width:252px}.cptch_span{color:#888;font-size:10px}.cptch_help_box{background-image:url(/wp-content/plugins/captcha/images/xtooltip_icons.png.pagespeed.ic.7MWyHTJqp2.png);background-repeat:no-repeat;cursor:pointer;height:28px;position:relative;margin:3px 5px;width:28px;display:inline-block;vertical-align:middle}.cptch_hidden_help_text{background:#f4f4f4;border:1px solid #dcdcdc;border-radius:4px;left:40px;padding:5px 10px;position:absolute;width:auto;line-height:1.5;display:none}.cptch_hidden_help_text:before{content:url(/wp-content/plugins/captcha/images/help.png.pagespeed.ce.mCHKcnfh8c.png);left:-10px;position:absolute;top:7px;direction:ltr}.cptch_help_box:hover .cptch_hidden_help_text{display:block}form input.cptch_input{padding-left:8px;padding-right:8px}</style><style id='isf_style-css' media='all'>.isf_sublabel_fe{white-space:nowrap!important;overflow:hidden;vertical-align:middle;font-size:13px;font-family:"Segoe WP","Segoe UI",Helvetica,Arial,sans-serif;line-height:2;text-align:center;display:block;float:right;margin-left:5px}</style><link rel='stylesheet' id='isf_pack_social_follow-css' href='http://www.gajotres.net/wp-content/plugins/indeed-social-media/social_follow/files/css/A.pack_social_follow.css,qver=4.2.2.pagespeed.cf.xj50USgUFV.css' type='text/css' media='all'/><link rel='stylesheet' id='ism_font-awesome-css' href='http://www.gajotres.net/wp-content/plugins/indeed-social-media/files/css/A.font-awesome.css,qver=4.2.2.pagespeed.cf.6fSUCeG2NM.css' type='text/css' media='all'/><link rel='stylesheet' id='ism_style-css' href='http://www.gajotres.net/wp-content/plugins/indeed-social-media/files/css/A.style-front_end.css,qver=4.2.2.pagespeed.cf.ON-HfN078N.css' type='text/css' media='all'/><link rel='stylesheet' id='ism_templates-css' href='http://www.gajotres.net/wp-content/plugins/indeed-social-media/files/css/A.templates.css,qver=4.2.2.pagespeed.cf.ucwnOu-hCM.css' type='text/css' media='all'/><link rel='stylesheet' id='ism_show_effects_css-css' href='http://www.gajotres.net/wp-content/plugins/indeed-social-media/files/css/A.animate.css,qver=4.2.2.pagespeed.cf.HkZPIqOsRq.css' type='text/css' media='all'/><link rel='stylesheet' id='google-font-rest-css' href='http://fonts.googleapis.com/css?family=Roboto+Condensed%3A400italic%2C700italic%2C700%2C400%7COpen+Sans%3A400italic%2C600italic%2C700italic%2C400%2C700%2C600&#038;ver=4.2.2' type='text/css' media='all'/><link rel='stylesheet' id='google-fonts-style-css' href='http://fonts.googleapis.com/css?family=Fjalla+One%3A400%2C700%7CPT+Sans+Narrow%3A400%2C700%7COpen+Sans%3A400%2C700%7CYanone+Kaffeesatz%3A400%2C700%7CHabibi%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=4.2.2' type='text/css' media='all'/><link rel='stylesheet' id='js_composer_front-css' href='http://www.gajotres.net/wp-content/plugins/js_composer/assets/css/A.js_composer.css,qver=4.4.2.pagespeed.cf.cGnOD6LyBd.css' type='text/css' media='all'/><link rel='stylesheet' id='td-theme-css' href='http://www.gajotres.net/wp-content/themes/Newsmag/A.style.css,qver=1.7.1.pagespeed.cf.dffmMjAHeK.css' type='text/css' media='all'/><link rel='stylesheet' id='jetpack_css-css' href='http://www.gajotres.net/wp-content/plugins/jetpack/css/A.jetpack.css,qver=3.5.3.pagespeed.cf.LU8wZJOPUI.css' type='text/css' media='all'/><style type="text/css">.recentcomments a{display:inline!important;padding:0!important;margin:0!important}</style><style type="text/css" id="syntaxhighlighteranchor"></style><style>.bbutton{}.bbutton{margin-left:40px}.bbutton:hover{}.animate{transition:all .1s;-webkit-transition:all .1s}.bbutton{position:relative;padding:10px 40px;margin-right:10px;border-radius:10px;font:16px/22px "Fjalla One",arial,sans-serif!important;cursor:pointer;font-weight:700;line-height:1.7;color:#fff;text-decoration:none}.blue{background-color:#3498db;border-bottom:5px solid #2980b9;text-shadow:0px -2px #2980b9}.red{background-color:#a00610;border-bottom:5px solid #770109;text-shadow:0px -2px #770109}.green{background-color:#82bf56;border-bottom:5px solid #669644;text-shadow:0px -2px #669644}.yellow{background-color:#f2cf66;border-bottom:5px solid #d1b358;text-shadow:0px -2px #d1b358}.bbutton:active{transform:translate(0px,5px);-webkit-transform:translate(0px,5px);border-bottom:1px solid}</style><style type="text/css" media="screen">.td-header-style-10>.td-header-header{background:#232323;border-top:10px solid #232323}.td-content-wrap{background:#f6f5f2}.td-header-header .td-make-full{margin-bottom:10px}.td-header-top-menu{background:#232323!important;color:#fff!important}#wpadminbar{background:#171717!important;border-bottom:1px solid #666}.td-header-main-menu{border-top:1px solid #666;background:#171717}.td-header-menu-wrap{margin-bottom:30px}.td-header-style-10 .td-header-text-logo{margin:0}.td-header-style-10 #td-header-menu{margin-left:0}.td-header-style-10 .td-header-text-logo img{margin:0}.td-page-header{display:none}.tagcloud a{background:#fff!important;margin-right:4px!important;margin-bottom:4px!important;padding:5px 7px!important;border:1px solid #e5e5e5!important;font-size:13px!important;color:#666!important;border-radius:2px!important}.tagcloud a:hover{background:#00a0c2!important;color:#fff!important}body:not(.device-touch) .tagcloud a {-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out}.td-post-next-prev,.author-box-wrap{border-top-width:0}.td-post-next-prev .td-next-prev-separator,.td-author-url{display:none}.desc{font-family:"Open Sans";font-size:14px}.desc a{display:none}.td-author-social{margin-top:10px}.td-author-social a,.td-author-name a{display:inline}.author-box-wrap .td-author-name a{font-family:'Roboto Condensed',sans-serif;font-size:20px;color:#4db2ec}.entry-crumbs *{display:none}.td-post-template-5 .entry-crumbs{padding:0px 0px 1px 0px}.td-post-next-prev-content>span{font-family:'Ubuntu',sans-serif;font-size:13px;font-weight:normal;color:#888;text-transform:uppercase;line-height:7px}.td-post-next-prev-content>a{color:#555;font-size:14px}@media only screen and (min-width:1170px){article .td-container,article .entry-thumb,.single-post .td-footer-container,.single-post .td-sub-footer-container,.single-post .td-make-full{width:1170px}article .td-pb-span8,article.td-post-template-5 header{width:830px}article div.td-pb-padding-side{padding:0px 19px 0px 30px}.td-post-featured-image img{display:none!important}.td-image-gradient{background:url(http://www.gajotres.net/wp-content/uploads/2015/04/xcoding.jpg.pagespeed.ic.f6RA9VcfPt.webp) no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.td-image-gradient>.td-post-featured-image{background-color:transparent!important}.td-related-span4{width:270px}}.my-main-container{border-top:1px solid #fff}.my-main-container .td-pb-span4{background:rgba(0,0,0,.64)}.my-main-container .vc_box_border_circle{padding:3px!important}.my-whatever{border-width:0!important;text-shadow:1px 1px #444;font:28px 'Roboto Condensed',arial,sans-serif}.my-whatever-top-text{font-size:24px;padding-top:0!important;padding-bottom:5px!important}.about-me-link{font-weight:bold;font-size:12px}.my-about-me .td_block_text_with_title>*{margin-top:0!important;margin-bottom:0!important}.about-me-strong,.grunion-field-label{font:16px 'Roboto Condensed',arial,sans-serif;font-weight:bold;color:#4a4a4a}.grunion-field-label span{font-size:14px}#g5455-name,#g5455-email,#g5455-website,#contact-form-comment-g5455-comment{border:1px solid #e6e6e6}#g5455-email{height:34px}.td_block_id_2122712939{border-top-width:0;padding-top:5px}.custom-adddd{display:block;height:250px;min-height:250px;height:auto!important;width:100%;margin-top:60px}.custom-adddd a img{height:250px;width:300px;margin:0 auto}.bbp-reply-content li{color:#444}.bbp-reply-content a{color:#4db2ec!important;font-weight:bold!important}.bbp-topic-revision-log-item img,.bbp-reply-revision-log-item img{display:none}h1,h2,h3,h4,h5,h6{font-weight:bold!important}.su-heading{border-bottom:1px dashed #f1f1f1!important;margin-bottom:40px!important;padding-bottom:0!important}.td-post-views{display:none}.su-frame,.su-frame-inner{border-width:0!important;box-shadow:0 0 0 #ccc!important}.book-table td{border-width:0!important}.frame-container{width:100%;height:100px;min-height:100px;height:auto!important;border:1px solid #ddd}.frame-header{width:100%;padding:1px 0 1px 2%;background:#333;font-weight:800;font-size:12px;color:#fff}.frame-header-edit{float:right;text-align:center;padding:0 2%;border-left:1px solid #fff;cursor:pointer}.frame-header-edit a{text-decoration:none;color:#fff!important;font-weight:600}.page__content{overflow:hidden!important}ul.special-list{list-style-type:disc;-webkit-margin-before:1em;-moz-margin-before:1em;-webkit-margin-after:1em;-moz-margin-after:1em;-webkit-margin-start:0px;-moz-margin-start:0px;-webkit-margin-end:0px;-moz-margin-end:0px;-webkit-padding-start:40px;-moz-padding-start:40px}ul.special-list li{margin-bottom:10px}.remove-highlight a{color:#000}.syntaxhighlighter{background-color:#272822!important;padding:10px}.syntaxhighlighter .line.alt2{background-color:#272822!important;font-size:15px!important}.syntaxhighlighter .line.alt1{background-color:#272822!important;font-size:15px!important}.td-post-content h1, .td-post-content h2, .td-post-content h3, .td-post-content h4. .td-post-content h5, .td-post-content h6 {color:#4b4b4b!important}.heading-link{color:#eee;font-size:18px;left:10px;position:absolute;line-height:44px}.td-ss-main-content>.block-title>span,.td_block_7>.block-title>span,.custom-adddd>.block-title>span,.bbp_widget_login>.block-title>span,.jetpack_subscription_widget>.block-title>span{padding:10px 30px 10px 30px!important;border-radius:0;background:#770109 url(http://www.gajotres.net/wp-content/uploads/2015/04/xdotted-image-vertical.png.pagespeed.ic.x84amQHStS.png) repeat-y 5px 0}.td-ss-main-content>.block-title>span:before,.td_block_7>.block-title>span:before,.custom-adddd>.block-title>span:before,.bbp_widget_login>.block-title>span:before,.jetpack_subscription_widget>.block-title>span:before{content:"";border-color:#770109 transparent transparent;border-style:solid;border-width:5px 7px 0 7px;width:0;height:0;position:relative;top:30px;left:-17px}.header-search-wrap .dropdown-menu #td-header-search{background-color:#333!important;color:#fff}.header-search-wrap .dropdown-menu .btn{border-left:1px solid #fff;color:#999}.meta-info div,.meta-info div a{font-style:normal;font-size:13px}.td_module_6 .item-details .td-module-title a{font:14px/20px "Fjalla One",arial,sans-serif!important}.td_block_id_185089381:after{width:90%;margin-left:5%}.custom-adddd:after,.main-announcement-container:after{margin-top:30px}.td-post-template-5 .td-post-header .meta-info{border-bottom:1px dashed #e1e1e1}.td-block-span12 .td_module_wrap .td-module-thumb .entry-thumb{width:75px!important}.td-block-span12 .td_module_wrap .item-details{margin-left:90px}.td-block-span12 .td_module_wrap .td-post-date{font-size:11px}.td-main-sidebar{background:#fafafa}.subscription-text{margin:20px 0;font-size:14px;line-height:20px;font-family:'Open Sans',Arial,sans-serif;color:#777}#subscribe-field{display:block;width:100%!important;height:46px;padding:12px 16px!important;font-size:14px;line-height:1.42857143;color:#3e3f3a;background-color:#fff;background-image:none;border:1px solid #dfd7ca;border-radius:4px}#subscribe-submit input{width:100%;border:none;font-size:11px;line-height:22px;font-weight:500;text-transform:uppercase;color:#fff;background-color:#3e3f3a;border-color:transparent;margin-bottom:0;text-align:center;vertical-align:middle;white-space:nowrap;padding:12px 16px;border-radius:4px;-webkit-user-select:none}.td-post-content a,.td-post-content ul li a strong,.td-post-content a strong{font-weight:400!important;color:#ec7070!important}.td-post-content a.classic{color:#3e3f3a!important}.more-space{display:block}.ism-shortcode-display{display:none!important}.continue-reading{width:"100%;
+    margin-top: 50px;padding-top:35px;font-family:"Fjalla One"!important;font-size:22px!important;border-top:1px solid #eee}@media print{.ism-website-display,.ism-website-display *{display:none!important}}.td-g-rec-id-content_top,.td-g-rec-id-content_bottom{margin:0!important}@media (min-width:1200px){.customHighlight{margin:0 -20px 0 -30px}.dropdown-menu{background:#171717!important;border:#171717!important}.td_module_mx6{width:237px!important}}@media (max-width:767px){.td-header-main-menu .td-make-full{background:#232323}.dropdown-menu{background:#232323!important;border:#232323!important}}</style><style>.td-header-border:before,.td-trending-now-title,.td_block_mega_menu .td_mega_menu_sub_cats .cur-sub-cat,.td-post-category:hover,.td-header-style-2 .td-header-sp-logo,.sf-menu ul .td-menu-item>a:hover,.sf-menu ul .sfHover>a,.sf-menu ul .current-menu-ancestor>a,.sf-menu ul .current-category-ancestor>a,.sf-menu ul .current-menu-item>a,.td-next-prev-wrap a:hover i,.page-nav .current,.widget_calendar tfoot a:hover,.td-footer-container .widget_search .wpb_button:hover,.td-scroll-up-visible,.dropcap,.td-category a,input[type="submit"]:hover,.td-post-small-box a:hover,.td-404-sub-sub-title a:hover,.td-rating-bar-wrap div,.td_top_authors .td-active .td-author-post-count,.td_top_authors .td-active .td-author-comments-count,.td_smart_list_3 .td-sml3-top-controls i:hover,.td_smart_list_3 .td-sml3-bottom-controls i:hover,.td-mobile-close a,.td_wrapper_video_playlist .td_video_controls_playlist_wrapper,.td-read-more a:hover,.td-login-wrap .btn,.td_display_err,.td-header-style-6 .td-top-menu-full,#bbpress-forums button:hover,#bbpress-forums .bbp-pagination .current,.bbp_widget_login .button:hover,.header-search-wrap .td-drop-down-search .btn:hover,.td-post-text-content .more-link-wrap:hover a,#buddypress div.item-list-tabs ul li>a span,#buddypress div.item-list-tabs ul li>a:hover span,#buddypress input[type="submit"]:hover,#buddypress a.button:hover span,#buddypress div.item-list-tabs ul li.selected a span,#buddypress div.item-list-tabs ul li.current a span,#buddypress input[type="submit"]:focus{background-color:#770109}@media (max-width:767px){.category .td-category a.td-current-sub-category{background-color:#770109!important}}.woocommerce .onsale,.woocommerce .woocommerce a.button:hover,.woocommerce-page .woocommerce .button:hover,.single-product .product .summary .cart .button:hover,.woocommerce .woocommerce .product a.button:hover,.woocommerce .product a.button:hover,.woocommerce .product #respond input#submit:hover,.woocommerce .checkout input#place_order:hover,.woocommerce .woocommerce.widget .button:hover,.woocommerce .woocommerce-message .button:hover,.woocommerce .woocommerce-error .button:hover,.woocommerce .woocommerce-info .button:hover,.woocommerce.widget .ui-slider .ui-slider-handle,.vc_btn-black:hover,.wpb_btn-black:hover,.item-list-tabs .feed:hover a{background-color:#770109!important}.top-header-menu a:hover,.top-header-menu .menu-item-has-children li a:hover,.td_module_wrap:hover .entry-title a,.td_mod_mega_menu:hover .entry-title a,.footer-email-wrap a,.widget a:hover,.td-footer-container .widget_calendar #today,.td-category-pulldown-filter a.td-pulldown-category-filter-link:hover,.td-load-more-wrap a:hover,.td-post-next-prev-content a:hover,.td-author-name a:hover,.td-author-url a:hover,.td_mod_related_posts:hover .entry-title a,.td-search-query,.top-header-menu .current-menu-item>a,.top-header-menu .current-menu-ancestor>a,.header-search-wrap .td-drop-down-search .result-msg a:hover,.td_top_authors .td-active .td-authors-name a,.td-mobile-content li a:hover,.post blockquote p,.td-post-content blockquote p,.page blockquote p,.comment-list cite a:hover,.comment-list cite:hover,.comment-list .comment-reply-link:hover,a,.white-menu #td-header-menu .sf-menu>li>a:hover,.white-menu #td-header-menu .sf-menu>.current-menu-ancestor>a,.white-menu #td-header-menu .sf-menu>.current-menu-item>a,.td-stack-classic-blog .td-post-text-content .more-link-wrap:hover a,.td_quote_on_blocks,#bbpress-forums .bbp-forum-freshness a:hover,#bbpress-forums .bbp-topic-freshness a:hover,#bbpress-forums .bbp-forums-list li a:hover,#bbpress-forums .bbp-forum-title:hover,#bbpress-forums .bbp-topic-permalink:hover,#bbpress-forums .bbp-topic-started-by a:hover,#bbpress-forums .bbp-topic-started-in a:hover,#bbpress-forums .bbp-body .super-sticky li.bbp-topic-title .bbp-topic-permalink,#bbpress-forums .bbp-body .sticky li.bbp-topic-title .bbp-topic-permalink,#bbpress-forums #subscription-toggle a:hover,#bbpress-forums #favorite-toggle a:hover,.widget_display_replies .bbp-author-name,.widget_display_topics .bbp-author-name,.td-category-siblings .td-subcat-dropdown a.td-current-sub-category,.td-category-siblings .td-subcat-dropdown a:hover,.td-pulldown-filter-display-option:hover,.td-pulldown-filter-display-option .td-pulldown-filter-link:hover,.td_normal_slide .td-wrapper-pulldown-filter .td-pulldown-filter-list a:hover,#buddypress ul.item-list li div.item-title a:hover,.td_block_13 .td-pulldown-filter-list a:hover{color:#770109}.td-stack-classic-blog .td-post-text-content .more-link-wrap:hover a{outline-color:#770109}.td-mega-menu .wpb_content_element li a:hover,.td_login_tab_focus{color:#770109!important}.td-next-prev-wrap a:hover i,.page-nav .current,.widget_tag_cloud a:hover,.post .td_quote_box,.page .td_quote_box,.td-login-panel-title,#bbpress-forums .bbp-pagination .current{border-color:#770109}.td_wrapper_video_playlist .td_video_currently_playing:after,.item-list-tabs .feed:hover{border-color:#770109!important}.td-header-top-menu,body .td-top-menu-full,.td-header-style-6 .td-top-menu-full{background-color:#fff}.td-header-style-1 .td-header-sp-top-menu{padding-left:13px;top:0}@media (min-width:768px) and (max-width:1023px){.td-header-style-1 .td-header-sp-top-menu{margin-top:0}}.td-header-style-1 .td_ul_logout{position:relative;right:7px}.td-header-style-1 .td-header-sp-top-widget,.td-header-style-1 .td-top-menu-widget{right:3px;top:0}@media (min-width:768px) and (max-width:1023px){.td-header-style-1 .td-header-sp-top-widget,.td-header-style-1 .td-top-menu-widget{margin-top:0}}.td-header-style-2 .td-header-sp-top-menu{padding-left:13px;padding-top:0;padding-bottom:0}.td-header-style-2 .td-header-sp-top-widget{right:3px;padding-top:0;padding-bottom:0}.td-header-style-2 .td_ul_logout{position:relative;right:7px}header .td-post-author-name a{color:#3e3f3a}.td-post-content,.td-post-content p{color:#3e3f3a}.td-post-content h1,.td-post-content h2,.td-post-content h3,.td-post-content h4,.td-post-content h5,.td-post-content h6{color:#3e3f3a}.td-page-content p,.td-page-content .td_block_text_with_title{color:#4b4b4b}.block-title>span,.block-title>a,.widgettitle,.wpb_tabs li a,.td-related-title .td-related-left,.td-related-title .td-related-right,.category .entry-title span,.td-author-counters span,.woocommerce-tabs h2,.woocommerce .product .products h2{font-family:"Fjalla One";font-size:14px;font-weight:normal}.td-module-meta-info .td-post-author-name a,.td_module_wrap .td-post-author-name a{font-style:normal;font-weight:bold}.td-module-meta-info .td-post-date .entry-date,.td_module_wrap .td-post-date .entry-date{font-style:normal}.td-module-meta-info .td-module-comments a,.td_module_wrap .td-module-comments a{font-style:normal}.td-big-grid-meta .td-post-category,.td_module_wrap .td-post-category,.td-module-image .td-post-category{font-style:normal}.td-post-template-default header .entry-title{font-family:"PT Sans Narrow";font-weight:normal}.td-post-template-1 header .entry-title{font-family:"PT Sans Narrow";font-weight:normal}.td-post-template-2 header .entry-title{font-family:"PT Sans Narrow";font-weight:normal}.td-post-template-3 header .entry-title{font-family:"PT Sans Narrow";font-weight:normal}.td-post-template-4 header .entry-title{font-family:"PT Sans Narrow";font-weight:normal}.td-post-template-5 header .entry-title{font-family:"PT Sans Narrow";font-size:38px;font-weight:normal}.td-post-template-6 header .entry-title{font-family:"PT Sans Narrow";font-weight:normal}.td-post-template-7 header .entry-title{font-family:"PT Sans Narrow";font-weight:normal}.td-post-template-8 header .entry-title{font-family:"PT Sans Narrow";font-weight:normal}.td-post-content p,.td-post-content{font-family:"Open Sans";font-size:18px;line-height:30px}.post blockquote p,.page blockquote p,.td-post-text-content blockquote p{font-family:"Open Sans"}.post .td_quote_box p,.page .td_quote_box p{font-family:"Open Sans"}.post .td_pull_quote p,.page .td_pull_quote p{font-family:"Open Sans"}.td-post-content h1{font-family:"PT Sans Narrow";font-size:38px}.td-post-content h2{font-family:"PT Sans Narrow";font-size:34px}.td-post-content h3{font-family:"PT Sans Narrow";font-size:30px}.td-post-content h4{font-family:"PT Sans Narrow";font-size:26px}.td-post-content h5{font-family:"PT Sans Narrow";font-size:22px}.td-post-content h6{font-family:"PT Sans Narrow";font-size:18px}.post .td-category a{font-family:"Roboto Condensed"}.post header .td-post-author-name,.post header .td-post-author-name a{font-family:"Roboto Condensed";font-size:14px;font-weight:normal}.post header .td-post-date .entry-date{font-family:"Roboto Condensed";font-size:14px;font-weight:normal}.post header .td-post-views span,.post header .td-post-comments{font-family:"Roboto Condensed";font-size:14px;font-weight:normal}.post .td-post-source-tags a,.post .td-post-source-tags span{font-family:"Open Sans"}.post .td-post-next-prev-content span{font-family:"Open Sans"}.post .td-post-next-prev-content a{font-family:"Open Sans"}.post .author-box-wrap .td-author-name a{font-family:"Roboto Condensed";font-size:20px;font-weight:normal}.post .author-box-wrap .td-author-url a{font-family:"Open Sans"}.post .author-box-wrap .td-author-description{font-family:"Open Sans"}.td_block_related_posts .entry-title a{font-family:"Open Sans"}.post .td-post-share-title,.td-comments-title-wrap h4,.comment-reply-title{font-family:"Open Sans"}.footer-text-wrap{font-family:"Yanone Kaffeesatz"}.td-sub-footer-copy{font-family:Habibi}</style><script type="text/javascript">window._wpemojiSettings={"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.gajotres.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.2"}};!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);</script>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?ver=1.11.1'></script>
+<script type='text/javascript'>//<![CDATA[
+var AjaxCheckClicks={"ajaxurl":"http:\/\/www.gajotres.net\/wp-admin\/admin-ajax.php","nonce":"50498c3f6c"};
+//]]></script>
+<script type='text/javascript' src='http://www.gajotres.net/wp-content/plugins/cfmonitor_1_8_0/js/checkclicks.js?ver=4.2.2'></script>
+<script type='text/javascript'>//<![CDATA[
+var AjaxUpdateClicks={"ajaxurl":"http:\/\/www.gajotres.net\/wp-admin\/admin-ajax.php","nonce":"8f352fe903"};
+//]]></script>
+<script type='text/javascript' src='http://www.gajotres.net/wp-content/plugins/cfmonitor_1_8_0/js/updateclicks.js?ver=4.2.2'></script>
+<script type='text/javascript'>//<![CDATA[
+var clientcfmonitor={"client_ip":"54.162.161.151","clickcount":"2","bannedperiod":"1","preurl":null,"firstclickdate":[[""],[""]],"updatedVisitCount":"0","isblockedcount":"0","customclass":"td-g-rec","firstclick":"false","disablead":"false","currentURL":"\/bootstrap-or-jquery-mobile-pros-and-cons\/2\/"};
+//]]></script>
+<script type='text/javascript' src='http://www.gajotres.net/wp-content/plugins/cfmonitor_1_8_0/js/check_min.js?ver=4.2.2'></script>
+<script type='text/javascript' src='http://www.gajotres.net/wp-content/plugins/indeed-social-media/files/js/front_end_header.js'></script>
+<script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.gajotres.net/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.gajotres.net/wp-includes/wlwmanifest.xml"/>
+<link rel='prev' title='Top 10 best looking free jQuery Mobile themes' href='http://www.gajotres.net/top-10-best-looking-free-jquery-mobile-themes/'/>
+<link rel='next' title='Building a Native Mobile App with Cordova and Ionic' href='http://www.gajotres.net/building-a-native-mobile-app-with-cordova-and-ionic/'/>
+<link rel='shortlink' href='http://www.gajotres.net/?p=4448'/>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="http://www.gajotres.net/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]--><script type="text/javascript">(function(url){if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){return;}
+var wfscr=document.createElement('script');wfscr.type='text/javascript';wfscr.async=true;wfscr.src=url+'&r='+Math.random();(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);})('//www.gajotres.net/wp-admin/admin-ajax.php?action=wordfence_logHuman&hid=7D1B9035528887132125DCB8E0F63FDC');</script>
+<script>var td_blocks=[];function td_block(){this.id='';this.block_type=1;this.atts='';this.td_column_number='';this.td_current_page=1;this.post_count=0;this.found_posts=0;this.max_num_pages=0;this.td_filter_value='';this.td_filter_ui_uid='';this.is_ajax_running=false;this.td_user_action='';this.header_color='';this.ajax_pagination_infinite_stop='';}
+var td_ad_background_click_link="";var td_ad_background_click_target="";var td_ajax_url="http:\/\/www.gajotres.net\/wp-admin\/admin-ajax.php?td_theme_name=Newsmag&v=1.7.1";var td_get_template_directory_uri="http:\/\/www.gajotres.net\/wp-content\/themes\/Newsmag";var tds_snap_menu="";var tds_logo_on_sticky="";var tds_header_style="10";var td_search_url="http:\/\/www.gajotres.net\/search\/";var td_please_wait="Please wait...";var td_email_user_pass_incorrect="User or password incorrect!";var td_email_user_incorrect="Email or username incorrect!";var td_email_incorrect="Email incorrect!";var tds_more_articles_on_post_enable="";var tds_more_articles_on_post_time_to_wait="";var tds_more_articles_on_post_pages_distance_from_top=0;var tds_theme_color_site_wide="#770109";var tds_smart_sidebar="enabled";var td_magnific_popup_translation_tPrev="Previous (Left arrow key)";var td_magnific_popup_translation_tNext="Next (Right arrow key)";var td_magnific_popup_translation_tCounter="%curr% of %total%";var td_magnific_popup_translation_ajax_tError="The content from %url% could not be loaded.";var td_magnific_popup_translation_image_tError="The image #%curr% could not be loaded.";</script>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-41431180-2','auto');ga('send','pageview');</script><link rel="dns-prefetch" href="//pagead2.googlesyndication.com"><link rel="dns-prefetch" href="//2.gravatar.com"><link rel="dns-prefetch" href="//0.gravatar.com"><link rel="dns-prefetch" href="//s0.wp.com"><link rel="dns-prefetch" href="//stats.wp.com"></head>
+<body class="single single-post postid-4448 single-format-standard paged-2 single-paged-2 bootstrap-or-jquery-mobile-pros-and-cons single_template_5 wpb-js-composer js-comp-ver-4.4.2 vc_responsive td-full-layout lazy-animation" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<div id="td-outer-wrap">
+<div class="td-scroll-up"><i class="td-icon-menu-up"></i></div>
+<div class="td-transition-content-and-menu td-mobile-nav-wrap">
+<div id="td-mobile-nav">
+<div class="td-mobile-close">
+<a href="#">CLOSE</a>
+<div class="td-nav-triangle"></div>
+</div>
+<div class="td-mobile-content">
+<div class="menu-main-menu-container"><ul id="menu-main-menu" class=""><li id="menu-item-5796" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-first menu-item-5796"><a href="http://www.gajotres.net">Home</a></li>
+<li id="menu-item-5879" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5879"><a href="http://www.gajotres.net/about-me/">About Me</a></li>
+<li id="menu-item-5957" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5957"><a href="http://www.gajotres.net/board/index/forum/">Forum</a></li>
+</ul></div> </div>
+</div> </div>
+<div class="td-transition-content-and-menu td-content-wrap">
+<div class="td-header-wrap td-header-style-10">
+<div class="td-header-row td-header-top-menu">
+<div class="td-make-full">
+<div class="td-header-sp-top-menu">
+</div>
+</div>
+</div>
+<div class="td-header-row td-header-header">
+<div class="td-make-full">
+<div class="td-header-text-logo">
+<a itemprop="url" href="http://www.gajotres.net/">
+<script pagespeed_no_defer="">//<![CDATA[
+(function(){var g=this,h=function(b,d){var a=b.split("."),c=g;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};var l=function(b){var d=b.length;if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};var m=function(b){var d=window;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var n,p=function(b,d,a,c,e){this.f=b;this.h=d;this.i=a;this.c=e;this.e={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.g=c;this.b={};this.a=[];this.d={}},q=function(b,d){var a,c,e=d.getAttribute("pagespeed_url_hash");if(a=e&&!(e in b.d))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=document.body;a=c.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.e.height&&c<=b.e.width)}a&&(b.a.push(e),b.d[e]=!0)};p.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&q(this,b)};h("pagespeed.CriticalImages.checkImageForCriticality",function(b){n.checkImageForCriticality(b)});h("pagespeed.CriticalImages.checkCriticalImages",function(){r(n)});var r=function(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d.length;++c)a=a.concat(l(document.getElementsByTagName(d[c])));if(0!=a.length&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)q(b,d);a="oh="+b.i;b.c&&(a+="&n="+b.c);if(d=0!=b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),c=1;c<b.a.length;++c){var e=","+encodeURIComponent(b.a[c]);131072>=a.length+e.length&&(a+=e)}b.g&&(e="&rd="+encodeURIComponent(JSON.stringify(s())),131072>=a.length+e.length&&(a+=e),d=!0);t=a;if(d){c=b.f;b=b.h;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(k){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(u){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}},s=function(){var b={},d=document.getElementsByTagName("IMG");if(0==d.length)return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("pagespeed_url_hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].k&&a.height>=b[e].j)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b},t="";h("pagespeed.CriticalImages.getBeaconData",function(){return t});h("pagespeed.CriticalImages.Run",function(b,d,a,c,e,f){var k=new p(b,d,a,e,f);n=k;c&&m(function(){window.setTimeout(function(){r(k)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://www.gajotres.net/bootstrap-or-jquery-mobile-pros-and-cons/2/','iRm-FmJ00g',true,false,'ifrBZaKMIfQ');
+//]]></script><img class="td-retina-data td-logo" data-retina="http://www.gajotres.net/wp-content/uploads/2015/04/logo_radni.png" src="http://www.gajotres.net/wp-content/uploads/2015/04/xlogo_radni_small.png.pagespeed.ic.OjhOgxfe84.png" alt="Gajotres.net" title="Gajotres.net" pagespeed_url_hash="1391471324" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+</a>
+<meta itemprop="name" content="Gajotres.net">
+</div>
+</div>
+</div>
+<div class="td-header-menu-wrap">
+<div class="td-header-row td-header-main-menu">
+<div class="td-make-full">
+<div id="td-header-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+<div id="td-top-mobile-toggle"><a href="#"><i class="td-icon-font td-icon-mobile"></i></a></div>
+<div class="td-main-menu-logo">
+<a itemprop="url" href="http://www.gajotres.net/">
+<img class="td-retina-data" data-retina="http://www.gajotres.net/wp-content/uploads/2015/04/logo_radni.png" src="http://www.gajotres.net/wp-content/uploads/2015/04/xlogo_radni_small.png.pagespeed.ic.OjhOgxfe84.png" alt="Gajotres.net" title="Gajotres.net" pagespeed_url_hash="1391471324" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+</a>
+<meta itemprop="name" content="Gajotres.net">
+</div>
+<div class="menu-main-menu-container"><ul id="menu-main-menu-1" class="sf-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-first td-menu-item td-normal-menu menu-item-5796"><a href="http://www.gajotres.net">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-5879"><a href="http://www.gajotres.net/about-me/">About Me</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-5957"><a href="http://www.gajotres.net/board/index/forum/">Forum</a></li>
+</ul></div></div>
+<div class="td-search-wrapper">
+<div id="td-top-search">
+<div class="header-search-wrap">
+<div class="dropdown header-search">
+<a id="td-header-search-button" href="#" role="button" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="header-search-wrap">
+<div class="dropdown header-search">
+<div class="td-drop-down-search" aria-labelledby="td-header-search-button">
+<form role="search" method="get" class="td-search-form" action="http://www.gajotres.net/">
+<div class="td-head-form-search-wrap">
+<input class="needsclick" id="td-header-search" type="text" value="" name="s" autocomplete="off"/><input class="wpb_button wpb_btn-inverse btn" type="submit" id="td-header-search-top" value="Search"/>
+</div>
+</form>
+<div id="td-aj-search"></div>
+</div>
+</div>
+</div> </div>
+</div>
+</div>
+<div class="td-header-container">
+<div class="td-header-row td-header-header">
+<div class="td-header-sp-ads">
+<div class="td-header-ad-wrap  td-ad">
+</div>	</div>
+</div>
+</div>
+</div><article id="post-4448" class="td-post-template-5 post-4448 post type-post status-publish format-standard has-post-thumbnail hentry category-blog-2 category-mobile-development category-web-development tag-jquery-mobile-2" itemscope itemtype="http://schema.org/Article">
+<div class="td-post-header td-container">
+<div class="td-entry-crumbs td-pb-padding-side"><div class="entry-crumbs"><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a title="" class="entry-crumb" itemprop="url" href="http://www.gajotres.net/"><span itemprop="title">Home</span></a></span> <i class="td-icon-right td-bread-sep"></i> <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a title="View all posts in Blog" class="entry-crumb" itemprop="url" href="http://www.gajotres.net/category/blog-2/"><span itemprop="title">Blog</span></a></span> <i class="td-icon-right td-bread-sep"></i> <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><meta itemprop="title" content="Bootstrap or jQuery Mobile &#8211; Pros and Cons"><meta itemprop="url" content="http://www.gajotres.net/bootstrap-or-jquery-mobile-pros-and-cons/">Bootstrap or jQuery Mobile &#8211; Pros and Cons</span></div></div>
+<div class="td-post-featured-image td-image-gradient">
+<div class="td-post-featured-image"><a href="http://www.gajotres.net/wp-content/uploads/2014/12/Bootstrap-or.jpg" data-caption=""><img width="754" height="483" itemprop="image" class="entry-thumb td-modal-image" src="http://www.gajotres.net/wp-content/uploads/2014/12/754x483xBootstrap-or.jpg.pagespeed.ic.Wc3M0cf5DL.webp" alt="" title="Bootstrap-or" pagespeed_url_hash="3154789612" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a></div>
+<header class="td-pb-padding-side">
+<ul class="td-category"><li class="entry-category"><a href="http://www.gajotres.net/category/blog-2/">Blog</a></li><li class="entry-category"><a href="http://www.gajotres.net/category/mobile-development/">Mobile development</a></li><li class="entry-category"><a href="http://www.gajotres.net/category/web-development/">Web development</a></li></ul> <h1 itemprop="name" class="entry-title">Bootstrap or jQuery Mobile &#8211; Pros and Cons</h1>
+<div class="meta-info">
+<div style="display: none;">Last updated on <time datetime="2015-04-10T15:06:20+00:00">April 10th, 2015</time></div>
+<div class="td-post-author-name">By <a itemprop="author" href="http://www.gajotres.net/author/dgaic666/">Gajotres</a> - </div> <div class="td-post-date">
+<time itemprop="dateCreated" class="entry-date updated td-module-date" datetime="2015-04-10T15:06:20+00:00">Last updated on April 10th, 2015</time>
+<meta itemprop="interactionCount" content="UserComments:3">
+</div>
+<div class="td-post-views"><i class="td-icon-views"></i><span class="td-nr-views-4448">12205</span></div> <div class="td-post-comments"><a href="http://www.gajotres.net/bootstrap-or-jquery-mobile-pros-and-cons/#comments"><i class="td-icon-comments"></i>3</a></div> </div>
+</header>
+</div>
+</div>
+<div class="td-container">
+<div class="td-container-border">
+<div class="td-pb-row">
+<div class="td-pb-span8 td-main-content" role="main">
+<div class="td-ss-main-content">
+<div class="td-post-content td-pb-padding-side">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><div class="td-g-rec td-g-rec-id-content_top">
+<script type="text/javascript">var td_screen_width=document.body.clientWidth;if(td_screen_width>=1024){document.write('<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2165291328933509" data-ad-slot="9632973476"></ins>');(adsbygoogle=window.adsbygoogle||[]).push({});}
+if(td_screen_width>=768&&td_screen_width<1024){document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-2165291328933509" data-ad-slot="9632973476"></ins>');(adsbygoogle=window.adsbygoogle||[]).push({});}
+if(td_screen_width<768){document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-2165291328933509" data-ad-slot="9632973476"></ins>');(adsbygoogle=window.adsbygoogle||[]).push({});}</script>
+</div>
+<p>
+<h3>Bootstrap:</h3><div style="width:100%;height: 30px;"> </div>
+<a href="http://getbootstrap.com/" style="text-decoration: none !important;" target="" rel=""><span class="bbutton red animate">Link</span></a><div style="width:100%;height: 30px;"> </div>
+Bootstrap is a front-end framework (personally it&#8217;s debatable if it can be called a framework ) relying on a CSS grid system for both responsive and non-responsive look and feel. That same look and feel are improved via cherry picked icons, typography, code, tables, forms, buttons, etc. Just like jQuery Mobile it also includes different UI components, like dropdowns, button(s), button groups, button dropdowns, navs, navbars, breadcrumbs, pagination and many other. And just like jQuery Mobile everything comes packed with jQuery JavaScript framework. <div style="width:100%;height: 30px;"> </div>
+Here&#8217;s where lines between Bootstrap and jQuery becomes blurry. Bootstrap is advertised as mobile first and that&#8217;s only partially true. While responsive in nature, it looks better on desktop screens then mobile ones. No matter what device you use, Bootstrap will always look like desktop application (unlike jQuery Mobile who always look like a mobile application). Unfortunately, there&#8217;s a big downside, every Bootstrap application looks and feels the same (just like any jQuery Mobile application). Of course, nothing prevents you doing some custom coding, which again brakes the purpose of Bootstrap rapid prototyping. Not to mention, Bootstrap customization can be pretty tricky, especially if you&#8217;re not CSS3 savvy. <div style="width:100%;height: 30px;"> </div>
+<img width="100%" height="auto" src="http://www.gajotres.net/wp-content/uploads/2014/12/xbootstrapui3.jpg.pagespeed.ic.TqIW9DdOFV.webp" alt="Bootstrap UI" pagespeed_url_hash="1187263667" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/><div style="width:100%;height: 30px;"> </div>
+While in much smaller scale compared to jQuery Mobile, JavaScript also plays a role here. The best part, however, is that Bootstrap enables you to skip writing a lot of JavaScript altogether. With it, you can easily manipulate any visual aspect of your page, be that modal windows alerts, tooltips, etc. <div style="width:100%;height: 30px;"> </div>
+Thankfully jQuery used with Bootstrap will not cause performance problems seen in many jQuery Mobile applications. This is because Bootstrap relays more on CSS during content generation then jQuery Mobile. More praises should go to Bootstrap grid system which is much much better then anything seen in jQuery Mobile, even if you count in every 3rd party grid systems. That grid system is what makes or brakes a good Bootstrap applications. Using the platform’s grid isn&#8217;t mandatory, but it does make your job a whole lot easier. <div style="width:100%;height: 30px;"> </div>
+Bootstrap has a large community, not to mention dedicated developers, which is a curse and a blessing at the same time. Thankfully Bootstrap doesn&#8217;t suffer from this as much as jQuery Mobile does. If you need anything just look for it in a Bootstrap official documentation page o Google it, Stackoverflow is also a good place for your question. <div style="width:100%;height: 30px;"> </div>
+<strong><h3>Pros</h3></strong><div style="width:100%;height: 30px;"> </div>
+<ul>
+<li>Easy to develop and prototype</li>
+<li>Excellent 3rd party support and community</li>
+<li>Better for desktop web applications</li>
+<li>Less dependent on jQuery which relates to better performance</li>
+<li><strong><a style="color: #555555 !important;" href="http://stackoverflow.com/questions/tagged/twitter-bootstrap">Stackoverflow</a></strong></li>
+</ul><div style="width:100%;height: 30px;"> </div>
+<strong><h3>Cons</h3></strong><div style="width:100%;height: 30px;"> </div>
+<ul>
+<li>All sites look the same, customization tends to be very hard</li>
+<li>Simply not made for professional use</li>
+<li>Official documentation</li>
+</ul><div style="width:100%;height: 30px;"> </div>
+<h2>Final words:</h2>
+I leave you to make your own decision. In few words, choose jQuery Mobile if you are working on a mobile application, or choose Bootstrap if a desktop application is your main goal. Both frameworks, while somewhat limited, are too good to ignore. <div style="width:100%;height: 30px;"> </div>
+While working on this article I missed mentioning one excellent advantage of jQuery Mobile and Bootstrap. They work very well together, you can easily combine Bootstrap grid system with jQuery Mobile page architecture, thus solving both frameworks disadvantages.
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><div class="td-g-rec td-g-rec-id-content_bottom">
+<script type="text/javascript">var td_screen_width=document.body.clientWidth;if(td_screen_width>=1024){document.write('<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2165291328933509" data-ad-slot="8685979070"></ins>');(adsbygoogle=window.adsbygoogle||[]).push({});}
+if(td_screen_width>=768&&td_screen_width<1024){document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-2165291328933509" data-ad-slot="8685979070"></ins>');(adsbygoogle=window.adsbygoogle||[]).push({});}
+if(td_screen_width<768){document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-2165291328933509" data-ad-slot="8685979070"></ins>');(adsbygoogle=window.adsbygoogle||[]).push({});}</script>
+</div>
+</div>
+<footer>
+<div class="page-nav page-nav-post td-pb-padding-side"><a href="http://www.gajotres.net/bootstrap-or-jquery-mobile-pros-and-cons/"><div><i class="td-icon-menu-left"></i></div></a> <a href="http://www.gajotres.net/bootstrap-or-jquery-mobile-pros-and-cons/"><div>1</div></a> <div>2</div></div>
+<div class="td-post-source-tags td-pb-padding-side">
+<ul class="td-tags td-post-small-box clearfix"><li><span>TAGS</span></li><li><a href="http://www.gajotres.net/tag/jquery-mobile-2/">jQuery-Mobile</a></li></ul> </div>
+<div class="td-block-row td-post-next-prev"><div class="td-block-span6 td-post-prev-post"><div class="td-post-next-prev-content"><span>Previous article</span><a href="http://www.gajotres.net/top-10-best-looking-free-jquery-mobile-themes/">Top 10 best looking free jQuery Mobile themes</a></div></div><div class="td-next-prev-separator"></div><div class="td-block-span6 td-post-next-post"><div class="td-post-next-prev-content"><span>Next article</span><a href="http://www.gajotres.net/building-a-native-mobile-app-with-cordova-and-ionic/">Building a Native Mobile App with Cordova and Ionic</a></div></div></div> <div class="author-box-wrap"><a itemprop="author" href="http://www.gajotres.net/author/dgaic666/"><img alt='' src='http://2.gravatar.com/avatar/8053e77df1eb97f47938c4f3d093e18c?s=96&#038;r=pg' srcset='http://2.gravatar.com/avatar/8053e77df1eb97f47938c4f3d093e18c?s=192&amp;r=pg 2x' class='avatar avatar-96 photo' height='96' width='96' pagespeed_url_hash="3796115253" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a><div class="desc"><div class="td-author-name vcard author"><span class="fn"><a itemprop="author" href="http://www.gajotres.net/author/dgaic666/">Gajotres</a></span></div><div class="td-author-url"><a href="http://www.gajotres.net">http://www.gajotres.net</a></div><div class="td-author-description">I'm a software architect and creative code developer. Blame it on my parents, my upbringing, or my obsession with the IT, but folks tell me I am really, really good at what I'm doing. When I'm not meddling with HTML5 and web development, I work as a senior Java developer in one of the biggest insurance companies in the world. <a href="https://plus.google.com/112675895785265588656?rel=author">Google+</a></div><div class="td-author-social"></div><div class="clearfix"></div></div></div>	<meta itemprop="author" content="Gajotres"><meta itemprop="interactionCount" content="UserComments:3"/> </footer>
+<script>var block_td_uid_1_558ac5329c7d6=new td_block();block_td_uid_1_558ac5329c7d6.id="td_uid_1_558ac5329c7d6";block_td_uid_1_558ac5329c7d6.atts='{"limit":3,"ajax_pagination":"next_prev","live_filter":"cur_post_same_categories","td_ajax_filter_type":"td_custom_related","class":"td_block_id_1747554592 td_uid_1_558ac5329c7d6_rand","td_column_number":3,"live_filter_cur_post_id":4448,"live_filter_cur_post_author":"51"}';block_td_uid_1_558ac5329c7d6.td_column_number="3";block_td_uid_1_558ac5329c7d6.block_type="td_block_related_posts";block_td_uid_1_558ac5329c7d6.post_count="3";block_td_uid_1_558ac5329c7d6.found_posts="114";block_td_uid_1_558ac5329c7d6.max_num_pages="38";block_td_uid_1_558ac5329c7d6.header_color="";block_td_uid_1_558ac5329c7d6.ajax_pagination_infinite_stop="";td_blocks.push(block_td_uid_1_558ac5329c7d6);</script><div class="td_block_wrap td_block_related_posts td_block_id_1747554592 td_uid_1_558ac5329c7d6_rand td-pb-border-top"><h4 class="td-related-title"><a id="td_uid_2_558ac5329e418" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_1_558ac5329c7d6" href="#">RELATED ARTICLES</a><a id="td_uid_3_558ac5329e492" class="td-related-right" data-td_filter_value="td_related_more_from_author" data-td_block_id="td_uid_1_558ac5329c7d6" href="#">MORE FROM AUTHOR</a></h4><div id=td_uid_1_558ac5329c7d6 class="td_block_inner">
+<div class="td-related-row">
+<div class="td-related-span4">
+<div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="http://www.gajotres.net/best-available-java-restful-micro-frameworks/" rel="bookmark" title="Best available Java RESTful Micro Frameworks"><img width="238" height="178" itemprop="image" class="entry-thumb" src="http://www.gajotres.net/wp-content/uploads/2015/06/238x178xjava-restful-frameworks-238x178.jpg.pagespeed.ic.Zlp0ElIygv.webp" alt="" title="Best available Java RESTful Micro Frameworks" pagespeed_url_hash="939149888" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a></div> </div>
+<div class="item-details">
+<h3 itemprop="name" class="entry-title td-module-title"><a itemprop="url" href="http://www.gajotres.net/best-available-java-restful-micro-frameworks/" rel="bookmark" title="Best available Java RESTful Micro Frameworks">Best available Java RESTful Micro Frameworks</a></h3> </div>
+</div>
+</div>
+<div class="td-related-span4">
+<div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="http://www.gajotres.net/ionic-framework-series-14-grid-system/" rel="bookmark" title="Ionic Framework | Using Grid System"><img width="238" height="178" itemprop="image" class="entry-thumb" src="http://www.gajotres.net/wp-content/uploads/2015/04/238x178xionic_grids-238x178.jpg.pagespeed.ic.bIjBsR1E2l.webp" alt="" title="Ionic Framework | Using Grid System" pagespeed_url_hash="54832218" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a></div> </div>
+<div class="item-details">
+<h3 itemprop="name" class="entry-title td-module-title"><a itemprop="url" href="http://www.gajotres.net/ionic-framework-series-14-grid-system/" rel="bookmark" title="Ionic Framework | Using Grid System">Ionic Framework | Using Grid System</a></h3> </div>
+</div>
+</div>
+<div class="td-related-span4">
+<div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="http://www.gajotres.net/storing-data-in-ionic-framework-and-onsenui/" rel="bookmark" title="Storing data in Ionic Framework and OnsenUI"><img width="238" height="178" itemprop="image" class="entry-thumb" src="http://www.gajotres.net/wp-content/uploads/2015/04/238x178xIonic_localstorage-238x178.jpg.pagespeed.ic.WOa2a81Ldc.webp" alt="" title="Storing data in Ionic Framework and OnsenUI" pagespeed_url_hash="1693304905" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a></div> </div>
+<div class="item-details">
+<h3 itemprop="name" class="entry-title td-module-title"><a itemprop="url" href="http://www.gajotres.net/storing-data-in-ionic-framework-and-onsenui/" rel="bookmark" title="Storing data in Ionic Framework and OnsenUI">Storing data in Ionic Framework and OnsenUI</a></h3> </div>
+</div>
+</div> </div></div><div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_1_558ac5329c7d6" data-td_block_id="td_uid_1_558ac5329c7d6"><i class="td-icon-font td-icon-menu-left"></i></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_1_558ac5329c7d6" data-td_block_id="td_uid_1_558ac5329c7d6"><i class="td-icon-font td-icon-menu-right"></i></a></div></div>
+<div class="comments" id="comments">
+<div class="td-comments-title-wrap td-pb-padding-side">
+<h4><span>3 COMMENTS</span></h4>
+</div>
+<ol class="comment-list td-pb-padding-side">
+<li class="comment " id="li-comment-8247">
+<article>
+<footer>
+<img alt='' src='http://2.gravatar.com/avatar/b204b2f0cde6350e30c018ca09207c6c?s=50&#038;r=pg' srcset='http://2.gravatar.com/avatar/b204b2f0cde6350e30c018ca09207c6c?s=100&amp;r=pg 2x' class='avatar avatar-50 photo' height='50' width='50' pagespeed_url_hash="2519589338" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/> <cite>Hamza</cite>
+<a class="comment-link" href="#li-comment-8247">
+</a>
+</footer>
+<div class="comment-content">
+<p>Nice tutorial Dragan Gaić !! Thanks to you i am finally able to make a decision</p>
+</div>
+<div class="comment-meta" id="comment-8247">
+<a class='comment-reply-link' href='/bootstrap-or-jquery-mobile-pros-and-cons/2/?replytocom=8247#respond' onclick='return addComment.moveForm( "comment-8247", "8247", "respond", "4448" )' aria-label='Reply to Hamza'>Reply</a> </div>
+</article>
+</li>
+<li class="comment " id="li-comment-9136">
+<article>
+<footer>
+<img alt='' src='http://0.gravatar.com/avatar/095bcd53d8b03fbda76d283f27df7a8c?s=50&#038;r=pg' srcset='http://0.gravatar.com/avatar/095bcd53d8b03fbda76d283f27df7a8c?s=100&amp;r=pg 2x' class='avatar avatar-50 photo' height='50' width='50' pagespeed_url_hash="3727503463" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/> <cite>amdad</cite>
+<a class="comment-link" href="#li-comment-9136">
+</a>
+</footer>
+<div class="comment-content">
+<p>But I tried to combine both &amp; success<br/>
+see below<br/>
+&lt;div data-role=&quot;page&quot; id=&quot;pageone&quot; data-theme=&quot;b&quot;&gt;<br/>
+&lt;div data-role=&quot;header&quot; id=&quot;demo&quot; data-position=&quot;fixed&quot; data-theme=&quot;b&quot;&gt;<br/>
+&lt;a href=&quot;#&quot; class=&quot;ui-btn ui-icon-home ui-btn-icon-left&quot;&gt;Home&lt;/a&gt;<br/>
+&lt;h1&gt;Dolonchapa&lt;/h1&gt;<br/>
+&lt;a href=&quot;&quot; class=&quot;ui-btn ui-icon-forward ui-btn-icon-left&quot;&gt;Logout&lt;/a&gt;<br/>
+&lt;/div&gt;</p>
+<p> &lt;div data-role=&quot;main&quot; class=&quot;ui-content&quot;&gt;<br/>
+&lt;div class=&quot;container&quot;&gt;<br/>
+&lt;div class=&quot;row&quot;&gt;<br/>
+&lt;div class=&quot;col-sm-3 visible-lg visible-md&quot;&gt;<br/>
+&nbsp;<br/>
+&lt;/div&gt;<br/>
+&lt;div class=&quot; col-sm-6&quot;&gt;<br/>
+&lt;form method=&quot;post&quot; action=&quot;login.php&quot;&gt;<br/>
+&lt;div&gt;<br/>
+&lt;h3&gt;Login Form&lt;/h3&gt;<br/>
+&lt;label for=&quot;uname&quot; class=&quot;ui-hidden-accessible&quot;&gt;Username:&lt;/label&gt;<br/>
+&lt;input type=&quot;text&quot; name=&quot;uname&quot; id=&quot;uname&quot; placeholder=&quot;Username&quot;&gt;<br/>
+&lt;label for=&quot;pass&quot; class=&quot;ui-hidden-accessible&quot;&gt;Password:&lt;/label&gt;<br/>
+&lt;input type=&quot;password&quot; name=&quot;pass&quot; id=&quot;pass&quot; placeholder=&quot;Password&quot;&gt;<br/>
+&lt;/div&gt;<br/>
+&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;submit&quot; class=&quot;ui-btn&quot;&gt;<br/>
+&lt;/form&gt;<br/>
+&lt;/div&gt;<br/>
+&lt;/div&gt;<br/>
+&lt;/div&gt;<br/>
+&lt;div data-role=&quot;footer&quot; style=&quot;text-align:center;&quot; data-position=&quot;fixed&quot; data-theme=&quot;b&quot;&gt;<br/>
+&lt;div data-role=&quot;controlgroup&quot; data-type=&quot;horizontal&quot;&gt;<br/>
+&lt;a href=&quot;#&quot; class=&quot;ui-btn ui-icon-action ui-btn-icon-notext&quot; style=&quot;text-align:center&quot;&gt;Facebook&lt;/a&gt;<br/>
+&lt;a href=&quot;#&quot; class=&quot;ui-btn ui-icon-alert ui-btn-icon-notext&quot; style=&quot;text-align:center&quot;&gt;Twitter&lt;/a&gt;<br/>
+&lt;a href=&quot;#&quot; class=&quot;ui-btn ui-icon-plus ui-btn-icon-notext&quot; style=&quot;text-align:center&quot;&gt;Instagram&lt;/a&gt;<br/>
+&lt;/div&gt;<br/>
+&lt;/div&gt;<br/>
+&lt;/div&gt;<br/>
+&lt;/div&gt;</p>
+</div>
+<div class="comment-meta" id="comment-9136">
+<a class='comment-reply-link' href='/bootstrap-or-jquery-mobile-pros-and-cons/2/?replytocom=9136#respond' onclick='return addComment.moveForm( "comment-9136", "9136", "respond", "4448" )' aria-label='Reply to amdad'>Reply</a> </div>
+</article>
+<ul class="children">
+<li class="comment " id="li-comment-9137">
+<article>
+<footer>
+<img alt='' src='http://2.gravatar.com/avatar/8053e77df1eb97f47938c4f3d093e18c?s=50&#038;r=pg' srcset='http://2.gravatar.com/avatar/8053e77df1eb97f47938c4f3d093e18c?s=100&amp;r=pg 2x' class='avatar avatar-50 photo' height='50' width='50' pagespeed_url_hash="710929183" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/> <cite><a href='http://www.gajotres.net' rel='external nofollow' class='url'>Dragan Gaić</a></cite>
+<a class="comment-link" href="#li-comment-9137">
+</a>
+</footer>
+<div class="comment-content">
+<p>I never said you can&#039;t combine them. </p>
+<p>&lt;blockquote&gt;While working on this article I missed mentioning one excellent advantage of jQuery Mobile and Bootstrap. They work very well together, you can easily combine Bootstrap grid system with jQuery Mobile page architecture, thus solving both frameworks disadvantages.&lt;/blockquote&gt;</p>
+<p>I just don&#039;t see the purpose of this combination.</p>
+</div>
+<div class="comment-meta" id="comment-9137">
+<a class='comment-reply-link' href='/bootstrap-or-jquery-mobile-pros-and-cons/2/?replytocom=9137#respond' onclick='return addComment.moveForm( "comment-9137", "9137", "respond", "4448" )' aria-label='Reply to Dragan Gaić'>Reply</a> </div>
+</article>
+</li>
+</ul>
+</li>
+</ol>
+<div class="comment-pagination">
+</div>
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">LEAVE A REPLY <small><a rel="nofollow" id="cancel-comment-reply-link" href="/bootstrap-or-jquery-mobile-pros-and-cons/2/#respond" style="display:none;">Cancel reply</a></small></h3>
+<form action="http://www.gajotres.net/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-form-input-wrap">
+<span class="comment-req-wrap needsclick"><input class="" id="author" name="author" placeholder="Name:" type="text" value="" size="30"/></span></p>
+<p class="comment-form-input-wrap">
+<span class="comment-req-wrap needsclick"><input class="" id="email" name="email" placeholder="Email:" type="text" value="" size="30"/></span></p>
+<p class="comment-form-input-wrap needsclick">
+<input class="" id="url" name="url" placeholder="Website:" type="text" value="" size="30"/></p>
+<p class="cptch_block"><br/>	<input type="hidden" name="cptch_result" value="oXHJ"/>
+<input type="hidden" name="cptch_time" value="1435157810"/>
+<input type="hidden" value="Version: 4.1.2"/>
+&#101;ight &times; 2 = <input id="cptch_input" class="cptch_input" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;"/></p>	<div class="clearfix"></div><p class="comment-form-input-wrap"><textarea class="needsclick" placeholder="Comment:" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"/> <input type='hidden' name='comment_post_ID' value='4448' id='comment_post_ID'/>
+<input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e69c8eef05"/></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"/> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"/> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="162"/></p>	</form>
+</div>
+</div>
+</div>
+</div>
+<div class="td-pb-span4 td-main-sidebar" role="complementary">
+<div class="td-ss-main-sidebar">
+<script>var block_td_uid_4_558ac532abb92=new td_block();block_td_uid_4_558ac532abb92.id="td_uid_4_558ac532abb92";block_td_uid_4_558ac532abb92.atts='{"category_id":"","category_ids":"-97","tag_slug":"","autors_id":"","sort":"popular","installed_post_types":"","limit":"5","offset":"","custom_title":"WHAT&#039;S HOT","custom_url":"","header_text_color":"#","header_color":"#","border_top":"","color_preset":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_filter_default_txt":"All","ajax_pagination":"next_prev","ajax_pagination_infinite_stop":"","class":"td_block_widget td_block_id_2796169819 td_uid_4_558ac532abb92_rand"}';block_td_uid_4_558ac532abb92.td_column_number="1";block_td_uid_4_558ac532abb92.block_type="td_block_7";block_td_uid_4_558ac532abb92.post_count="5";block_td_uid_4_558ac532abb92.found_posts="116";block_td_uid_4_558ac532abb92.max_num_pages="24";block_td_uid_4_558ac532abb92.header_color="#";block_td_uid_4_558ac532abb92.ajax_pagination_infinite_stop="";td_blocks.push(block_td_uid_4_558ac532abb92);</script><div class="td_block_wrap td_block_7 td_block_widget td_block_id_2796169819 td_uid_4_558ac532abb92_rand td-pb-border-top"><h4 class="block-title"><span>WHAT&#039;S HOT</span></h4><div id=td_uid_4_558ac532abb92 class="td_block_inner">
+<div class="td-block-span12">
+<div class="td_module_6 td_module_wrap td-animation-stack" itemscope itemtype="http://schema.org/Article">
+<div class="td-module-thumb"><a href="http://www.gajotres.net/best-available-php-restful-micro-frameworks/" rel="bookmark" title="Best available PHP RESTful Micro Frameworks"><img itemprop="image" class="entry-thumb" src="data:image/webp;base64,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" alt="" title="Best available PHP RESTful Micro Frameworks" pagespeed_url_hash="2995520247" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a></div>
+<div class="item-details">
+<h3 itemprop="name" class="entry-title td-module-title"><a itemprop="url" href="http://www.gajotres.net/best-available-php-restful-micro-frameworks/" rel="bookmark" title="Best available PHP RESTful Micro Frameworks">Best available PHP RESTful Micro Frameworks</a></h3> <div class="meta-info">
+<div class="td-post-date"><time itemprop="dateCreated" class="entry-date updated td-module-date" datetime="2014-11-07T14:58:06+00:00">Nov 7, 2014</time><meta itemprop="interactionCount" content="UserComments:20"/></div> </div>
+</div>
+<meta itemprop="author" content="Gajotres"><meta itemprop="interactionCount" content="UserComments:20"/> </div>
+</div>
+<div class="td-block-span12">
+<div class="td_module_6 td_module_wrap td-animation-stack" itemscope itemtype="http://schema.org/Article">
+<div class="td-module-thumb"><a href="http://www.gajotres.net/top-7-mobile-application-html5-frameworks/" rel="bookmark" title="Top 7 Mobile application HTML5 frameworks"><img width="100" height="75" itemprop="image" class="entry-thumb" src="http://www.gajotres.net/wp-content/uploads/2013/09/100x75xframeworks-100x75.jpg.pagespeed.ic.gn3XRc_0LG.webp" alt="" title="Top 7 Mobile application HTML5 frameworks" pagespeed_url_hash="1308865014" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a></div>
+<div class="item-details">
+<h3 itemprop="name" class="entry-title td-module-title"><a itemprop="url" href="http://www.gajotres.net/top-7-mobile-application-html5-frameworks/" rel="bookmark" title="Top 7 Mobile application HTML5 frameworks">Top 7 Mobile application HTML5 frameworks</a></h3> <div class="meta-info">
+<div class="td-post-date"><time itemprop="dateCreated" class="entry-date updated td-module-date" datetime="2015-02-28T11:51:27+00:00">Feb 28, 2015</time><meta itemprop="interactionCount" content="UserComments:63"/></div> </div>
+</div>
+<meta itemprop="author" content="Gajotres"><meta itemprop="interactionCount" content="UserComments:63"/> </div>
+</div>
+<div class="td-block-span12">
+<div class="td_module_6 td_module_wrap td-animation-stack" itemscope itemtype="http://schema.org/Article">
+<div class="td-module-thumb"><a href="http://www.gajotres.net/top-10-best-looking-free-jquery-mobile-themes/" rel="bookmark" title="Top 10 best looking free jQuery Mobile themes"><img itemprop="image" class="entry-thumb" src="data:image/webp;base64,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" alt="" title="Top 10 best looking free jQuery Mobile themes" pagespeed_url_hash="1507972799" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a></div>
+<div class="item-details">
+<h3 itemprop="name" class="entry-title td-module-title"><a itemprop="url" href="http://www.gajotres.net/top-10-best-looking-free-jquery-mobile-themes/" rel="bookmark" title="Top 10 best looking free jQuery Mobile themes">Top 10 best looking free jQuery Mobile themes</a></h3> <div class="meta-info">
+<div class="td-post-date"><time itemprop="dateCreated" class="entry-date updated td-module-date" datetime="2014-11-29T18:03:12+00:00">Nov 29, 2014</time><meta itemprop="interactionCount" content="UserComments:9"/></div> </div>
+</div>
+<meta itemprop="author" content="Gajotres"><meta itemprop="interactionCount" content="UserComments:9"/> </div>
+</div>
+<div class="td-block-span12">
+<div class="td_module_6 td_module_wrap td-animation-stack" itemscope itemtype="http://schema.org/Article">
+<div class="td-module-thumb"><a href="http://www.gajotres.net/building-a-native-mobile-app-with-phonegap-and-jquery-mobile-1-4/" rel="bookmark" title="Building a Native Mobile App with Phonegap and jQuery Mobile 1.4"><img width="100" height="75" itemprop="image" class="entry-thumb" src="http://www.gajotres.net/wp-content/uploads/2013/10/100x75xPhonegap_tutorial-100x75.jpg.pagespeed.ic.9h9myAJaVf.webp" alt="" title="Building a Native Mobile App with Phonegap and jQuery Mobile 1.4" pagespeed_url_hash="2189952752" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a></div>
+<div class="item-details">
+<h3 itemprop="name" class="entry-title td-module-title"><a itemprop="url" href="http://www.gajotres.net/building-a-native-mobile-app-with-phonegap-and-jquery-mobile-1-4/" rel="bookmark" title="Building a Native Mobile App with Phonegap and jQuery Mobile 1.4">Building a Native Mobile App with Phonegap and jQuery Mobile 1.4</a></h3> <div class="meta-info">
+<div class="td-post-date"><time itemprop="dateCreated" class="entry-date updated td-module-date" datetime="2014-10-02T07:33:50+00:00">Oct 2, 2014</time><meta itemprop="interactionCount" content="UserComments:38"/></div> </div>
+</div>
+<meta itemprop="author" content="Gajotres"><meta itemprop="interactionCount" content="UserComments:38"/> </div>
+</div>
+<div class="td-block-span12">
+<div class="td_module_6 td_module_wrap td-animation-stack" itemscope itemtype="http://schema.org/Article">
+<div class="td-module-thumb"><a href="http://www.gajotres.net/how-to-correctly-submit-form-data-in-jquery-mobile/" rel="bookmark" title="How to correctly submit form data in jQuery Mobile"><img width="100" height="75" itemprop="image" class="entry-thumb" src="http://www.gajotres.net/wp-content/uploads/2014/05/100x75xform_handling_new-100x75.jpg.pagespeed.ic.zXr0IBrSJM.webp" alt="" title="How to correctly submit form data in jQuery Mobile" pagespeed_url_hash="3888012403" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a></div>
+<div class="item-details">
+<h3 itemprop="name" class="entry-title td-module-title"><a itemprop="url" href="http://www.gajotres.net/how-to-correctly-submit-form-data-in-jquery-mobile/" rel="bookmark" title="How to correctly submit form data in jQuery Mobile">How to correctly submit form data in jQuery Mobile</a></h3> <div class="meta-info">
+<div class="td-post-date"><time itemprop="dateCreated" class="entry-date updated td-module-date" datetime="2014-07-04T00:29:13+00:00">Jul 4, 2014</time><meta itemprop="interactionCount" content="UserComments:41"/></div> </div>
+</div>
+<meta itemprop="author" content="Gajotres"><meta itemprop="interactionCount" content="UserComments:41"/> </div>
+</div> </div><div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_4_558ac532abb92" data-td_block_id="td_uid_4_558ac532abb92"><i class="td-icon-font td-icon-menu-left"></i></a><a href="#" class="td-ajax-next-page" id="next-page-td_uid_4_558ac532abb92" data-td_block_id="td_uid_4_558ac532abb92"><i class="td-icon-font td-icon-menu-right"></i></a></div></div> <aside class="widget widget_text">	<div class="textwidget"><span class="td-g-rec cfmonitor more-space">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-2165291328933509" data-ad-slot="8989017471"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</span></div>
+</aside><aside class="widget jetpack_subscription_widget"><div class="block-title"><span>JOIN THE NEWSLETTER</span></div>
+<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-3">
+<div id="subscribe-text"><div class="subscription-text">Web design/development tutorials and news from around the web.</div>
+</div><p>Join 48 other subscribers</p>
+<p id="subscribe-email">
+<label id="jetpack-subscribe-label" for="subscribe-field">
+Email Address	</label>
+<input type="email" name="email" required="required" class="required" value="" id="subscribe-field" placeholder="Email Address"/>
+</p>
+<p id="subscribe-submit">
+<input type="hidden" name="action" value="subscribe"/>
+<input type="hidden" name="source" value="http://www.gajotres.net/bootstrap-or-jquery-mobile-pros-and-cons/2/"/>
+<input type="hidden" name="sub-type" value="widget"/>
+<input type="hidden" name="redirect_fragment" value="blog_subscription-3"/>
+<input type="submit" value="Subscribe" name="jetpack_subscriptions_widget"/>
+</p>
+</form>
+<script>(function(d){if(('placeholder'in d.createElement('input'))){var label=d.getElementById('jetpack-subscribe-label');label.style.clip='rect(1px, 1px, 1px, 1px)';label.style.position='absolute';label.style.height='1px';label.style.width='1px';label.style.overflow='hidden';}})(document);jQuery('#subscribe-blog-blog_subscription-3').submit(function(event){var requiredInput=jQuery(this).find('.required');if(requiredInput.val()==''){event.preventDefault();requiredInput.focus();}});</script>
+</aside><aside class="widget widget_text">	<div class="textwidget"><div class="custom-adddd">
+<div class="block-title"><span>DAILY DEALS</span></div>
+<div style="margin-bottom: 10px;">
+</div>
+<a href="https://www.digitalocean.com/?refcode=2244e94f81eb"><img src="http://www.gajotres.net/wp-content/uploads/2015/03/xdo_custom.png.pagespeed.ic.LiCfOSrjKK.png" pagespeed_url_hash="2205075810" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+</a>
+</div></div>
+</aside> </div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div class="td-footer-container td-container">
+<div class="td-pb-row">
+<div class="td-pb-span4">
+<aside class="widget widget_recent_comments"><div class="block-title"><span>RECENT COMMENTS</span></div><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Mark</span> on <a href="http://www.gajotres.net/ionic-framework-tutorial-6-side-menu-pattern/#comment-9608">Ionic Framework | Side Menu Pattern Overview</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.gajotres.net' rel='external nofollow' class='url'>Gajotres</a></span> on <a href="http://www.gajotres.net/ionic-framework-tutorial-6-side-menu-pattern/#comment-9607">Ionic Framework | Side Menu Pattern Overview</a></li><li class="recentcomments"><span class="comment-author-link">Mark</span> on <a href="http://www.gajotres.net/ionic-framework-tutorial-6-side-menu-pattern/#comment-9606">Ionic Framework | Side Menu Pattern Overview</a></li><li class="recentcomments"><span class="comment-author-link">Valeriu</span> on <a href="http://www.gajotres.net/using-google-maps-with-ionic-framework/#comment-9604">Using Google Maps With Ionic Framework</a></li><li class="recentcomments"><span class="comment-author-link">Valerio</span> on <a href="http://www.gajotres.net/ionic-framework-tutorial-10-form-handling-and-validation/#comment-9603">Ionic Framework | Working With Forms And Validation</a></li></ul></aside>	</div>
+<div class="td-pb-span4">
+<aside class="widget widget_recent_entries">	<div class="block-title"><span>RECENT POSTS</span></div>	<ul>
+<li>
+<a href="http://www.gajotres.net/best-available-java-restful-micro-frameworks/">Best available Java RESTful Micro Frameworks</a>
+</li>
+<li>
+<a href="http://www.gajotres.net/ionic-framework-series-14-grid-system/">Ionic Framework | Using Grid System</a>
+</li>
+<li>
+<a href="http://www.gajotres.net/storing-data-in-ionic-framework-and-onsenui/">Storing data in Ionic Framework and OnsenUI</a>
+</li>
+<li>
+<a href="http://www.gajotres.net/onsenui-series-13-touch-gestures/">OnsenUI | Working With Touch Gestures</a>
+</li>
+<li>
+<a href="http://www.gajotres.net/ionic-framework-series-13-touch-gestures/">Ionic Framework | Using Touch Gestures</a>
+</li>
+</ul>
+</aside>	</div>
+<div class="td-pb-span4">
+<aside class="widget widget_text"><div class="block-title"><span>RSS</span></div>	<div class="textwidget"><strong><a href="http://www.gajotres.net/feed/">Entries</a></strong> RSS<br/>
+<strong><a href="http://www.gajotres.net/comments/feed/">Comments</a></strong> RSS</div>
+</aside><aside class="widget widget_tag_cloud"><div class="block-title"><span>TAG CLOUD</span></div><div class="tagcloud"><a href='http://www.gajotres.net/tag/android/' class='tag-link-94' title='2 topics' style='font-size: 9.6688741721854pt;'>Android</a>
+<a href='http://www.gajotres.net/tag/announcement/' class='tag-link-100' title='1 topic' style='font-size: 8pt;'>Announcement</a>
+<a href='http://www.gajotres.net/tag/app-framework/' class='tag-link-12' title='1 topic' style='font-size: 8pt;'>App Framework</a>
+<a href='http://www.gajotres.net/tag/cordova/' class='tag-link-95' title='2 topics' style='font-size: 9.6688741721854pt;'>Cordova</a>
+<a href='http://www.gajotres.net/tag/crosswalk/' class='tag-link-96' title='1 topic' style='font-size: 8pt;'>Crosswalk</a>
+<a href='http://www.gajotres.net/tag/famo-us/' class='tag-link-92' title='2 topics' style='font-size: 9.6688741721854pt;'>Famo.us</a>
+<a href='http://www.gajotres.net/tag/frameworks/' class='tag-link-82' title='5 topics' style='font-size: 12.450331125828pt;'>Frameworks</a>
+<a href='http://www.gajotres.net/tag/html/' class='tag-link-54' title='1 topic' style='font-size: 8pt;'>HTML</a>
+<a href='http://www.gajotres.net/tag/hybrid/' class='tag-link-10' title='3 topics' style='font-size: 10.781456953642pt;'>Hybrid</a>
+<a href='http://www.gajotres.net/tag/ionic/' class='tag-link-91' title='22 topics' style='font-size: 17.827814569536pt;'>Ionic</a>
+<a href='http://www.gajotres.net/tag/iscrollview/' class='tag-link-79' title='3 topics' style='font-size: 10.781456953642pt;'>iScrollView</a>
+<a href='http://www.gajotres.net/tag/java/' class='tag-link-109' title='1 topic' style='font-size: 8pt;'>Java</a>
+<a href='http://www.gajotres.net/tag/javascript/' class='tag-link-6' title='2 topics' style='font-size: 9.6688741721854pt;'>Javascript</a>
+<a href='http://www.gajotres.net/tag/jquery/' class='tag-link-4' title='8 topics' style='font-size: 14.026490066225pt;'>jQuery</a>
+<a href='http://www.gajotres.net/tag/jquery-mobile-2/' class='tag-link-3' title='64 topics' style='font-size: 22pt;'>jQuery-Mobile</a>
+<a href='http://www.gajotres.net/tag/kendo-ui/' class='tag-link-77' title='3 topics' style='font-size: 10.781456953642pt;'>Kendo UI</a>
+<a href='http://www.gajotres.net/tag/leaflet/' class='tag-link-81' title='1 topic' style='font-size: 8pt;'>Leaflet</a>
+<a href='http://www.gajotres.net/tag/mobile/' class='tag-link-9' title='1 topic' style='font-size: 8pt;'>Mobile</a>
+<a href='http://www.gajotres.net/tag/onsenui/' class='tag-link-93' title='18 topics' style='font-size: 17.086092715232pt;'>OnsenUI</a>
+<a href='http://www.gajotres.net/tag/phonegap/' class='tag-link-83' title='2 topics' style='font-size: 9.6688741721854pt;'>Phonegap</a>
+<a href='http://www.gajotres.net/tag/phonejs/' class='tag-link-84' title='1 topic' style='font-size: 8pt;'>PhoneJS</a>
+<a href='http://www.gajotres.net/tag/php/' class='tag-link-85' title='6 topics' style='font-size: 13.099337748344pt;'>PHP</a>
+<a href='http://www.gajotres.net/tag/plugin/' class='tag-link-55' title='1 topic' style='font-size: 8pt;'>Plugin</a>
+<a href='http://www.gajotres.net/tag/review/' class='tag-link-78' title='9 topics' style='font-size: 14.490066225166pt;'>Review</a>
+<a href='http://www.gajotres.net/tag/sencha-touch/' class='tag-link-11' title='3 topics' style='font-size: 10.781456953642pt;'>Sencha Touch</a>
+<a href='http://www.gajotres.net/tag/supersonic/' class='tag-link-101' title='1 topic' style='font-size: 8pt;'>Supersonic</a>
+<a href='http://www.gajotres.net/tag/tutorial/' class='tag-link-88' title='6 topics' style='font-size: 13.099337748344pt;'>Tutorial</a>
+<a href='http://www.gajotres.net/tag/widget/' class='tag-link-80' title='2 topics' style='font-size: 9.6688741721854pt;'>Widget</a></div>
+</aside>	</div>
+</div>
+</div>
+<div class="td-sub-footer-container td-container td-container-border ">
+<div class="td-pb-row">
+<div class="td-pb-span4 td-sub-footer-copy">
+<div class="td-pb-padding-side">
+&copy; Copyright 2013 - 2015 Gajotres.net </div>
+</div>
+<div class="td-pb-span8 td-sub-footer-menu">
+<div class="td-pb-padding-side">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript' src='http://www.gajotres.net/wp-content/plugins/akismet/_inc/form.js?ver=3.1.2'></script>
+<script type='text/javascript' src='http://www.gajotres.net/wp-content/plugins/bbpress/templates/default/js/editor.js?ver=2.5.7-5693'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201526'></script>
+<script type='text/javascript' src='http://www.gajotres.net/wp-content/themes/Newsmag/js/tagdiv_theme.min.js?ver=1.7.1'></script>
+<script type='text/javascript' src='http://www.gajotres.net/wp-includes/js/comment-reply.min.js?ver=4.2.2'></script>
+<script>jQuery().ready(function jQuery_ready(){td_ajax_count.td_get_views_counts_ajax("post","[4448]");});jQuery(window).load(function(){if(typeof window.td_animation_stack!=='undefined'){window.td_animation_stack.init();}});</script>
+<script type='text/javascript' src='http://stats.wp.com/e-201526.js' async defer></script>
+<script type='text/javascript'>_stq=window._stq||[];_stq.push(['view',{v:'ext',j:'1:3.5.3',blog:'67933878',post:'4448',tz:'0',srv:'www.gajotres.net'}]);_stq.push(['clickTrackerInit','67933878','4448']);</script>
+</body>
+</html>

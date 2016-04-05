@@ -1,0 +1,491 @@
+
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head id="Head1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"65a1cfd223","applicationID":"2190386","transactionName":"b1JUYkBXX0BQUUFYClYYcllGeFRHcl1bRRdXW1pTQBl5XFxXGngLXFJO","queueTime":0,"applicationTime":351,"ttGuid":"F5E152734CC1183","agent":"js-agent.newrelic.com/nr-686.min.js"}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgAHWFNQGwEBXVFRDwc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(4),t(5),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=t("ee").create(),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,ee:"QJf3ax"}],8:[function(t,e){function n(){u.inPlace(this,p,"fn-")}function r(t,e){u.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),u=c(a),f=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,u.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=n(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=n(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var f=0;c>f;f++)e.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===f.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=u.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,u=c.document;t(2);var f=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-686.min.js"},p=e.exports={offset:i(),origin:f,features:{}};u.addEventListener?(u.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(u.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script>
+    
+    
+        <link rel="shortcut icon" type="image/x-icon" href="http://static.contentres.com/media/images/c8ca7d62-e845-4b1a-86ae-daf283b83502.ico" />
+        
+        <link rel="icon" sizes="32x32" type="image/png" href="http://static.contentres.com/media/images/980e7301-6538-41d5-b27e-c6f30d0976e2.png" />
+        
+        <link rel="apple-touch-icon" href="http://static.contentres.com/media/images/a47dd8aa-164d-4193-90a8-2016b093339b.png"/>
+        <link rel="icon" sizes="152x152" href="http://static.contentres.com/media/images/a47dd8aa-164d-4193-90a8-2016b093339b.png">
+        
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+    
+    <title>Home | New Horizons Wealth Management LLC</title>
+    <meta name="robots" content="index, follow"/>
+    
+
+    <link rel="stylesheet" href="http://static.contentres.com/site/templates/global/css/boilerplate.css?v=2.20.3">
+    <link rel="stylesheet" href="http://static.contentres.com/site/templates/global/css/global.css?v=2.20.3">
+    <link rel="stylesheet" href="http://static.contentres.com/site/templates/global/css/print.css?v=2.20.3" media="print">
+    <link rel="stylesheet" href="http://static.contentres.com/site/templates/global/js/fancybox/jquery.fancybox-1.3.4.css">
+    <link rel="stylesheet" href="http://static.contentres.com/site/templates/001/css/1.css?v=2.20.3" type="text/css">
+    <link rel="stylesheet" href="http://static.contentres.com/site/templates/001/css/1a.css?v=2.20.3" type="text/css">    
+    
+    <link rel="stylesheet" href="http://static.contentres.com/site/templates/001/css/1ac.css?v=2.20.3" type="text/css">
+    <link rel="stylesheet" href="http://www.nhwmllc.com/css/custom/customtheme.css?r=1062839464" type="text/css">
+    <link rel="stylesheet" media="(max-width: 480px)" href="http://static.contentres.com/site/templates/001/css/1m.css?v=2.20.3" type="text/css">
+    <link rel="stylesheet" href="http://static.contentres.com/site/templates/001/css/1m1.css?v=2.20.3" type="text/css">
+    <link rel="stylesheet" media="(min-width:481px)" href="http://www.nhwmllc.com/css/custom/styles.css?r=1062839464" type="text/css">
+    <link rel="stylesheet"  href="http://static.contentres.com/site/templates/global/css/print.css?v=2.20.3" type="text/css" media="print">
+    <script src="http://static.contentres.com/site/templates/global/js/modernizr-1.7.min.js"></script>
+    <script type="text/javascript" src="/scripts/MicrosoftAjax.js"></script>
+    <script type="text/javascript" src="/scripts/MicrosoftMVCAjax.js"></script>
+    <script type="text/javascript" src="/scripts/MicrosoftMVCValidation.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="http://static.contentres.com/site/templates/global/js/fancybox/jquery.fancybox-1.3.4.js"></script>
+    
+<style>
+  /** Add this CSS Import to the top of the main CSS to import FontAwesome **/
+  @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+  /** fontawesome social media icons **/
+  .facebookIcon, .twitterIcon, .linkedinIcon, .youtubeIcon, .emailIcon, .googleIcon{
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    color: #FFF;
+    padding: 1px 0 2px 0px;
+    text-align: center;
+    opacity: 0.5;
+  }
+  .facebookIcon:hover, .twitterIcon:hover, .linkedinIcon:hover, .youtubeIcon:hover, .emailIcon:hover, .googleIcon:hover{
+    text-decoration: none;
+    opacity: 1;
+    color: #fff;
+  }
+  .facebookIcon:before, .twitterIcon:before, .linkedinIcon:before, .youtubeIcon:before, .emailIcon:before, .googleIcon:before{
+    padding: 5px 3px;
+    width: 20px;
+    height: 16px;
+    display: inline-block; 
+  }
+  .facebookIcon:before{
+    content: "\f09a";
+    background-color: #3D5F9F;
+  }
+  .twitterIcon:before{
+    content: "\f099";
+    background-color: #56C2CF;
+  }
+  .linkedinIcon:before{
+    content: "\f0e1";
+    background-color: #0F75B3;
+  }
+  .youtubeIcon:before{
+    content: "\f16a";
+    background-color: #D6202D;
+  }
+  .emailIcon:before{
+    content: "\f0e0";
+    background-color: #189604;
+  }
+  .googleIcon:before{
+    content: "\f0d5";
+    background-color: #DF4A32;
+  }
+
+  /** removes footer social media icons to replace with fontawsome icons **/
+  footer .socialMedia a{
+    color: #fff;
+  }
+  footer .facebookIcon img, footer .twitterIcon img, footer .linkedinIcon img, footer .youtubeIcon img{
+    display: none;
+  }
+
+  /** MOBILE **/
+  @media only screen and (max-width: 480px) {
+    header { background: #fff; padding: 10px 0 !important; }
+    header .backgroundImage {width: 100%;height: auto;}
+    header .fauxLogoImagemap, header .fauxLogoImageMap, header .clientBranding {margin-top: 0;margin-left: 0px;width: 100%;height: auto;float: none;}
+    header .fauxLogoImagemap img, header .fauxLogoImageMap img, header .clientBranding img {width: 95% !important;height: auto;}
+    header .headerSocial {display: none;}
+    #navButton {padding-top: 4px;padding-right: 27px;}
+    nav#main .first{display:none;}
+    #content .container article #suggested {display: none;}
+    .homeBox {margin: 20px 0; border-top: 1px solid #CCC;}
+    .homeBox p {display: none;}
+  }
+
+</style>
+</head>
+<body class="homepage">
+  <script>var addthis_config = { "data_track_clickback": true, services_compact: 'email, facebook, twitter, more', services_exclude: 'print' }</script>
+  <script src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dac6baa77f4cfd0"></script>
+  
+<header class="header">
+  <section class="container">
+    <div class="backgroundImage"><div class="fauxLogoImageMap"><a href="http://www.nhwmllc.com/" target="_self"><img alt="New Horizons Wealth Management - Logo" src="http://static.contentres.com/media/images/a2825f4f-fc18-4d6b-950b-c3c73f74d7c9.png" /></a></div><div class="headerSocial"><a href="https://www.facebook.com/NewHorizonsWealthManagement" target="_blank" class="facebookIcon">&#160;</a><a href="https://twitter.com/NewHorizonsW" target="_blank" class="twitterIcon">&#160;</a><a href="https://www.linkedin.com/pub/joseph-okaly/90/b6b/733" target="_blank" class="linkedinIcon">&#160;</a><!--<a href="https://www.youtube.com"  target="_blank"  class="youtubeIcon">&#160;</a>--></div></div>
+  </section>
+</header>
+
+  <nav id="main">
+    <section class="container">
+      <a href="http://www.nhwmllc.com/"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" id="homeButton" alt="Home"></a>
+      <a href="javascript:void(0)" id="navButton"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" alt="Navigation">MENU</a>
+        
+      <ul><li class="first"><a href="http://www.nhwmllc.com/p/about" >About</a><a href="javascript:void(0)"><span class="subnavButton" alt="Navigation">&nbsp;</span></a><ul><li><a href="http://www.nhwmllc.com/about" >About Us</a></li><li><a href="http://www.nhwmllc.com/team" >Our Team</a></li><li><a href="http://www.nhwmllc.com/p/our-process" >Our Process</a></li><li><a href="http://www.nhwmllc.com/p/our-services" >Our Services</a></li><li><a href="http://www.nhwmllc.com/blog" >Blog</a></li></ul></li><li><a href="http://www.nhwmllc.com/resource-center" >Resource Center</a><a href="javascript:void(0)"><span class="subnavButton" alt="Navigation">&nbsp;</span></a><ul><li><a href="http://www.nhwmllc.com/p/recommended-reading" >Recommended Reading</a></li><li><a href="http://www.nhwmllc.com/resource-center/retirement" >Retirement</a></li><li><a href="http://www.nhwmllc.com/resource-center/estate" >Estate</a></li><li><a href="http://www.nhwmllc.com/resource-center/investment" >Investment</a></li><li><a href="http://www.nhwmllc.com/resource-center/insurance" >Insurance</a></li><li><a href="http://www.nhwmllc.com/resource-center/tax" >Tax</a></li><li><a href="http://www.nhwmllc.com/resource-center/money" >Money</a></li><li><a href="http://www.nhwmllc.com/resource-center/lifestyle" >Lifestyle</a></li></ul></li><li><a href="http://www.nhwmllc.com/tools" >Tools</a><a href="javascript:void(0)"><span class="subnavButton" alt="Navigation">&nbsp;</span></a><ul><li><a href="http://www.nhwmllc.com/tools/glossary" >Glossary</a></li><li><a href="http://www.nhwmllc.com/tools/tax-resources" >Tax Resources</a></li><li><a href="http://www.nhwmllc.com/resource-center/calculators" >All Calculators</a></li></ul></li><li><a href="http://www.nhwmllc.com/p/account-access" >Account Access</a></li><li class="last"><a href="http://www.nhwmllc.com/contact" >Contact</a></li></ul>
+    </section>
+  </nav>
+  
+  
+<section id="hero">
+  <section class="container">
+    
+    <a href="http://www.nhwmllc.com/resource-center/investment/jane-bond-infiltrating-the-market" id="hero1" class="asset-334 selected"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="hero" style="background-image: url(http://static.contentres.com/site/templates/global/img/assets/334-hero.jpg)" alt="Jane Bond: Infiltrating the Market"/></a>
+    
+    <a href="http://www.nhwmllc.com/resource-center/money/what-our-kids-can-teach-us-about-saving-money" id="hero2" class="asset-318"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="hero" style="background-image: url(http://static.contentres.com/site/templates/global/img/assets/292-hero.jpg)" alt="What Our Kids Can Teach us About Saving Money"/></a>
+    
+    <a href="http://www.nhwmllc.com/resource-center/investment/the-fed-and-how-it-got-that-way" id="hero3" class="asset-311"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="hero" style="background-image: url(http://static.contentres.com/site/templates/global/img/assets/311-hero.jpg)" alt="The Fed and How It Got That Way"/></a>
+    
+    <a href="http://www.nhwmllc.com/resource-center/retirement/how-to-retire-early" id="hero4" class="asset-295"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="hero" style="background-image: url(http://static.contentres.com/site/templates/global/img/assets/295-hero.jpg)" alt="How to Retire Early"/></a>
+    
+    <a href="#" id="previousHero" class="backArrow"></a>
+    <a href="#" id="nextHero" class="forwardArrow"></a>
+    <aside>
+    
+    <div id="hero1_wrapper" class="wrapper selected asset-334">
+        <h2>Jane Bond: Infiltrating the Market</h2>
+        <p>Agent Jane Bond is on the case, infiltrating the world of bonds.</p>
+        <p><a href="http://www.nhwmllc.com/resource-center/investment/jane-bond-infiltrating-the-market">Learn More</a> <a href="http://www.nhwmllc.com/resource-center/investment/jane-bond-infiltrating-the-market"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="arrowLink" alt="arrow"></a></p>
+    </div>
+    
+    <div id="hero2_wrapper" class="wrapper asset-318">
+        <h2>What Our Kids Can Teach us About Saving Money</h2>
+        <p>Would you guess that Millennials are effectively saving for retirement? Well, they are.</p>
+        <p><a href="http://www.nhwmllc.com/resource-center/money/what-our-kids-can-teach-us-about-saving-money">Learn More</a> <a href="http://www.nhwmllc.com/resource-center/money/what-our-kids-can-teach-us-about-saving-money"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="arrowLink" alt="arrow"></a></p>
+    </div>
+    
+    <div id="hero3_wrapper" class="wrapper asset-311">
+        <h2>The Fed and How It Got That Way</h2>
+        <p>A quick history of the Federal Reserve and overview of what it does.</p>
+        <p><a href="http://www.nhwmllc.com/resource-center/investment/the-fed-and-how-it-got-that-way">Learn More</a> <a href="http://www.nhwmllc.com/resource-center/investment/the-fed-and-how-it-got-that-way"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="arrowLink" alt="arrow"></a></p>
+    </div>
+    
+    <div id="hero4_wrapper" class="wrapper asset-295">
+        <h2>How to Retire Early</h2>
+        <p>Retiring early sounds like a dream come true, but it’s important to take a look at the cold, hard facts.</p>
+        <p><a href="http://www.nhwmllc.com/resource-center/retirement/how-to-retire-early">Learn More</a> <a href="http://www.nhwmllc.com/resource-center/retirement/how-to-retire-early"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="arrowLink" alt="arrow"></a></p>
+    </div>
+    
+    </aside>
+  </section>
+</section>
+  <section id="content">
+    <section class="container">
+      
+    
+    
+    <article>
+        <div class="welcome"><h1>Welcome to New Horizons</h1><p>New Horizons understands that Upper Middle Class Families face very unique challenges that can affect long-term financial success.  These challenges involve trying to answer where your current savings and investment path will lead you, how you can best utilize social security and pension resources, and how you can protect your assets today, while still maximizing what you leave to future generations.</p><p><img alt="New Horizons Wealth Management - Our Team" src="https://s3.amazonaws.com/PlatinumStrategies/PWS/members/okaly/nhwm-homepage.jpg" /></p><p>Because over 90% of our clients are Upper Middle Class Families with your similar concerns, we have a staff that has accumulated extensive experience in handling these challenges and the technology and tools you need to thrive in your financial life.</p></div><div class="boxesWrapper"><ul><li class="box ourTeam"><h2>Our Team</h2><p>Come meet the team behind New Horizons</p><a href="/team" target="_self">Learn More</a></li><li class="box ourProcess"><h2>Our Process</h2><p>How do we do what we do?</p><a href="/p/our-process" target="_self">Learn More</a></li><li class="box ourServices"><h2>Our Services</h2><p>Learn about our unique services.</p><a href="/p/our-services" target="_self">Learn More</a></li></ul></div>
+
+                <div style="clear: both">&nbsp;</div>
+                
+<section id="suggested">
+  
+
+    <h2>Helpful Content</h2>
+    
+<section class="content left asset-281">
+  <a href="http://www.nhwmllc.com/resource-center/retirement/should-you-ever-retire"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" alt="Should You Ever Retire?" style="background-image: url(http://static.contentres.com/site/templates/global/img/assets/281-thumb.jpg)"></a>
+  <h3><a href="http://www.nhwmllc.com/resource-center/retirement/should-you-ever-retire">Should You Ever Retire?</a></h3>
+  <p>A growing number of Americans are pushing back the age at which they plan to retire. Or deciding not to retire at all.</p>
+</section>
+<section class="content asset-120">
+  <a href="http://www.nhwmllc.com/resource-center/insurance/keep-your-umbrella-handy"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" alt="Keep Your Umbrella Handy" style="background-image: url(http://static.contentres.com/site/templates/global/img/assets/120-thumb.jpg)"></a>
+  <h3><a href="http://www.nhwmllc.com/resource-center/insurance/keep-your-umbrella-handy">Keep Your Umbrella Handy</a></h3>
+  <p>Umbrella liability can be a fairly inexpensive way to help shelter current assets and future income from the unexpected.</p>
+</section>
+<section class="content asset-260">
+  <a href="http://www.nhwmllc.com/resource-center/lifestyle/what-to-do-when-you-lose-your-wallet"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" alt="What to Do When You Lose Your Wallet" style="background-image: url(http://static.contentres.com/site/templates/global/img/assets/260-thumb.jpg)"></a>
+  <h3><a href="http://www.nhwmllc.com/resource-center/lifestyle/what-to-do-when-you-lose-your-wallet">What to Do When You Lose Your Wallet</a></h3>
+  <p>There are things you can do to keep yourself safe when you lose your wallet.</p>
+</section>
+</section>
+            <div class="rule">&#160;</div>
+            
+<section id="additional">
+    <div class="wrapper">
+    <nav>
+        <ul>
+        
+        <li><a href="#" id="tab1" class="tab1 selected">Articles</a></li>
+        
+        <li><a href="#" id="tab2" class="tab2">Calculators</a></li>
+        
+        <li><a href="#" id="tab3" class="tab3">Presentations</a></li>
+        
+        <li><a href="#" id="tab4" class="tab4">Videos</a></li>
+        
+        </ul>
+    </nav>
+    
+    <div id="tab1_content" class="matterContent selected">
+        
+
+<section class="content left asset-211">
+<h4><a href="http://www.nhwmllc.com/resource-center/investment/a-decision-not-made-is-still-a-decision">A Decision Not Made Is Still a Decision</a></h4>
+<p>Investors who put off important investment decisions may face potential consequence to their future financial security.</p>
+</section>
+
+<section class="content asset-122">
+<h4><a href="http://www.nhwmllc.com/resource-center/estate/will-power">Will Power</a></h4>
+<p>Preparing for the eventual distribution of your assets may not sound enticing. But a will puts the power in your hands.</p>
+</section>
+
+<section class="content left asset-230">
+<h4><a href="http://www.nhwmllc.com/resource-center/lifestyle/tips-to-prevent-marital-rift">Tips to Prevent the #1 Cause of Marital Rift</a></h4>
+<p>Couples may be able to head off many of the problems in a marriage that money can cause.</p>
+</section>
+
+<section class="content asset-179">
+<h4><a href="http://www.nhwmllc.com/resource-center/lifestyle/what-to-look-for-in-personal-finance-apps">What to Look for in Personal Finance Apps</a></h4>
+<p>An increasing number have been developed to help individuals with their personal finances.</p>
+</section>
+
+<section class="content left asset-123">
+<h4><a href="http://www.nhwmllc.com/resource-center/estate/problems-with-probate">Problems with Probate</a></h4>
+<p>Probate can be a completely public process, or it can be managed to include as little information as possible.</p>
+</section>
+
+<section class="content asset-290">
+<h4><a href="http://www.nhwmllc.com/resource-center/investment/dont-be-your-own-worst-enemy">Don’t Be Your Own Worst Enemy</a></h4>
+<p>Emotional biases can adversely impact financial decision making. Here’s a few to be mindful of.</p>
+</section>
+        <h4 class="viewAll"><a href="http://www.nhwmllc.com/resource-center/articles">View all articles</a> <a href="http://www.nhwmllc.com/resource-center/articles"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="arrowLink" alt="arrow"></a></h4>
+    </div>
+    
+    <div id="tab2_content" class="matterContent">
+        
+
+<section class="content left asset-049">
+<h4><a href="http://www.nhwmllc.com/resource-center/retirement/inflation-and-retirement">Inflation & Retirement</a></h4>
+<p>Estimate how much income may be needed at retirement to maintain your standard of living.</p>
+</section>
+
+<section class="content asset-040">
+<h4><a href="http://www.nhwmllc.com/resource-center/lifestyle/should-i-pay-off-debt-or-invest">Should I Pay Off Debt or Invest?</a></h4>
+<p>This calculator will help determine whether you should  invest funds or pay down debt.</p>
+</section>
+
+<section class="content left asset-026">
+<h4><a href="http://www.nhwmllc.com/resource-center/insurance/lifetime-of-earnings">Lifetime of Earnings</a></h4>
+<p>Estimate how much you have the potential to earn during your working years.</p>
+</section>
+
+<section class="content asset-032">
+<h4><a href="http://www.nhwmllc.com/resource-center/investment/impact-of-taxes-and-inflation">Impact of Taxes and Inflation</a></h4>
+<p>Estimate the potential impact taxes and inflation can have on the purchasing power of an investment.</p>
+</section>
+
+<section class="content left asset-052">
+<h4><a href="http://www.nhwmllc.com/resource-center/retirement/estimate-your-rmd">Estimate Your RMD</a></h4>
+<p>Help determine the required minimum distribution from an IRA or other qualified retirement plan.</p>
+</section>
+
+<section class="content asset-059">
+<h4><a href="http://www.nhwmllc.com/resource-center/tax/home-mortgage-deduction">Home Mortgage Deduction</a></h4>
+<p>Use this calculator to assess the potential benefits of a home mortgage deduction.</p>
+</section>
+        <h4 class="viewAll"><a href="http://www.nhwmllc.com/resource-center/calculators">View all calculators</a> <a href="http://www.nhwmllc.com/resource-center/calculators"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="arrowLink" alt="arrow"></a></h4>
+    </div>
+    
+    <div id="tab3_content" class="matterContent">
+        
+
+<section class="content left asset-089">
+<h4><a href="http://www.nhwmllc.com/resource-center/insurance/protecting-those-who-matter-most">Protecting Those Who Matter Most</a></h4>
+<p>The importance of life insurance, how it works, and how much coverage you need. </p>
+</section>
+
+<section class="content asset-092">
+<h4><a href="http://www.nhwmllc.com/resource-center/tax/tax-management-strategies">Tax Management Strategies</a></h4>
+<p>Learn more about taxes, tax-favored investing, and tax strategies. </p>
+</section>
+
+<section class="content left asset-091">
+<h4><a href="http://www.nhwmllc.com/resource-center/lifestyle/managing-your-lifestyle">Managing Your Lifestyle</a></h4>
+<p>Using smart management to get more of what you want and free up assets to invest.</p>
+</section>
+
+<section class="content asset-090">
+<h4><a href="http://www.nhwmllc.com/resource-center/insurance/long-term-care-protection-strategies">Long-Term-Care Protection Strategies</a></h4>
+<p>The chances of needing long-term care, its cost, and strategies for covering that cost.</p>
+</section>
+
+<section class="content left asset-110">
+<h4><a href="http://www.nhwmllc.com/resource-center/retirement/an-inside-look-at-retirement-living">An Inside Look at Retirement Living</a></h4>
+<p>A number of questions and concerns need to be addressed to help you better prepare for retirement living.</p>
+</section>
+
+<section class="content asset-096">
+<h4><a href="http://www.nhwmllc.com/resource-center/investment/5-smart-investing-strategies">5 Smart Investing Strategies</a></h4>
+<p>There are some smart strategies that may help you pursue your investment objectives</p>
+</section>
+        <h4 class="viewAll"><a href="http://www.nhwmllc.com/resource-center/presentations">View all presentations</a> <a href="http://www.nhwmllc.com/resource-center/presentations"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="arrowLink" alt="arrow"></a></h4>
+    </div>
+    
+    <div id="tab4_content" class="matterContent">
+        
+
+<section class="content left asset-272">
+<h4><a href="http://www.nhwmllc.com/resource-center/investment/16-wall-street-cliches-in-60-seconds">16 Wall Street Cliches in 60 Seconds</a></h4>
+<p>Pundits say a lot of things about the markets. Let's see if you can keep up.</p>
+</section>
+
+<section class="content asset-311">
+<h4><a href="http://www.nhwmllc.com/resource-center/investment/the-fed-and-how-it-got-that-way">The Fed and How It Got That Way</a></h4>
+<p>A quick history of the Federal Reserve and overview of what it does.</p>
+</section>
+
+<section class="content left asset-070">
+<h4><a href="http://www.nhwmllc.com/resource-center/retirement/the-power-of-tax-deferred-growth">The Power of Tax-Deferred Growth</a></h4>
+<p>Why are 401(k) plans, annuities, and IRAs so popular?</p>
+</section>
+
+<section class="content asset-285">
+<h4><a href="http://www.nhwmllc.com/resource-center/investment/the-real-cost-of-a-vacation-home">The Real Cost of a Vacation Home</a></h4>
+<p>What if instead of buying that home, you invested that
+money?</p>
+</section>
+
+<section class="content left asset-151">
+<h4><a href="http://www.nhwmllc.com/resource-center/tax/will-you-pay-the-amt">Will You Pay the AMT?</a></h4>
+<p>Despite recent tax-law changes, many Americans are expected to pay the AMT this year.</p>
+</section>
+
+<section class="content asset-062">
+<h4><a href="http://www.nhwmllc.com/resource-center/investment/the-cycle-of-investing">The Cycle of Investing</a></h4>
+<p>Understanding the cycle of investing may help you avoid easy pitfalls.</p>
+</section>
+        <h4 class="viewAll"><a href="http://www.nhwmllc.com/resource-center/videos">View all videos</a> <a href="http://www.nhwmllc.com/resource-center/videos"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="arrowLink" alt="arrow"></a></h4>
+    </div>
+    
+    </div>
+</section>   
+    </article>
+    <aside>
+        
+    </aside>
+
+      <div class="clear"></div>
+    </section>
+    <div class="clear"></div>
+  </section>
+  <footer>
+    <section class="container">
+      <section class="note">
+        
+<p class="globalDisclosure">The content is developed from sources believed to be providing accurate information. The information in this material is not intended as tax or legal advice. Please consult legal or tax professionals for specific information regarding your individual situation. Some of this material was developed and produced by FMG, LLC, to provide information on a topic that may be of interest. FMG, LLC, is not affiliated with the named representative, broker-dealer, state- or SEC-registered investment advisory firm. The opinions expressed and material provided are for general information, and should not be considered a solicitation for the purchase or sale of any security.</p>
+        <p class="globalCopyright">Copyright 2015 FMG Suite.</p>
+        <p class="globalDisclaimer">Securities offered through TFS Securities, Inc., member <a href="http://www.finra.org/" target="_blank">FINRA</a>/<a href="http://sipc.org/" target="_blank">SIPC</a>, a full service broker dealer located at 437 Newman Springs Road, Lincroft, NJ 07738 (732)758-9300. Investment Advisory Services offered through TFS Advisory Services, a division of TFS Securities, Inc.</p>
+      </section>
+      <aside>
+        <div class="wrapper">
+          <section class="contact">
+            <h4>Contact</h4>
+            <table class="delmar001-contact-information">
+            <tr class="delmar001-phone"><td>Office:&nbsp;</td><td>973-540-1066</td></tr>
+            <tr class="delmar001-fax"><td>Fax:</td><td>973-540-1775</td></tr>
+            </table>
+            <p class="delmar001-address_block"><span class="delmar001-address1">325 Columbia Turnpike</span>
+            
+            <br><span class="delmar001-address2">Suite 107</span>
+            
+            <br><span class="delmar001-city">Florham Park,</span> <span class="delmar001-region">NJ</span> <span class="delmar001-postalcode">07932</span>
+                        
+            </p>
+            
+            <p><a href="mailto:info@nhwmllc.com">info@nhwmllc.com</a></p>
+            
+            <section class="socialMedia">
+            
+                <a href="https://www.facebook.com/NewHorizonsWealthManagement" target="_blank"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="facebook" alt="Facebook"></a>
+            
+                <a href="https://twitter.com/NewHorizonsW" target="_blank"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="twitter" alt="Twitter"></a>
+            
+                <a href="https://www.linkedin.com/pub/joseph-okaly/90/b6b/733" target="_blank"><img src="http://static.contentres.com/site/templates/global/img/clear.gif" class="linkedIn" alt="LinkedIn"></a>
+            
+            </section>
+          </section>
+          <section class="quickLinks">
+            <h4>Quick Links</h4>
+            <ul><li><a href="http://www.nhwmllc.com/resource-center/retirement" >Retirement</a></li><li><a href="http://www.nhwmllc.com/resource-center/investment" >Investment</a></li><li><a href="http://www.nhwmllc.com/resource-center/estate" >Estate</a></li><li><a href="http://www.nhwmllc.com/resource-center/insurance" >Insurance</a></li><li><a href="http://www.nhwmllc.com/resource-center/tax" >Tax</a></li><li><a href="http://www.nhwmllc.com/resource-center/money" >Money</a></li><li><a href="http://www.nhwmllc.com/resource-center/lifestyle" >Lifestyle</a></li><li><a href="http://www.nhwmllc.com/resource-center/articles" >All Articles</a></li><li><a href="http://www.nhwmllc.com/resource-center/videos" >All Videos</a></li><li><a href="http://www.nhwmllc.com/resource-center/calculators" >All Calculators</a></li><li><a href="http://www.nhwmllc.com/resource-center/presentations" >All Presentations</a></li></ul>
+          </section>
+        </div>  
+      </aside>
+      <div class="rule2">&#160;</div>
+    </section>
+  </footer>
+
+    <script>
+//** Add this Script to the Custom Head section in the Additional Footer HTML **//
+$(document).ready(function() {
+
+    // ADD CLASS TO HOMEBUTTON ANCHOR TAG SO WE CAN TARGET WITH CSS TO ADD FONTAWESOME HOME ICON
+    //$('nav#main .container #homeButton').parent().attr('class', 'homeButton');
+
+    // pull home url and add an li to the menu
+    //var homeUrl = $('nav#main .container a:first').attr('href');
+    //$('nav#main ul li.first').removeClass('first');
+    //$('nav#main ul:first').prepend('<li class="first"><a href="' + homeUrl + '">Home</a></li>');
+    //$('nav#main ul:first').prepend('<li class="first"><a href="' + homeUrl + '"><i class="fa fa-home" /></a></li>');
+
+    $('footer .socialMedia').append('');
+
+    // remove default footer social media icons and replace with fontawesome
+    $('footer a img.facebook').parent().attr('class', 'facebookIcon');
+    $('footer a img.twitter').parent().attr('class', 'twitterIcon');
+    $('footer a img.linkedIn').parent().attr('class', 'linkedinIcon');
+    $('footer a img.youTube').parent().attr('class', 'youtubeIcon');
+
+    // make all nav items target _self to fix custom bio link
+    // $('nav#main a').attr('target', '_self');
+
+});
+</script>
+
+    
+  <script type="text/javascript" src="http://static.contentres.com/site/templates/global/js/global.js?v=2.20.3"></script>
+  <script type="text/javascript" src="http://static.contentres.com/site/templates/global/js/contact.js?v=2.20.3"></script>
+  <!--[if gt IE 8]><!-->
+  <script type="text/javascript" src="http://static.contentres.com/site/templates/global/js/dygraph.combined.min.js?v=2.20.3"></script>
+  <script type="text/javascript" src="http://static.contentres.com/site/templates/global/js/index.market.js?v=2.20.3"></script>
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+  <script language="javascript" type="text/javascript" src="http://static.contentres.com/site/templates/global/js/excanvas.min.js?v=2.20.3")></script>
+  <script language="javascript" type="text/javascript" src="http://static.contentres.com/site/templates/global/js/jquery.flot.js?v=2.20.3")></script>
+  <script language="javascript" type="text/javascript" src="http://static.contentres.com/site/templates/global/js/index.market.ie.js?v=2.20.3")></script>
+  <![endif]-->
+  
+  <script src="http://static.contentres.com/site/templates/global/js/index.js?v=2.20.3"></script>
+  
+  
+
+<script type="text/javascript">    var FMG = { "RootLocation": "http://www.nhwmllc.com/", "SecureLocation": "https://www.fmgwebsites.com/e59ac744-ee54-46af-b417-73502277df71/", 
+    "LeavingSiteDisclaimer" : null
+};</script>
+
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24680519-10']);
+    _gaq.push(['_trackPageview']);
+    
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+</html>

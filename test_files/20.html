@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+<head>
+<meta name="google-site-verification" content="bkzqyd26ZxuXczZ-Vect_9qPPrbhGDiT3LhB6Q2MYTk" />
+	<meta charset="UTF-8" />
+	<title>Optimizing Algorithmic Trading Models. A SciDB Quantitative Finance Use Case - Paradigm4</title>
+			
+		<link rel="pingback" href="http://www.paradigm4.com/xmlrpc.php" />
+		<!--[if lt IE 9]>
+	<script src="http://www.paradigm4.com/wp-content/themes/Divi/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	
+<!-- This site is optimized with the Yoast SEO plugin v3.0.6 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Optimizing algorithmic trading models using SciDB. A quantitative finance use case."/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://www.paradigm4.com/optimizing-algorithmic-trading-models-using-an-array-database-a-quantitative-finance-use-case/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Optimizing Algorithmic Trading Models. A SciDB Quantitative Finance Use Case - Paradigm4" />
+<meta property="og:description" content="Optimizing algorithmic trading models using SciDB. A quantitative finance use case." />
+<meta property="og:url" content="http://www.paradigm4.com/optimizing-algorithmic-trading-models-using-an-array-database-a-quantitative-finance-use-case/" />
+<meta property="og:site_name" content="Paradigm4" />
+<meta property="article:tag" content="array database" />
+<meta property="article:tag" content="hedge funds" />
+<meta property="article:tag" content="quantitative finance" />
+<meta property="article:tag" content="use case" />
+<meta property="article:section" content="Array Database" />
+<meta property="article:published_time" content="2014-03-14T02:43:14+00:00" />
+<meta property="article:modified_time" content="2014-10-10T11:23:52+00:00" />
+<meta property="og:updated_time" content="2014-10-10T11:23:52+00:00" />
+<meta property="og:image" content="http://www.paradigm4.com/wp-content/uploads/2014/03/Wall-Street-Bull-300x225.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Paradigm4 &raquo; Feed" href="http://www.paradigm4.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Paradigm4 &raquo; Comments Feed" href="http://www.paradigm4.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Paradigm4 &raquo; Optimizing Algorithmic Trading Models. A SciDB Quantitative Finance Use Case Comments Feed" href="http://www.paradigm4.com/optimizing-algorithmic-trading-models-using-an-array-database-a-quantitative-finance-use-case/feed/" />
+<meta content="Divi Child Theme v." name="generator"/><link rel='stylesheet' id='bxslider-css-css'  href='http://www.paradigm4.com/wp-content/plugins/kiwi-logo-carousel/third-party/jquery.bxslider/jquery.bxslider.css?ver=98aafab448cefa9f25de049a5313a247' type='text/css' media='' />
+<link rel='stylesheet' id='kiwi-logo-carousel-styles-css'  href='http://www.paradigm4.com/wp-content/plugins/kiwi-logo-carousel/custom-styles.css?ver=98aafab448cefa9f25de049a5313a247' type='text/css' media='' />
+<link rel='stylesheet' id='digg-digg-css'  href='http://www.paradigm4.com/wp-content/plugins/digg-digg/css/diggdigg-style.css?ver=98aafab448cefa9f25de049a5313a247' type='text/css' media='screen' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='http://www.paradigm4.com/wp-content/plugins/revslider/public/assets/css/settings.css?ver=98aafab448cefa9f25de049a5313a247' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+</style>
+<link rel='stylesheet' id='parent-style-css'  href='http://www.paradigm4.com/wp-content/themes/Divi/style.css?ver=98aafab448cefa9f25de049a5313a247' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-advanced-options-css'  href='http://www.paradigm4.com/wp-content/themes/Divi/css/advanced_options.css?ver=98aafab448cefa9f25de049a5313a247' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://www.paradigm4.com/wp-content/themes/Divi-child/fonts/font-awesome/css/font-awesome.min.css?ver=98aafab448cefa9f25de049a5313a247' type='text/css' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='http://www.paradigm4.com/wp-content/themes/Divi-child/style.css?ver=98aafab448cefa9f25de049a5313a247' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,800italic,400,300,700,800&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css'  href='http://www.paradigm4.com/wp-content/themes/Divi-child/style.css?ver=98aafab448cefa9f25de049a5313a247' type='text/css' media='all' />
+<link rel='stylesheet' id='et-shortcodes-css-css'  href='http://www.paradigm4.com/wp-content/themes/Divi/epanel/shortcodes/css/shortcodes.css?ver=98aafab448cefa9f25de049a5313a247' type='text/css' media='all' />
+<link rel='stylesheet' id='et-shortcodes-responsive-css-css'  href='http://www.paradigm4.com/wp-content/themes/Divi/epanel/shortcodes/css/shortcodes_responsive.css?ver=98aafab448cefa9f25de049a5313a247' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-25995356-1']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='http://www.paradigm4.com/wp-includes/js/jquery/jquery.js?ver=98aafab448cefa9f25de049a5313a247'></script>
+<script type='text/javascript' src='http://www.paradigm4.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=98aafab448cefa9f25de049a5313a247'></script>
+<script type='text/javascript' src='http://www.paradigm4.com/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=98aafab448cefa9f25de049a5313a247'></script>
+<script type='text/javascript' src='http://www.paradigm4.com/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=98aafab448cefa9f25de049a5313a247'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.paradigm4.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.paradigm4.com/wp-includes/wlwmanifest.xml" /> 
+
+<link rel='shortlink' href='http://www.paradigm4.com/?p=1565' />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />	<style>
+		a { color: #07457b; }
+
+		body { color: #666666; }
+
+		.et_pb_counter_amount, .et_pb_featured_table .et_pb_pricing_heading, .et_quote_content, .et_link_content, .et_audio_content { background-color: #07457b; }
+
+		#main-header, #main-header .nav li ul, .et-search-form, #main-header .et_mobile_menu { background-color: #f9f9f9; }
+
+		#top-header, #et-secondary-nav li ul { background-color: #07457b; }
+
+		.woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce input.button.alt, .woocommerce-page input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce-page #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce a.button, .woocommerce-page a.button, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce #content input.button, .woocommerce-page #content input.button, .woocommerce-message, .woocommerce-error, .woocommerce-info { background: #07457b !important; }
+
+		#et_search_icon:hover, .mobile_menu_bar:before, .footer-widget h4, .et-social-icon a:hover, .comment-reply-link, .form-submit input, .et_pb_sum, .et_pb_pricing li a, .et_pb_pricing_table_button, .et_overlay:before, .entry-summary p.price ins, .woocommerce div.product span.price, .woocommerce-page div.product span.price, .woocommerce #content div.product span.price, .woocommerce-page #content div.product span.price, .woocommerce div.product p.price, .woocommerce-page div.product p.price, .woocommerce #content div.product p.price, .woocommerce-page #content div.product p.price, .et_pb_member_social_links a:hover { color: #07457b !important; }
+
+		.woocommerce .star-rating span:before, .woocommerce-page .star-rating span:before, .et_pb_widget li a:hover, .et_pb_bg_layout_light .et_pb_promo_button, .et_pb_bg_layout_light .et_pb_more_button, .et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active, .et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active, .et_pb_gallery .et_pb_gallery_pagination ul li a.active, .wp-pagenavi span.current, .wp-pagenavi a:hover, .et_pb_contact_submit, .et_pb_bg_layout_light .et_pb_newsletter_button, .nav-single a, .posted_in a { color: #07457b !important; }
+
+		.et-search-form, .nav li ul, .et_mobile_menu, .footer-widget li:before, .et_pb_pricing li:before, blockquote { border-color: #07457b; }
+
+		#main-footer { background-color: #2e2e2e; }
+
+		#top-menu a { color: #000000; }
+
+		#top-menu li.current-menu-ancestor > a, #top-menu li.current-menu-item > a, .bottom-nav li.current-menu-item > a { color: #07457b; }
+
+		</style>
+<link rel="shortcut icon" href="http://www.paradigm4.com/wp-content/uploads/2016/02/Favicon_P4.22.png" /><script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//www.paradigm4.com/?wordfence_logHuman=1&hid=D38D0D76673405EB449105F3A9DC6680');
+</script><meta name="generator" content="Powered by Slider Revolution 5.0.6 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<style type="text/css" id="et-custom-css">
+a.smallgreen, a.biggreen { color: #07457b !important; background: #07457b; background: -moz-linear-gradient(top, #94e48d 0%, #07457b 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#07457b), color-stop(100%,#07457b)); background: -webkit-linear-gradient(top, #07457b 0%,#07457bc 100%); background: -o-linear-gradient(top, #07457b 0%,#07457b 100%); background: -ms-linear-gradient(top, #07457b 0%,#07457b 100%); background: linear-gradient(to bottom, #07457b 0%,#07457b 100%); border: 1px solid #07457b; }
+	a.smallgreen:hover, a.biggreen:hover { color: #07457b !important; }
+</style></head>
+<body class="single single-post postid-1565 single-format-standard et_fixed_nav osx et_right_sidebar chrome et_includes_sidebar">
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>Munchkin.init('662-CEN-819');</script>
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0014/4209.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+	<div id="page-container">
+
+	
+		<header id="main-header" class="et_nav_text_color_dark">
+			<div class="container clearfix">
+							<a href="http://www.paradigm4.com/">
+					<img src="http://www.paradigm4.com/wp-content/uploads/2016/02/P4NewTagline300X703.png" alt="Paradigm4" id="logo" />
+				</a>
+
+				<div id="et-top-navigation">
+					<nav id="top-menu-nav">
+					<ul id="top-menu" class="nav"><li id="menu-item-3814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3814"><a href="http://www.paradigm4.com/about/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://www.paradigm4.com/about/team/">Meet the Team</a></li>
+	<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="http://www.paradigm4.com/about/news/">News &#038; Events</a></li>
+	<li id="menu-item-3699" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3699"><a href="http://www.paradigm4.com/about/whats-in-our-name/">What&#8217;s in Our Name?</a></li>
+	<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="http://www.paradigm4.com/about/careers/">Careers</a></li>
+	<li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="http://www.paradigm4.com/about/contact/">Contact</a></li>
+</ul>
+</li>
+<li id="menu-item-3498" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3498"><a href="#">Industries</a>
+<ul class="sub-menu">
+	<li id="menu-item-3500" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3500"><a href="http://www.paradigm4.com/life-sciences/">Life Sciences</a></li>
+	<li id="menu-item-3501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3501"><a href="http://www.paradigm4.com/financial-markets/">Financial Markets</a></li>
+	<li id="menu-item-3499" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3499"><a href="#">Other Industries</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1837" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1837"><a href="http://www.paradigm4.com/other-industries/#Sensor_Analytics">Sensor Analytics</a></li>
+		<li id="menu-item-1834" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1834"><a href="http://www.paradigm4.com/other-industries/#insurance">Insurance</a></li>
+		<li id="menu-item-1836" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1836"><a href="http://www.paradigm4.com/other-industries/#eCommerce">e-Commerce</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-69"><a href="http://www.paradigm4.com/try_scidb/">Try SciDB</a>
+<ul class="sub-menu">
+	<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="http://www.paradigm4.com/try_scidb/compare-editions/">SciDB Editions</a></li>
+	<li id="menu-item-3134" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3134"><a href="#">SciDB Integration</a>
+	<ul class="sub-menu">
+		<li id="menu-item-303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-303"><a href="http://www.paradigm4.com/try_scidb/scidb-r/">R Integration</a></li>
+		<li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71"><a href="http://www.paradigm4.com/try_scidb/scidb-py/">Python Integration</a></li>
+	</ul>
+</li>
+	<li id="menu-item-142" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-142"><a href="#">SciDB Compared to</a>
+	<ul class="sub-menu">
+		<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="http://www.paradigm4.com/try_scidb/compare-to-relational-databases/">Relational Databases</a></li>
+		<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="http://www.paradigm4.com/try_scidb/compare-to-map-reduce-and-hadoop/">Map-Reduce &#038; Hadoop</a></li>
+		<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="http://www.paradigm4.com/try_scidb/compare-to-analytic-software/">Analytic Software</a></li>
+		<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="http://www.paradigm4.com/try_scidb/compare-to-nosql/">NoSQL</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3072" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3072"><a href="http://www.paradigm4.com/try_scidb/">Download SciDB</a></li>
+</ul>
+</li>
+<li id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-114"><a href="http://www.paradigm4.com/technology/">Technology</a>
+<ul class="sub-menu">
+	<li id="menu-item-3637" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3637"><a href="http://www.paradigm4.com/technology/#MAC">MAC™</a></li>
+	<li id="menu-item-1819" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1819"><a href="http://www.paradigm4.com/technology/#Array_Data_Model">Array Data Model</a></li>
+	<li id="menu-item-1817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1817"><a href="http://www.paradigm4.com/technology/#ACID_Database">ACID Database</a></li>
+	<li id="menu-item-1820" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1820"><a href="http://www.paradigm4.com/technology/#MMP">Distributed MPP Architecture</a></li>
+	<li id="menu-item-1821" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1821"><a href="http://www.paradigm4.com/technology/#In-Database_Analytics">In-Database Analytics</a></li>
+	<li id="menu-item-1822" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1822"><a href="http://www.paradigm4.com/technology/#Open_Source">Open Source</a></li>
+	<li id="menu-item-1823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1823"><a href="http://www.paradigm4.com/technology/#Commodity_Hardware">Commodity Hardware</a></li>
+	<li id="menu-item-1824" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1824"><a href="http://www.paradigm4.com/technology/#Programmable">Programmable from R &#038; Python</a></li>
+</ul>
+</li>
+<li id="menu-item-3135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3135"><a href="http://www.paradigm4.com/resources/">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-3926" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3926"><a title="SciDB User Community" href="http://paradigm4.com/forum/">Forum</a></li>
+	<li id="menu-item-164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164"><a href="http://www.paradigm4.com/?cat=5">Blog</a></li>
+	<li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93"><a href="http://www.paradigm4.com/resources/videos/">Videos</a></li>
+	<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"><a href="http://www.paradigm4.com/resources/papers/">Papers</a></li>
+	<li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="http://www.paradigm4.com/resources/documentation/">Technical Documentation</a></li>
+	<li id="menu-item-2415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2415"><a href="http://www.paradigm4.com/resources/hardware-guidelines/">Hardware Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-3988" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3988"><a href="http://paradigm4.com/forum/">Forum</a></li>
+</ul>					</nav>
+
+					
+										<div id="et_top_search">
+						<span id="et_search_icon"></span>
+						<form role="search" method="get" class="et-search-form et-hidden" action="http://www.paradigm4.com/">
+						<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />						</form>
+					</div>
+					
+					<div id="et_mobile_nav_menu">
+			<a href="#" class="mobile_nav closed">
+				<span class="select_page">Select Page</span>
+				<span class="mobile_menu_bar"></span>
+			</a>
+		</div>
+				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+		</header> <!-- #main-header -->
+
+
+		<div id="et-main-area">
+<div id="main-content">
+	<div class="container">
+		<div id="content-area" class="clearfix">
+			<div id="left-area">
+							
+				<article id="post-1565" class="post-1565 post type-post status-publish format-standard hentry category-array-database category-blog tag-array-database-2 tag-hedge-funds tag-quantitative-finance tag-use-case et_pb_post">
+					<h1>Optimizing Algorithmic Trading Models. A SciDB Quantitative Finance Use Case</h1>
+
+				<p class="post-meta"> by <a href="http://www.paradigm4.com/author/bill-kantor/" title="Posts by Bill Kantor" rel="author">Bill Kantor</a> | Mar 14, 2014 | <a href="http://www.paradigm4.com/category/array-database/" rel="category tag">Array Database</a>, <a href="http://www.paradigm4.com/category/blog/" rel="category tag">Blog</a> | <span class="comments-number"><a href="http://www.paradigm4.com/optimizing-algorithmic-trading-models-using-an-array-database-a-quantitative-finance-use-case/#respond">0 comments</a></span></p>
+				
+					<div class="entry-content">
+					<a id="dd_start"></a><p><a href="http://www.paradigm4.com/wp-content/uploads/2014/03/Wall-Street-Bull.jpg"><img class=" wp-image-1567 alignleft" src="http://www.paradigm4.com/wp-content/uploads/2014/03/Wall-Street-Bull-300x225.jpg" alt="Wall Street Bull" width="216" height="162" /></a>This post is part two of a two-part series on why you might care about an array database. Part one, “<a title="Why an Array Database?" href="http://www.paradigm4.com/why-an-array-database/">Why an Array Database?</a>” is recommended reading.</p>
+<hr />
+<p>Now, a word for you experts out there. We realize that quantitative analysis is complex; and we’ve simplified this use case for the sake of articulating an example to a larger audience. You’ll have to cut us some slack. Ok, now back to the use case.</p>
+<p>A hedge fund wants to develop an algorithmic trading model that finds and exploits short-term market inefficiencies. Its intent is to identify stocks that track each other, find the first mover, and execute trades before the market fully equalizes on the other stocks. The data is stock trade tick information which looks like this: time, symbol, price and volume. And as you can imagine, there’s a lot of it. Trade ticks are all ordered in time although they can be at irregular intervals. Symbols can be ordered as well (say alphabetically) but the order does not mean much but making symbol an array coordinate makes accessing it faster.</p>
+<p>Let’s set up a two-dimensional array; let one dimension be time and another be symbol. For each time-symbol pair, the array would store the attributes of price and volume. There are alternatives schemas of course. That’s up to the user who can easily change things later. For now let’s just go with the two-dimensional time-symbol array.</p>
+<p>Did you see what happened when we set up the array? In other databases, time and symbol are fields of a record. Rather than burying the inherent order of time and symbol in rows or columns in a table, an array storage model promotes what was buried order (or context) into primary coordinates of the system. Why does that matter? Well with a traditional database, one common way to accelerate data access is to maintain two copies of your data—one organized by time then symbol, another organized by symbol then time—at the cost of doubling your storage. (Yes, an alternative is to use two indices but that only reduces access time for a single symbol and time. Analytics will focus on ranges, not discrete values.)</p>
+<p>With an array database, time and symbol are coordinate dimensions of the array; so it is very easy to select data along a single coordinate dimension or multiple dimensions at once. More important, because the inherent order is preserved in the way the data is stored in an array database, it also means that accessing the information will be much faster than alternative approaches. Admittedly, if our hedge fund knows—in advance—how they want to access their data, they would bear the cost and tune the database. But for ad hoc analysis, they won’t know what kinds of questions will be asked. So the data access ought to be fast without advanced tuning. Array storage models give them that flexibility.</p>
+<p>But our hedge fund wants to do something that will really burden traditional databases. It wants to know what other stocks are highly correlated with IBM? This involves looking at every tick of every stock symbol, comparing it to the previous ticks for that same symbol over some time interval (that’s a window of values) in order to infer a trend in the stock price and then comparing that trend to the same measurements for IBM. That’s a lot of multidimensional selects. A speed difference will be significant, but there is another advantage of the array database.</p>
+<p>What our hedge fund really wants to do is to compare the movement of every stock to every other stock. Yikes! This is getting computationally intense. And this is where the array database really shines. If we take the two-dimensional array of time and symbol, select only the price attribute; we have a matrix of stock prices with symbols on one dimension and time on the other. A multiplication of this matrix by its transpose (with two other less computationally challenging steps) produces the correlation matrix showing precisely what the hedge fund wants—an understanding of which stocks behave similarly.</p>
+<p>This is just one example of many valuable analyses based on linear algebra. Now that matrix multiply can be quite compute intensive depending upon how granular your data is and how long a period you want to analyze. With SciDB, matrix multiplication executes fast and in parallel and performance can be improved by just adding more commodity hardware. And the really cool thing is that the program for multiplying these matrices—which are distributed over several servers—is just one line of code in SciDB. No one had to worry about where the data sits and coordinate the analyses across multiple servers—SciDB took care of that behind the scenes.</p>
+<p>There is one other way that the array storage model wins here. Because the data is stored in exactly the format you want to perform the matrix math, there is no manipulation necessary to get it into the format needed by your analytics engine. And if your database happens to also offer in-database math like SciDB, then there is no need to move the data. Just do the math, don’t worry about moving the data or how much memory is on your server.<br />
+</br></p>
+<a id="dd_end"></a><div class='dd_outer'><div class='dd_inner'><div id='dd_ajax_float'><div class='dd_button_v'><a href="http://twitter.com/share" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://twitter.com/share', '']);" class="twitter-share-button" data-url="http://www.paradigm4.com/optimizing-algorithmic-trading-models-using-an-array-database-a-quantitative-finance-use-case/" data-count="vertical" data-text="Optimizing Algorithmic Trading Models. A SciDB Quantitative Finance Use Case" data-via=""></a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></div><div style='clear:left'></div><div class='dd_button_v'><a href="http://bufferapp.com/add" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://bufferapp.com/add', '']);" class="buffer-add-button" data-count="vertical" data-text="Optimizing Algorithmic Trading Models. A SciDB Quantitative Finance Use Case" data-url="http://www.paradigm4.com/optimizing-algorithmic-trading-models-using-an-array-database-a-quantitative-finance-use-case/" data-via=""></a><script type="text/javascript" src="http://static.bufferapp.com/js/button.js"></script></div><div style='clear:left'></div><div class='dd_button_v'><script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.paradigm4.com/optimizing-algorithmic-trading-models-using-an-array-database-a-quantitative-finance-use-case/" send="false" show_faces="false"  layout="box_count" width="50"  ></fb:like></div><div style='clear:left'></div><div class='dd_button_v'><script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script><g:plusone size='tall' href='http://www.paradigm4.com/optimizing-algorithmic-trading-models-using-an-array-database-a-quantitative-finance-use-case/'></g:plusone></div><div style='clear:left'></div><div class='dd_button_v'><script src='//platform.linkedin.com/in.js' type='text/javascript'></script><script type='IN/Share' data-url='http://www.paradigm4.com/optimizing-algorithmic-trading-models-using-an-array-database-a-quantitative-finance-use-case/' data-counter='top'></script></div><div style='clear:left'></div></div></div></div><script type="text/javascript">var dd_offset_from_content = 30;var dd_top_offset_from_content = 0;var dd_override_start_anchor_id = "";var dd_override_top_offset = "";</script><script type="text/javascript" src="http://www.paradigm4.com/wp-content/plugins/digg-digg//js/diggdigg-floating-bar.js?ver=5.3.6"></script>					</div> <!-- .entry-content -->
+
+					
+									</article> <!-- .et_pb_post -->
+
+										</div> <!-- #left-area -->
+
+				<div id="sidebar">
+		<div id="search-2" class="et_pb_widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://www.paradigm4.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></div> <!-- end .et_pb_widget --><div id="nav_menu-4" class="et_pb_widget widget_nav_menu"><h4 class="widgettitle">Links</h4><div class="menu-quick-links-container"><ul id="menu-quick-links" class="menu"><li id="menu-item-3459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3459"><a href="http://www.paradigm4.com/about/contact/">Contact Us</a></li>
+<li id="menu-item-3572" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3572"><a href="http://www.paradigm4.com/life-sciences/">Life Sciences</a></li>
+<li id="menu-item-3573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3573"><a href="http://www.paradigm4.com/financial-markets/">Financial Markets</a></li>
+<li id="menu-item-3575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3575"><a href="http://www.paradigm4.com/resources/papers/">Papers</a></li>
+<li id="menu-item-3576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3576"><a href="http://www.paradigm4.com/resources/videos/">Videos</a></li>
+<li id="menu-item-3458" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3458"><a href="http://paradigm4.com/forum/">Forum</a></li>
+<li id="menu-item-3461" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3461"><a href="https://github.com/Paradigm4" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://github.com/Paradigm4', 'Paradigm4 Labs Github']);" >Paradigm4 Labs Github</a></li>
+</ul></div></div> <!-- end .et_pb_widget -->		<div id="recent-posts-2" class="et_pb_widget widget_recent_entries">		<h4 class="widgettitle">Recent Posts</h4>		<ul>
+					<li>
+				<a href="http://www.paradigm4.com/breaking-down-genomic-sequencing-bottlenecks-at-sanger-institute/">Breaking down genomic sequencing bottlenecks at Sanger Institute</a>
+						</li>
+					<li>
+				<a href="http://www.paradigm4.com/golden-seeds-invests-paradigm4/">Golden Seeds Invests in Paradigm4</a>
+						</li>
+					<li>
+				<a href="http://www.paradigm4.com/leaders-in-financial-markets-beat-competition-with-scidb/">Leaders in Financial Markets beat competition with SciDB</a>
+						</li>
+					<li>
+				<a href="http://www.paradigm4.com/pydata-nyc-talk-next-gen-tick-database-case-study/">PyData NYC talk: next gen tick database case study</a>
+						</li>
+					<li>
+				<a href="http://www.paradigm4.com/hpc-white-house-initiative/">HPC White House Initiative</a>
+						</li>
+				</ul>
+		</div> <!-- end .et_pb_widget --><div id="categories-2" class="et_pb_widget widget_categories"><h4 class="widgettitle">Categories</h4>		<ul>
+	<li class="cat-item cat-item-7"><a href="http://www.paradigm4.com/category/announcements/" >Announcements</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://www.paradigm4.com/category/array-database/" >Array Database</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.paradigm4.com/category/benchmarks/" >Benchmarks</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.paradigm4.com/category/big-data-features/" >Big Data Features</a>
+</li>
+	<li class="cat-item cat-item-57"><a href="http://www.paradigm4.com/category/bioinformatics/" >Bioinformatics</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://www.paradigm4.com/category/blog/" >Blog</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="http://www.paradigm4.com/category/data-scientist-2/" >Data Scientist</a>
+</li>
+	<li class="cat-item cat-item-49"><a href="http://www.paradigm4.com/category/databases/" >Databases</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="http://www.paradigm4.com/category/diverse/" >Diverse</a>
+</li>
+	<li class="cat-item cat-item-45"><a href="http://www.paradigm4.com/category/examples/" >Examples</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.paradigm4.com/category/hadoop/" >Hadoop</a>
+</li>
+	<li class="cat-item cat-item-71"><a href="http://www.paradigm4.com/category/mike-stonebraker/" >Mike Stonebraker</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="http://www.paradigm4.com/category/opinion/" >Opinion</a>
+</li>
+	<li class="cat-item cat-item-56"><a href="http://www.paradigm4.com/category/quant-finance/" >Quant Finance</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.paradigm4.com/category/r/" >R</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="http://www.paradigm4.com/category/survey-report/" >Survey Report</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.paradigm4.com/category/tips/" >Tips</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.paradigm4.com/category/uncategorized/" >Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-30"><a href="http://www.paradigm4.com/category/use-case-2/" >Use Case</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="http://www.paradigm4.com/category/variety/" >Variety</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://www.paradigm4.com/category/webinar-qa/" >Webinar Q&amp;A</a>
+</li>
+		</ul>
+</div> <!-- end .et_pb_widget --><div id="archives-2" class="et_pb_widget widget_archive"><h4 class="widgettitle">Archives</h4>		<ul>
+	<li><a href='http://www.paradigm4.com/2015/12/'>December 2015</a></li>
+	<li><a href='http://www.paradigm4.com/2015/11/'>November 2015</a></li>
+	<li><a href='http://www.paradigm4.com/2015/09/'>September 2015</a></li>
+	<li><a href='http://www.paradigm4.com/2015/07/'>July 2015</a></li>
+	<li><a href='http://www.paradigm4.com/2015/06/'>June 2015</a></li>
+	<li><a href='http://www.paradigm4.com/2015/05/'>May 2015</a></li>
+	<li><a href='http://www.paradigm4.com/2015/02/'>February 2015</a></li>
+	<li><a href='http://www.paradigm4.com/2015/01/'>January 2015</a></li>
+	<li><a href='http://www.paradigm4.com/2014/08/'>August 2014</a></li>
+	<li><a href='http://www.paradigm4.com/2014/07/'>July 2014</a></li>
+	<li><a href='http://www.paradigm4.com/2014/06/'>June 2014</a></li>
+	<li><a href='http://www.paradigm4.com/2014/04/'>April 2014</a></li>
+	<li><a href='http://www.paradigm4.com/2014/03/'>March 2014</a></li>
+	<li><a href='http://www.paradigm4.com/2014/02/'>February 2014</a></li>
+	<li><a href='http://www.paradigm4.com/2014/01/'>January 2014</a></li>
+	<li><a href='http://www.paradigm4.com/2013/11/'>November 2013</a></li>
+	<li><a href='http://www.paradigm4.com/2013/10/'>October 2013</a></li>
+	<li><a href='http://www.paradigm4.com/2013/08/'>August 2013</a></li>
+	<li><a href='http://www.paradigm4.com/2013/07/'>July 2013</a></li>
+	<li><a href='http://www.paradigm4.com/2013/06/'>June 2013</a></li>
+	<li><a href='http://www.paradigm4.com/2013/05/'>May 2013</a></li>
+	<li><a href='http://www.paradigm4.com/2013/04/'>April 2013</a></li>
+	<li><a href='http://www.paradigm4.com/2013/03/'>March 2013</a></li>
+	<li><a href='http://www.paradigm4.com/2013/02/'>February 2013</a></li>
+	<li><a href='http://www.paradigm4.com/2013/01/'>January 2013</a></li>
+	<li><a href='http://www.paradigm4.com/2012/08/'>August 2012</a></li>
+		</ul>
+</div> <!-- end .et_pb_widget --><div id="text-2" class="et_pb_widget widget_text">			<div class="textwidget"><a href="https://twitter.com/paradigm4" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://twitter.com/paradigm4', '']);" title="Paradigm4 Twitter"  target="_blank"><img class="alignleft wp-image-3466 size-full" style="margin-top: 10px; margin-bottom: 10px;" src="http://www.paradigm4.com/wp-content/uploads/2015/03/Paradigm4-Twitter-Share.png" alt="Paradigm4 Twitter Share" width="250" height="70" /></a>
+<a title="Paradigm4 RSS" href="http://www.paradigm4.com/feed" target="_blank"><img class=" size-full wp-image-3465 alignleft" style="margin-bottom: 15px;" src="http://www.paradigm4.com/wp-content/uploads/2015/03/Paradigm4-RSS-Share.png" alt="Paradigm4 RSS Share" width="250" height="70" /></a>
+<a href="https://www.linkedin.com/company/paradigm4" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://www.linkedin.com/company/paradigm4', '']);" title="Paradigm4 LinkedIn"  target="_blank"><img class=" size-full wp-image-3467 alignleft" style="margin-bottom: 15px;" src="http://www.paradigm4.com/wp-content/uploads/2015/03/LinkedIn-Social-Share.png" alt="LinkedIn Social Share" width="250" height="70" /></a></div>
+		</div> <!-- end .et_pb_widget -->	</div> <!-- end #sidebar -->
+		</div> <!-- #content-area -->
+	</div> <!-- .container -->
+</div> <!-- #main-content -->
+
+
+            <footer id="main-footer">
+                
+
+        
+                <div id="et-footer-nav">
+
+                    <div class="container et_pb_row">
+
+                        <div class="footer__about et_pb_column et_pb_column_1_3">
+                            <h4 class="footer__about__title">About Paradigm4</h4>
+                            <p class="footer__about__body">We are the company behind SciDB. Paradigm4's SciDB is designed for mining insights from genomic, clinical, trading, image, sensor, and device data. Paradigm4 is changing what’s possible with Big Data analytics, enabling businesses to answer bigger—and harder—questions, accelerating the creation of new discoveries, products and services.</p>
+                            <p class="footer__about__body">MAC&trade; is a trademark of Paradigm4, Inc.</p>
+                        </div>
+
+                        <div class="footer__links et_pb_column et_pb_column_1_3">
+                            <h4 class="footer__links__title">Quick Links</h4>
+                            <ul id="menu-quick-links-1" class="bottom-nav"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3459"><a href="http://www.paradigm4.com/about/contact/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3572"><a href="http://www.paradigm4.com/life-sciences/">Life Sciences</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3573"><a href="http://www.paradigm4.com/financial-markets/">Financial Markets</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3575"><a href="http://www.paradigm4.com/resources/papers/">Papers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3576"><a href="http://www.paradigm4.com/resources/videos/">Videos</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3458"><a href="http://paradigm4.com/forum/">Forum</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3461"><a href="https://github.com/Paradigm4" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://github.com/Paradigm4', 'Paradigm4 Labs Github']);" >Paradigm4 Labs Github</a></li>
+</ul>                        </div>
+
+                        <div class="footer__twitter et_pb_column et_pb_column_1_3">
+                            <script>
+/*********************************************************************
+*  #### Twitter Post Fetcher v10.0 ####
+*  Coded by Jason Mayes 2013. A present to all the developers out there.
+*  www.jasonmayes.com
+*  Please keep this disclaimer with my code if you use it. Thanks. :-)
+*  Got feedback or questions, ask here:
+*  http://www.jasonmayes.com/projects/twitterApi/
+*  Updates will be posted to this site.
+*********************************************************************/
+var twitterFetcher=function(){function x(e){return e.replace(/<b[^>]*>(.*?)<\/b>/gi,function(c,e){return e}).replace(/class=".*?"|data-query-source=".*?"|dir=".*?"|rel=".*?"/gi,"")}function p(e,c){for(var g=[],f=RegExp("(^| )"+c+"( |$)"),a=e.getElementsByTagName("*"),h=0,d=a.length;h<d;h++)f.test(a[h].className)&&g.push(a[h]);return g}var y="",l=20,s=!0,k=[],t=!1,q=!0,r=!0,u=null,v=!0,z=!0,w=null,A=!0;return{fetch:function(e,c,g,f,a,h,d,b,m,n){void 0===g&&(g=20);void 0===f&&(s=!0);void 0===a&&(a=
+!0);void 0===h&&(h=!0);void 0===d&&(d="default");void 0===b&&(b=!0);void 0===m&&(m=null);void 0===n&&(n=!0);t?k.push({id:e,domId:c,maxTweets:g,enableLinks:f,showUser:a,showTime:h,dateFunction:d,showRt:b,customCallback:m,showInteraction:n}):(t=!0,y=c,l=g,s=f,r=a,q=h,z=b,u=d,w=m,A=n,c=document.createElement("script"),c.type="text/javascript",c.src="//cdn.syndication.twimg.com/widgets/timelines/"+e+"?&lang=en&callback=twitterFetcher.callback&suppress_response_codes=true&rnd="+Math.random(),document.getElementsByTagName("head")[0].appendChild(c))},
+callback:function(e){var c=document.createElement("div");c.innerHTML=e.body;"undefined"===typeof c.getElementsByClassName&&(v=!1);e=[];var g=[],f=[],a=[],h=[],d=0;if(v)for(c=c.getElementsByClassName("tweet");d<c.length;){0<c[d].getElementsByClassName("retweet-credit").length?a.push(!0):a.push(!1);if(!a[d]||a[d]&&z)e.push(c[d].getElementsByClassName("e-entry-title")[0]),h.push(c[d].getAttribute("data-tweet-id")),g.push(c[d].getElementsByClassName("p-author")[0]),f.push(c[d].getElementsByClassName("dt-updated")[0]);
+d++}else for(c=p(c,"tweet");d<c.length;)e.push(p(c[d],"e-entry-title")[0]),h.push(c[d].getAttribute("data-tweet-id")),g.push(p(c[d],"p-author")[0]),f.push(p(c[d],"dt-updated")[0]),0<p(c[d],"retweet-credit").length?a.push(!0):a.push(!1),d++;e.length>l&&(e.splice(l,e.length-l),g.splice(l,g.length-l),f.splice(l,f.length-l),a.splice(l,a.length-l));c=[];d=e.length;for(a=0;a<d;){if("string"!==typeof u){var b=new Date(f[a].getAttribute("datetime").replace(/-/g,"/").replace("T"," ").split("+")[0]),b=u(b);
+f[a].setAttribute("aria-label",b);if(e[a].innerText)if(v)f[a].innerText=b;else{var m=document.createElement("p"),n=document.createTextNode(b);m.appendChild(n);m.setAttribute("aria-label",b);f[a]=m}else f[a].textContent=b}b="";s?(r&&(b+='<div class="twitter-user">'+x(g[a].innerHTML)+"</div>"),b+='<p class="tweet">'+x(e[a].innerHTML)+"</p>",q&&(b+='<span class="twitter-time"><i class="fa fa-clock-o"></i> '+f[a].getAttribute("aria-label")+"</span>")):e[a].innerText?(r&&(b+='<p class="user">'+g[a].innerText+"</p>"),b+='<p class="tweet">'+e[a].innerText+
+"</p>",q&&(b+='<p class="timePosted">'+f[a].innerText+"</p>")):(r&&(b+='<p class="user">'+g[a].textContent+"</p>"),b+='<p class="tweet">'+e[a].textContent+"</p>",q&&(b+='<p class="timePosted">'+f[a].textContent+"</p>"));A&&(b+='<span class="interact"><a target="_blank" href="https://twitter.com/intent/tweet?in_reply_to='+h[a]+'" class="twitter_reply_icon" title="Reply"><i class="fa fa-mail-forward"></i></a><a target="_blank" href="https://twitter.com/intent/retweet?tweet_id='+h[a]+'" class="twitter_retweet_icon" title="Retweet"><i class="fa fa-retweet"></i></a><a target="_blank" href="https://twitter.com/intent/favorite?tweet_id='+
+h[a]+'" class="twitter_fav_icon" title="Favorite"><i class="fa fa-star"></i></a></span>');c.push(b);a++}if(null==w){e=c.length;g=0;f=document.getElementById(y);for(h="";g<e;)h+='<div class="twitter-layout">'+c[g]+"</div>",g++;f.innerHTML=h+""}else w(c);t=!1;0<k.length&&(twitterFetcher.fetch(k[0].id,k[0].domId,k[0].maxTweets,k[0].enableLinks,k[0].showUser,k[0].showTime,k[0].dateFunction,k[0].showRt,k[0].customCallback,k[0].showInteraction),k.splice(0,1))}}}();
+</script>
+
+<h4 class="footer__twitter__title"><a href="https://twitter.com/Paradigm4">Join Us On Twitter&nbsp;<small>@Paradigm4</small></a></h4>
+
+<div id="twitter-feed"></div>
+
+<script>
+twitterFetcher.fetch("530434511880716288","twitter-feed",1,true,false);
+</script>
+
+<div><br>&nbsp;<br>
+<h4 class="footer__twitter__title">Sign up for SciDB updates</h4><br>
+<script src="//app-ab03.marketo.com/js/forms2/js/forms2.min.js"></script>
+<form id="mktoForm_1448"></form>
+<script>MktoForms2.loadForm("//app-ab03.marketo.com", "662-CEN-819", 1448);</script>
+</div>                        </div>
+                    </div>
+
+                    <div class="et_pb_row">
+                        <div class="et_pb_column_4_4 social-icons">
+                            <div class="social-icons__container">
+    <ul class="et-social-icons">
+                            <li class="et-social-icon et-social-twitter">
+                <a href="http://twitter.com/paradigm4" class="icon">
+                    <span>Twitter</span>
+                </a>
+            </li>
+                            <li class="et-social-icon et-social-google-plus">
+                <a href="https://plus.google.com/+Paradigm4Waltham/about" class="icon">
+                    <span>Google</span>
+                </a>
+            </li>
+                                    <li class="et-social-icon et-social-linkedin">
+                <a href="https://www.linkedin.com/company/paradigm4" class="icon">
+                    <span>LinkedIn</span>
+                </a>
+            </li>
+        
+        <li class="et-social-icon et-social-youtube">
+        <a href="http://youtube.com/user/paradigm4inc" class="icon">
+        <span>YouTube</span>
+        </a>
+        </li>
+    </ul>
+    <div class="social-icons__container__follow-us">
+        <h4><span class="social-icons__container__follow-us__bg">Follow Us</span></h4>
+    </div>
+</div>
+                        </div>
+                    </div>
+                </div> <!-- #et-footer-nav -->
+
+            
+                <div id="footer-bottom">
+                    <div class="container clearfix">
+                        <p style="margin-bottom: 0.75em;">Copyright &copy; 2016 Paradigm4 Inc. All Rights Reserved.</p>
+                    </div>  <!-- .container -->
+                </div>
+            </footer> <!-- #main-footer -->
+        </div> <!-- #et-main-area -->
+
+
+    </div> <!-- #page-container -->
+
+    <script>jQuery(document).ready(function(){jQuery(".kiwi-logo-carousel-default").bxSlider({mode:"horizontal",speed:500,slideMargin:0,infiniteLoop:true,hideControlOnEnd:false,captions:false,ticker:false,tickerHover:false,adaptiveHeight:false,responsive:true,pager:false,controls:true,autoControls:false,minSlides:1,maxSlides:10,moveSlides:1,slideWidth:225,auto:true,pause:4000,useCSS:false});jQuery(".kiwi-logo-carousel-featured-customers").bxSlider({mode:"horizontal",speed:500,slideMargin:0,infiniteLoop:true,hideControlOnEnd:true,captions:false,ticker:false,tickerHover:false,adaptiveHeight:false,responsive:true,pager:true,controls:true,autoControls:false,minSlides:1,maxSlides:8,moveSlides:1,slideWidth:225,auto:true,pause:4000,useCSS:false});});</script><script type='text/javascript' src='http://www.paradigm4.com/wp-content/themes/Divi/js/jquery.fitvids.js?ver=98aafab448cefa9f25de049a5313a247'></script>
+<script type='text/javascript' src='http://www.paradigm4.com/wp-content/themes/Divi/js/waypoints.min.js?ver=98aafab448cefa9f25de049a5313a247'></script>
+<script type='text/javascript' src='http://www.paradigm4.com/wp-content/themes/Divi/js/jquery.magnific-popup.js?ver=98aafab448cefa9f25de049a5313a247'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var et_custom = {"ajaxurl":"http:\/\/www.paradigm4.com\/wp-admin\/admin-ajax.php","images_uri":"http:\/\/www.paradigm4.com\/wp-content\/themes\/Divi\/images","et_load_nonce":"7f081f0e16","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","fill":"Fill","field":"field","invalid":"Invalid email","captcha":"Captcha"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.paradigm4.com/wp-content/themes/Divi/js/custom.js?ver=98aafab448cefa9f25de049a5313a247'></script>
+<script type='text/javascript' src='http://test.paradigm4.com/wp-includes/js/jquery/jquery.cookie.js?ver=98aafab448cefa9f25de049a5313a247'></script>
+<script type='text/javascript' src='http://www.paradigm4.com/wp-content/plugins/kiwi-logo-carousel/third-party/jquery.bxslider/jquery.bxslider.js?ver=98aafab448cefa9f25de049a5313a247'></script>
+</body>
+</html>
+

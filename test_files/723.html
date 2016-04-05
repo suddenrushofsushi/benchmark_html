@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html id="ie8" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html id="ie9" lang="en">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Long Le&#039;s Blog | Telerik Kendo UI MVP &amp; Evangelist, MSDN Author, MCPD, Hacker, App/Dev Architect, Codementor, Blogger, CoD Gamer, ♥&#039;ing Dad &amp; hooked on TypeScript &amp; MEAN stack!</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://blog.longle.net/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://s0.wp.com/wp-content/themes/pub/splendio/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+		<script src='https://r-login.wordpress.com/remote-login.php?action=js&amp;host=blog.longle.net&amp;id=10143612&amp;t=1435157510&amp;back=http%3A%2F%2Fblog.longle.net%2F' type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel="alternate" type="application/rss+xml" title="Long Le&#039;s Blog &raquo; Feed" href="http://blog.longle.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Long Le&#039;s Blog &raquo; Comments Feed" href="http://blog.longle.net/comments/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel='stylesheet' id='all-css-0' href='https://s1.wp.com/_static/??-eJx9kNsKwjAMhl/IWsQDeiE+y9bFLrNpypJRfHuj4AllN+FP832kxNfiAmeFrJ4mV9IUMYsXwgTXMvIAQb+7ZRBZ+P9awguIH0BLEy7u0f3gbeL4FjhG6HhSd+aUuPqKXYTZHZjPmFGvrzAHS8+jBu7sV0Z5SWix5+pegzk78Aj2TqXRO0HQYQMJyLA5jcruad1jb7f4PcMHX4vRrm3LCCLOKuFETntb9PBOdFxt1pvt7rBfb4cbh5ikAQ==' type='text/css' media='all' />
+<link rel='stylesheet' id='droid-sans-css'  href='http://fonts.googleapis.com/css?family=Droid+Sans%3Aregular%2Cbold&#038;ver=20120821' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-2' href='https://s2.wp.com/_static/??-eJyFi9EKwjAMRX/IGsqG4oP4LVuNNSNNytIx/HsrBVGE+XI5F86BNbugUlAKlDsmNMjLCJYZ5UoKVh6M+2C2gz8mSWi2W3PQ9NOkxWVeIokBJp2obdMIRAtV096w1UdUxxqGQipfx914oHkrnXFkjRUjVOvjvqJLOvu+60+Hzh/99ARqH2lq' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css-3' href='https://s0.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1387483371g' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-4' href='https://s0.wp.com/_static/??-eJx1izsOgCAQBS8krh/UyngWNCtgYCEsxuurhZVazUvmDRxRLIEyUga/i+h2bYkhBs5idcomYKOSJf2wXJgL+K40EiZ7iZ/5arNBjwxGgnZhVu4+TH6sZSurrm+6YTsBJUk66g==' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyFkOsOwjAIhV/I2rjNn8Zn2YVVZgt1UBd9ertEY9SpCQkEPg7k2CkapNanDsQOOU4Jxss9rQdZ2V+ACejGWmEdkB5wy6RAOrOBG/RgksBYu9zLQj0vcJFFA4hkaGH6+hLSGWH6iw2gsW6PZgTB64dq49mZ6JNDEptrBx0nNT17z5OdsHOg7zt6gPyjjamxEj1Qhzyf7RO1ikyyZJbEpy/fXb5T+7DbVGW53RRVUQ03BxuZFA=='></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lelong37.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel='shortlink' href='http://wp.me/GyOE' />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Long Le&#039;s Blog" />
+<meta property="og:description" content="Telerik Kendo UI MVP &amp; Evangelist, MSDN Author, MCPD, Hacker, App/Dev Architect, Codementor, Blogger, CoD Gamer, ♥&#039;ing Dad &amp; hooked on TypeScript &amp; MEAN stack!" />
+<meta property="og:url" content="http://blog.longle.net/" />
+<meta property="og:site_name" content="Long Le&#039;s Blog" />
+<meta property="og:image" content="http://1.gravatar.com/blavatar/78d8139bcbe1d07dd5b0264f3800e0b1?s=200&amp;ts=1435157510" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<link rel="shortcut icon" type="image/x-icon" href="http://1.gravatar.com/blavatar/9dc80aaf6f99060690a8d8f17ebfe25c?s=16" sizes="16x16" />
+<link rel="icon" type="image/x-icon" href="http://1.gravatar.com/blavatar/9dc80aaf6f99060690a8d8f17ebfe25c?s=16" sizes="16x16" />
+<link rel="apple-touch-icon-precomposed" href="http://1.gravatar.com/blavatar/78d8139bcbe1d07dd5b0264f3800e0b1?s=114" />
+<link rel='openid.server' href='http://lelong37.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='http://lelong37.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="http://blog.longle.net/osd.xml" title="Long Le&#039;s Blog" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://wordpress.com/opensearch.xml" title="WordPress.com" />
+<style type="text/css">
+.widget_twitter li {
+	word-wrap: break-word;
+}
+</style>
+<meta name="application-name" content="Long Le&#039;s Blog" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Telerik Kendo UI MVP &amp; Evangelist, MSDN Author, MCPD, Hacker, App/Dev Architect, Codementor, Blogger, CoD Gamer, ♥&#039;ing Dad &amp; hooked on TypeScript &amp; MEAN stack!" /><meta name="msapplication-task" content="name=Subscribe;action-uri=http://blog.longle.net/feed/;icon-uri=http://1.gravatar.com/blavatar/9dc80aaf6f99060690a8d8f17ebfe25c?s=16" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="title" content="Long Le&#039;s Blog on WordPress.com" />
+<meta name="description" content="Telerik Kendo UI MVP &amp; Evangelist, MSDN Author, MCPD, Hacker, App/Dev Architect, Codementor, Blogger, CoD Gamer, ♥&#039;ing Dad &amp; hooked on TypeScript &amp; MEAN stack! (by Le)" />
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="home blog mp6 customizer-styles-applied highlander-enabled highlander-light infinite-scroll">
+	<div id="wrapper" class="hfeed">
+				<div id="header">
+			<div id="branding">
+				<header id="masthead" role="banner">
+					<hgroup>
+						<h1 class="site-title"><a href="http://blog.longle.net/" title="Long Le&#039;s Blog" rel="home">Long Le&#039;s Blog</a></h1>
+						<h2 class="site-description">Telerik Kendo UI MVP &amp; Evangelist, MSDN Author, MCPD, Hacker, App/Dev Architect, Codementor, Blogger, CoD Gamer, ♥&#039;ing Dad &amp; hooked on TypeScript &amp; MEAN stack!</h2>
+					</hgroup>
+
+					<nav role="navigation" class="site-navigation">
+						<h1 class="assistive-text">Main menu</h1>
+						<div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+						<div class="menu"><ul><li class="current_page_item"><a href="http://blog.longle.net/">Home</a></li><li class="page_item page-item-2"><a href="http://blog.longle.net/about/">About</a></li><li class="page_item page-item-108"><a href="http://blog.longle.net/fortunes/">Fortune Quotes</a></li></ul></div>
+					</nav>
+				</header>
+			</div><!-- #branding -->
+
+			<div id="header-auxiliary">
+				<div class="header-search">
+					<form method="get" action="#">
+						<fieldset>
+							<p class="search-title">Search</p>
+							<input type="text" value="" name="s" /><button type="submit">GO</button>
+						 </fieldset>
+					 </form>
+				 </div><!-- .header-search -->
+
+									 <div class="syndicate">
+						  <ul class="fade">
+															<li><a class="rss-link" href="http://blog.longle.net/feed/" title="RSS"><span>RSS Feed</span></a></li>
+							
+															<li><a class="twitter-link" href="http://twitter.com/lelong37" title="Twitter"><span>Twitter</span></a></li>
+							
+													</ul>
+					 </div><!-- .syndicate -->
+							</div><!-- #header-auxiliary -->
+
+			<div id="header-image" role="banner">
+							</div><!-- #header-image -->
+		</div><!-- #header -->
+
+		<div id="container">
+		<div id="primary">
+			<div id="content" role="main">
+
+				
+						
+<article id="post-4314" class="post-4314 post type-post status-publish format-standard hentry category-net category-windows-azure-net tag-angularjs tag-azure tag-javascript tag-jaydata tag-js tag-kendo tag-kendoui tag-mean tag-mongodb tag-msdn tag-node-js tag-odata tag-rest tag-stack tag-website">
+	<header class="entry-header">
+					<div class="entry-date">
+				<a href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/" title="UTC" rel="bookmark"><time class="entry-date" datetime="2015-01-07T04:01:50+00:00" pubdate>January 7, 2015</time></a>			</div><!-- .entry-date -->
+							<h1 class="entry-title"><a href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/" rel="bookmark">MSDN: Building Web Apps on the MEAN Stack with OData in Microsoft&nbsp;Azure</a></h1>
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+				<p>Apologize for the delay, this article was actually published last month. If your a .NET developer specifically with ASP.NET (MVC, Web API/REST, Entity Framework, OData, etc.) and have heard or had interest in the MEAN stack, especially Node.JS, server side development in JavaScript &#8211; made possible with Google&#8217;s V8 open source JavaScript engine, have a quick read (and YES the entire MEAN stack will run in Azure just as your traditional .NET web stack would).</p>
+<p><strong>MSDN: Building Web Apps on the MEAN Stack with OData in Microsoft Azure</strong></p>
+<p>Online: <a href="http://msdn.microsoft.com/en-us/magazine/dn857363.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/magazine/dn857363.aspx</a><br />
+Download: <a href="http://lelong37.files.wordpress.com/2015/01/mdn_1412dg.pdf" rel="nofollow">http://lelong37.files.wordpress.com/2015/01/mdn_1412dg.pdf</a><br />
+Source code: <a href="http://msdnmeanstack.codeplex.com" rel="nofollow">http://msdnmeanstack.codeplex.com</a><br />
+Live Demo: <a href="http://meanjaydatakendo.azurewebsites.net" rel="nofollow">http://meanjaydatakendo.azurewebsites.net</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/magazine/dn857363.aspx"><img src="https://lelong37.files.wordpress.com/2015/01/2015-01-07_02-40-13.png?w=600" alt="" /></a></p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-4314" class="share-twitter sd-button share-icon" href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-4314" class="share-linkedin sd-button share-icon" href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-4314" class="share-google-plus-1 sd-button share-icon" href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon" href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/?share=tumblr" target="_blank" title="Click to share on Tumblr"><span>Tumblr</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon" href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-4314" class="share-facebook sd-button share-icon" href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/?share=facebook" target="_blank" title="Share on Facebook"><span>Facebook</span></a></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-4314" class="share-pinterest sd-button share-icon" href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span>Pinterest</span></a></li><li class="share-pocket"><a rel="nofollow" data-shared="" class="share-pocket sd-button share-icon" href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/?share=pocket" target="_blank" title="Click to share on Pocket"><span>Pocket</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-10143612-4314-558ac4064dbff' data-src='//widgets.wp.com/likes/#blog_id=10143612&amp;post_id=4314&amp;origin=lelong37.wordpress.com&amp;obj_id=10143612-4314-558ac4064dbff' data-name='like-post-frame-10143612-4314-558ac4064dbff'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>			</div><!-- .entry-content -->
+	
+	<ul class="entry-meta fade">
+								<li class="cat-links">
+				Posted in <a href="http://blog.longle.net/category/net/" rel="category tag">.NET</a>, <a href="http://blog.longle.net/category/net/windows-azure-net/" rel="category tag">Windows Azure</a>			</li>
+			
+						<li class="tag-links">
+				Tagged <a href="http://blog.longle.net/tag/angularjs/" rel="tag">angularjs</a>, <a href="http://blog.longle.net/tag/azure/" rel="tag">azure</a>, <a href="http://blog.longle.net/tag/javascript/" rel="tag">Javascript</a>, <a href="http://blog.longle.net/tag/jaydata/" rel="tag">jaydata</a>, <a href="http://blog.longle.net/tag/js/" rel="tag">js</a>, <a href="http://blog.longle.net/tag/kendo/" rel="tag">kendo</a>, <a href="http://blog.longle.net/tag/kendoui/" rel="tag">KendoUI</a>, <a href="http://blog.longle.net/tag/mean/" rel="tag">mean</a>, <a href="http://blog.longle.net/tag/mongodb/" rel="tag">mongodb</a>, <a href="http://blog.longle.net/tag/msdn/" rel="tag">msdn</a>, <a href="http://blog.longle.net/tag/node-js/" rel="tag">node.js</a>, <a href="http://blog.longle.net/tag/odata/" rel="tag">odata</a>, <a href="http://blog.longle.net/tag/rest/" rel="tag">rest</a>, <a href="http://blog.longle.net/tag/stack/" rel="tag">stack</a>, <a href="http://blog.longle.net/tag/website/" rel="tag">website</a>			</li>
+					
+				<li class="comments-link"><a href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/#comments">3 Comments</a></li>
+		
+			</ul><!-- #entry-meta -->
+</article><!-- #post-4314 -->
+					
+						
+<article id="post-4273" class="post-4273 post type-post status-publish format-standard hentry category-net tag-angularjs tag-architecture tag-benefits tag-cbre tag-enterprise tag-framework tag-javascript tag-kendo tag-kendoui tag-telerik">
+	<header class="entry-header">
+					<div class="entry-date">
+				<a href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/" title="UTC" rel="bookmark"><time class="entry-date" datetime="2014-11-03T15:40:35+00:00" pubdate>November 3, 2014</time></a>			</div><!-- .entry-date -->
+							<h1 class="entry-title"><a href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/" rel="bookmark">Our Telerik Kendo UI Case Study 2014 Released &#8211; Enterprise Benefits and Value&nbsp;Added</a></h1>
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+				<p>Telerik Kendo UI Case Study is out, quick read on CBRE enterprise benefits leveraging Kendo UI Professional.</p>
+<p><a href="http://www.telerik.com/company/success-stories/details/real-estate-giant-cbre-cuts-mobile-app-dev-time-by-50-with-telerik"><img class="alignnone size-large wp-image-4274" src="https://lelong37.files.wordpress.com/2014/11/2014-11-03_14-07-52.png?w=600&#038;h=378" alt="2014-11-03_14-07-52"   /></a></p>
+<p><strong>Customer Profile</strong><br />
+CB Richard Ellis (CBRE) is one of the world’s premier full-service real estate companies, with 349 offices in 42 countries and over 44,000 employees. The company’s $223 billion in transactions span sales and leasing, loan originations, property and corporate facilities management and much more, making CBRE the global leader in real estate services and investment.</p>
+<p><strong>Business Situation</strong><br />
+CBRE has over 100 mobile apps–some public facing–but most are unique to the company internal operations. However, disparate development platforms scattered around the world made it difficult to maximize economies of scale. The company needed a framework to deliver application portability to a spectrum of devices and operating systems, while at the same time, providing the “wow” factor field agents needed to close real estate deals.</p>
+<p><strong>Solution</strong><br />
+When CBRE application development shifted increasingly to HTML5 and CSS3, the development team conducted a thorough review of the competitive landscape and after an exhaustive research they chose the Telerik Kendo UI® framework.</p>
+<p><strong>Benefits</strong></p>
+<ul>
+<li>Less resources needed to develop, test and keep things consistent for a wide array of machines, browsers and versions</li>
+<li>Development time savings of 35%-50%</li>
+<li>Confidence that each app will run flawlessly on whatever device selected: iPad, iPhone, Android tablet, Windows Phone, Mac or Windows desktop</li>
+</ul>
+<p><a title="http://www.telerik.com/company/success-stories/details/real-estate-giant-cbre-cuts-mobile-app-dev-time-by-50-with-telerik" href="http://www.telerik.com/company/success-stories/details/real-estate-giant-cbre-cuts-mobile-app-dev-time-by-50-with-telerik" target="_blank">http://www.telerik.com/company/success-stories/details/real-estate-giant-cbre-cuts-mobile-app-dev-time-by-50-with-telerik</a></p>
+<p><a title="http://www.telerik.com/docs/default-source/case-studies-documents/cbre_casestudy_2.pdf" href="http://www.telerik.com/docs/default-source/case-studies-documents/cbre_casestudy_2.pdf" target="_blank">http://www.telerik.com/docs/default-source/case-studies-documents/cbre_casestudy_2.pdf</a></p>
+<p><a href="https://lelong37.files.wordpress.com/2014/11/cbre_casestudy_2.pdf">CBRE Telerik Kendo UI Enterprise Case Study 2014 (PDF Download)</a></p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-4273" class="share-twitter sd-button share-icon" href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-4273" class="share-linkedin sd-button share-icon" href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-4273" class="share-google-plus-1 sd-button share-icon" href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon" href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/?share=tumblr" target="_blank" title="Click to share on Tumblr"><span>Tumblr</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon" href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-4273" class="share-facebook sd-button share-icon" href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/?share=facebook" target="_blank" title="Share on Facebook"><span>Facebook</span></a></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-4273" class="share-pinterest sd-button share-icon" href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span>Pinterest</span></a></li><li class="share-pocket"><a rel="nofollow" data-shared="" class="share-pocket sd-button share-icon" href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/?share=pocket" target="_blank" title="Click to share on Pocket"><span>Pocket</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-10143612-4273-558ac406529a7' data-src='//widgets.wp.com/likes/#blog_id=10143612&amp;post_id=4273&amp;origin=lelong37.wordpress.com&amp;obj_id=10143612-4273-558ac406529a7' data-name='like-post-frame-10143612-4273-558ac406529a7'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>			</div><!-- .entry-content -->
+	
+	<ul class="entry-meta fade">
+								<li class="cat-links">
+				Posted in <a href="http://blog.longle.net/category/net/" rel="category tag">.NET</a>			</li>
+			
+						<li class="tag-links">
+				Tagged <a href="http://blog.longle.net/tag/angularjs/" rel="tag">angularjs</a>, <a href="http://blog.longle.net/tag/architecture/" rel="tag">architecture</a>, <a href="http://blog.longle.net/tag/benefits/" rel="tag">benefits</a>, <a href="http://blog.longle.net/tag/cbre/" rel="tag">cbre</a>, <a href="http://blog.longle.net/tag/enterprise/" rel="tag">enterprise</a>, <a href="http://blog.longle.net/tag/framework/" rel="tag">framework</a>, <a href="http://blog.longle.net/tag/javascript/" rel="tag">Javascript</a>, <a href="http://blog.longle.net/tag/kendo/" rel="tag">kendo</a>, <a href="http://blog.longle.net/tag/kendoui/" rel="tag">KendoUI</a>, <a href="http://blog.longle.net/tag/telerik/" rel="tag">Telerik</a>			</li>
+					
+		
+			</ul><!-- #entry-meta -->
+</article><!-- #post-4273 -->
+					
+						
+<article id="post-4131" class="post-4131 post type-post status-publish format-standard hentry category-net category-ef category-kendo-ui-web category-mvc-net category-telerik category-windows-azure-net tag-net-2 tag-angularjs tag-animation tag-asp-net tag-azure tag-c tag-ef-2 tag-entity-framework tag-jquery tag-kendo tag-kendo-ui tag-mvc tag-ng-view tag-odata tag-spa tag-sql tag-web-api">
+	<header class="entry-header">
+					<div class="entry-date">
+				<a href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/" title="UTC" rel="bookmark"><time class="entry-date" datetime="2014-05-01T02:28:39+00:00" pubdate>May 1, 2014</time></a>			</div><!-- .entry-date -->
+							<h1 class="entry-title"><a href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/" rel="bookmark">AngularJS &amp; Kendo UI using Angular Kendo with ASP.NET MVC 5, Web API &amp;&nbsp;OData</a></h1>
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+				<p><span style="color:red;">Update: 9/12/2014 &#8211; Codeplex source code download URL update.</span></p>
+<p><span style="color:red;">Update: 5/1/2014 &#8211; Customer View &amp; customerController.js has been updated to toggle styles by manipulating the DOM through the ViewModel with ng-show to adhere and stay consistent with AngularJS best practices.</span></p>
+<p><span style="color:red;">Update: 5/14/2014 &#8211; Added section &#8220;Animating our View Swapping&#8221;, to elaborate on adding animation to the &#8220;ng-view&#8221; swapping process.</span></p>
+<p>Source code: <a href="http://goo.gl/f1esAf" target="_blank">http://goo.gl/f1esAf</a><br />
+Live demo: <a href="http://longle.azurewebsites.net" rel="nofollow">http://longle.azurewebsites.net</a></p>
+<p>With <a href="https://angularjs.org" target="_blank">AngularJS</a> and ASP.NET MVC, we now have an MVC pattern and architecture for both on the client and server. What do we do and/or how do we approach this? Well one can argue we don’t use any of the MVC architecture on the server and build out a full-fledged AngularJS front-end application and only use make async calls to Web API for all things that absolutely need to be on the server e.g. CRUD, workflows, business logic, etc.</p>
+<p>Now, there’s absolutely nothing wrong with this approach, and for the most part a lot of heavy front end SPA’s are built this way in ASP.NET MVC. However, with all the .NET, ASP.NET and AngularJS goodness, why not leverage the best of both worlds? Again, there’s absolutely nothing wrong with building a pure AngularJS application and only using Web API, but for this blog post we’ll go over patterns of using the best of both worlds along with integrating <a href="http://kendo-labs.github.io/angular-kendo/#/" target="_blank">AngularJS with Kendo UI</a>.</p>
+<p><i>Note: for those that prefer to build a pure AngularJS front-end and only leveraging Web API on the backend (which many devs prefer), simply ignore the MVC Razor sections. If this is the case you can also opt to render raw *.html vs. *.cshtml views as well.</i></p>
+<p><strong>Let’s take a look at our Project structure for all things client-side.</strong></p>
+<p><a href="http://lelong37.files.wordpress.com/2014/05/2014-05-01_1-21-351.png"><img class="alignnone size-full wp-image-4151" src="http://lelong37.files.wordpress.com/2014/05/2014-05-01_1-21-351.png?w=600" alt="2014-05-01_1-21-35"   /></a></p>
+<p>Staying true to the AngularJS seed (sample) application from the AngularJS team, we’ll also create an “app” folder under “scripts”, staying true to ASP.NET MVC, where JS scripts are supposed to reside.</p>
+<p><strong>Northwind.Web/Scripts/app/app.js</strong></p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+
+var northwindApp = angular.module('northwindApp', ['kendo.directives', 'ngRoute', 'ngAnimate'])
+    .config(function ($routeProvider)
+    {
+        $routeProvider
+            .when('/home',
+            {
+                templateUrl: '/home/home',
+                controller: 'homeController'
+            })
+            .when('/customer',
+            {
+                templateUrl: '/customer',
+                controller: 'customerController'
+            })
+            .when('/customer/edit/:id',
+            {
+                templateUrl: '/customer/edit',
+                controller: 'customerEditController'
+            })
+            .when('/help',
+            {
+                templateUrl: '/help'
+            })
+            .otherwise(
+            {
+                redirectTo: '/home'
+            });
+    });
+
+</pre>
+<p>This is where our AngularJS application bootstrapping process takes place, here we’ve declared our new app “northwindApp” and we register all our routes (URL’s) for our SPA application. Note, if you’re not building a SPA, you can still leverage all the AngularJS goodness and architecture it brings (which btw, is huge), you can just omit the registering any of the routes in this step. Notice, the parameters we are passing into the module method: “northwindApp” is the name of our app, after that it’s an array of all the AngularJS modules we want injected into our application:</p>
+<ul>
+<li>“kendo.directives” are needed so that we have full integration with AngularJS and Kendo UI, this will make more sense when we cover how AngularJS will compile Kendo UI widgets using directives.</li>
+<li>“ngRoute” is needed so that we can configure our SPA routes, if your familiar with ASP.NET MVC routes, pretty much the same principles here, only difference here is routing of your application will take place on the client vs. the server. Here we are configuring each out with the “when” method by simply passing in the path in the URL and within the “when” we configure what the server URL path is to remotely load the View and which Controller to use. The “otherwise” method is simply a default route that will be used if none of the other routes are matched from what’s in the URL. You could route the default “otherwise” route to go to a custom 404 page, for our purposes we’ll just route the user to the default home page.</li>
+<li>“ngAnimate” is injected here so that we can add some animation when AngularJS swaps out our Views in our SPA.</li>
+</ul>
+<p><strong>Northwind.Web/Scripts/app/controllers/homeController.js</strong></p>
+<pre class="brush: jscript; highlight: [5]; title: ; notranslate" title="">
+
+'use strict';
+
+northwindApp.controller('homeController',
+    function ($scope) {
+        $scope.title = &quot;ASP.NET&quot;;
+    });
+
+</pre>
+<p>AngularJS has the notion of scopes with in application, there is one $rootScope and multiple children $scopes (so to speak), in your application. The best .NET analogy of a scope is something like a context, so $rootScope would map to an ApplicationContext (global with Singleton like behaivor) and $scope would map to something like a (if we had one) ControlllerContext. $scope is more of a context that you use to as an adhesive to bind you View to your Controller. So from homeController.js you see that we’ve defined a property named “title” with the value “ASP.NET”, let’s take a look at our partial Home.cshtml mark-up.</p>
+<p><strong>Northwind.Web/Views/Home/Home.cshtml</strong></p>
+<pre class="brush: xml; highlight: [4]; title: ; notranslate" title="">
+
+&lt;div class=&quot;jumbotron&quot;&gt;
+   &lt;h1&gt;{{title}&lt;/h1&gt;
+   &lt;p class=&quot;lead&quot;&gt;ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.&lt;/p&gt;
+   &lt;p&gt;&lt;a href=&quot;http://asp.net&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Learn more &amp;raquo;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+   &lt;div class=&quot;col-md-4&quot;&gt;
+       &lt;h2&gt;Getting started&lt;/h2&gt;
+       &lt;p&gt;
+           ASP.NET Web API is a framework that makes it easy to build HTTP services that reach a broad range of clients, including browsers and mobile devices. ASP.NET Web API is an ideal platform for building RESTful applications on the .NET Framework.
+       &lt;/p&gt;
+       &lt;p&gt;&lt;a class=&quot;btn btn-default&quot; href=&quot;http://go.microsoft.com/fwlink/?LinkId=301870&quot;&gt;Learn more &amp;raquo;&lt;/a&gt;&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md-4&quot;&gt;
+       &lt;h2&gt;Get more libraries&lt;/h2&gt;
+       &lt;p&gt;NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.&lt;/p&gt;
+       &lt;p&gt;&lt;a class=&quot;btn btn-default&quot; href=&quot;http://go.microsoft.com/fwlink/?LinkId=301871&quot;&gt;Learn more &amp;raquo;&lt;/a&gt;&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;col-md-4&quot;&gt;
+       &lt;h2&gt;Web Hosting&lt;/h2&gt;
+       &lt;p&gt;You can easily find a web hosting company that offers the right mix of features and price for your applications.&lt;/p&gt;
+       &lt;p&gt;&lt;a class=&quot;btn btn-default&quot; href=&quot;http://go.microsoft.com/fwlink/?LinkId=301872&quot;&gt;Learn more &amp;raquo;&lt;/a&gt;&lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+<p>Notice the {{title}} on line 2, between the h1 tags, when the View (Home.cshtml) loads, AngularJS will replace the h1 html with the $scope.title value: “ASP.NET”.</p>
+<p><a href="http://longle.azurewebsites.net" rel="nofollow">http://longle.azurewebsites.net</a></p>
+<p><a href="http://lelong37.files.wordpress.com/2014/05/2014-05-01_0-04-13.png"><img class="alignnone size-large wp-image-4134" src="http://lelong37.files.wordpress.com/2014/05/2014-05-01_0-04-13.png?w=600&#038;h=477" alt="2014-05-01_0-04-13" width="600" height="477" /></a></p>
+<p>Now that we have a primer to AngularJS’s MVVM pattern, let’s take a look at some bit more complex, the customerController.js which will display a Kendo UI Grid with the customizations which include a toolbar with buttons all wired up with Angular Kendo directives and AngularJS MVVM.</p>
+<p><strong>Northwind.Web/Scripts/app/controllers/customerController.js</strong></p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+
+'use strict';
+
+northwindApp.controller('customerController',
+    function ($scope, $rootScope, $location, customerDataSource)
+    {
+        customerDataSource.filter({}); // reset filter on dataSource everytime view is loaded
+
+        var onClick = function (event, delegate)
+        {
+            var grid = event.grid;
+            var selectedRow = grid.select();
+            var dataItem = grid.dataItem(selectedRow);
+
+            if (selectedRow.length &amp;amp;gt; 0)
+                delegate(grid, selectedRow, dataItem);
+            else
+                alert(&amp;amp;quot;Please select a row.&amp;amp;quot;);
+        };
+
+        $scope.isToolbarVisible = false;
+
+        var toggleToolbar = function() {
+            $scope.isToolbarVisible = !$scope.isToolbarVisible;
+        }
+
+        $scope.toolbarTemplate = kendo.template($(&amp;amp;quot;#toolbar&amp;amp;quot;).html());
+
+        $scope.save = function (e)
+        {
+            onClick(e, function (grid)
+            {
+                grid.saveRow();
+                toggleToolbar();
+            });
+        };
+
+        $scope.cancel = function (e)
+        {
+            onClick(e, function (grid)
+            {
+                grid.cancelRow();
+                toggleToolbar();
+            });
+        },
+
+        $scope.details = function (e)
+        {
+            onClick(e, function (grid, row, dataItem)
+            {
+                $location.url('/customer/edit/' + dataItem.CustomerID);
+            });
+        },
+
+        $scope.edit = function (e)
+        {
+            onClick(e, function (grid, row)
+            {
+                grid.editRow(row);
+                toggleToolbar();
+            });
+        },
+
+        $scope.destroy = function (e)
+        {
+            onClick(e, function (grid, row, dataItem)
+            {
+                grid.dataSource.remove(dataItem);
+                grid.dataSource.sync();
+            });
+        },
+
+        $scope.onChange = function (e)
+        {
+            var grid = e.sender;
+
+            $rootScope.lastSelectedDataItem = grid.dataItem(grid.select());
+        },
+
+        $scope.dataSource = customerDataSource;
+
+        $scope.onDataBound = function (e)
+        {
+            // check if there was a row that was selected
+            if ($rootScope.lastSelectedDataItem == null)
+                return;
+
+            var view = this.dataSource.view(); // get all the rows
+
+            for (var i = 0; i &amp;amp;lt; view.length; i++)
+            {
+                // iterate through rows
+                if (view[i].CustomerID == $rootScope.lastSelectedDataItem.CustomerID)
+                {
+                    // find row with the lastSelectedProductd
+                    var grid = e.sender; // get the grid
+
+                    grid.select(grid.table.find(&amp;amp;quot;tr[data-uid='&amp;amp;quot; + view[i].uid + &amp;amp;quot;']&amp;amp;quot;)); // set the selected row
+                    break;
+                }
+            }
+        };
+    });
+
+</pre>
+<p>We declare a Controller by using the “controller” method, the first parameter is the name of our Controller, the second parameter takes a function who’s parameters are all the modules we want our Controller to be injected with. Our Controller is being injected with the following.</p>
+<ul>
+<li>$scope, which we already know about</li>
+<li>$rootScope, so that we can store some things to help us manage our View state, in this case we will store what was the last selected row on our Grid so that when the user navigates back to this view we can re-select the same row and highlight it.</li>
+<li>$location, so that we can navigate from this View to other Views e.g. customer edit view which will have a form so we can make changes to a Customer.</li>
+<li>customerDataSource, which is a reusable AngularJS service which returns a Kendo UI DataSource.</li>
+</ul>
+<p>Notice how we are <strong>leveraging MVVM to manipulate the DOM</strong> to toggle the tool bar above the grid with the &#8220;ng-show&#8221; directive vs. manipulating the DOM with jQuery, this is key with AngularJS design principles.</p>
+<p>As for the rest of the code in CustomerController.js it’s fairly straight forward, for me details on what each of these methods responsibilities are please have a quick read up here: <a href="http://blog.longle.net/2013/06/18/mvc-4-web-api-odata-entity-framework-kendo-ui-grid-datasource-with-mvvm" rel="nofollow">http://blog.longle.net/2013/06/18/mvc-4-web-api-odata-entity-framework-kendo-ui-grid-datasource-with-mvvm</a>.</p>
+<p><strong>Northwind.Web/Scripts/app/services/customerDataSource.js</strong></p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+
+﻿'use strict';
+
+northwindApp.factory('customerDataSource',
+    function (customerModel)
+    {
+        var crudServiceBaseUrl = &quot;/odata/Customer&quot;;
+
+        return new kendo.data.DataSource({
+            type: &quot;odata&quot;,
+            transport: {
+                read: {
+                    async: false,
+                    url: crudServiceBaseUrl,
+                    dataType: &quot;json&quot;
+                },
+                update: {
+                    url: function (data)
+                    {
+                        return crudServiceBaseUrl + &quot;(&quot; + data.CustomerID + &quot;)&quot;;
+                    },
+                    type: &quot;put&quot;,
+                    dataType: &quot;json&quot;
+                },
+                destroy: {
+                    url: function (data)
+                    {
+                        return crudServiceBaseUrl + &quot;(&quot; + data.CustomerID + &quot;)&quot;;
+                    },
+                    dataType: &quot;json&quot;
+                }
+            },
+            batch: false,
+            serverPaging: true,
+            serverSorting: true,
+            serverFiltering: true,
+            pageSize: 10,
+            schema: {
+                data: function (data) { return data.value; },
+                total: function (data) { return data[&quot;odata.count&quot;]; },
+                model: customerModel
+            },
+            error: function (e)
+            {
+                alert(e.xhr.responseText);
+            }
+        });
+    });
+
+</pre>
+<p>We create the customerDataSource as a reusable AngularJS service using the &#8220;factory&#8221; method. The first parameter is the name of our service and the second parameter is method who&#8217;s parameters indicates that we are injected with customModel.</p>
+<p><strong>Northwind.Web/Scripts/app/services/customerModel.js</strong></p>
+<pre class="brush: csharp; title: ; notranslate" title="">
+
+'use strict';
+
+northwindApp.factory('customerModel', function ()
+{
+    return kendo.data.Model.define({
+        id: &quot;CustomerID&quot;,
+        fields: {
+            CustomerID: { type: &quot;string&quot;, editable: false, nullable: false },
+            CompanyName: { title: &quot;Company&quot;, type: &quot;string&quot; },
+            ContactName: { title: &quot;Contact&quot;, type: &quot;string&quot; },
+            ContactTitle: { title: &quot;Title&quot;, type: &quot;string&quot; },
+            Address: { type: &quot;string&quot; },
+            City: { type: &quot;string&quot; },
+            PostalCode: { type: &quot;string&quot; },
+            Country: { type: &quot;string&quot; },
+            Phone: { type: &quot;string&quot; },
+            Fax: { type: &quot;string&quot; },
+            State: { type: &quot;string&quot; }
+        }
+    });
+});
+
+</pre>
+<p>Again, we create a reusable AngularJS service which returns a Kendo UI Customer model. This reusable Cusomer model will be used for our Grid and Controllers.</p>
+<p><strong>Northwind.Web/Customer/Index.cshtml</strong></p>
+<pre class="brush: xml; highlight: [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,39,41,42,43,46,47]; title: ; notranslate" title="">
+
+@{
+   ViewBag.Title = &quot;Index&quot;;
+}
+
+&lt;div&gt;
+   &lt;h2 ng-cloak&gt;{{title}}&lt;/h2&gt;
+   &lt;div&gt;
+       &lt;div class=&quot;demo-section&quot;&gt;
+           &lt;div class=&quot;k-content&quot; style=&quot;width: 100%&quot;&gt;
+               &lt;div kendo-grid=&quot;grid&quot;
+                    k-sortable=&quot;true&quot;
+                    k-pageable=&quot;true&quot;
+                    k-filterable=&quot;true&quot;
+                    k-editable=&quot;'inline'&quot;
+                    k-selectable=&quot;true&quot;
+                    k-toolbar='[ { template: toolbarTemplate } ]'
+                    k-columns='[
+                       { field: &quot;CustomerID&quot;, title: &quot;ID&quot;, width: &quot;75px&quot; },
+                       { field: &quot;CompanyName&quot;, title: &quot;Company&quot;},
+                       { field: &quot;ContactName&quot;, title: &quot;Contact&quot; },
+                       { field: &quot;ContactTitle&quot;, title: &quot;Title&quot; },
+                       { field: &quot;Address&quot; },
+                       { field: &quot;City&quot; },
+                       { field: &quot;PostalCode&quot; },
+                       { field: &quot;Country&quot; },
+                       { field: &quot;Phone&quot; },
+                       { field: &quot;Fax&quot; }]'
+                    k-data-source=&quot;dataSource&quot;
+                    k-on-data-bound=&quot;onDataBound(kendoEvent)&quot;
+                    k-on-change=&quot;onChange(kendoEvent)&quot;&gt;
+               &lt;/div&gt;
+               &lt;style scoped&gt;
+                   .toolbar { padding: 15px; float: right; }
+               &lt;/style&gt;
+           &lt;/div&gt;
+       &lt;/div&gt;
+
+       &lt;script type=&quot;text/x-kendo-template&quot; id=&quot;toolbar&quot;&gt;
+           &lt;div&gt;
+               &lt;div class=&quot;toolbar&quot;&gt;
+                   &lt;button kendo-button ng-click=&quot;edit(this)&quot;&gt;&lt;span class=&quot;k-icon k-i-tick&quot;&gt;&lt;/span&gt;Edit&lt;/button&gt;
+                   &lt;button kendo-button ng-click=&quot;destroy(this)&quot;&gt;&lt;span class=&quot;k-icon k-i-tick&quot;&gt;&lt;/span&gt;Delete&lt;/button&gt;
+                   &lt;button kendo-button ng-click=&quot;details(this)&quot;&gt;&lt;span class=&quot;k-icon k-i-tick&quot;&gt;&lt;/span&gt;Edit Details&lt;/button&gt;
+               &lt;/div&gt;
+               &lt;div class=&quot;toolbar&quot; style=&quot;display:none&quot;&gt;
+                   &lt;button kendo-button ng-click=&quot;save(this)&quot;&gt;&lt;span class=&quot;k-icon k-i-tick&quot;&gt;&lt;/span&gt;Save&lt;/button&gt;
+                   &lt;button kendo-button ng-click=&quot;cancel(this)&quot;&gt;&lt;span class=&quot;k-icon k-i-tick&quot;&gt;&lt;/span&gt;Cancel&lt;/button&gt;
+               &lt;/div&gt;
+           &lt;/div&gt;
+       &lt;/script&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+
+</pre>
+<p>Here we can see that we that the declarative syntax for Kendo UI widgets have changed a bit, and at a first glance it seems that it’s dramatic change, but as they say, <strong>there’s a method to the madness</strong>. If you understand the convention here, it’s pretty simple, take look at the cheat sheet we have below for our view.</p>
+<p><strong>Customer.cshtml Cheat Sheet</strong></p>
+<table>
+<tbody>
+<tr bgcolor="#d3d3d3">
+<td><strong>Before (with Kendo UI)</strong></td>
+<td><strong>After (with Angular Kendo)</strong></td>
+</tr>
+<tr>
+<td>data-role=”grid”</td>
+<td>kendo-grid</td>
+</tr>
+<tr>
+<td>data-sortable</td>
+<td>k-sortable</td>
+</tr>
+<tr>
+<td>data-bind=”source: dataSource”</td>
+<td>k-data-source=”dataSource”</td>
+</tr>
+<tr>
+<td>data-bind=”events: { change: onChange }”</td>
+<td>k-on-change=”onChange(kendoEvent)”</td>
+</tr>
+</tbody>
+</table>
+<p>For declarative widgets, we simply prefix with “kendo-“, quick note, where the name has camel casing, you would simply separate it with dashes e.g. DropDownList -&gt; k-drop-down-list.</p>
+<ul>
+<li>Options for a widget are simply prefixed with a “k-“.</li>
+<li>For all things that were bound with “data-bind”, simply become first class citizen attributes again following the dash-separted convention.</li>
+<li>Same for events, however the only other item, is that you have to explicitly pass in a “kendoEvent” vs. before you didn’t.</li>
+</ul>
+<p>If we run our application, we can see that everything renders and it’s business as usual.</p>
+<p><a href="http://longle.azurewebsites.net/#/customer" rel="nofollow">http://longle.azurewebsites.net/#/customer</a></p>
+<p><a href="http://lelong37.files.wordpress.com/2014/05/2014-05-01_0-44-42.png"><img class="alignnone size-large wp-image-4140" src="http://lelong37.files.wordpress.com/2014/05/2014-05-01_0-44-42.png?w=600&#038;h=556" alt="2014-05-01_0-44-42" width="600" height="556" /></a></p>
+<p><strong>Northwind.Web/Scripts/app/controllers/customerEditController.js</strong></p>
+<pre class="brush: jscript; title: ; notranslate" title="">
+
+﻿'use strict';
+
+northwindApp.controller('customerEditController',
+    function ($scope, $routeParams, $location, customerDataSource)
+    {
+        var customerId = $routeParams.id;
+
+        customerDataSource.filter({ field: &quot;CustomerID&quot;, operator: &quot;eq&quot;, value: customerId });
+        $scope.customer = customerDataSource.at(0);
+
+        $scope.save = function ()
+        {
+            customerDataSource.view()[0].dirty = true;
+            customerDataSource.sync();
+            $location.url('/customer');
+        };
+
+        $scope.cancel = function ()
+        {
+            $location.url('/customer');
+        }
+    });
+
+</pre>
+<p>For the customerEditController.js, we are being injected with $scope, $routeParams, $location and customerDataSource, notice the reusability of our customerDataSource. We use the customerDataSource to hydrate our grid with a list of customers on our Northwind.Web.Views/Conrollers/Index.cshml view as well as our Northwind.Web/Views/Customers/Edit.cshtml view with a single customer.</p>
+<p><strong>On the Sever-Side of Things</strong></p>
+<p>In the beginning of the post, we mentioned leveraging the best of both worlds, we’ve seen how we done this on the client side of things with all the goodness of AngularJS and Kendo UI. AngularJS brings a nice fully fledged framework which forces us to using nice well defined patterns (MVC’ish &amp; MVVM), which has a natural side effect of having an elegant architecture on the client side. So how do we make the most of ASP.NET MVC on the server side? Simple, we follow all the best practices as we’ve always been doing in the past.</p>
+<p><strong>Taking full advantage of MVC’s bundling and Minification</strong></p>
+<p>Northwind.Web/App_Start/BundleConfig.cs</p>
+<pre class="brush: csharp; highlight: [11,16,18,22,27,31,40,44]; title: ; notranslate" title="">
+
+using System.Web.Optimization;
+
+namespace Northwind.Web
+{
+    public class BundleConfig
+    {
+        // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
+        public static void RegisterBundles(BundleCollection bundles)
+        {
+            //Scripts
+            bundles.Add(new ScriptBundle(&quot;~/bundles/jquery&quot;).Include(
+                        &quot;~/Scripts/jquery-{version}.js&quot;,
+                        &quot;~/Scripts/jquery-migrate-{version}.js&quot;));
+
+            // Use the development version of Modernizr to develop with and learn from. Then, when you're ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
+            bundles.Add(new ScriptBundle(&quot;~/bundles/modernizr&quot;).Include(&quot;~/Scripts/modernizr-*&quot;));
+
+            bundles.Add(new ScriptBundle(&quot;~/bundles/bootstrap&quot;).Include(
+                      &quot;~/Scripts/bootstrap.js&quot;,
+                      &quot;~/Scripts/respond.js&quot;));
+
+            bundles.Add(new ScriptBundle(&quot;~/bundles/angular&quot;).Include(
+                      &quot;~/Scripts/angular.js&quot;,
+                      &quot;~/Scripts/angular-route.js&quot;,
+                      &quot;~/Scripts/angular-animate.js&quot;));
+
+            bundles.Add(new ScriptBundle(&quot;~/bundles/kendo&quot;).Include(
+                &quot;~/Scripts/kendo/2014.1.318/kendo.web.min.js&quot;,
+                &quot;~/Scripts/angular-kendo.js&quot;));
+
+            bundles.Add(new ScriptBundle(&quot;~/bundles/app&quot;).Include(
+                      &quot;~/Scripts/app/app.js&quot;,
+                      &quot;~/Scripts/app/services/customerModel.js&quot;,
+                      &quot;~/Scripts/app/services/customerDataSource.js&quot;,
+                      &quot;~/Scripts/app/controllers/homeController.js&quot;,
+                      &quot;~/Scripts/app/controllers/customerController.js&quot;,
+                      &quot;~/Scripts/app/controllers/customerEditController.js&quot;));
+
+            //Styles
+            bundles.Add(new StyleBundle(&quot;~/Content/css&quot;).Include(
+                      &quot;~/Content/bootstrap.css&quot;,
+                      &quot;~/Content/site.css&quot;));
+
+            bundles.Add(new StyleBundle(&quot;~/Content/kendo&quot;).Include(
+                      &quot;~/Content/kendo/2014.1.318/kendo.common.min.css&quot;,
+                      &quot;~/Content/kendo/2014.1.318/kendo.bootstrap.min.css&quot;));
+
+            // Set EnableOptimizations to false for debugging. For more information, visit http://go.microsoft.com/fwlink/?LinkId=301862
+            BundleTable.EnableOptimizations = false;
+        }
+    }
+}
+
+</pre>
+<p><strong><br />
+ASP.NET’s Layout.cshtml have always been great to work with, so we stick with it.<br />
+</strong></p>
+<pre class="brush: csharp; highlight: [10,11,12,13,36,42,43,44,45,46]; html-script: true; title: ; notranslate" title="">
+
+﻿&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; ng-app=&quot;northwindApp&quot;&gt;
+&lt;head&gt;
+   &lt;meta charset=&quot;utf-8&quot; /&gt;
+   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+   &lt;meta name=&quot;description&quot; content=&quot;SPA Application&quot; /&gt;
+
+   &lt;title&gt;@ViewBag.Title&lt;/title&gt;
+
+   @Styles.Render(&quot;~/Content/css&quot;)
+   @Styles.Render(&quot;~/Content/kendo&quot;)
+   @RenderSection(&quot;Styles&quot;, required: false)
+   @Scripts.Render(&quot;~/bundles/modernizr&quot;)
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;div class=&quot;navbar navbar-inverse navbar-fixed-top&quot;&gt;
+       &lt;div class=&quot;container&quot;&gt;
+           &lt;div class=&quot;navbar-header&quot;&gt;
+               &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse&quot;&gt;
+                   &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                   &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                   &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+               &lt;/button&gt;
+               &lt;a href=&quot;#/home&quot; class=&quot;navbar-brand&quot;&gt;http://blog.longle.net&lt;/a&gt;
+           &lt;/div&gt;
+           &lt;div class=&quot;navbar-collapse collapse&quot;&gt;
+               &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+                   &lt;li&gt;&lt;a href=&quot;#/home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                   &lt;li&gt;&lt;a href=&quot;#/customer&quot;&gt;Customer&lt;/a&gt;&lt;/li&gt;
+                   &lt;li&gt;&lt;a href=&quot;#/help&quot;&gt;API&lt;/a&gt;&lt;/li&gt;
+               &lt;/ul&gt;
+           &lt;/div&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;container body-content&quot;&gt;
+       @RenderBody()
+       &lt;footer&gt;
+           &lt;p&gt;Copyright &amp;copy; @DateTime.Now.Year - SPA Application&lt;/p&gt;
+       &lt;/footer&gt;
+   &lt;/div&gt;
+
+   @Scripts.Render(&quot;~/bundles/jquery&quot;)
+   @Scripts.Render(&quot;~/bundles/angular&quot;)
+   @Scripts.Render(&quot;~/bundles/app&quot;)
+   @Scripts.Render(&quot;~/bundles/kendo&quot;)
+   @Scripts.Render(&quot;~/bundles/bootstrap&quot;)
+
+   @RenderSection(&quot;Scripts&quot;, required: false)
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+<p>Notice we are taking advantage of all of our bundling and minification.</p>
+<p>By default, ASP.NET MVC loads Index.cshtml e.g. <a href="http://localhost:2569/Home" rel="nofollow">http://localhost:2569/Home</a>, again, same here, we use Index.cshtml as our landing page as usual.</p>
+<p><strong>Northwind.Web/Vviews/Home/Index.cshml</strong></p>
+<pre class="brush: xml; highlight: [5]; title: ; notranslate" title="">
+
+﻿@{
+   ViewBag.Title = &quot;SPA&quot;;
+   ViewBag.Description = &quot;SPA App&quot;;
+}
+&lt;div ng-view&gt;&lt;/div&gt;
+
+</pre>
+<p>Notice how we have very little mark-up here and this View is simply for us to server up all the HTML in our Northwind.Web/Views/Shared/_Layout.cshml, then the @RenderBody() will render Northwind.Web/Views/Home/Index.cshml which will have the &#8220;div&#8221; element where AngularJS will load our AngularJS Views into on the client side.</p>
+<p><strong>Northwind.Web/Controllers/CustomerController.cs</strong></p>
+<pre class="brush: csharp; highlight: [10,15]; title: ; notranslate" title="">
+
+using System.Web.Mvc;
+
+namespace Northwind.Web.Controllers
+{
+    public class CustomerController : Controller
+    {
+        // GET: Customer
+        public ActionResult Index()
+        {
+            return PartialView();
+        }
+
+        public ActionResult Edit()
+        {
+            return PartialView();
+        }
+    }
+}
+
+</pre>
+<p>In CustomerController.cs, we are returning PartialView’s vs. View’s, well because that’s what they really are now “PartialViews”, there simply chunks of HTML that AngularJS will remotely load into our div&gt; element when swapping views.</p>
+<p><strong>Northwind.Web.Api.CustomerController.cs</strong></p>
+<pre class="brush: csharp; title: ; notranslate" title="">
+
+public class CustomerController : ODataController
+{
+private readonly ICustomerService _customerService;
+private readonly IUnitOfWorkAsync _unitOfWorkAsync;
+
+public CustomerController(
+    IUnitOfWorkAsync unitOfWorkAsync,
+    ICustomerService customerService)
+{
+    _unitOfWorkAsync = unitOfWorkAsync;
+    _customerService = customerService;
+}
+
+// GET: odata/Customers
+[HttpGet]
+[Queryable]
+public IQueryable&lt;Customer&gt; GetCustomer()
+{
+    return _customerService.ODataQueryable();
+}
+
+// GET: odata/Customers(5)
+[Queryable]
+public SingleResult&lt;Customer&gt; GetCustomer([FromODataUri] string key)
+{
+    return SingleResult.Create(_customerService.ODataQueryable().Where(t =&gt; t.CustomerID == key));
+}
+
+// PUT: odata/Customers(5)
+public async Task&lt;IHttpActionResult&gt; Put(string key, Customer customer)
+{
+    if (!ModelState.IsValid)
+    {
+        return BadRequest(ModelState);
+    }
+
+    if (key != customer.CustomerID)
+    {
+        return BadRequest();
+    }
+
+    customer.ObjectState = ObjectState.Modified;
+    _customerService.Update(customer);
+
+    try
+    {
+        await _unitOfWorkAsync.SaveChangesAsync();
+    }
+    catch (DbUpdateConcurrencyException)
+    {
+        if (!CustomerExists(key))
+        {
+            return NotFound();
+        }
+        throw;
+    }
+
+    return Updated(customer);
+}
+
+// POST: odata/Customers
+public async Task&lt;IHttpActionResult&gt; Post(Customer customer)
+{
+    if (!ModelState.IsValid)
+    {
+        return BadRequest(ModelState);
+    }
+
+    customer.ObjectState = ObjectState.Added;
+    _customerService.Insert(customer);
+
+    try
+    {
+        await _unitOfWorkAsync.SaveChangesAsync();
+    }
+    catch (DbUpdateException)
+    {
+        if (CustomerExists(customer.CustomerID))
+        {
+            return Conflict();
+        }
+        throw;
+    }
+
+    return Created(customer);
+}
+
+//// PATCH: odata/Customers(5)
+[AcceptVerbs(&quot;PATCH&quot;, &quot;MERGE&quot;)]
+public async Task&lt;IHttpActionResult&gt; Patch([FromODataUri] string key, Delta&lt;Customer&gt; patch)
+{
+    if (!ModelState.IsValid)
+    {
+        return BadRequest(ModelState);
+    }
+
+    Customer customer = await _customerService.FindAsync(key);
+
+    if (customer == null)
+    {
+        return NotFound();
+    }
+
+    patch.Patch(customer);
+    customer.ObjectState = ObjectState.Modified;
+
+    try
+    {
+        await _unitOfWorkAsync.SaveChangesAsync();
+    }
+    catch (DbUpdateConcurrencyException)
+    {
+        if (!CustomerExists(key))
+        {
+            return NotFound();
+        }
+        throw;
+    }
+
+    return Updated(customer);
+}
+
+// DELETE: odata/Customers(5)
+public async Task&lt;IHttpActionResult&gt; Delete(string key)
+{
+    Customer customer = await _customerService.FindAsync(key);
+
+    if (customer == null)
+    {
+        return NotFound();
+    }
+
+    customer.ObjectState = ObjectState.Deleted;
+
+    _customerService.Delete(customer);
+    await _unitOfWorkAsync.SaveChangesAsync();
+
+    return StatusCode(HttpStatusCode.NoContent);
+}
+
+// GET: odata/Customers(5)/CustomerDemographics
+[Queryable]
+public IQueryable&lt;CustomerDemographic&gt; GetCustomerDemographics([FromODataUri] string key)
+{
+    return
+        _customerService.ODataQueryable()
+            .Where(m =&gt; m.CustomerID == key)
+            .SelectMany(m =&gt; m.CustomerDemographics);
+}
+
+// GET: odata/Customers(5)/Orders
+[Queryable]
+public IQueryable&lt;Order&gt; GetOrders([FromODataUri] string key)
+{
+    return _customerService.ODataQueryable().Where(m =&gt; m.CustomerID == key).SelectMany(m =&gt; m.Orders);
+}
+
+protected override void Dispose(bool disposing)
+{
+    if (disposing)
+    {
+        _unitOfWorkAsync.Dispose();
+    }
+    base.Dispose(disposing);
+}
+
+private bool CustomerExists(string key)
+{
+    return _customerService.Query(e =&gt; e.CustomerID == key).Select().Any();
+}
+}
+
+</pre>
+<p>This is fairly straight forward, and we used the Visual Studio 2013 Update 2 RC out of the box Controller scaffolding to generate most of this code. We then replaced the code that was directly using Entity Framework to use a Repository and Service pattern, for more information on the pattern used please have a quick read here: <a href="https://genericunitofworkandrepositories.codeplex.com" rel="nofollow">https://genericunitofworkandrepositories.codeplex.com</a>.</p>
+<p><strong>Visual Studio 2013 with Update 2 RC Web API OData Scaffolding Template</strong></p>
+<p><a href="http://lelong37.files.wordpress.com/2014/05/2014-05-01_1-10-42.png"><img class="alignnone size-large wp-image-4142" src="http://lelong37.files.wordpress.com/2014/05/2014-05-01_1-10-42.png?w=600&#038;h=414" alt="2014-05-01_1-10-42" width="600" height="414" /></a></p>
+<p><strong>Animating our View Swapping</strong></p>
+<p>To polish our UX (user experience) a bit, were going to add some animation to how AngularJS swaps view in our &#8220;ng-view&#8221; div.</p>
+<p><strong>Northwind.Web/Content/Site.css</strong></p>
+<pre class="brush: css; highlight: [24,25,26,27,28,29,30,31,32,33,34,36,37,38,40,41,42,44,45,46]; title: ; notranslate" title="">
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.ng-enter, .ng-leave {
+    -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s;
+    display: block;
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.ng-enter {
+    left: 100%;
+}
+
+    .ng-enter.ng-enter-active {
+        left: 0;
+    }
+
+.ng-leave.ng-leave-active {
+    left: -200%;
+}
+
+</pre>
+<p>We&#8217;ve added some rudimentary animation with .ng-enter and .ng-leave, both which the cubic-brezier, to slide in our Views. This implementation was originally based off AngularJS original animation documentation for &#8220;ng-view&#8221;, please have a quick read up here: <a href="https://docs.angularjs.org/api/ngRoute/directive/ngView" rel="nofollow">https://docs.angularjs.org/api/ngRoute/directive/ngView</a> for more details.</p>
+<p>There you have it AngularJS, Kendo UI with Angular Kendo and ASP.NET MVC 5, all harmoniously with the best of both worlds.</p>
+<p>Happy Coding&#8230;! <span class='wp-smiley wp-emoji wp-emoji-smile' title=':)'>:)</span></p>
+<p>Source code: <a href="http://goo.gl/f1esAf" target="_blank">http://goo.gl/f1esAf</a><br />
+Live demo: <a href="http://longle.azurewebsites.net" rel="nofollow">http://longle.azurewebsites.net</a></p>
+<p>Stay tuned for integrating this with RequireJS for large scale apps!</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-4131" class="share-twitter sd-button share-icon" href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-4131" class="share-linkedin sd-button share-icon" href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-4131" class="share-google-plus-1 sd-button share-icon" href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon" href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/?share=tumblr" target="_blank" title="Click to share on Tumblr"><span>Tumblr</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon" href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-4131" class="share-facebook sd-button share-icon" href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/?share=facebook" target="_blank" title="Share on Facebook"><span>Facebook</span></a></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-4131" class="share-pinterest sd-button share-icon" href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span>Pinterest</span></a></li><li class="share-pocket"><a rel="nofollow" data-shared="" class="share-pocket sd-button share-icon" href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/?share=pocket" target="_blank" title="Click to share on Pocket"><span>Pocket</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-10143612-4131-558ac4065e1d0' data-src='//widgets.wp.com/likes/#blog_id=10143612&amp;post_id=4131&amp;origin=lelong37.wordpress.com&amp;obj_id=10143612-4131-558ac4065e1d0' data-name='like-post-frame-10143612-4131-558ac4065e1d0'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>			</div><!-- .entry-content -->
+	
+	<ul class="entry-meta fade">
+								<li class="cat-links">
+				Posted in <a href="http://blog.longle.net/category/net/" rel="category tag">.NET</a>, <a href="http://blog.longle.net/category/net/ef/" rel="category tag">EF</a>, <a href="http://blog.longle.net/category/telerik/kendo-ui-web/" rel="category tag">Kendo UI Web</a>, <a href="http://blog.longle.net/category/net/mvc-net/" rel="category tag">MVC</a>, <a href="http://blog.longle.net/category/telerik/" rel="category tag">Telerik</a>, <a href="http://blog.longle.net/category/net/windows-azure-net/" rel="category tag">Windows Azure</a>			</li>
+			
+						<li class="tag-links">
+				Tagged <a href="http://blog.longle.net/tag/net-2/" rel="tag">.net</a>, <a href="http://blog.longle.net/tag/angularjs/" rel="tag">angularjs</a>, <a href="http://blog.longle.net/tag/animation/" rel="tag">animation</a>, <a href="http://blog.longle.net/tag/asp-net/" rel="tag">ASP.NET</a>, <a href="http://blog.longle.net/tag/azure/" rel="tag">azure</a>, <a href="http://blog.longle.net/tag/c/" rel="tag">C#</a>, <a href="http://blog.longle.net/tag/ef-2/" rel="tag">ef</a>, <a href="http://blog.longle.net/tag/entity-framework/" rel="tag">entity framework</a>, <a href="http://blog.longle.net/tag/jquery/" rel="tag">jQuery</a>, <a href="http://blog.longle.net/tag/kendo/" rel="tag">kendo</a>, <a href="http://blog.longle.net/tag/kendo-ui/" rel="tag">Kendo UI</a>, <a href="http://blog.longle.net/tag/mvc/" rel="tag">mvc</a>, <a href="http://blog.longle.net/tag/ng-view/" rel="tag">ng-view</a>, <a href="http://blog.longle.net/tag/odata/" rel="tag">odata</a>, <a href="http://blog.longle.net/tag/spa/" rel="tag">spa</a>, <a href="http://blog.longle.net/tag/sql/" rel="tag">sql</a>, <a href="http://blog.longle.net/tag/web-api/" rel="tag">web api</a>			</li>
+					
+				<li class="comments-link"><a href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/#comments">26 Comments</a></li>
+		
+			</ul><!-- #entry-meta -->
+</article><!-- #post-4131 -->
+					
+						
+<article id="post-4110" class="post-4110 post type-post status-publish format-standard hentry category-net tag-building tag-codeplex tag-git tag-missing tag-nuget-packages tag-restore tag-tfs tag-visual-studio-2013 tag-vs2013">
+	<header class="entry-header">
+					<div class="entry-date">
+				<a href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/" title="UTC" rel="bookmark"><time class="entry-date" datetime="2014-03-31T23:52:55+00:00" pubdate>March 31, 2014</time></a>			</div><!-- .entry-date -->
+							<h1 class="entry-title"><a href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/" rel="bookmark">Quick Example of using Git with CodePlex for Clone, Changes, Commit, Sync &amp; Restoring Missing NuGet&nbsp;Packages</a></h1>
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+				<p>This post is for those of us that are (primarily .NET developers) that have been accustomed to using Team Foundation Server as a source coded repository and now just getting started with Git. Git is a fairly mature and an advanced source code repository with many more features than I&#8217;ll actually get into. The intent of this screen cast is to get you started with Visual Studio 2013 Git integration. Although this screen cast uses CodePlex in the demo, the process should be the same for any another Git repository e.g. TFS 2012+, <a href="http://github.com" target="_blank">GitHub.com</a>, <a href="http://codeplex.com" target="_blank">CodePlex</a>, <a href="http://www.visualstudio.com" target="_blank">Visual Studio Online TFS</a>, etc.</p>
+<p><span class='embed-youtube' style='text-align:center; display: block;'><iframe class='youtube-player' type='text/html' width='600' height='368' src='http://www.youtube.com/embed/ub3jnNIY4sE?version=3&#038;rel=1&#038;fs=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;hd=1&#038;wmode=transparent' frameborder='0' allowfullscreen='true'></iframe></span></p>
+<p>*Please configure YouTube player in Full HD for optimal viewing</p>
+<p>For more info on <a href="http://codeplex.com">CodePlex</a>: <a href="http://codeplex.codeplex.com/wikipage?title=Using%20Git%20with%20CodePlex" rel="nofollow">http://codeplex.codeplex.com/wikipage?title=Using%20Git%20with%20CodePlex</a></p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-4110" class="share-twitter sd-button share-icon" href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-4110" class="share-linkedin sd-button share-icon" href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-4110" class="share-google-plus-1 sd-button share-icon" href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon" href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/?share=tumblr" target="_blank" title="Click to share on Tumblr"><span>Tumblr</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon" href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-4110" class="share-facebook sd-button share-icon" href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/?share=facebook" target="_blank" title="Share on Facebook"><span>Facebook</span></a></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-4110" class="share-pinterest sd-button share-icon" href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span>Pinterest</span></a></li><li class="share-pocket"><a rel="nofollow" data-shared="" class="share-pocket sd-button share-icon" href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/?share=pocket" target="_blank" title="Click to share on Pocket"><span>Pocket</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-10143612-4110-558ac40661c52' data-src='//widgets.wp.com/likes/#blog_id=10143612&amp;post_id=4110&amp;origin=lelong37.wordpress.com&amp;obj_id=10143612-4110-558ac40661c52' data-name='like-post-frame-10143612-4110-558ac40661c52'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>			</div><!-- .entry-content -->
+	
+	<ul class="entry-meta fade">
+								<li class="cat-links">
+				Posted in <a href="http://blog.longle.net/category/net/" rel="category tag">.NET</a>			</li>
+			
+						<li class="tag-links">
+				Tagged <a href="http://blog.longle.net/tag/building/" rel="tag">building</a>, <a href="http://blog.longle.net/tag/codeplex/" rel="tag">codeplex</a>, <a href="http://blog.longle.net/tag/git/" rel="tag">git</a>, <a href="http://blog.longle.net/tag/missing/" rel="tag">missing</a>, <a href="http://blog.longle.net/tag/nuget-packages/" rel="tag">nuget packages</a>, <a href="http://blog.longle.net/tag/restore/" rel="tag">restore</a>, <a href="http://blog.longle.net/tag/tfs/" rel="tag">tfs</a>, <a href="http://blog.longle.net/tag/visual-studio-2013/" rel="tag">visual studio 2013</a>, <a href="http://blog.longle.net/tag/vs2013/" rel="tag">vs2013</a>			</li>
+					
+		
+			</ul><!-- #entry-meta -->
+</article><!-- #post-4110 -->
+					
+						
+<article id="post-4088" class="post-4088 post type-post status-publish format-standard hentry category-net category-kendo-ui-web category-mvc-3 category-mvc-4 category-telerik tag-architecture tag-asp-net tag-controller tag-ef-2 tag-entity-framework tag-jquery tag-kendo-ui tag-maintainable tag-model tag-mvc tag-mvvm tag-odata tag-requirejs tag-scalable tag-simple tag-single-page-application tag-spa tag-view">
+	<header class="entry-header">
+					<div class="entry-date">
+				<a href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/" title="UTC" rel="bookmark"><time class="entry-date" datetime="2014-03-04T02:29:12+00:00" pubdate>March 4, 2014</time></a>			</div><!-- .entry-date -->
+							<h1 class="entry-title"><a href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/" rel="bookmark">Harness the Power of ASP.NET MVC, Web Api, OData, Kendo UI &amp; RequireJS to Build an Easy &amp; Maintainable SPA (for the .NET Developer) &#8211;&nbsp;Published</a></h1>
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+				<p>Apologize for the delay, the original article: &#8220;Harness the Power of ASP.NET MVC, Web Api, OData, Kendo UI &amp; RequireJS to Build an Easy &amp; Maintainable SPA (for the .NET Developer)&#8221; has now been published as &#8220;<strong>A .NET Developer Primer to Single-Page Applications (SPA)</strong>&#8220;.</p>
+<p>Download: <a href="http://lelong37.files.wordpress.com/2014/03/msdn-mag-1403.pdf" rel="nofollow">http://lelong37.files.wordpress.com/2014/03/msdn-mag-1403.pdf</a><br />
+Online: <a href="http://msdn.microsoft.com/en-us/magazine/dn605877.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/magazine/dn605877.aspx</a><br />
+Source code: <a href="https://easyspa.codeplex.com" rel="nofollow">https://easyspa.codeplex.com</a><br />
+Live Demo: <a href="http://easyspa.azurewebsites.net/home/spa#/customer/index" rel="nofollow">http://easyspa.azurewebsites.net/home/spa#/customer/index</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/magazine/dn605877.aspx"><img src="http://lelong37.files.wordpress.com/2014/03/3-4-2014-1-36-58-am1.png?w=600" alt="3-4-2014 1-36-58 AM"   class="alignnone size-full wp-image-4095" /></a></p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-4088" class="share-twitter sd-button share-icon" href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-4088" class="share-linkedin sd-button share-icon" href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-4088" class="share-google-plus-1 sd-button share-icon" href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon" href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/?share=tumblr" target="_blank" title="Click to share on Tumblr"><span>Tumblr</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon" href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-4088" class="share-facebook sd-button share-icon" href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/?share=facebook" target="_blank" title="Share on Facebook"><span>Facebook</span></a></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-4088" class="share-pinterest sd-button share-icon" href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span>Pinterest</span></a></li><li class="share-pocket"><a rel="nofollow" data-shared="" class="share-pocket sd-button share-icon" href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/?share=pocket" target="_blank" title="Click to share on Pocket"><span>Pocket</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-10143612-4088-558ac40663d7b' data-src='//widgets.wp.com/likes/#blog_id=10143612&amp;post_id=4088&amp;origin=lelong37.wordpress.com&amp;obj_id=10143612-4088-558ac40663d7b' data-name='like-post-frame-10143612-4088-558ac40663d7b'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>			</div><!-- .entry-content -->
+	
+	<ul class="entry-meta fade">
+								<li class="cat-links">
+				Posted in <a href="http://blog.longle.net/category/net/" rel="category tag">.NET</a>, <a href="http://blog.longle.net/category/telerik/kendo-ui-web/" rel="category tag">Kendo UI Web</a>, <a href="http://blog.longle.net/category/net/mvc-3/" rel="category tag">MVC 3</a>, <a href="http://blog.longle.net/category/net/mvc-4/" rel="category tag">MVC 4</a>, <a href="http://blog.longle.net/category/telerik/" rel="category tag">Telerik</a>			</li>
+			
+						<li class="tag-links">
+				Tagged <a href="http://blog.longle.net/tag/architecture/" rel="tag">architecture</a>, <a href="http://blog.longle.net/tag/asp-net/" rel="tag">ASP.NET</a>, <a href="http://blog.longle.net/tag/controller/" rel="tag">Controller</a>, <a href="http://blog.longle.net/tag/ef-2/" rel="tag">ef</a>, <a href="http://blog.longle.net/tag/entity-framework/" rel="tag">entity framework</a>, <a href="http://blog.longle.net/tag/jquery/" rel="tag">jQuery</a>, <a href="http://blog.longle.net/tag/kendo-ui/" rel="tag">Kendo UI</a>, <a href="http://blog.longle.net/tag/maintainable/" rel="tag">maintainable</a>, <a href="http://blog.longle.net/tag/model/" rel="tag">model</a>, <a href="http://blog.longle.net/tag/mvc/" rel="tag">mvc</a>, <a href="http://blog.longle.net/tag/mvvm/" rel="tag">MVVM</a>, <a href="http://blog.longle.net/tag/odata/" rel="tag">odata</a>, <a href="http://blog.longle.net/tag/requirejs/" rel="tag">requirejs</a>, <a href="http://blog.longle.net/tag/scalable/" rel="tag">scalable</a>, <a href="http://blog.longle.net/tag/simple/" rel="tag">simple</a>, <a href="http://blog.longle.net/tag/single-page-application/" rel="tag">single page application</a>, <a href="http://blog.longle.net/tag/spa/" rel="tag">spa</a>, <a href="http://blog.longle.net/tag/view/" rel="tag">View</a>			</li>
+					
+				<li class="comments-link"><a href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/#comments">30 Comments</a></li>
+		
+			</ul><!-- #entry-meta -->
+</article><!-- #post-4088 -->
+					
+						
+<article id="post-3999" class="post-3999 post type-post status-publish format-standard hentry category-net category-ef category-kendo-ui-web category-mvc-3 category-mvc-4 category-telerik category-windows-azure-net tag-net-2 tag-asp-net tag-async tag-eager-loading tag-entity-framework tag-filtering tag-mvc tag-power-tools tag-repository tag-service tag-sorting tag-unit-of-work">
+	<header class="entry-header">
+					<div class="entry-date">
+				<a href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/" title="UTC" rel="bookmark"><time class="entry-date" datetime="2014-01-06T01:28:48+00:00" pubdate>January 6, 2014</time></a>			</div><!-- .entry-date -->
+							<h1 class="entry-title"><a href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/" rel="bookmark">Unit of Work &amp; Repository Framework with ASP.NET MVC 5, Entity Framework 6 &amp; Unity 3 (Quick-Start&nbsp;Video)</a></h1>
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+				<p><span style="color:red;">Update: 08/12/2014 &#8211; Please refer to <a href="https://genericunitofworkandrepositories.codeplex.com/documentation" rel="nofollow">https://genericunitofworkandrepositories.codeplex.com/documentation</a> for latest documentation. There have been breaking changes released since this recording was published.</span></p>
+<p><span style="color:red;">Update: 02/24/2014 &#8211; v3.2 released, improved API and reusable queries with the Object Query Pattern. Breaking change: Framework now ships returning all things TEntity or IEnumberable for compartmentalization, you will need to change the Repository.cs (see below, what methods signatures to change) if IQueryable is preferred over IEnumerable, IEnumerable is preferred as a best practice (<a href="http://genericunitofworkandrepositories.codeplex.com/documentation" rel="nofollow">http://genericunitofworkandrepositories.codeplex.com/documentation</a>).</span></p>
+<p><span style="color:red;">Update: 01/06/2014 &#8211; When viewing please configure your YouTube<br />
+player to 1080p for clear viewing of the coded demos.</span></p>
+<p><a href="https://genericunitofworkandrepositories.codeplex.com/documentation" rel="nofollow">https://genericunitofworkandrepositories.codeplex.com/documentation</a></p>
+<div style="padding:20px;">
+<span class='embed-youtube' style='text-align:center; display: block;'><iframe class='youtube-player' type='text/html' width='600' height='368' src='http://www.youtube.com/embed/QwwfTWMrM9k?version=3&#038;rel=1&#038;fs=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;hd=1&#038;wmode=transparent' frameborder='0' allowfullscreen='true'></iframe></span>
+</div>
+<p>Hope everyone had a wonderful New Years holiday, with the new year starting wanted to fulfill a high request, which was a quick start video on the Unit of Work and Repository Frameworks in ASP.NET MVC with Unity for IoC and DI. </p>
+<p>This video will touch on the following topics:</p>
+<ul>
+<li>Entity Framework Power Tools</li>
+<li>Uow &amp; Repo Framework</li>
+<li>Generating EF Mappings and POCO&#8217;s</li>
+<li>Upgrading the stack to EF 6.2</li>
+<li>Basic Customer CRUD Use Case with MVC Scafolding Template w/ Async</li>
+<li>Refactoring the CustomerController to use UoW &amp; Repo Framework w/ Async</li>
+<li>Why the ICustomerService Approach?</li>
+<li>Why Commit Unit of Work Outside the Service vs. versa</li>
+<li>Quick Examples with Eager Loading, Filter, and Sorting</li>
+</ul>
+<p>Sample application download: <a href="https://skydrive.live.com/redir?resid=949A1C97C2A17906%216769" rel="nofollow">https://skydrive.live.com/redir?resid=949A1C97C2A17906%216769</a><br />
+<em>(Please enable Nuget Packages Restore at the Solution Level)</em></p>
+<p>Questions and/or comments please tweet <a href="http://twitter.com/lelong37" target="_blank">@LeLong37</a>.</p>
+<p><b>Note:</b></p>
+<p>1. Although the quick start video, takes the approach of committing the unit of work outside the ICustomerService exampled, whether you choose to do this inside your services or manage this outside, there is no right or wrong, this is totally team preference. </p>
+<p>2. Also all use cases demonstrated in the CustomerController could have been satisfied by using the UnitOfWork out of the box without the need to implement the ICustomerService, however as mentioned, this is the preferred best practice.</p>
+<p><b>Using ICustomerService in CustomerController</b></p>
+<pre class="brush: csharp; title: ; notranslate" title="">
+
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task&amp;lt;ActionResult&amp;gt; Edit([Bind(Include = &amp;quot;CustomerID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax&amp;quot;)] Customer customer)
+{
+    if (ModelState.IsValid)
+    {
+        customer.ObjectState = ObjectState.Modified;
+        _customerService.Update(customer);
+        await _unitOfWork.SaveAsync();
+        return RedirectToAction(&amp;quot;Index&amp;quot;);
+    }
+    return View(customer);
+}
+
+</pre>
+<p><b>Without ICustomerService and using IUnitOfWork out of the box in the CustomerController</b></p>
+<pre class="brush: csharp; title: ; notranslate" title="">
+
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task&amp;lt;ActionResult&amp;gt; Edit([Bind(Include = &amp;quot;CustomerID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax&amp;quot;)] Customer customer)
+{
+    if (ModelState.IsValid)
+    {
+        customer.ObjectState = ObjectState.Modified;
+        _unitOfWork.Repository&amp;lt;Customer&amp;gt;().Update(customer);
+        await _unitOfWork.SaveAsync();
+        return RedirectToAction(&amp;quot;Index&amp;quot;);
+    }
+    return View(customer);
+}
+
+</pre>
+<p>In this case it is preferred that the IRepository return <strong>IEnumerable vs. IQueryable</strong>. </p>
+<p><span style="color:red;"><strong>HAVING THE REPOSITORY RETURN ALL THINGS IEnumerable or IList is a best practice and preferred approach.</strong>  Down the line, if you were to ever switch out your back-end, you won&#8217;t be bound to the requirements that the back-end implements IQueryable e.g. moving from EF to pure REST services.</span></p>
+<p><strong>Question?</strong> Why does the Repository in the framework return IQueryable? </p>
+<p><strong>Answer:</strong> Because most devs have been spoiled with ORM&#8217;s (e.g. nHibernate.Linq, Linq to Sql, Entity Framework) returning IQueryable and I received to many requests and complaints when the Repository layer in the Framework was returning IEnumerable or IList. Another caveat is that you can&#8217;t definitively tell what SQL queries are happening in your application by looking at the Repository layer, because you haven&#8217;t truly compartmentalized them in this layer; developers are more than able to modify the query plan before the query is actually executed.</p>
+<p>For teams that prefer all things returned as IEnumerable from Repository layer, this would <strong>require three lines of code to be changed</strong> in the framework, here&#8217;s how:</p>
+<ol>
+<li>
+Repository.IRepositoryQuery.cs</p>
+<pre class="brush: csharp; highlight: [1]; title: ; notranslate" title="">
+
+IEnumerable&amp;lt;TEntity&amp;gt; Get();
+
+</pre>
+</li>
+<li>
+<p>Repository.RepositoryQuery.cs</p>
+<pre class="brush: csharp; highlight: [1]; title: ; notranslate" title="">
+
+        public IEnumerable&amp;lt;TEntity&amp;gt; Get()
+        {
+            return _repository.Get(_filter, _orderByQuerable, _includeProperties, _page, _pageSize);
+        }
+
+</pre>
+</li>
+<li>
+<p>Repository.Repository.cs</p>
+<pre class="brush: csharp; highlight: [1]; title: ; notranslate" title="">
+
+        internal IEnumerable&amp;lt;TEntity&amp;gt; Get(
+            Expression&amp;lt;Func&amp;lt;TEntity, bool&amp;gt;&amp;gt; filter = null,
+            Func&amp;lt;IQueryable&amp;lt;TEntity&amp;gt;, IOrderedQueryable&amp;lt;TEntity&amp;gt;&amp;gt; orderBy = null,
+            List&amp;lt;Expression&amp;lt;Func&amp;lt;TEntity, object&amp;gt;&amp;gt;&amp;gt; includeProperties = null,
+            int? page = null,
+            int? pageSize = null)
+        {
+            IQueryable&amp;lt;TEntity&amp;gt; query = _dbSet;
+
+            if (includeProperties != null)
+                includeProperties.ForEach(i =&amp;gt; query = query.Include(i));
+
+            if (filter != null)
+                query = query.Where(filter);
+
+            if (orderBy != null)
+                query = orderBy(query);
+
+            if (page != null &amp;amp;&amp;amp; pageSize != null)
+                query = query
+                    .Skip((page.Value - 1) * pageSize.Value)
+                    .Take(pageSize.Value);
+
+            return query;
+        }
+
+
+</pre>
+</li>
+</ol>
+<p>Additional references: <a href="http://blog.longle.net/2013/05/11/genericizing-the-unit-of-work-pattern-repository-pattern-with-entity-framework-in-mvc/" rel="nofollow">http://blog.longle.net/2013/05/11/genericizing-the-unit-of-work-pattern-repository-pattern-with-entity-framework-in-mvc/</a></p>
+<p>Sample application download: <a href="https://skydrive.live.com/redir?resid=949A1C97C2A17906%216769" rel="nofollow">https://skydrive.live.com/redir?resid=949A1C97C2A17906%216769</a></p>
+<p>CodePlex download for the framework: <a href="https://genericunitofworkandrepositories.codeplex.com/" rel="nofollow">https://genericunitofworkandrepositories.codeplex.com/</a></p>
+<p>Happy coding&#8230;! <span class='wp-smiley wp-emoji wp-emoji-smile' title=':)'>:)</span></p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-3999" class="share-twitter sd-button share-icon" href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-3999" class="share-linkedin sd-button share-icon" href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-3999" class="share-google-plus-1 sd-button share-icon" href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon" href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/?share=tumblr" target="_blank" title="Click to share on Tumblr"><span>Tumblr</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon" href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-3999" class="share-facebook sd-button share-icon" href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/?share=facebook" target="_blank" title="Share on Facebook"><span>Facebook</span></a></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-3999" class="share-pinterest sd-button share-icon" href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span>Pinterest</span></a></li><li class="share-pocket"><a rel="nofollow" data-shared="" class="share-pocket sd-button share-icon" href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/?share=pocket" target="_blank" title="Click to share on Pocket"><span>Pocket</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-10143612-3999-558ac40667b8a' data-src='//widgets.wp.com/likes/#blog_id=10143612&amp;post_id=3999&amp;origin=lelong37.wordpress.com&amp;obj_id=10143612-3999-558ac40667b8a' data-name='like-post-frame-10143612-3999-558ac40667b8a'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>			</div><!-- .entry-content -->
+	
+	<ul class="entry-meta fade">
+								<li class="cat-links">
+				Posted in <a href="http://blog.longle.net/category/net/" rel="category tag">.NET</a>, <a href="http://blog.longle.net/category/net/ef/" rel="category tag">EF</a>, <a href="http://blog.longle.net/category/telerik/kendo-ui-web/" rel="category tag">Kendo UI Web</a>, <a href="http://blog.longle.net/category/net/mvc-3/" rel="category tag">MVC 3</a>, <a href="http://blog.longle.net/category/net/mvc-4/" rel="category tag">MVC 4</a>, <a href="http://blog.longle.net/category/telerik/" rel="category tag">Telerik</a>, <a href="http://blog.longle.net/category/net/windows-azure-net/" rel="category tag">Windows Azure</a>			</li>
+			
+						<li class="tag-links">
+				Tagged <a href="http://blog.longle.net/tag/net-2/" rel="tag">.net</a>, <a href="http://blog.longle.net/tag/asp-net/" rel="tag">ASP.NET</a>, <a href="http://blog.longle.net/tag/async/" rel="tag">Async</a>, <a href="http://blog.longle.net/tag/eager-loading/" rel="tag">eager loading</a>, <a href="http://blog.longle.net/tag/entity-framework/" rel="tag">entity framework</a>, <a href="http://blog.longle.net/tag/filtering/" rel="tag">Filtering</a>, <a href="http://blog.longle.net/tag/mvc/" rel="tag">mvc</a>, <a href="http://blog.longle.net/tag/power-tools/" rel="tag">power tools</a>, <a href="http://blog.longle.net/tag/repository/" rel="tag">repository</a>, <a href="http://blog.longle.net/tag/service/" rel="tag">service</a>, <a href="http://blog.longle.net/tag/sorting/" rel="tag">Sorting</a>, <a href="http://blog.longle.net/tag/unit-of-work/" rel="tag">unit of work</a>			</li>
+					
+				<li class="comments-link"><a href="http://blog.longle.net/2014/01/06/unit-of-work-unity-3-quick-start-video/#comments">144 Comments</a></li>
+		
+			</ul><!-- #entry-meta -->
+</article><!-- #post-3999 -->
+					
+						
+<article id="post-3990" class="post-3990 post type-post status-publish format-standard hentry category-net">
+	<header class="entry-header">
+					<div class="entry-date">
+				<a href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/" title="UTC" rel="bookmark"><time class="entry-date" datetime="2013-12-31T01:30:37+00:00" pubdate>December 31, 2013</time></a>			</div><!-- .entry-date -->
+							<h1 class="entry-title"><a href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/" rel="bookmark">WordPress 2013 In Review &#8211; 220,000 Views, Thank You for Reading &amp; Happy New&nbsp;Years&#8230;!</a></h1>
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+				<p>The WordPress.com stats helper monkeys prepared a 2013 annual report for this blog.</p>
+<p>	<a href="http://blog.longle.net/2013/annual-report/"><img src="http://www.wordpress.com/wp-content/mu-plugins/annual-reports/img/2012-emailteaser.png?m=1356563792g" width="100%" alt="" /></a></p>
+<p>Here&#8217;s an excerpt:</p>
+</p>
+<blockquote><p>The Louvre Museum has 8.5 million visitors per year.  This blog was viewed about <strong>220,000</strong> times in 2013. If it were an exhibit at the Louvre Museum, it would take about 9 days for that many people to see it.</p></blockquote>
+<p><a href="http://blog.longle.net/2013/annual-report/">Click here to see the complete report.</a></p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-3990" class="share-twitter sd-button share-icon" href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-3990" class="share-linkedin sd-button share-icon" href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-3990" class="share-google-plus-1 sd-button share-icon" href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon" href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/?share=tumblr" target="_blank" title="Click to share on Tumblr"><span>Tumblr</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon" href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-3990" class="share-facebook sd-button share-icon" href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/?share=facebook" target="_blank" title="Share on Facebook"><span>Facebook</span></a></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-3990" class="share-pinterest sd-button share-icon" href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span>Pinterest</span></a></li><li class="share-pocket"><a rel="nofollow" data-shared="" class="share-pocket sd-button share-icon" href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/?share=pocket" target="_blank" title="Click to share on Pocket"><span>Pocket</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-10143612-3990-558ac4066a090' data-src='//widgets.wp.com/likes/#blog_id=10143612&amp;post_id=3990&amp;origin=lelong37.wordpress.com&amp;obj_id=10143612-3990-558ac4066a090' data-name='like-post-frame-10143612-3990-558ac4066a090'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>			</div><!-- .entry-content -->
+	
+	<ul class="entry-meta fade">
+								<li class="cat-links">
+				Posted in <a href="http://blog.longle.net/category/net/" rel="category tag">.NET</a>			</li>
+			
+					
+				<li class="comments-link"><a href="http://blog.longle.net/2013/12/31/wordpress-2013-in-review-happy-new-years/#comments">2 Comments</a></li>
+		
+			</ul><!-- #entry-meta -->
+</article><!-- #post-3990 -->
+					
+						<nav id="nav-below" class="site-navigation paging-navigation">
+		<h1 class="assistive-text">Post navigation</h1>
+
+	
+				<div class="nav-previous"><a href="http://blog.longle.net/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+		
+		
+	
+	</nav><!-- #nav-below -->
+	
+				
+			</div><!-- #content -->
+
+		</div><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+						<aside id="twitter-3" class="widget widget_twitter"><h1 class="widget-title"><a href='http://twitter.com/LeLong37'>Tweets</a></h1><ul class='tweets'>
+			<li>
+				<a href='http://twitter.com/search?q=%23VSCode'>#VSCode</a> 0.3.0 <a href='http://twitter.com/search?q=%23TypeScript'>#TypeScript</a> v1.5 FULL <a href='http://twitter.com/search?q=%23debugging'>#debugging</a>...! <a href='http://twitter.com/search?q=%23gulp'>#gulp</a>-typescript 100% works w/ tsconfig.json &lt;3 @<a href='http://twitter.com/Code'>Code</a> defacto <a href='http://twitter.com/search?q=%23IDE'>#IDE</a> <a href="http://t.co/sChK4eNtca" rel="nofollow">http://t.co/sChK4eNtca</a> 				<a href="http://twitter.com/LeLong37/statuses/613222799704875008" class="timesince">1&nbsp;day&nbsp;ago</a>
+			</li>
+
+			
+			<li>
+				<a href='http://twitter.com/search?q=%23bomb'>#bomb</a> <a href='http://twitter.com/search?q=%23leathal'>#leathal</a> <a href='http://twitter.com/search?q=%23stack'>#stack</a> <a href='http://twitter.com/search?q=%23typescript'>#typescript</a> 1.5a <a href='http://twitter.com/search?q=%23gulp'>#gulp</a> <a href='http://twitter.com/search?q=%23nodemon'>#nodemon</a> <a href='http://twitter.com/search?q=%23browsersync'>#browsersync</a> and of course <a href='http://twitter.com/search?q=%23VSCode'>#VSCode</a> @<a href='http://twitter.com/code'>code</a> 2 build <a href='http://twitter.com/search?q=%23awesome'>#awesome</a> apps <a href="http://t.co/dBzGmyivwZ" rel="nofollow">http://t.co/dBzGmyivwZ</a> 				<a href="http://twitter.com/LeLong37/statuses/612793938190036992" class="timesince">2&nbsp;days&nbsp;ago</a>
+			</li>
+
+			
+			<li>
+				RT @<a href='http://twitter.com/pluralsight'>pluralsight</a>: Because the internet. <a href='http://twitter.com/search?q=%23FridayFunny'>#FridayFunny</a> <a href='http://twitter.com/search?q=%23StarWars'>#StarWars</a> <a href="http://t.co/BZYjLDtQBk" rel="nofollow">http://t.co/BZYjLDtQBk</a> 				<a href="http://twitter.com/LeLong37/statuses/609419061479370753" class="timesince">1&nbsp;week&nbsp;ago</a>
+			</li>
+
+			
+			<li>
+				@<a href='http://twitter.com/Bahar414'>Bahar414</a> yes 4 building enterprise app &amp; address sep of concerns, maintainability, etc. vid is obs w/ cur v pls use <a href="https://genericunitofworkandrepositories.codeplex.com/documentation"> …nitofworkandrepositories.codeplex.com/documentation</a> 				<a href="http://twitter.com/LeLong37/statuses/605918734419521536" class="timesince">3&nbsp;weeks&nbsp;ago</a>
+			</li>
+
+			
+			<li>
+				@<a href='http://twitter.com/EricRohler'>EricRohler</a> @<a href='http://twitter.com/stevenrf1'>stevenrf1</a> latest source code can be found here <a href="https://genericunitofworkandrepositories.codeplex.com/SourceControl/latest"> …nitofworkandrepositories.codeplex.com/SourceControl/…</a> latest documentation <a href="https://genericunitofworkandrepositories.codeplex.com/documentation"> …nitofworkandrepositories.codeplex.com/documentation</a> 				<a href="http://twitter.com/LeLong37/statuses/603361464070459392" class="timesince">4&nbsp;weeks&nbsp;ago</a>
+			</li>
+
+			</ul><a href="http://twitter.com/LeLong37"  class='twitter-follow-button' data-show-count='false' data-link-color='#ec8500' data-text-color='#333333'>Follow @LeLong37</a></aside><aside id="image-5" class="widget widget_image"><div style="overflow:hidden;"><a href="https://www.codementor.io/lelong37"><img src="http://lelong37.files.wordpress.com/2014/08/2014-08-14_21-51-09.png?w=240&amp;h=42" class="alignnone" width="240" height="42" /></a></div>
+</aside>		<aside id="recent-posts-4" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+					<li>
+				<a href="http://blog.longle.net/2015/01/07/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure/">MSDN: Building Web Apps on the MEAN Stack with OData in Microsoft&nbsp;Azure</a>
+						</li>
+					<li>
+				<a href="http://blog.longle.net/2014/11/03/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added/">Our Telerik Kendo UI Case Study 2014 Released &#8211; Enterprise Benefits and Value&nbsp;Added</a>
+						</li>
+					<li>
+				<a href="http://blog.longle.net/2014/05/01/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata/">AngularJS &amp; Kendo UI using Angular Kendo with ASP.NET MVC 5, Web API &amp;&nbsp;OData</a>
+						</li>
+					<li>
+				<a href="http://blog.longle.net/2014/03/31/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages/">Quick Example of using Git with CodePlex for Clone, Changes, Commit, Sync &amp; Restoring Missing NuGet&nbsp;Packages</a>
+						</li>
+					<li>
+				<a href="http://blog.longle.net/2014/03/04/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published/">Harness the Power of ASP.NET MVC, Web Api, OData, Kendo UI &amp; RequireJS to Build an Easy &amp; Maintainable SPA (for the .NET Developer) &#8211;&nbsp;Published</a>
+						</li>
+				</ul>
+		</aside><aside id="blog_subscription-3" class="widget widget_blog_subscription"><h1 class="widget-title"><label for="subscribe-field">Follow Blog via Email</label></h1>
+				<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="subscribe-blog">
+											<p>Enter your email address to follow this blog and receive notifications of new posts by email.</p>
+<p>Join 918 other followers</p>
+						<p><input type="text" name="email" style="width: 95%; padding: 1px 2px" placeholder="Enter your email address" value="" id="subscribe-field"/></p>
+					
+					<p>
+						<input type="hidden" name="action" value="subscribe"/>
+						<input type="hidden" name="blog_id" value="10143612"/>
+						<input type="hidden" name="source" value="http://blog.longle.net/"/>
+						<input type="hidden" name="sub-type" value="widget"/>
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-3" />
+						<input type="hidden" id="_wpnonce" name="_wpnonce" value="d2eba4867c" />						<input type="submit" value="Follow" />
+					</p>
+				</form>
+			
+</aside><aside id="blog-stats-3" class="widget widget_blog-stats"><h1 class="widget-title">Blog Stats</h1>		<ul>
+			<li>774,794 views</li>
+		</ul>
+		</aside>		</div><!-- #secondary .widget-area -->
+		<div class="container-bottom"></div>
+	</div><!-- #container -->
+
+	<footer id="colophon" role="contentinfo">
+
+		
+		<div class="site-info">
+						<a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com</a>.
+			<span class="sep"> | </span>
+			<a href="https://wordpress.com/themes/splendio/" title="Learn more about this theme">The Splendio Theme</a>.		</div><!-- .site-info -->
+
+	</footer><!-- #colophon -->
+</div><!-- #wrapper -->
+
+		<script type="text/javascript">
+		//<![CDATA[
+		var infiniteScroll = {"settings":{"id":"content","ajaxurl":"http:\/\/blog.longle.net\/?infinity=scrolling","type":"click","wrapper":true,"wrapper_class":"infinite-wrap","footer":true,"click_handle":"1","text":"Older posts","totop":"Scroll back to top","currentday":"31.12.13","order":"DESC","scripts":[],"styles":[],"google_analytics":false,"offset":0,"history":{"host":"blog.longle.net","path":"\/page\/%d\/","use_trailing_slashes":true,"parameters":""},"query_args":{"error":"","m":"","p":0,"post_parent":"","subpost":"","subpost_id":"","attachment":"","attachment_id":0,"name":"","static":"","pagename":"","page_id":0,"second":"","minute":"","hour":"","day":0,"monthnum":0,"year":0,"w":0,"category_name":"","tag":"","cat":"","tag_id":"","author":"","author_name":"","feed":"","tb":"","paged":0,"comments_popup":"","meta_key":"","meta_value":"","preview":"","s":"","sentence":"","fields":"","menu_order":"","category__in":[],"category__not_in":[],"category__and":[],"post__in":[],"post__not_in":[],"tag__in":[],"tag__not_in":[],"tag__and":[],"tag_slug__in":[],"tag_slug__and":[],"post_parent__in":[],"post_parent__not_in":[],"author__in":[],"author__not_in":[],"posts_per_page":7,"ignore_sticky_posts":false,"suppress_filters":false,"cache_results":false,"update_post_term_cache":true,"update_post_meta_cache":true,"post_type":"","nopaging":false,"comments_per_page":"50","no_found_rows":false,"order":"DESC"},"last_post_date":"2013-12-31 01:30:37","stats":"blog=10143612&v=wpcom&tz=-5&user_id=0&subd=lelong37&x_pagetype=infinite-click"}};
+		//]]>
+		</script>
+		<!-- wpcom_wp_footer -->
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201526x'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781g'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+
+	<div id="bit" class="loggedout-follow-normal">
+		<a class="bsub" href="javascript:void(0)"><span id='bsub-text'>Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow &ldquo;Long Le&#039;s Blog&rdquo;</label></h3>
+
+			<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+						<p class="bit-follow-count">Join 918 other followers</p>
+			<p><input type="email" name="email" value="Enter your email address" onfocus='this.value=(this.value=="Enter your email address") ? "" : this.value;' onblur='this.value=(this.value=="") ? "Enter your email address" : this.value;'  id="loggedout-follow-field"/></p>
+
+			<input type="hidden" name="action" value="subscribe"/>
+			<input type="hidden" name="blog_id" value="10143612"/>
+			<input type="hidden" name="source" value="http://blog.longle.net/"/>
+			<input type="hidden" name="sub-type" value="loggedout-follow"/>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="d2eba4867c" /><input type="hidden" name="_wp_http_referer" value="/" />
+			<p id='bsub-subscribe-button'><input type="submit" value="Sign me up" /></p>
+			</form>
+					<div id='bsub-credit'><a href="https://wordpress.com/?ref=lof">Build a website with WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/blog.longle.net\/2015\/01\/07\/msdn-building-web-apps-on-the-mean-stack-with-odata-in-microsoft-azure\/":4314,"http:\/\/blog.longle.net\/2014\/11\/03\/telerik-kendo-ui-case-study-2014-released-enterprise-benefits-and-value-added\/":4273,"http:\/\/blog.longle.net\/2014\/05\/01\/angularjs-kendo-ui-using-angular-kendo-with-asp-net-mvc-5-web-api-odata\/":4131,"http:\/\/blog.longle.net\/2014\/03\/31\/quick-example-of-using-git-with-codeplex-for-clone-changes-commit-sync-restoring-missing-nuget-packages\/":4110,"http:\/\/blog.longle.net\/2014\/03\/04\/harness-the-power-of-asp-net-mvc-web-api-odata-kendo-ui-requirejs-to-build-an-easy-maintainable-spa-for-the-net-developer-published\/":4088,"http:\/\/blog.longle.net\/2014\/01\/06\/unit-of-work-unity-3-quick-start-video\/":3999,"http:\/\/blog.longle.net\/2013\/12\/31\/wordpress-2013-in-review-happy-new-years\/":3990};
+		window.WPCOM_jetpack = false;
+				window.WPCOM_site_ID = 10143612;
+			</script>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-linkedin' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+		});
+		</script>
+			<div id="sharing_email" style="display: none;">
+		<form action="/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" />
+			<script> document.getElementById('jetpack-source_f_name').value = ''; </script>
+			<div class="recaptcha" id="sharing_recaptcha"></div><input type="hidden" name="recaptcha_public_key" id="recaptcha_public_key" value="6LcYW8MSAAAAADBAuEH9yaPcF7lWh11Iq62ZKtoo" />
+			<img style="float: right; display: none" class="loading" src="http://s2.wp.com/wp-content/mu-plugins/post-flair/sharing/images/loading.gif?m=1315610318g" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-tumblr' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+							<script type="text/javascript">
+				jQuery(document).on('ready', function(){
+					jQuery('body').on('click', 'a.share-pinterest', function(e){
+						e.preventDefault();
+						// Load Pinterest Bookmarklet code
+						var s = document.createElement("script");
+						s.type = "text/javascript";
+						s.src = window.location.protocol + "//assets.pinterest.com/js/pinmarklet.js?r=" + ( Math.random() * 99999999 );
+						var x = document.getElementsByTagName("script")[0];
+						x.parentNode.insertBefore(s, x);
+						// Trigger Stats
+						var s = document.createElement("script");
+						s.type = "text/javascript";
+						s.src = this + ( this.toString().indexOf( '?' ) ? '&' : '?' ) + 'js_only=1';
+						var x = document.getElementsByTagName("script")[0];
+						x.parentNode.insertBefore(s, x);
+					});
+				});
+			</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-pocket' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcompocket', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<iframe src='http://widgets.wp.com/likes/master.html?ver=20141028#ver=20141028&amp;mp6=1' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type="text/javascript">
+		//<![CDATA[
+			var jetpackLikesWidgetQueue = [];
+			var jetpackLikesWidgetBatch = [];
+			var jetpackLikesMasterReady = false;
+
+			function JetpackLikespostMessage( message, target ) {
+				if ( "string" === typeof message ){
+					try{
+						message = JSON.parse( message );
+					}
+					catch(e) {
+						return;
+					}
+				}
+
+				pm( {
+					target: target,
+					type: 'likesMessage',
+					data: message,
+					origin: '*'
+				} );
+			}
+
+			function JetpackLikesBatchHandler() {
+				var requests = [];
+				jQuery( 'div.jetpack-likes-widget-unloaded' ).each( function( i ) {
+					if ( jetpackLikesWidgetBatch.indexOf( this.id ) > -1 )
+						return;
+					jetpackLikesWidgetBatch.push( this.id );
+					var regex = /like-(post|comment)-wrapper-(\d+)-(\d+)-(\w+)/;
+					var match = regex.exec( this.id );
+					if ( ! match || match.length != 5 )
+						return;
+
+					var info = {
+						blog_id: match[2],
+						width:   this.width
+					};
+
+					if ( 'post' == match[1] ) {
+						info.post_id = match[3];
+					} else if ( 'comment' == match[1] ) {
+						info.comment_id = match[3];
+					}
+
+					info.obj_id = match[4];
+
+					requests.push( info );
+				});
+
+				if ( requests.length > 0 ) {
+					JetpackLikespostMessage( { event: 'initialBatch', requests: requests }, window.frames['likes-master'] );
+				}
+			}
+
+			function JetpackLikesMessageListener( event ) {
+				if ( "undefined" == typeof event.event )
+					return;
+
+				if ( 'masterReady' == event.event ) {
+					jQuery( document ).ready( function() {
+						jetpackLikesMasterReady = true;
+
+						var stylesData = {
+								event: 'injectStyles'
+						};
+
+						if ( jQuery( 'iframe.admin-bar-likes-widget' ).length > 0 ) {
+							JetpackLikespostMessage( { event: 'adminBarEnabled' }, window.frames[ 'likes-master' ] );
+
+							stylesData.adminBarStyles = {
+								background: jQuery( '#wpadminbar .quicklinks li#wp-admin-bar-wpl-like > a' ).css( 'background' ),
+								isRtl: ( 'rtl' == jQuery( '#wpadminbar' ).css( 'direction' ) )
+							};
+						}
+
+						if ( !window.addEventListener )
+							jQuery( '#wp-admin-bar-admin-bar-likes-widget' ).hide();
+
+						stylesData.textStyles = {
+							color: jQuery( '.sd-text-color').css( 'color' ),
+							fontFamily: jQuery( '.sd-text-color' ).css( 'font-family' ),
+							fontSize: jQuery( '.sd-text-color' ).css( 'font-size' ),
+							direction: jQuery( '.sd-text-color' ).css( 'direction' ),
+							fontWeight: jQuery( '.sd-text-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-text-color' ).css( 'font-style' ),
+							textDecoration: jQuery( '.sd-text-color' ).css('text-decoration')
+						};
+
+						stylesData.linkStyles = {
+							color: jQuery( '.sd-link-color' ).css('color'),
+							fontFamily: jQuery( '.sd-link-color' ).css('font-family'),
+							fontSize: jQuery( '.sd-link-color' ).css('font-size'),
+							textDecoration: jQuery( '.sd-link-color' ).css('text-decoration'),
+							fontWeight: jQuery( '.sd-link-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-link-color' ).css( 'font-style' )
+						};
+
+						JetpackLikespostMessage( stylesData, window.frames[ 'likes-master' ] );
+
+						JetpackLikesBatchHandler();
+
+						jQuery( document ).on( 'inview', 'div.jetpack-likes-widget-unloaded', function() {
+							jetpackLikesWidgetQueue.push( this.id );
+						});
+					});
+				}
+
+				if ( 'showLikeWidget' == event.event ) {
+					jQuery( '#' + event.id + ' .post-likes-widget-placeholder'  ).fadeOut( 'fast', function() {
+						jQuery( '#' + event.id + ' .post-likes-widget' ).fadeIn( 'fast', function() {
+							JetpackLikespostMessage( { event: 'likeWidgetDisplayed', blog_id: event.blog_id, post_id: event.post_id, obj_id: event.obj_id }, window.frames['likes-master'] );
+						});
+					});
+				}
+
+				if ( 'clickReblogFlair' == event.event ) {
+					wpcom_reblog.toggle_reblog_box_flair( event.obj_id );
+				}
+
+				if ( 'showOtherGravatars' == event.event ) {
+					var $container = jQuery( '#likes-other-gravatars' );
+					var $list = $container.find( 'ul' );
+
+					$container.hide();
+					$list.html( '' );
+
+					$container.find( '.likes-text span' ).text( event.total );
+
+					jQuery.each( event.likers, function( i, liker ) {
+						$list.append( '<li class="' + liker.css_class + '"><a href="' + liker.profile_URL + '" class="wpl-liker" rel="nofollow" target="_parent"><img src="' + liker.avatar_URL + '" alt="' + liker.name + '" width="30" height="30" style="padding-right: 3px;" /></a></li>');
+					} );
+
+					var offset = jQuery( "[name='" + event.parent + "']" ).offset();
+
+					$container.css( 'left', offset.left + event.position.left - 10 + 'px' );
+					$container.css( 'top', offset.top + event.position.top - 33 + 'px' );
+
+					var rowLength = Math.floor( event.width / 37 );
+					var height = ( Math.ceil( event.likers.length / rowLength ) * 37 ) + 13;
+					if ( height > 204 ) {
+						height = 204;
+					}
+
+					$container.css( 'height', height + 'px' );
+					$container.css( 'width', rowLength * 37 - 7 + 'px' );
+
+					$list.css( 'width', rowLength * 37 + 'px' );
+
+					$container.fadeIn( 'slow' );
+
+					var scrollbarWidth = $list[0].offsetWidth - $list[0].clientWidth;
+					if ( scrollbarWidth > 0 ) {
+						$container.width( $container.width() + scrollbarWidth );
+						$list.width( $list.width() + scrollbarWidth );
+					}
+				}
+			}
+
+			pm.bind( 'likesMessage', function(e) { JetpackLikesMessageListener(e); } );
+
+			jQuery( document ).click( function( e ) {
+				var $container = jQuery( '#likes-other-gravatars' );
+
+				if ( $container.has( e.target ).length === 0 ) {
+					$container.fadeOut( 'slow' );
+				}
+			});
+
+			function JetpackLikesWidgetQueueHandler() {
+				var wrapperID;
+				if ( ! jetpackLikesMasterReady ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				if ( jetpackLikesWidgetQueue.length > 0 ) {
+					// We may have a widget that needs creating now
+					var found = false;
+					while( jetpackLikesWidgetQueue.length > 0 ) {
+						// Grab the first member of the queue that isn't already loading.
+						wrapperID = jetpackLikesWidgetQueue.splice( 0, 1 )[0];
+						if ( jQuery( '#' + wrapperID ).hasClass( 'jetpack-likes-widget-unloaded' ) ) {
+							found = true;
+							break;
+						}
+					}
+					if ( ! found ) {
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				} else if ( jQuery( 'div.jetpack-likes-widget-unloaded' ).length > 0 ) {
+					// Grab any unloaded widgets for a batch request
+					JetpackLikesBatchHandler();
+
+					// Get the next unloaded widget
+					wrapperID = jQuery( 'div.jetpack-likes-widget-unloaded' ).first()[0].id;
+					if ( ! wrapperID ) {
+						// Everything is currently loaded
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				}
+
+				if ( 'undefined' === typeof wrapperID ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				var $wrapper = jQuery( '#' + wrapperID );
+				$wrapper.find( 'iframe' ).remove();
+
+				if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='22px' width='68px' frameBorder='0' scrolling='no' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				} else {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='55px' width='100%' frameBorder='0' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				}
+
+				$wrapper.removeClass( 'jetpack-likes-widget-unloaded' ).addClass( 'jetpack-likes-widget-loading' );
+
+				$wrapper.find( 'iframe' ).load( function( e ) {
+					var $iframe = jQuery( e.target );
+					$wrapper.removeClass( 'jetpack-likes-widget-loading' ).addClass( 'jetpack-likes-widget-loaded' );
+
+					JetpackLikespostMessage( { event: 'loadLikeWidget', name: $iframe.attr( 'name' ), width: $iframe.width() }, window.frames[ 'likes-master' ] );
+
+					if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+						$wrapper.find( 'iframe' ).Jetpack( 'resizeable' );
+					}
+				});
+				setTimeout( JetpackLikesWidgetQueueHandler, 250 );
+			}
+			JetpackLikesWidgetQueueHandler();
+		//]]>
+		</script>
+
+	<div id="carousel-reblog-box">
+		<form action="" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" onclick="if ( this.value == 'Add your thoughts here... (optional)' ) { this.value = ''; }" onblur="if ( this.value == '' || this.value == '' ) { this.value = 'Add your thoughts here... (optional)'; }">Add your thoughts here... (optional)</textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="10143612" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="http://blog.longle.net" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="Long Le&#039;s Blog" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="122d4469ab" /><input type="hidden" name="_wp_http_referer" value="/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJzTLy/QTc7PK0nNK9EvyClNz8wr1i+uzCtJrMjITM/IAeKS1CJMEWP94uSizIISoOIM5/yiVL2sYh19yo1yKiotzvAKBvOpaWREbg41jXMOzkgsKqCqicXFQOPsc20NTYyMjE2MDI1NsgArDJ+J'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?m=1422342134g&amp;ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?m=1363304414g&amp;ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<link rel='stylesheet' id='all-css-0' href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1431128867g' type='text/css' media='all' />
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='http://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825g&#038;ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='all-css-2' href='https://s2.wp.com/wp-content/mu-plugins/tiled-gallery/tiled-gallery.css?m=1401143454g' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackSlideshowSettings = {"spinner":"http:\/\/s1.wp.com\/wp-content\/mu-plugins\/shortcodes\/img\/slideshow-loader.gif","blog_id":"10143612","blog_subdomain":"lelong37","user_id":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JetpackEmojiSettings = {"base_url":"http:\/\/s0.wp.com\/wp-content\/mu-plugins\/emoji\/twemoji\/"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"http:\/\/blog.longle.net\/wp-admin\/admin-ajax.php","nonce":"cb77a04fa2","display_exif":"1","display_geo":"1","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/lelong37.wordpress.com\/wp-login.php?redirect_to=http%3A%2F%2Fblog.longle.net%2F2013%2F12%2F31%2Fwordpress-2013-in-review-happy-new-years%2F","local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=10143612&v=wpcom&tz=-5&user_id=0&subd=lelong37","is_public":"1"};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"http:\/\/blog.longle.net\/wp-admin\/admin-ajax.php","nonce":"cb77a04fa2","display_exif":"1","display_geo":"1","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/lelong37.wordpress.com\/wp-login.php?redirect_to=http%3A%2F%2Fblog.longle.net%2F2013%2F12%2F31%2Fwordpress-2013-in-review-happy-new-years%2F","local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=10143612&v=wpcom&tz=-5&user_id=0&subd=lelong37","is_public":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJyNj00SgjAMhS9krR1k6XgWDEFaS1ublMrtRWZgxAWyyt/7XhKZgwDvGB1LQ7LGXgOG19HQQX6NuiSCTXftSGrXaKd5WJINLbU+Mvga6WNungnjcIQBLO6GyOoxa30WS3+Dxc4bLTmv4l+9QQ4VPMQ+9UqlHdg0n5obfzMI/Gsx8/34ipcVEfIETHWISLSxFKroE6FdrpwbI3PtLupcKFWUJ1WaN6JZrSg='></script>
+<script type='text/javascript' src='http://platform.twitter.com/widgets.js?ver=20111117'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJyVzbsSgkAMheEXMsYLaOX4LAsb12AIO9kA49tLY2EDY3XmL745OGdoB3VSx36ELGNiLegzu5NBI6F9NWwRMhMqTWSkkTXtu7LDf2zediwUIQURsvdvrag8FIeHBDYsz2DLxXcXdO9vx+pcHerLqb52H5XlV+s='></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script type="text/javascript">
+			jQuery.extend( infiniteScroll.settings.scripts, ["jquery","jquery-core","jquery-migrate","mobile-useragent-info","postmessage","jquery_inview","jetpack_resize","loggedout-subscribe","functions-js","spin","jquery.spin","grofiles-cards","wpgroho","syntaxhighlighter-core","syntaxhighlighter-brush-jscript","syntaxhighlighter-brush-xml","syntaxhighlighter-brush-csharp","syntaxhighlighter-brush-css","devicepx","the-neverending-homepage","jquery-cycle","jetpack-slideshow","twemoji","jetpack-emoji","jetpack-emoji-init","swfobject","videopress","jetpack-carousel","twitter-widgets","twitter-widgets-infinity","twitter-widgets-pending","tiled-gallery","sharing-js"] );
+			jQuery.extend( infiniteScroll.settings.styles, ["smileyproject","jetpack_likes","loggedout-subscribe","the-neverending-homepage","jetpack-slideshow","wpcom-core-compat-playlist-styles","mp6hacks","wpcom-bbpress2-staff-css","splendio","splendio-wpcom","jetpack-emoji-css","noticons","geo-location-flair","reblogging","a8c-global-print","sharedaddy","genericons","h4-global","droid-sans","jetpack-carousel","tiled-gallery","jetpack-carousel-ie8fix"] );
+		</script><script src="//stats.wp.com/w.js?47" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'10143612','blog_tz':'-5','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'10143612','v':'wpcom','tz':'-5','user_id':'0','subd':'lelong37'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1LVmwrVi5vQS5fVFtfdHBbPyw1VXIrU3hWLHhzVndTdktBX0ddJnpXRjVaOTd6fj1YMX4ydzRUSk0wbVRfODlnNUZzfmJqbFlVUG55K0kwWzkxfmR2NFJqSywrbkFEM0M2Jis/aUF0TnUyUCVJdjJVOXFNaVpxRXklSS1Rb3hbTnVpNjMtP1RRJlhKUnRzbXF1RS8/d3hYWDJrUGpsTi5WOS1yMFd0TEh1aG5wMkt3cl1bYlFtYWRwd1FBeXlFaE1Ca35oeiZqYVRiPzYrMDBlZ18vXS0zVFYtR2c5TVNGLXBOWEVCTi1EVW5sanl3SE8zQ1RfcHd6ZEN5Vk9VSjhtVjM9bzZDWSwsLW1wYyZuTm1NZSw3TFZQVWlkd000TjZafG5xc3VZ'}]);
+_stq.push([ 'clickTrackerInit', '10143612', '0' ]);
+	</script>
+<noscript><img src="http://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>
+<!--
+	generated 235 seconds ago
+	generated in 0.260 seconds
+	served from batcache in 0.003 seconds
+	expires in 65 seconds
+-->

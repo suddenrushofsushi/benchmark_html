@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<base href="http://www.igeek.co.uk/" />
+<meta name="Generator" content="CMS Made Simple - Copyright (C) 2004-14 Ted Kulp. All rights reserved." />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="start" title="igeek - CMS, E-Commerce and dynamic website development for bristol and the south west" href="http://www.igeek.co.uk/" />
+<link rel="next" title="FileMaker Pro development in London &amp; Bristol, UK" href="http://www.igeek.co.uk/filemaker.html" />
+
+<link rel="canonical" href="http://www.igeek.co.uk/" /><link rel="alternate" type="application/rss+xml" title="igeek blog feed" href="http://www.igeek.co.uk/feeds/blog.rss" />
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Software Developers: FileMaker, Web, Mobile. London &amp; Bristol UK | igeek</title>
+<meta name='description' content='FileMaker and web development, bespoke database design for Windows and Mac, ecommerce and CMS sites, web and database integration, Bristol and London, UK'>
+<meta name='keywords' content='FileMaker web cms hosting ecommerce, filemaker, web, development, integration, cms, ecommerce, e-commerce, database, hosting, filemakergo, ipad, iphone, ipod, iOS, dynamic, bespoke, develop, application, bristol, southwest, south, west, london'>
+<meta name='robots' content='index, follow'>
+<meta name='google-site-verification' content='v2oC2GM_MoSiD9HVv7s703tz-UolPh76CxjCYCvB2u4'>
+<meta name='author' content='igeek ltd'>
+<link rel='schema.DC' href='http://purl.org/dc/elements/1.1/'>
+<link rel='schema.DCTERMS' href='http://purl.org/dc/terms/'>
+<meta name='DC.type' content='Text' scheme='DCTERMS.DCMIType'>
+<meta name='DC.format' content='text/html' scheme='DCTERMS.IMT'>
+<meta name='DC.relation' content='http://dublincore.org/' scheme='DCTERMS.URI'>
+<meta name='DC.publisher' content='igeek ltd'>
+<meta name='DC.language' content='en_US' scheme='DCTERMS.RFC3066' />
+<meta name='DC.rights' content='(c) igeek 2015'>
+<meta name='DC.title' content='Software Developers: FileMaker, Web, Mobile. London & Bristol UK | igeek'>
+<meta name='DC.description' content='FileMaker and web development, bespoke database design for Windows and Mac, ecommerce and CMS sites, web and database integration, Bristol and London, UK'>
+<meta name='DC.date' content='2015-04-23T10:22:01+01:00' scheme='DCTERMS.W3CDTF'>
+<meta name='DC.identifier' content='http://www.igeek.co.uk/' scheme='DCTERMS.URI'>
+
+
+<meta name="google-site-verification" content="2gO0Y7l5VZDNs-gT9dvEAUI-H99ksF10bos6x0UXx-U" />
+<link rel="stylesheet" type="text/css" href="http://www.igeek.co.uk/tmp/cache/stylesheet_combined_52da3fc788c82d385ab4443144696d18.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://www.igeek.co.uk/tmp/cache/stylesheet_combined_ff1c096f34d27d5b2168791619d47839.css" />
+
+<!--[if lt IE 9]>
+  <script src="/uploads/scripts/trunk/html5shiv.min.js"></script>
+<![endif]-->
+	<link rel="shortcut icon" href="/uploads/images/new/favicon.ico">
+	<link rel="apple-touch-icon" href="/uploads/images/new/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/uploads/images/new/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/uploads/images/new/apple-touch-icon-114x114.png">
+	
+<script src="/uploads/scripts/jquery-1.8.3.min.js"></script>
+<script src="/uploads/scripts/jquery.cycle2.min.js"></script>
+<script src="/uploads/scripts/jquery.cycle2.scrollVert.min.js"></script>
+<script src="/uploads/scripts/jquery.cycle2.swipe.min.js"></script>
+<script src="/uploads/scripts/jquery.cycle2.center.min.js"></script>
+<script>  
+<!--  // building select nav for mobile width only -->
+$(function(){
+	// building select menu
+	$('<select />').appendTo('nav');
+
+	// building an option for select menu
+	$('<option />', {
+		'selected': 'selected',
+		'value' : '',
+		'text': 'Choose Page...'
+	}).appendTo('nav select');
+
+	$('nav ul li a').each(function(){
+		var target = $(this);
+
+		$('<option />', {
+			'value' : target.attr('href'),
+			'text': target.text()
+		}).appendTo('nav select');
+
+	});
+
+	// on clicking on link
+	$('nav select').on('change',function(){
+		window.location = $(this).find('option:selected').val();
+	});
+});
+
+// show and hide sub menu
+$(function(){
+	$('nav ul li').hover(
+		function () {
+			//show its submenu
+			$('ul', this).slideDown(150);
+		}, 
+		function () {
+			//hide its submenu
+			$('ul', this).slideUp(150);			
+		}
+	);
+});
+//end
+</script>
+
+<script type="text/javascript" src="/uploads/scripts/jquery.cookiebar.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.cookieBar({
+message: 'igeek uses cookies.  By continuing, you consent to our cookies.  <a href="/cookie-policy.html" title="read about the cookies we set">See details</a>',
+acceptButton: true,
+acceptText: 'Close',
+autoEnable: true,
+acceptOnContinue: true,
+expireDays: 365,
+forceShow: false,
+effect: 'slide',
+element: 'body',
+append: false,
+fixed: true,
+bottom: false,
+redirect: '/',
+zindex: 1000,
+domain: 'igeek.co.uk'
+        });
+    });
+</script>
+
+</head><body>
+
+<header>
+
+
+<div class="container">
+    <div class="eleven columns">
+        <a href="/"><img class="width-auto" id="logo" src="/uploads/images/new/igeek-logo.png" alt="igeek" /></a>
+    </div>
+
+    <div class="info five columns">
+                <div class="column">
+                <a target="_blank" href="https://twitter.com/igeekUK"><img class="twitter" src="/uploads/images/new/twitter-logo.gif" alt="igeek twitter"></a>
+                </div>
+                
+                <!--<div class="column">-->
+                <p class="tel"><a title="Call igeek's Bristol office" href="tel:0117 322 6560">0117 322 6560</a><br /><a title="Call igeek's London office" href="tel:0203 036 0521">0203 036 0521</a></p>
+                <!--</div>-->
+        </div> <!-- end five -->
+
+</div><!-- end container -->
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1014540217;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1014540217/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+</header>
+	
+	<div id="nav-container">
+		<div class="container">
+			<div id="fdw">
+<nav>
+<ul>
+
+
+
+<li style="display:none;"><a href="http://www.igeek.co.uk/" title="igeek - CMS, E-Commerce and dynamic website development for bristol and the south west"><dfn>1: </dfn>igeek homepage</a>
+
+
+
+<li><a href="http://www.igeek.co.uk/filemaker.html" ><dfn>2: </dfn>FileMaker<span class="arrow"></span></a>
+
+
+
+<ul style="display: none;" class="sub_menu">
+<li class="arrow_top"></li>
+<li><a href="http://www.igeek.co.uk/filemaker/bespoke-business-systems.html" title="Custom FileMaker-based business applications and database development"><dfn>2.1: </dfn>Bespoke Business Systems</a>
+
+
+
+<li><a href="http://www.igeek.co.uk/filemaker/filemaker-web-integration.html" title="FileMaker and website integration: access your database over the web"><dfn>2.2: </dfn>FileMaker Web Integration</a>
+
+</li></ul>
+
+
+<li><a href="http://www.igeek.co.uk/web.html" ><dfn>3: </dfn>Web<span class="arrow"></span></a>
+
+
+
+<ul style="display: none;" class="sub_menu">
+<li class="arrow_top"></li>
+<li><a href="http://www.igeek.co.uk/web/content-management-systems.html" title="Content Management System web development, bespoke module creation"><dfn>3.1: </dfn>Content Management Systems</a>
+
+
+
+<li><a href="http://www.igeek.co.uk/web/ecommerce.html" title="Online shops, hand-built ecommerce facilities"><dfn>3.2: </dfn>E-Commerce Website Development</a>
+
+
+
+<li><a href="http://www.igeek.co.uk/web/hosting.html" title="Secure web hosting services, backed up and monitored. Domain name registration"><dfn>3.3: </dfn>Web Hosting</a>
+
+
+
+<li><a href="http://www.igeek.co.uk/web/other-services-and-info.html" title="Web and FileMaker hosting, email hosting, multimedia sourcing, domain registration"><dfn>3.4: </dfn>Other Services</a>
+
+</li></ul>
+
+
+<li><a href="http://www.igeek.co.uk/mobile.html" ><dfn>4: </dfn>Mobile</a>
+
+
+
+<li><a href="http://www.igeek.co.uk/igeek-portfolio/taunton-nhs-trust-fm.html" ><dfn>5: </dfn>Portfolio</a>
+
+
+
+<li><a href="http://www.igeek.co.uk/about-igeek.html" ><dfn>6: </dfn>About</a>
+
+
+
+<li><a href="http://www.igeek.co.uk/blog.html" ><dfn>7: </dfn>Blog</a>
+
+
+
+<li><a href="http://www.igeek.co.uk/contact-us.html" title="Contact details for Bristol and London Developers, igeek, specialists in e-commerce, FileMaker Pro and web development: details, 11-19 Wine Street, Bristol, 0117 3702469, 19 Eastbourne Terrace, London, W2 6LG, 0203 036 0521 info 'at' igeek.co.uk"><dfn>8: </dfn>Contact Us</a>
+
+ </li>
+ </ul>
+</nav>
+</div>
+
+		
+	</div>	<!-- end container -->			
+			
+	</div><!-- end nav container -->	
+		
+	<div class="container">
+	
+ 		<div class="sixteen columns main">
+ 		
+ 		<div class="nine columns slideshow slides">
+		<ul class="cycle-slideshow slideshow" data-cycle-speed="1000" data-cycle-timeout="5000" data-cycle-slides="> li" data-cycle-center-horz="true" data-cycle-center-vert="true" data-cycle-auto-height="calc" id="slider1">
+
+        
+    
+
+<li><a href="http://www.igeek.co.uk/igeek-portfolio/icon-film-distribution-fm.html"><img src="/uploads/images/portfolio/icon/icon1.png" class="slider" alt="Icon Film Distribution: FileMaker Development & Help"></a></li><li><a href="http://www.igeek.co.uk/igeek-portfolio/bristol-old-vic-theatre-school-fm.html"><img src="/uploads/images/portfolio/BOVTS/bristol-old-vic.png" class="slider" alt="Bristol Old Vic Theatre School: New responsive website & FileMaker system"></a></li><li><a href="http://www.igeek.co.uk/igeek-portfolio/at-bristol-fm.html"><img src="/uploads/images/portfolio/At-Bristol/At-bristol exterior 2.jpg" class="slider" alt="At Bristol: FileMaker Consultancy on in-house Systems"></a></li>
+			</ul>
+		
+		</div><!-- end five-->
+		
+		<div class="six columns slideshow quotes">
+<div itemtype="http://data-vocabulary.org/Review" data-cycle-slides="> div.quote" class="cycle-slideshow slideshow" data-cycle-speed="1000" data-cycle-timeout="5000" data-cycle-center-horz="true" data-cycle-center-vert="true" data-cycle-auto-height="calc" id="slider2">
+		<div class="quote"><blockquote class="description">igeek were invaluably resourceful in helping us create our database from scratch. Their efficiency and attention to detail was second to none.</blockquote><p class="reviewer"> Ben Friedman, Acquisitions Manager, Icon Film Distribution.</p></div><div class="quote"><blockquote class="description">I felt that whenever there was an issue that I have with the system all I needed to do was email or ring someone and it was resolved very quickly.</blockquote><p class="reviewer">Marchia Abokie, Bristol Old Vic Theatre School</p></div><div class="quote"><blockquote class="description">igeek make solutions that work for people.</blockquote><p class="reviewer">Dan Bird, Exhibitions Director, At-Bristol.</p></div>
+</div>
+</div><!-- end ten-->
+ 		</div><!-- end sixteen-->
+	
+		
+<div class="sixteen columns main">
+<div class="nine columns copy">
+  <h1>Software: FileMaker, mobile and web</h1>
+
+<p>The best way to cut your organisation’s costs is to harness the power of software.</p>
+
+<p>By automating some or even all of your workflow, you can simplify the way you work every day.</p>
+
+<ul>
+<li>mobile apps for iPad and iPhone</li>
+<li>bespoke software</li>
+<li>responsive websites that work</li>
+<li>E-Commerce and CMS sites</li>
+<li>PC, Mac, iOS</li>
+</ul>
+
+<p>As well as being FileMaker Platinum accredited developers, we also work in PHP, MySQL and HTML for the perfect piece of software that’s available wherever you are, in the office, on the road, onsite or at home.</p></div>
+<div class="six columns">
+<br />
+
+<div class="videoWrapper">
+    <!-- Copy & Pasted from YouTube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sOyeNFQcyLg?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    
+<div id="blog_block">
+<h1>Blog</h1>
+<!-- Start igeek blog Display Template -->
+<div class="entry">
+<div class="entry-title"><a href="http://www.igeek.co.uk/blog/96/FileMaker-11-12-13-14-Replacement-Icons.html" title="FileMaker 11,12,13 &amp; 14 Replacement Icons">FileMaker 11,12,13 &amp; 14 Replacement Icons</a></div>
+
+<div class="entry-meta">
+In <a href="/blog/category/3/filemaker" title="See all blog posts in category FileMaker">FileMaker</a> by Bisley on  8 July 2015
+
+</div>
+<br class="clear">
+
+
+	<div class="entry-summary">
+		 Do you run different versions of FileMaker? These FileMaker icons will make it clear which versions are in your dock! 	</div>
+
+
+<p><a href="http://www.igeek.co.uk/blog/96/FileMaker-11-12-13-14-Replacement-Icons.html" title="FileMaker 11,12,13 &amp; 14 Replacement Icons">Read more...</a></p>
+<div class="hr450"></div>
+
+       <div class="CGBlogSummaryField">
+                  
+             </div>
+       <div class="CGBlogSummaryField">
+                  
+             </div>
+  
+</div>
+
+</div></div>
+</div>
+	
+
+<div class="hp-box filemaker one-third column firstbox">
+<h3>FileMaker</h3>
+<p>Blurring the line between app and database. <a href="http://www.igeek.co.uk/filemaker.html">More&nbsp;»</a></p>
+</div>
+<div class="hp-box web one-third column">
+<h3>Web</h3>
+<p>Ensure you're the one in charge of your website. <a href="http://www.igeek.co.uk/web.html">More&nbsp;»</a></p>
+</div>
+<div class="hp-box bespoke one-third column">
+<h3>Bespoke Software</h3>
+<p>Code that does exactly what you need. <a href="http://www.igeek.co.uk/filemaker/bespoke-business-systems.html">More&nbsp;»</a></p>
+</div>	
+		<br class="clear" />
+		
+			
+
+	</div><!-- container -->
+
+<div id="footer-container">
+    <div class="container">
+
+    <div class="nine columns"> 
+        <img class="width-auto" src="/uploads/images/new/igeek-copyright.gif" alt="copyright igeek"> 
+        <ul id="links"><li><a href="http://www.igeek.co.uk/cookie-policy.html" title="our cookie policy">cookies</a> | <a href="http://www.igeek.co.uk/t-and-cs.html" title="terms and conditions">t&amp;cs</a> | <a href="http://www.igeek.co.uk/web-t-and-cs.html" title="online terms and conditions">online t&amp;cs</a> | <a href="http://www.igeek.co.uk/data-protection-information.html" title="data protection">dpa</a> | <a href="http://www.igeek.co.uk/sla.html" title="service level agreement">sla</a> | <a href="http://www.igeek.co.uk/complaints.html" title="complaints">complaints</a> | <a href="http://www.igeek.co.uk/how-we-work.html" title="how we work">how we work</a> | <a href="https://mail.igeek.co.uk" title="login to igeek webmail" target="_blank">igeek webmail</a></li></ul>
+    </div>
+
+    <div class="seven columns">
+       <div class="cycle-slideshow" data-cycle-speed="800" data-cycle-slides="> a" id="certs_box">
+
+<a href="http://developer.filemaker.com/search/detail/?location=location.10000001168" target="_blank" title="igeek ltd - FileMaker Business Alliance - Platinum">
+<img class="width-auto" src="/uploads/images/certifications/filemaker-business-alliance-platinum.png" alt="FileMaker Business Alliance - Platinum">
+</a>
+
+<a href="http://developer.filemaker.com/search/detail/?location=location.10000001168" target="_blank" title="igeek ltd - FileMaker 13 Certified Developer">
+<img class="width-auto" src="/uploads/images/certifications/filemaker_certified_13.png" alt="FileMaker 13 Certified Developer">
+</a>
+
+<a href="http://developer.filemaker.com/search/detail/?location=location.10000001168" target="_blank" title="igeek ltd - FileMaker 12 Certified Developer">
+<img class="width-auto" src="/uploads/images/certifications/filemaker_certified_12.png" alt="FileMaker 12 Certified Developer">
+</a>
+
+<a href="http://developer.filemaker.com/search/detail/?location=location.10000001168" target="_blank" title="igeek ltd - FileMaker 11 Certified Developers">
+<img class="width-auto" src="/uploads/images/certifications/filemaker_certified_11.png" alt="FileMaker 11 Certified Developer">
+</a>
+
+<a href="http://developer.filemaker.com/search/detail/?location=location.10000001168" target="_blank" title="igeek ltd - FileMaker 9 Certified Developers">
+<img class="width-auto" src="/uploads/images/certifications/filemaker_certified_9.png" alt="FileMaker 9 Certified Developer">
+</a>
+
+</div>
+    </div>
+    
+    </div>
+
+</div>
+
+</body>
+ 
+<script type="text/javascript">
+/* <![CDATA[ */
+
+writeJavaScriptCookie();
+
+function writeJavaScriptCookie() {
+  var date = new Date();
+  date.setTime(date.getTime()+(60*60*1000));
+  var the_cookie_date = date;
+  var the_cookie = "cmsms_statistics_javascript_detected=true";
+  the_cookie = the_cookie + ";expires=" + the_cookie_date;
+  document.cookie=the_cookie;
+}
+/* ]]> */
+</script>
+    
+      
+    <script type="text/javascript">
+
+/* <![CDATA[ */
+
+writeResolutionCookie();
+
+function writeResolutionCookie() {
+  var date = new Date();
+  date.setTime(date.getTime()+(60*60*1000));
+  var the_cookie_date = date;
+  var the_cookie = "cmsms_statistics_module_resolution="+ screen.width +"x"+ screen.height;
+  var the_cookie = the_cookie + ";expires=" + the_cookie_date;
+  document.cookie=the_cookie;
+
+  var bn=navigator.appName;    // Browser Name
+  if (bn.substring(0,9)=="Microsoft") {
+     bn="MSIE";            // browser name, cont'd
+  };         
+  var cd=(bn=="MSIE")?screen.colorDepth:screen.pixelDepth; // Color depth
+  if (cd!="undefined") {
+    var the_depthcookie="cmsms_statistics_module_colordepth=";
+    the_depthcookie=the_depthcookie+cd;
+    the_depthcookie = the_depthcookie + ";expires=" + the_cookie_date;
+    document.cookie=the_depthcookie;
+  }
+}
+/* ]]> */
+</script>
+    
+    
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-27209268-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</html>

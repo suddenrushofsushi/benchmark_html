@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]>
+<html id="ie6" lang="en">
+<![endif]-->
+<!--[if IE 7 ]>
+<html id="ie7" lang="en">
+<![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+	<meta charset="UTF-8" />
+
+	<title>Curses and Riots | Writing by Naomi Woddis</title>
+
+	<link rel="pingback" href="https://cursesandriots.wordpress.com/xmlrpc.php" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="alternate" type="application/rss+xml" title="Curses and Riots &raquo; Feed" href="https://cursesandriots.wordpress.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Curses and Riots &raquo; Comments Feed" href="https://cursesandriots.wordpress.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<link rel='stylesheet' id='all-css-0' href='https://s2.wp.com/_static/??-eJyNktFuwyAMRX9oDFVrl6dp35IQhzg1GIFRlL8vabS0VSq0F+sa7pG5FnoOyrAX8KJdVoGyRZ90ckiwhMgTGHntPk1KH/o9RniFpCeQ0JqruncHe0dsHwBbCz1nUQMT8axn7C1UZ6Af0KMsu/iXWUZw5Wkhd5ozYeAalUaOYrgvQHHpRFjkyLPaL2q04Qjl3IVWVoeDHlugMt5Xc7nw/UetciwbPC7vyT+H4lZdFyKkpEp1mJ3ach64Q3ydZKFqDHA84VY3G2rPgsWZdlHjLbAiNq0g+5dGDdRirKER1k9SpL3v/9Gu0K/7OZ0vzbn5Ol2a6QbPrgp4' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css-1' href='https://s1.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1444132114g' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2' href='https://s0.wp.com/wp-content/themes/h4/global.css?m=1420737423g' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJyFkNEKwjAMRX/IrmzOBx/Eb9nWrKS2TW1ai369FSYiToVAQnK43BtZgkA/2ayApal1zhCvS2sMb+QvQDjUcUjQOPRPeCKfwKcH62hECyIzxEHXXRWaaYULxMkBc4VWru+W0F8Qyl/MQArDdBIRGG8fqqMlLYLNGj3LOmtQlJOYyVoqsqDSkNbCc3jl/P61hTq6Q9v3265r9+3O3AGUCobW'></script>
+<link rel='stylesheet' id='all-css-0' href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1377793621g' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cursesandriots.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel='shortlink' href='http://wp.me/5ioP' />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Curses and Riots" />
+<meta property="og:description" content="Writing by Naomi Woddis" />
+<meta property="og:url" content="https://cursesandriots.wordpress.com/" />
+<meta property="og:site_name" content="Curses and Riots" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta property="fb:app_id" content="249643311490" />
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png" />
+<link rel='openid.server' href='https://cursesandriots.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://cursesandriots.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://cursesandriots.wordpress.com/osd.xml" title="Curses and Riots" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="theme-color" content="#ffffff" />
+<style type="text/css">
+.widget_twitter li {
+	word-wrap: break-word;
+}
+</style>
+<meta name="application-name" content="Curses and Riots" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Writing by Naomi Woddis" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://cursesandriots.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="title" content="Curses and Riots on WordPress.com" />
+<meta name="description" content="Writing by Naomi Woddis (by Naomi Woddis)" />
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="home blog custom-background mp6 customizer-styles-applied color-light highlander-enabled highlander-light infinite-scroll neverending">
+<div id="wrapper">
+
+	
+	<div id="search">
+		<form method="get" id="searchform" action="https://cursesandriots.wordpress.com/">
+	<div>
+		<span class="search">Search:</span><input type="text" value="" size="15" name="s" id="s" />
+		<input type="submit" id="searchsubmit" value="Go" />
+	</div>
+</form>	</div>
+
+	<div id="main-nav">
+		<h1 class="masthead"><a href="https://cursesandriots.wordpress.com">Curses and Riots</a></h1>
+		<p class="description">Writing by Naomi Woddis</p>
+
+		<div class="menu-wrap"><ul class="menu"><li class="page_item page-item-2"><a href="https://cursesandriots.wordpress.com/about/">About Naomi Woddis</a></li></ul></div>
+	</div>
+<div id="content">
+
+	<div id="entry-content">
+
+	
+		
+					<div id="post-1096" class="post-1096 post type-post status-publish format-standard hentry category-photography category-poetry category-re-issue tag-naomi-woddis tag-poetry-and-photography tag-re-issue">
+				<h2 class="entry-title"><a href="https://cursesandriots.wordpress.com/2015/09/16/re-issue-what-a-dog-sees/" rel="bookmark">Re Issue &#8211; What a Dog Sees</a></h2>
+				<p class="date">September 16, 2015 <a href="https://cursesandriots.wordpress.com/2015/09/16/re-issue-what-a-dog-sees/#respond"><span class="sep">&sect;</span> <span class="commentcount">Leave a comment</span></a></p>
+
+				<div class="entry">
+					<p><a href="https://cursesandriots.files.wordpress.com/2015/09/reflected-dog.jpg"><img class="aligncenter size-full wp-image-1097" src="https://cursesandriots.files.wordpress.com/2015/09/reflected-dog.jpg?w=480&#038;h=479" alt="reflected-dog" width="480" height="479" /></a></p>
+<p><strong><a href="http://itchykoo.com/itchy_en.html">Photograph – Copyright Dan Wesker 2010</a></strong></p>
+<p><em><strong>What a Dog Sees</strong></em></p>
+<p><em>in a puddle of water</em><br />
+<em>is not just his reflection</em><br />
+<em>but the barks of other dogs</em></p>
+<p><em>their yelps falling</em><br />
+<em>in new rain</em><br />
+<em>splashing a dance</em><br />
+<em>in pre-breakfast air</em></p>
+<p><em>sees</em><br />
+<em>other paws muddy with joy</em><br />
+<em>off leash</em></p>
+<p><em>then tilts his wet nose </em></p>
+<p><em>towards sky</em><br />
+<em>and buildings</em></p>
+<p><em>some have bad people in them</em><br />
+<em>they do not feed his brothers</em><br />
+<em>and steal the wag</em><br />
+<em>from happy tails</em></p>
+<p><em>what a dog sees</em><br />
+<em>are the circles</em><br />
+<em>walked</em><br />
+<em>by those on two legs</em></p>
+<p><em>lack of courage</em><br />
+<em>over cooked meals</em><br />
+<em>unanswered telephones</em></p>
+<p><em>so much water</em><br />
+<em>and the memory of almost drowning</em><br />
+<em>in his puppy paws</em></p>
+<p><em>head cocked his ears</em><br />
+<em>a net to capture</em><br />
+<em>all this human chatter</em></p>
+<p><em>and wonders what this world</em><br />
+<em>would want</em><br />
+<em>with all this talking</em></p>
+<p><em><strong><br />
+</strong></em><strong><a href="http://poetrymosaic.wordpress.com/">Poem – Copyright Naomi Woddis 2010</a></strong></p>
+									</div>
+			</div><!-- close post_class -->
+		
+					<div id="post-1091" class="post-1091 post type-post status-publish format-standard hentry category-poetry category-re-issue tag-money tag-naomi-woddis tag-poetry-mosaic">
+				<h2 class="entry-title"><a href="https://cursesandriots.wordpress.com/2015/09/16/thumbing-the-gelt/" rel="bookmark">Re Issue &#8211; Thumbing the Gelt</a></h2>
+				<p class="date">September 16, 2015 <a href="https://cursesandriots.wordpress.com/2015/09/16/thumbing-the-gelt/#respond"><span class="sep">&sect;</span> <span class="commentcount">Leave a comment</span></a></p>
+
+				<div class="entry">
+					<p>Thumbing the Gelt</p>
+<p><em>I am the King of Coins,</em><br />
+<em>wherever I go they listen.</em><br />
+<em>I can’t resist the smell of burning,</em><br />
+<em>It reminds me of home.</em></p>
+<p><em>A coin fresh from the mint</em><br />
+<em>feels like a brand new day,</em><br />
+<em>a token of promises made</em><br />
+<em>with double-crossed fingers.</em></p>
+<p><em>Each wet wad is worthless</em><br />
+<em>Lips speak of bribes. Each mouth</em><br />
+<em>shaped by want. This</em><br />
+<em>pretty paper is imaginary.</em></p>
+<p><em>How I love that shiny gold,</em><br />
+<em>a party dress dollar, each</em><br />
+<em>element of a measured exchange.</em><br />
+<em>I pass the time by counting</em></p>
+<p><em>what I have. Three thieves</em><br />
+<em>died of thirst in Death Valley</em><br />
+<em>their dollars could not buy them water.</em><br />
+<em>A cocksure wind blew </em></p>
+<p><em>their bucks away.</em><br />
+<em>To know it is to lose it.</em><br />
+<em>No one rules. But this.</em></p>
+<p>© Copyright Naomi Woddis 2008</p>
+<p>Inspired and taken from answers to the the following questions:</p>
+<p>What is money ?<br />
+Who rules ?<br />
+How self determining are we ?</p>
+<p> <a href="https://cursesandriots.wordpress.com/2015/09/16/thumbing-the-gelt/#more-1091" class="more-link">&laquo; Read the rest of this entry &raquo;</a></p>
+									</div>
+			</div><!-- close post_class -->
+		
+					<div id="post-1089" class="post-1089 post type-post status-publish format-standard hentry category-poetry category-re-issue tag-naomi-woddis tag-re-issue">
+				<h2 class="entry-title"><a href="https://cursesandriots.wordpress.com/2015/09/16/re-issue-how-still-a-body/" rel="bookmark">Re Issue &#8211; How Still a Body</a></h2>
+				<p class="date">September 16, 2015 <a href="https://cursesandriots.wordpress.com/2015/09/16/re-issue-how-still-a-body/#respond"><span class="sep">&sect;</span> <span class="commentcount">Leave a comment</span></a></p>
+
+				<div class="entry">
+					<p>How Still a Body</p>
+<p><em>I grew up in Nigeria with my grandmother.</em><br />
+<em>One dawn two armed robbers were caught</em><br />
+<em>in the act. Local people set on them, beating</em><br />
+<em>them with whatever came to hand.</em></p>
+<p><em>A large crowd gathered around the thieves.</em><br />
+<em>One had survived the beating, blood poured</em><br />
+<em>into his eye. In a deep gutter, the other</em><br />
+<em>robber lay, his body bloated from the heat.</em></p>
+<p><em>And then I knew this is how still a body<br />
+looks when it is dead. Today I heard</em><br />
+<em>that in Urdu, the word for yesterday</em><br />
+<em>is the same as the word for tomorrow.</em></p>
+<p><em>And I panicked at the thought because</em><br />
+<em>I could not imagine what my world would be like</em><br />
+<em>if the words for then and now were the same.</em><br />
+<em>Twenty years have passed since I saw</em></p>
+<p><em>that stranger’s corpse. I keep walking this earth</em><br />
+<em>hoping that home’s door will open up to me.</em><br />
+<em>These words draw a circle leading me back</em><br />
+<em>to my grandmother’s house; a ceaseless dying. </em></p>
+<p>© Copyright Naomi Woddis 2008</p>
+<p>Inspired and taken from answers to the the following questions:</p>
+<p>What image illustrates the true nature of time ?<br />
+Describe the first time you saw another person’s blood ?<br />
+What does the word home mean to you ?</p>
+<p> <a href="https://cursesandriots.wordpress.com/2015/09/16/re-issue-how-still-a-body/#more-1089" class="more-link">&laquo; Read the rest of this entry &raquo;</a></p>
+									</div>
+			</div><!-- close post_class -->
+		
+					<div id="post-1083" class="post-1083 post type-post status-publish format-standard hentry category-poetry category-re-issue tag-naomi-woddis tag-peter-pan">
+				<h2 class="entry-title"><a href="https://cursesandriots.wordpress.com/2015/09/15/re-issue-peter-pan-loses-his-ability-to-fly/" rel="bookmark">Re Issue &#8211; Peter Pan Loses his Ability to Fly</a></h2>
+				<p class="date">September 15, 2015 <a href="https://cursesandriots.wordpress.com/2015/09/15/re-issue-peter-pan-loses-his-ability-to-fly/#comments">&sect; <span class="commentcount">2 Comments</span></a></p>
+
+				<div class="entry">
+					<p><em>Peter Pan Loses his Ability to Fly</em></p>
+<p><em> My parents left me</em><br />
+<em> to defend myself with only sticks</em><br />
+<em> and a few bad words.</em><br />
+<em> I open my milk-tooth mouth,</em><br />
+<em> I&#8217;ve not even the jaw to bite.</em></p>
+<p><em> The inside of me is dust. I want</em><br />
+<em> good fortune to stroke me</em><br />
+<em> with a mother&#8217;s bed-time touch.</em><br />
+<em> I keep waiting.</em></p>
+<p><em> My dreams are full of ghouls,</em><br />
+<em> angry fang-tooth dogs, and dark</em><br />
+<em> corridors lit by just one flame.</em></p>
+<p><em> If only I knew good things, then</em><br />
+<em> my cottoned feet would lift</em><br />
+<em> from the rubble of the earth,</em><br />
+<em> the split and splintered timber.</em></p>
+<p><em> If I was happy, and not scared</em><br />
+<em> I would rise like a bird</em><br />
+<em> the island below my kingdom</em><br />
+<em> and me, king for a day.</em></p>
+									</div>
+			</div><!-- close post_class -->
+		
+					<div id="post-1078" class="post-1078 post type-post status-publish format-standard hentry category-re-issue tag-dan-wesker tag-naomi-woddis">
+				<h2 class="entry-title"><a href="https://cursesandriots.wordpress.com/2015/09/15/re-issue-jagged/" rel="bookmark">Re Issue  &#8211; Jagged</a></h2>
+				<p class="date">September 15, 2015 <a href="https://cursesandriots.wordpress.com/2015/09/15/re-issue-jagged/#respond"><span class="sep">&sect;</span> <span class="commentcount">Leave a comment</span></a></p>
+
+				<div class="entry">
+					<p><a href="https://cursesandriots.files.wordpress.com/2015/09/plant-in-bottle3.jpg"><img class="alignnone size-medium wp-image-1079" src="https://cursesandriots.files.wordpress.com/2015/09/plant-in-bottle3.jpg?w=287&#038;h=300" alt="plant-in-bottle3" width="287" height="300" /></a></p>
+<p><strong><a href="http://itchykoo.com/itchy_en.html">Photograph – Copyright Dan Wesker 2009</a></strong></p>
+<p><em><strong>Jagged</strong></em></p>
+<p><em>Today I saw them both</em><br />
+<em> in a photograph. Him</em><br />
+<em> the new king, back</em><br />
+<em> resting against</em><br />
+<em> a hard won throne.</em></p>
+<p><em>Her face cross-hatched</em><br />
+<em> with worry, wearing</em><br />
+<em> pretty pink eye-shadow</em><br />
+<em> and a smile meant</em><br />
+<em> only for pictures.</em></p>
+<p><em>I still have the bouquet,</em><br />
+<em> hardened to darkness,</em><br />
+<em> its shadow jagged</em><br />
+<em> as a dancer. Red</em><br />
+<em> as the cry of first sex.</em></p>
+<p><strong><br />
+<a href="http://poetrymosaic.wordpress.com/">Poem – Copyright Naomi Woddis 2009</a></strong></p>
+									</div>
+			</div><!-- close post_class -->
+		
+					<div id="post-1073" class="post-1073 post type-post status-publish format-standard hentry category-re-issue tag-collage-poetry tag-naomi-woddis tag-poetry-mosaic">
+				<h2 class="entry-title"><a href="https://cursesandriots.wordpress.com/2015/09/15/re-issue-an-introduction/" rel="bookmark">Re Issue &#8211; an introduction.</a></h2>
+				<p class="date">September 15, 2015 <a href="https://cursesandriots.wordpress.com/2015/09/15/re-issue-an-introduction/#comments">&sect; <span class="commentcount">4 Comments</span></a></p>
+
+				<div class="entry">
+					<p>It&#8217;s been a while since I&#8217;ve written any poetry but I thought I would go through two of my old projects <a href="https://poetrymosaic.wordpress.com">Poetry Mosaic</a> and <a href="https://momentsofchaosandnostalgia.wordpress.com">Moments of Chaos and Nostalgia</a> (a poetry/photography project with photographer <a href="http://www.saatchiart.com/www.itchykoo.com">Dan Weske</a>r) and in addition to this some of my unpublished work and share the poems here in an online collection called <strong><a href="https://cursesandriots.wordpress.com/category/re-issue/">Re Issue</a>.</strong></p>
+<p>I&#8217;m still very proud of <strong>Poetry Mosaic</strong>. This is how I described it on the blog initially.</p>
+<p><em>Poetry Mosaic is the online poetry invention of London based poet, <strong>Naomi Woddis</strong>. I find that my writing process is changing rapidly and I am using found text in my work. Sometimes I will do an extended interview and this will form the basis or springboard for a poem. I mix some extracts of the conversation with my own writing. </em></p>
+<p><em>Poetry Mosaic goes a step further. The responses to specific questions will be the starting point for the poetry on this site. Short phrases from these replies will be cut and pasted with longer pieces of my own work and the finished poems will be posted on the Poetry Mosaic blog. Each respondent will be fully acknowledged at the end of each poem on the Poetry Mosaic blog. I will retain sole copyright for the poem that I create out of the responses.</em></p>
+<p>Sometimes I created the poem using only the replies and at other times I would include my own contributions to the final piece.</p>
+<p>&#8212;</p>
+<p><em><strong>On Time</strong></em></p>
+<p><em>The oldest knew the mountain.</em><br />
+<em>As children they had</em><br />
+<em>all the time in the world,</em></p>
+<p><em>watched the hourglass empty,</em><br />
+<em>caught in the glint</em><br />
+<em>of the rising sun’s eye.</em></p>
+<p><em>*</em></p>
+<p><em>My greying hair, the shrinking</em><br />
+<em>human brain, skin products</em><br />
+<em>gathering on the bathroom shelf.</em></p>
+<p><em>An antelope runs</em><br />
+<em>across a lonely desert,</em><br />
+<em>its shadow speeding.</em></p>
+<p><em>*</em></p>
+<p><em>Tornado time whirls.</em><br />
+<em>Monks meditate on stillness</em><br />
+<em>at the fulcrum.</em></p>
+<p><em>Everything that has happened</em><br />
+<em>will happen.</em><br />
+<em>It is always Now.</em></p>
+<p>© Copyright Naomi Woddis 2008</p>
+<p> <a href="https://cursesandriots.wordpress.com/2015/09/15/re-issue-an-introduction/#more-1073" class="more-link">&laquo; Read the rest of this entry &raquo;</a></p>
+									</div>
+			</div><!-- close post_class -->
+		
+					<div id="post-1049" class="post-1049 post type-post status-publish format-standard hentry category-living-differently-project category-photography tag-khalik-allah tag-living-differently tag-therapeutic-relationship">
+				<h2 class="entry-title"><a href="https://cursesandriots.wordpress.com/2014/08/05/living-differently-nothing-is-beautiful/" rel="bookmark">Living Differently &#8211; Nothing is Beautiful</a></h2>
+				<p class="date">August 5, 2014 <a href="https://cursesandriots.wordpress.com/2014/08/05/living-differently-nothing-is-beautiful/#comments">&sect; <span class="commentcount">10 Comments</span></a></p>
+
+				<div class="entry">
+					<p>A week ago my solid, kind and adored therapist finally retired. I&#8217;m still numb from the ending of what has become one of my most important relationships to date. Every therapeutic relationship is different and ours evolved in to something far away from text books and theories and in to something imaginative, philosophical, supportive and ultimately saved my life more than once.  A few weeks before our final session we were talking about photography. I mentioned the work of <a href="https://www.flickr.com/photos/71883347@N07/">Khalik Allah</a>, whom I had only just discovered. I broke down in tears recalling the images of these New Yorkers &#8211; tough, broken and on the edge of survival. What struck me most is their vibrance. Yes, there&#8217;s suffering here, addiction and poverty but there&#8217;s also tenacity. That the photographs are in colour, deep saturated flourishing colour, spoke to me about the vitality of the human spirit. And that&#8217;s why I wept.</p>
+<p>&#8216;All photography captures life&#8217; I said &#8216;Even if it&#8217;s no longer there, it&#8217;s the evidence that it has been. From the sky at night to a lamp on a table, to the people in the photographs, it&#8217;s all about life. And because it&#8217;s all about life it means that it&#8217;s about beauty.&#8217; I thought about the photographic projects I&#8217;ve assigned myself since becoming ill &#8211; from taking pictures of the small and mundane, snapping the shutter at the same subject matter over days or weeks to my most recent project <a href="https://www.flickr.com/photos/naomiwoddis/sets/72157645286342455/">&#8216;The View From Here&#8217; </a> (taken entirely from my bed during this recent crash). &#8216;Even nothing is beautiful&#8217; I said.</p>
+<p>My therapist smiled and repeated &#8216;Nothing is beautiful&#8217; and in that moment we acknowledged both meanings inherent in this statement. The way I had originally meant it &#8211; <em>even </em>nothing is beautiful &#8211; and also remembering the despair I had taken to many session where I would arrive joyless and sad believing that there was no beauty in myself, or the world that I had access to. Nothing is beautiful, not this moment or any moment to come. But now my wish is that by stumbling on these words I can find moments, however short, where both the hope and hopelessness can live side by side. And that there will always be colour even in the most brutal of times.</p>
+<p><a href="https://cursesandriots.files.wordpress.com/2014/08/blooming.jpg"><img class="aligncenter size-full wp-image-1056" src="https://cursesandriots.files.wordpress.com/2014/08/blooming.jpg?w=480&#038;h=722" alt="Blooming" width="480" height="722" /></a></p>
+									</div>
+			</div><!-- close post_class -->
+		
+		<div class="navigation">
+			<p class="alignleft"><a href="https://cursesandriots.wordpress.com/page/2/" >&laquo; Older Entries</a></p>
+			<p class="alignright"></p>
+		</div>
+
+	
+</div> <!-- close entry-content -->
+
+	<div id="supplementary">
+		<div class="meta">
+
+					<ul>
+				<li id="rss_links-2" class="widget widget_rss_links"><p class="size-medium"><a class="feed-image-link" href="https://cursesandriots.wordpress.com/feed/" title="Subscribe to Posts"><img src="https://cursesandriots.wordpress.com/i/rss/orange-medium.png?m=1391188133g" alt="RSS Feed" /></a>&nbsp;<a href="https://cursesandriots.wordpress.com/feed/" title="Subscribe to Posts">RSS - Posts</a></p>
+</li>
+<li id="blog_subscription-3" class="widget widget_blog_subscription"><h2 class="widgettitle"><label for="subscribe-field">Follow Curses and Riots via Email</label></h2>
+
+				<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="subscribe-blog">
+											<p>Join 928 other followers</p>
+						<p><input type="text" name="email" style="width: 95%; padding: 1px 2px" placeholder="Enter your email address" value="" id="subscribe-field"/></p>
+					
+					<p>
+						<input type="hidden" name="action" value="subscribe"/>
+						<input type="hidden" name="blog_id" value="1262371"/>
+						<input type="hidden" name="source" value="https://cursesandriots.wordpress.com/"/>
+						<input type="hidden" name="sub-type" value="widget"/>
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-3" />
+						<input type="hidden" id="_wpnonce" name="_wpnonce" value="c0d0465873" />						<input type="submit" value="Follow" />
+					</p>
+				</form>
+			
+</li>
+		<li id="recent-posts-3" class="widget widget_recent_entries">		<h2 class="widgettitle">Recent Posts</h2>
+		<ul>
+					<li>
+				<a href="https://cursesandriots.wordpress.com/2015/09/16/re-issue-what-a-dog-sees/">Re Issue &#8211; What a Dog Sees</a>
+						</li>
+					<li>
+				<a href="https://cursesandriots.wordpress.com/2015/09/16/thumbing-the-gelt/">Re Issue &#8211; Thumbing the Gelt</a>
+						</li>
+					<li>
+				<a href="https://cursesandriots.wordpress.com/2015/09/16/re-issue-how-still-a-body/">Re Issue &#8211; How Still a Body</a>
+						</li>
+					<li>
+				<a href="https://cursesandriots.wordpress.com/2015/09/15/re-issue-peter-pan-loses-his-ability-to-fly/">Re Issue &#8211; Peter Pan Loses his Ability to Fly</a>
+						</li>
+					<li>
+				<a href="https://cursesandriots.wordpress.com/2015/09/15/re-issue-jagged/">Re Issue  &#8211; Jagged</a>
+						</li>
+				</ul>
+		</li>
+		<li id="categories-1" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+		<ul>
+	<li class="cat-item cat-item-924"><a href="https://cursesandriots.wordpress.com/category/events/" >Events</a>
+</li>
+	<li class="cat-item cat-item-831"><a href="https://cursesandriots.wordpress.com/category/interviews/" >Interviews</a>
+</li>
+	<li class="cat-item cat-item-94525187"><a href="https://cursesandriots.wordpress.com/category/living-differently-project/" >Living Differently Project</a>
+</li>
+	<li class="cat-item cat-item-68933"><a href="https://cursesandriots.wordpress.com/category/other-lives/" >Other Lives</a>
+</li>
+	<li class="cat-item cat-item-187434"><a href="https://cursesandriots.wordpress.com/category/personal-journey/" >Personal Journey</a>
+</li>
+	<li class="cat-item cat-item-436"><a href="https://cursesandriots.wordpress.com/category/photography/" >Photography</a>
+</li>
+	<li class="cat-item cat-item-87903870"><a href="https://cursesandriots.wordpress.com/category/picture-this-project/" >Picture This Project</a>
+</li>
+	<li class="cat-item cat-item-422"><a href="https://cursesandriots.wordpress.com/category/poetry/" >Poetry</a>
+</li>
+	<li class="cat-item cat-item-275"><a href="https://cursesandriots.wordpress.com/category/radio/" >Radio</a>
+</li>
+	<li class="cat-item cat-item-1163789"><a href="https://cursesandriots.wordpress.com/category/re-issue/" >Re Issue</a>
+</li>
+	<li class="cat-item cat-item-442"><a href="https://cursesandriots.wordpress.com/category/recommendations/" >Recommendations</a>
+</li>
+	<li class="cat-item cat-item-309"><a href="https://cursesandriots.wordpress.com/category/reviews/" >Reviews</a>
+</li>
+	<li class="cat-item cat-item-200"><a href="https://cursesandriots.wordpress.com/category/travel/" >Travel</a>
+</li>
+		</ul>
+</li>
+<li id="facebook-likebox-3" class="widget widget_facebook_likebox"><h2 class="widgettitle"><a href="https://www.facebook.com/pages/Naomi-Woddis-Photography/234885179213">Naomi Woddis Photography</a></h2>
+		<div id="fb-root"></div>
+		<div class="fb-page" data-href="https://www.facebook.com/pages/Naomi-Woddis-Photography/234885179213" data-width="200"  data-height="130" data-hide-cover="false" data-show-facepile="false" data-show-posts="false">
+		<div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/pages/Naomi-Woddis-Photography/234885179213"><a href="https://www.facebook.com/pages/Naomi-Woddis-Photography/234885179213">Naomi Woddis Photography</a></blockquote></div>
+		</div>
+		<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=249643311490&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+		</li>
+<li id="twitter-2" class="widget widget_twitter"><h2 class="widgettitle"><a href='http://twitter.com/NaomiWoddis'>Twitter</a></h2>
+<ul class='tweets'></ul><a href="http://twitter.com/NaomiWoddis"  class='twitter-follow-button' data-show-count='false' data-link-color='#000000' data-text-color='#222222'>Follow @NaomiWoddis</a></li>
+<li id="linkcat-1356" class="widget widget_links"><h2 class="widgettitle">Blogroll</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://alisonwhitecreative.wordpress.com/">Alison White</a></li>
+<li><a href="http://www.blaglady.com/">Blag Lady</a></li>
+<li><a href="http://cathdrake.wordpress.com/">Cath Drake</a></li>
+<li><a href="https://cursesandriots.wordpress.com">Curses and Riots</a></li>
+<li><a href="http://www.heavenlyhealer.blogspot.com/">Heavenly Healer</a></li>
+<li><a href="http://www.jsamlarose.com/">Jacob Sam-La Rose</a></li>
+<li><a href="http://jacquelinesaphra.net/">Jaqueline Saphra</a></li>
+<li><a href="http://jascribble.wordpress.com/">Jascribble</a></li>
+<li><a href="http://www.metaroar.com">Metaroar</a></li>
+<li><a href="http://miriamnash.com/">Miriam Nash</a></li>
+<li><a href="http://www.myspace.com/naomiwoddis">MySpace</a></li>
+<li><a href="http://opennotebooks.co.uk/">Open Notebooks</a></li>
+<li><a href="http://peonymoon.wordpress.com/">Peony Moon</a></li>
+<li><a href="http://poetrymosaic.wordpress.com">Poetry Mosaic</a></li>
+<li><a href="http://thisisyogic.wordpress.com">this is yogic</a></li>
+<li><a href="http://yemisiblake.co.uk">Yemisi Blake</a></li>
+
+	</ul>
+</li>
+
+			</ul>
+
+		
+	</div> <!-- close meta -->
+	</div> <!-- close supplementary -->
+
+</div> <!-- close content -->
+<div id="footer">
+
+	<div id="footer-contact">
+		<p><a href="https://wordpress.com/?ref=footer_website">Create a free website or blog at WordPress.com.</a></p>
+		<p><a href="https://wordpress.com/themes/oulipo/" title="Learn more about this theme">The Oulipo Theme</a>.</p>
+	</div>
+
+</div>
+
+</div> <!-- close wrapper -->
+		<script type="text/javascript">
+		//<![CDATA[
+		var infiniteScroll = {"settings":{"id":"entry-content","ajaxurl":"https:\/\/cursesandriots.wordpress.com\/?infinity=scrolling","type":"scroll","wrapper":true,"wrapper_class":"infinite-wrap","footer":true,"click_handle":"1","text":"Older posts","totop":"Scroll back to top","currentday":"16.09.15","order":"DESC","scripts":[],"styles":[],"google_analytics":false,"offset":0,"history":{"host":"cursesandriots.wordpress.com","path":"\/page\/%d\/","use_trailing_slashes":true,"parameters":""},"query_args":{"error":"","m":"","p":0,"post_parent":"","subpost":"","subpost_id":"","attachment":"","attachment_id":0,"name":"","static":"","pagename":"","page_id":0,"second":"","minute":"","hour":"","day":0,"monthnum":0,"year":0,"w":0,"category_name":"","tag":"","cat":"","tag_id":"","author":"","author_name":"","feed":"","tb":"","paged":0,"comments_popup":"","meta_key":"","meta_value":"","preview":"","s":"","sentence":"","title":"","fields":"","menu_order":"","category__in":[],"category__not_in":[],"category__and":[],"post__in":[],"post__not_in":[],"post_name__in":[],"tag__in":[],"tag__not_in":[],"tag__and":[],"tag_slug__in":[],"tag_slug__and":[],"post_parent__in":[],"post_parent__not_in":[],"author__in":[],"author__not_in":[],"posts_per_page":7,"ignore_sticky_posts":false,"suppress_filters":false,"cache_results":false,"update_post_term_cache":true,"update_post_meta_cache":true,"post_type":"","nopaging":false,"comments_per_page":"50","no_found_rows":false,"order":"DESC"},"last_post_date":"2014-08-05 20:23:01","stats":"blog=1262371&v=wpcom&tz=0&user_id=0&subd=cursesandriots&x_pagetype=infinite"}};
+		//]]>
+		</script>
+		<!-- wpcom_wp_footer -->
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201612y'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781g'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/cursesandriots.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/cursesandriots.wordpress.com\/wp-login.php?action=logout&_wpnonce=a50c777a20","homeURL":"https:\/\/cursesandriots.wordpress.com\/","postID":"1096","gravDefault":"blank","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"","userIsLoggedIn":"","isJetpack":"0","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1424115551j'></script>
+		<div id="infinite-footer">
+			<div class="container">
+				<div class="blog-info">
+					<a id="infinity-blog-title" href="https://cursesandriots.wordpress.com/" rel="home">
+						Curses and Riots					</a>
+				</div>
+				<div class="blog-credits">
+					<a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com.</a> <a href="https://wordpress.com/themes/oulipo/" title="Learn more about this theme">The Oulipo Theme</a>.				</div>
+			</div>
+		</div><!-- #infinite-footer -->
+		
+	<div id="bit" class="loggedout-follow-normal">
+		<a class="bsub" href="javascript:void(0)"><span id='bsub-text'>Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow &ldquo;Curses and Riots&rdquo;</label></h3>
+
+			<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+						<p class="bit-follow-count">Join 928 other followers</p>
+			<p><input type="email" name="email" placeholder="Enter your email address" id="loggedout-follow-field"/></p>
+
+			<input type="hidden" name="action" value="subscribe"/>
+			<input type="hidden" name="blog_id" value="1262371"/>
+			<input type="hidden" name="source" value="https://cursesandriots.wordpress.com/"/>
+			<input type="hidden" name="sub-type" value="loggedout-follow"/>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="c0d0465873" /><input type="hidden" name="_wp_http_referer" value="/" />
+			<p id='bsub-subscribe-button'><input type="submit" value="Sign me up" /></p>
+			</form>
+					<div id='bsub-credit'><a href="https://wordpress.com/?ref=lof">Build a website with WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+
+	<div id="carousel-reblog-box">
+		<form action="" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="" class="cancel">Cancel</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="1262371" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://cursesandriots.wordpress.com" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="Curses and Riots" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="dab6e1976e" /><input type="hidden" name="_wp_http_referer" value="/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+<link rel='stylesheet' id='all-css-0' href='https://s2.wp.com/_static/??/wp-content/mu-plugins/widgets/facebook-likebox/style.css,/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1438295886j' type='text/css' media='all' />
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825g&#038;ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='all-css-2' href='https://s0.wp.com/wp-content/mu-plugins/tiled-gallery/tiled-gallery.css?m=1443731146g' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackSlideshowSettings = {"spinner":"https:\/\/s1.wp.com\/wp-content\/mu-plugins\/shortcodes\/img\/slideshow-loader.gif","blog_id":"1262371","blog_subdomain":"cursesandriots","user_id":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JetpackEmojiSettings = {"base_url":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/emoji\/twemoji\/"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/cursesandriots.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"c1e1d9ef2a","display_exif":"1","display_geo":"1","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/cursesandriots.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcursesandriots.wordpress.com%2F2015%2F09%2F16%2Fre-issue-what-a-dog-sees%2F","local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=1262371&v=wpcom&tz=0&user_id=0&subd=cursesandriots","is_public":"1","reblog_enabled":""};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/cursesandriots.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"c1e1d9ef2a","display_exif":"1","display_geo":"1","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/cursesandriots.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fcursesandriots.wordpress.com%2F2015%2F09%2F16%2Fre-issue-what-a-dog-sees%2F","local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add your thoughts here... (optional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=1262371&v=wpcom&tz=0&user_id=0&subd=cursesandriots","is_public":"1","reblog_enabled":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJyNj90OgjAMhV/IsZig4oXxWbAU2RzbXDsmby+SQMQL5Kp/5zttZfICnGW0LDXJCjsF6F+Zpp38GrVReBPvypJUtlZWcT8nK1pqXGBwFdLHXD8jhj6DHgxuhsioIWtcEnN/hcXWaSU5LeJfvUb2JTzENvVCpSyYOJ2aanfTCPxrMfHd8IqTJRHyCIy1D0i0shTK4CKhma+cGgNzbS/7/HA6H/OiKPQboxutTA=='></script>
+<script type='text/javascript' src='https://platform.twitter.com/widgets.js?ver=20111117'></script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyVy7EOQEAMANAfUnViYBDfgmsupepyivh7VpMY3/DwjDCuaqSGyw5R9sC6oZ1sRgkG6cd54OQhMqHSQYnUs4Z82jL8c+P3YyEPoRehdL31rG5pXVXUTVO70k03DU5D1g=='></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "cursesandriots.wordpress.com";
+	</script>
+	<script type="text/javascript" src="https://s.skimresources.com/js/725X1342.skimlinks.js"></script><script type="text/javascript">
+			jQuery.extend( infiniteScroll.settings.scripts, ["jquery","jquery-core","jquery-migrate","mobile-useragent-info","postmessage","jquery_inview","jetpack_resize","loggedout-subscribe","spin","jquery.spin","grofiles-cards","wpgroho","jquery.autoresize","highlander-comments","devicepx","the-neverending-homepage","jquery-cycle","jetpack-slideshow","twemoji","jetpack-emoji","jetpack-emoji-init","swfobject","videopress","jetpack-carousel","twitter-widgets","twitter-widgets-infinity","twitter-widgets-pending","tiled-gallery"] );
+			jQuery.extend( infiniteScroll.settings.styles, ["smileyproject","jetpack_likes","loggedout-subscribe","the-neverending-homepage","infinity-oulipo","jetpack-slideshow","wpcom-core-compat-playlist-styles","mp6hacks","wpcom-bbpress2-staff-css","oulipo","jetpack-emoji-css","noticons","geo-location-flair","reblogging","a8c-global-print","h4-global","highlander-comments","highlander-comments-ie7","jetpack_facebook_likebox","jetpack-carousel","tiled-gallery","jetpack-carousel-ie8fix"] );
+		</script><script src="//stats.wp.com/w.js?51" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'1262371','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'1262371','v':'wpcom','tz':'0','user_id':'0','subd':'cursesandriots'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1LVmwrVi5vQS5fVFtfdHBbPyw1VXIrU3hWLHhzVndTdktBX0ddJnpXRjVaOTd6fj1YMX4ydzR6MmRCYnxkNmcrRH5YNFl5cHM3NFJ+LDdlVmFCUj9bd0V2a3JRJk1UTXlEVGxBS1YyTWxDUHlKVl10d0ElW3NSSi8vd1hsMWNBL21BX29BUXhReGUuRmFdPS41SjUuQmdbMkd2UWRyLSZhOUxjR34wUl9nSDNjdV1bTmZda3QlWjlDUXdPLEhQMCVBVlJrdGIsP091TnlVMGJBcF9FRFRHbltINm9aUmxlK1RyOEgweTFXSnJRSCV5NW03LWFaRjRXX11vMV0zUmtJV3lWXUJ4YWZZb0d3OVNNeS00cUdhL211TnhWalo9NThKNGx1'}]);
+_stq.push([ 'clickTrackerInit', '1262371', '0' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script></body>
+</html>

@@ -1,0 +1,1590 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="sixapart-standard">
+<head>
+<link rel="shortcut icon" href="http://www.antweb.org/images/favicon.ico" >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="imagetoolbar" content="no" />    
+    <title>Ant Blog: Search Results</title>
+    <meta name="generator" content="Movable Type Pro 4.32-en" />
+    
+
+
+    
+        
+        
+        
+        
+        
+        
+
+        <link rel="stylesheet" href="http://www.antweb.org/antblog/styles.css" type="text/css" />
+<link rel="stylesheet" href="http://www.antweb.org/antblog/antblog_style.css" type="text/css" />
+
+
+        <link rel="alternate" type="application/atom+xml" title="Atom" href="http://www.antweb.org/antblog/atom.xml" />
+        <link rel="start" href="http://www.antweb.org/antblog/" title="Home" />
+        <script type="text/javascript" src="http://www.antweb.org/antblog/mt.js"></script>
+        
+    
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var user = {"is_banned":0,"is_authenticated":0,"can_comment":0,"can_post":0,"is_anonymous":1,"is_trusted":0};
+
+
+/* ]]> */
+</script>
+
+    
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    mtAttachEvent('load', mtUpdateScores);
+    mtAttachEvent('usersignin', mtUpdateScores);
+    /* ]]> */
+    </script>
+</head>
+<body id="mt-community-blog" class="mt-search-results layout-wt">
+<div align="center">
+<div class="layout">
+<div id="">
+        
+<div id="header">
+    <div class="header_logo">
+                    
+<a href="http://www.antweb.org/antblog/" accesskey="1"><img src="http://www.antweb.org/antblog/images/antblog_logo.png" width="330" height="95" alt="Ant Blog" title="Ant Blog" /></a>    
+
+    </div>
+        <div class="header_navigation">
+                            <span id="signin-widget-content" class="widget-content" style="color:#fff;"></span>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+function mtUpdateSignInWidget(u) {
+    var separator = '&nbsp;&nbsp;|&nbsp;&nbsp;';
+    var el = document.getElementById('signin-widget-content');
+    var content = '';
+    if (!el) return;
+    if (u) {
+        if (u && u.is_authenticated) {
+            user = u;
+            mtSaveUser();
+        } else {
+            // user really isn't logged in; so let's do this!
+            return mtSignIn();
+        }
+    } else {
+        u = mtGetUser();
+    }
+    if (u && u.name) {
+        var url;
+        if (u.is_authenticated) {
+            if (u.is_author) {
+                url = 'http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&blog_id=1';
+                url += '&static=' + encodeURIComponent( location.href );
+            } else {
+                url = u.url;
+            }
+        } else if (u.url) {
+            url = u.url;
+        } else {
+            url = null;
+        }
+        if (url)
+            content += 'You are signed in as <a href="' + url + '">' + u.name + '</a>';
+        else
+            content += 'You are signed in as ' + u.name + '';
+        if (u.is_author)
+            content += separator + '<a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=edit&blog_id=1&return_to=' + encodeURIComponent(document.URL) + '">Edit profile</a>';
+        
+        content += separator + '<a href="javascript:void(0)" onclick="return mtSignOutOnClick()">Sign out</a>';
+        
+    } else if (u && u.is_banned) {
+        content = 'You do not have permission to sign in to this blog.';
+    } else {
+        content = '<a href="javascript:void(0)" onclick="return mtSignInOnClick(\'signin-widget-content\')">Sign In</a>';
+        
+        
+        content += separator + 'Not a member? <a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=register&blog_id=1&return_to=' + encodeURIComponent(document.URL) + '">Register</a>';
+        
+        
+    }
+    el.innerHTML = content;
+}
+mtAttachEvent('usersignin', mtUpdateSignInWidget);
+mtUpdateSignInWidget();
+/* ]]> */
+</script>
+
+ | <a href="http://www.antweb.org/">Back to AntWeb</a>
+        </div>                    
+    </div>
+</div>
+<div class="nav_bg">
+<div id="nav">
+    <div class="left">
+        <a href="http://www.antweb.org/antblog/">Home</a>&nbsp;&nbsp;&nbsp;
+        <a href="http://www.antweb.org/antblog/archives.html">Archives</a>
+
+
+
+
+
+    </div>
+</div>
+    <div class="header_search">
+        &nbsp;<form method="get" action="http://www.antweb.org/cgi-bin/mt/mt-search.cgi">
+<strong>Search for</strong> 
+        <input type="hidden" name="IncludeBlogs" value="1" />
+
+        <input type="hidden" name="limit" value="20" />
+        <input id="search" class="header_search_input" name="search" value="carpenter ants" />
+        <input type="submit" class="header_search_submit" value="Go &#187;" />
+ </form>
+
+
+    </div>
+</div>
+            <div id="content" class="page_bg">
+                <div id="content-inner">
+                    <div id="alpha">
+                        <div id="alpha-inner">
+
+
+
+
+  
+    
+        
+<div id="search-results">
+    <span id="current-page" class="hidden">1</span>
+    <h1 id="page-title" class="search-results-header">
+        
+        
+        Results tagged &ldquo;carpenter ants&rdquo;
+        
+    </h1>
+    <div class="search-results-container autopagerize_page_element">
+        
+    <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://www.antweb.org/antblog/2014/06/my-cat-found-this-large-black-ant-rogers-hamilton-ontario-canada-2.html"
+    trackback:ping="http://www.antweb.org/cgi-bin/mt/mt-tb.cgi/290"
+    dc:title="My cat found this large black ant (Rogers, Hamilton, Ontario, Canada)"
+    dc:identifier="http://www.antweb.org/antblog/2014/06/my-cat-found-this-large-black-ant-rogers-hamilton-ontario-canada-2.html"
+    dc:subject=""
+    dc:description="Hi guys, Im from Hamilton Ontario in Canada. My cat found this ant walking up the wall in my kitchen. I apologise for the goopy mess but when she caught it I smucked it afraid with the chompers on that..."
+    dc:creator="AntAsk"
+    dc:date="2014-06-04T06:09:36-08:00" />
+</rdf:RDF>
+-->
+
+<div id="entry-294" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2014/06/my-cat-found-this-large-black-ant-rogers-hamilton-ontario-canada-2.html" rel="bookmark">My cat found this large black ant (Rogers, Hamilton, Ontario, Canada)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2014-06-04T06:09:36-08:00">June  4, 2014  6:09 AM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>Hi guys, </p>
+
+<p>Im from Hamilton Ontario in Canada. My cat found this ant walking up the wall in my kitchen. I apologise for the goopy mess but when she caught it I smucked it afraid with the chompers on that thing that she'd get bit!!! Ive never seen an ant this big and at first thought it was a wasp without wings albeit a bit smaller than a wasp. Can you tell me a bit about it please?? Thanks<br />
+<a target='new' href="http://www.antweb.org/antblog/assets_c/2014/06/carpenter_ant_may2014_smaller-399.html" onclick="window.open('http://www.antweb.org/antblog/assets_c/2014/06/carpenter_ant_may2014_smaller-399.html','popup','width=288,height=477,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false"><img src="http://www.antweb.org/antblog/assets_c/2014/06/carpenter_ant_may2014_smaller-thumb-288x477-399.jpeg" width="288" height="477" alt="carpenter_ant_may2014_smaller.jpeg" class="mt-image-center" style="text-align: center; display: block; margin: 0 auto 20px;" /></a></p>
+
+<p>***********************<br />
+Dear Rogers:</p>
+
+<p>This is a recently mated female (would have gone on to become the queen/mother/reproductive center of a new colony) of what we in the ant biz call <em><a target='new' href="http://www.antweb.org/getComparison.do?rank=species&name=pennsylvanicus&genus=camponotus&project=pennsylvaniaants&pr=d">Camponotus pennsylvanicus</a></em>, a.k.a. Eastern Black Carpenter Ant. </p>
+
+<p>This is a very common ant in the deciduous forests of eastern North America, and also well adapted to the human habitat of parks, yards, and urban green spaces. Occasionally, they inhabit the wood of buildings that has been damaged by water and begun to soften, but their preferred nesting space is in a stump or in dead limbs or trunk of a living tree. They are generalist feeders, preying on other insects, and eating naturally occurring sweets such as fallen fruit, nectar from glands or secreted by glands on other parts of plants, or honeydew, a sweet waste product of sap-sucking insects. In the human habitat, they have the additional resources of picnic scraps, candy wrappers, and such. Though they forage around the clock, their peak activity is in the warmer, early night hours. </p>
+
+<p>Most ants start new colonies by means of a queen such as this one raising her first brood of a few, small worker ants, unaided and often without eating, while feeding the larvae a glandular secretion (analogous to the milk of mammals, but produced by salivary glands). During this period of weeks to months of single motherhood, the young queen lives off the abundant body fat (the whitish goo of your squished individual) and the re-absorbed wing muscles that she would never use for flight, following breaking off the wings after her mating flight.</p>
+
+<p>Thanks for writing to the AntBlog,<br />
+James C. Trager & the AntAsk Team</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=ants%20in%20my%20house&amp;limit=20';return false;" rel="tag">ants in my house</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=ants%20in%20your%20home&amp;limit=20';return false;" rel="tag">ants in your home</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=large%20ants&amp;limit=20';return false;" rel="tag">large ants</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    
+        
+    <div id="entry-292" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2014/06/my-cat-found-this-large-black-ant-rogers-hamilton-ontario-canada.html" rel="bookmark">My cat found this large black ant (Rogers, Hamilton, Ontario, Canada)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2014-06-01T09:19:17-08:00">June  1, 2014  9:19 AM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>Hi guys, </p>
+
+<p>Im from Hamilton Ontario in Canada. My cat found this ant walking up the wall in my kitchen. I apologise for the goopy mess but when she caught it I smucked it afraid with the chompers on that thing that she'd get bit!!! Ive never seen an ant this big and at first thought it was a wasp without wings albeit a bit smaller than a wasp. Can you tell me a bit about it please?? Thanks</p>
+
+<p><br />
+**********************<br />
+Dear Rogers:</p>
+
+<p>This is a recently mated female (would have gone on to become the queen/mother/reproductive center of a new colony) of what we in the ant biz call <em><a target='new' href="http://www.antweb.org/getComparison.do?rank=species&name=pennsylvanicus&genus=camponotus&project=pennsylvaniaants&pr=d">Camponotus pennsylvanicus</a></em>, a.k.a. Eastern Black Carpenter Ant. </p>
+
+<p>This is a very common ant in the deciduous forests of eastern North America, and also well adapted to the human habitat of parks, yards, and urban green spaces. Occasionally, they inhabit the wood of buildings that has been damaged by water and begun to soften, but their preferred nesting space is in a stump or in dead limbs or trunk of a living tree. They are generalist feeders, preying on other insects, and eating naturally occurring sweets such as fallen fruit, nectar from glands or secreted by glands on other parts of plants, or honeydew, a sweet waste product of sap-sucking insects. In the human habitat, they have the additional resources of picnic scraps, candy wrappers, and such. Though they forage around the clock, their peak activity is in the warmer, early night hours. </p>
+
+<p>Most ants start new colonies by means of a queen such as this one raising her first brood of a few, small worker ants, unaided and often without eating, while feeding the larvae a glandular secretion (analogous to the milk of mammals, but produced by salivary glands). During this period of weeks to months of single motherhood, the young queen lives off the abundant body fat (the whitish goo of your squished individual) and the re-absorbed wing muscles that she would never use for flight, following breaking off the wings after her mating flight.</p>
+
+<p>Thanks for writing to the AntBlog,<br />
+James C. Trager & the AntAsk Team<br />
+</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=ants%20in%20my%20house&amp;limit=20';return false;" rel="tag">ants in my house</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=ants%20in%20your%20home&amp;limit=20';return false;" rel="tag">ants in your home</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=black%20ant&amp;limit=20';return false;" rel="tag">black ant</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=large%20ants&amp;limit=20';return false;" rel="tag">large ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=pest%20ants&amp;limit=20';return false;" rel="tag">pest ants</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    
+        
+    <div id="entry-293" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2014/06/my-cat-found-this-large-black-ant-rogers-hamilton-ontario-canada-1.html" rel="bookmark">My cat found this large black ant (Rogers, Hamilton, Ontario, Canada)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2014-06-01T09:19:17-08:00">June  1, 2014  9:19 AM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>Hi guys, </p>
+
+<p>Im from Hamilton Ontario in Canada. My cat found this ant walking up the wall in my kitchen. I apologise for the goopy mess but when she caught it I smucked it afraid with the chompers on that thing that she'd get bit!!! Ive never seen an ant this big and at first thought it was a wasp without wings albeit a bit smaller than a wasp. Can you tell me a bit about it please?? Thanks</p>
+
+<p><br />
+**********************<br />
+Dear Rogers:</p>
+
+<p>This is a recently mated female (would have gone on to become the queen/mother/reproductive center of a new colony) of what we in the ant biz call <em><a target='new' href="http://www.antweb.org/getComparison.do?rank=species&name=pennsylvanicus&genus=camponotus&project=pennsylvaniaants&pr=d">Camponotus pennsylvanicus</a></em>, a.k.a. Eastern Black Carpenter Ant. </p>
+
+<p>This is a very common ant in the deciduous forests of eastern North America, and also well adapted to the human habitat of parks, yards, and urban green spaces. Occasionally, they inhabit the wood of buildings that has been damaged by water and begun to soften, but their preferred nesting space is in a stump or in dead limbs or trunk of a living tree. They are generalist feeders, preying on other insects, and eating naturally occurring sweets such as fallen fruit, nectar from glands or secreted by glands on other parts of plants, or honeydew, a sweet waste product of sap-sucking insects. In the human habitat, they have the additional resources of picnic scraps, candy wrappers, and such. Though they forage around the clock, their peak activity is in the warmer, early night hours. </p>
+
+<p>Most ants start new colonies by means of a queen such as this one raising her first brood of a few, small worker ants, unaided and often without eating, while feeding the larvae a glandular secretion (analogous to the milk of mammals, but produced by salivary glands). During this period of weeks to months of single motherhood, the young queen lives off the abundant body fat (the whitish goo of your squished individual) and the re-absorbed wing muscles that she would never use for flight, following breaking off the wings after her mating flight.</p>
+
+<p>Thanks for writing to the AntBlog,<br />
+James C. Trager & the AntAsk Team<br />
+</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=ants%20in%20my%20house&amp;limit=20';return false;" rel="tag">ants in my house</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=ants%20in%20your%20home&amp;limit=20';return false;" rel="tag">ants in your home</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=black%20ant&amp;limit=20';return false;" rel="tag">black ant</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=large%20ants&amp;limit=20';return false;" rel="tag">large ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=pest%20ants&amp;limit=20';return false;" rel="tag">pest ants</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    
+        
+    <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://www.antweb.org/antblog/2012/06/large-ant-on-hike-matt-lassen-county-california-usa.html"
+    trackback:ping="http://www.antweb.org/cgi-bin/mt/mt-tb.cgi/168"
+    dc:title="Large ant on hike (Matt, Lassen County, California, USA)"
+    dc:identifier="http://www.antweb.org/antblog/2012/06/large-ant-on-hike-matt-lassen-county-california-usa.html"
+    dc:subject="Ask an Ant Expert"
+    dc:description="While hiking in a remote and Primitive forest in Lassen County of northern California I came across one very large ant. All of the ants I had seen earlier that day were large and black. They were approximately 1/2 inch..."
+    dc:creator="AntAsk"
+    dc:date="2012-06-15T18:25:09-08:00" />
+</rdf:RDF>
+-->
+
+<div id="entry-169" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2012/06/large-ant-on-hike-matt-lassen-county-california-usa.html" rel="bookmark">Large ant on hike (Matt, Lassen County, California, USA)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2012-06-15T18:25:09-08:00">June 15, 2012  6:25 PM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>While hiking in a remote and Primitive forest in Lassen County of northern California I came across one very large ant.</p>
+
+<p>All of the ants I had seen earlier that day were large and black. They were approximately 1/2 inch long and very stout.  I hiked several more miles into a truly primitive and rustic area and found a black ant that was at least one inch long.  I thought it must be some sort of queen but it was all alone.  Any idea what it could be be. Could it be a carpenter ant? The trail is not far from the Pacific Rim trail which starts in San Diego and maybe this ant hitched a ride.  I have looked everywhere and it seems that most ants in north America are under 1/2 inch.</p>
+
+<p>I wish I had taken the poor fellow home.  If the ant is unique then I will go back this summer and try and locate him and bring him back for research. If there is one, there is likely more ants.</p>
+
+<p>Your advise is greatly appreciated,</p>
+
+<p>Sincerely,<br />
+Matt</p>
+
+<p>*****<br />
+Matt,</p>
+
+<p>Thank you for contacting AntBlog. </p>
+
+<p>Unfortunately without a photograph it is difficult to say what ant species you observed, but from your description it is not out of the realm of possibilities that you found a queen of the larger ants (likely carpenter ants from the genus <a target='new' href="http://www.antweb.org/description.do?rank=genus&name=camponotus&project=worldants">Camponotus</a>) you saw earlier on your walk.  Queens are often larger than workers and new founding queens can be exploring the local environment to find a suitable new home to start a colony.  </p>
+
+<p>You can see a list and photographs of the ants of California <a target='new' href="http://www.antweb.org/california.jsp">here</a>.  </p>
+
+<p>Best regards,<br />
+Corrie Moreau & the AntAsk Team</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=large%20ants&amp;limit=20';return false;" rel="tag">large ants</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    
+        
+    <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://www.antweb.org/antblog/2011/10/ants-on-tree-with-sticky-black-substance-alan-costa-rica.html"
+    trackback:ping="http://www.antweb.org/cgi-bin/mt/mt-tb.cgi/116"
+    dc:title="Ants on tree with sticky, black substance (Alan, Blackpool, England, but while visiting Costa Rica)"
+    dc:identifier="http://www.antweb.org/antblog/2011/10/ants-on-tree-with-sticky-black-substance-alan-costa-rica.html"
+    dc:subject="Ask an Ant Expert"
+    dc:description="Hi, I was in Corcovado National Park in Costa Rica where I took this photo (sorry about the quality) of what I think is Camponotus sericeiventris. As you can see, the ant is walking over a sticky, black substance with..."
+    dc:creator="AntAsk"
+    dc:date="2011-10-20T11:15:42-08:00" />
+</rdf:RDF>
+-->
+
+<div id="entry-117" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2011/10/ants-on-tree-with-sticky-black-substance-alan-costa-rica.html" rel="bookmark">Ants on tree with sticky, black substance (Alan, Blackpool, England, but while visiting Costa Rica)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2011-10-20T11:15:42-08:00">October 20, 2011 11:15 AM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>Hi,<br />
+I was in Corcovado National Park in Costa Rica where I took this photo (sorry about the quality) of what I think is Camponotus sericeiventris.  As you can see, the ant is walking over a sticky, black substance with no apparent problem. The whole trunk of the tree was covered in this substance - is it anything to do with the ants?<br />
+ <br />
+Many thanks<br />
+Alan </p>
+
+<p><img alt="IMG_0729 2.jpg" src="http://www.antweb.org/antblog/IMG_0729%202.jpg" width="921" height="720" class="mt-image-center" style="text-align: center; display: block; margin: 0 auto 20px;" /><br />
+*****<br />
+Alan,</p>
+
+<p>Thank you for contacting AntBlog and including an image.  We contacted an expert on the ants of Costa Rica, Dr. John T. Longino, to address your question.  Here is what Dr. Longino had to say:</p>
+
+<p>"Your ant is indeed Camponotus sericeiventris. I've often seen tree trunks with black, sticky, oozy areas, and ants often seem to be attracted to them. I have always surmised that these are tree infections, a result of wounds and/or pathogens, and that the tree sap is oozing out and evaporating, making a sweet exudate that ants might like. I doubt that the ants are the cause of the exudate.</p>
+
+<p>From the look of your image, the area looks wet but not super sticky. Ants have no problem walking over wet surfaces. Also, if a sticky surface gets a "skin" of moisture or dryness, that would make it easy for an insect to walk over. We might touch a surface and break that thin surface layer, contacting the sticky material below. So a surface that seems sticky to us might not be to an insect.</p>
+
+<p>By the way, I did my graduate work in Corcovado, back in early 1980's, and developed my love of ants there."</p>
+
+<p>John "Jack" Longino (guest expert), Corrie Moreau & the AntAsk Team</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=ants%20on%20trees&amp;limit=20';return false;" rel="tag">ants on trees</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=camponotus&amp;limit=20';return false;" rel="tag">camponotus</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=costa%20rica&amp;limit=20';return false;" rel="tag">costa rica</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    
+        
+    <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://www.antweb.org/antblog/2011/10/strange-ant-behavior-cheryl-new-york-usa.html"
+    trackback:ping="http://www.antweb.org/cgi-bin/mt/mt-tb.cgi/113"
+    dc:title="Strange ant behavior (Cheryl, New York, USA)"
+    dc:identifier="http://www.antweb.org/antblog/2011/10/strange-ant-behavior-cheryl-new-york-usa.html"
+    dc:subject="Ask an Ant Expert"
+    dc:description="Hello, I would like to know if there is any sense to make out of the strange behavior I witnessed an ant making in my house. I live in Long Island, NY and I guess the type of ant was..."
+    dc:creator="AntAsk"
+    dc:date="2011-10-14T23:41:26-08:00" />
+</rdf:RDF>
+-->
+
+<div id="entry-114" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2011/10/strange-ant-behavior-cheryl-new-york-usa.html" rel="bookmark">Strange ant behavior (Cheryl, New York, USA)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2011-10-14T23:41:26-08:00">October 14, 2011 11:41 PM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>Hello, </p>
+
+<p>I would like to know if there is any sense to make out of the strange behavior I witnessed an ant making in my house.<br />
+ <br />
+I live in Long Island, NY and I guess the type of ant was a regular black carpenter ant.  The first thing that struck me odd was that it had a very narrow thorax, almost like it was pinched in...But that might be 100% normal and I've just never looked that hard at an ant before.<br />
+ <br />
+The second thing that struck me odd was that it was standing still and seemed to be jittering its legs while they were planted on the floor, almost like wobbling them. I thought maybe it was neurological damage?  Poison?  I don't know.<br />
+ <br />
+I decided to get some cookie crumbs and a plastic cup so I can try to feed it and observe it for a little while.   It did eat a bit which made me feel better.  The next strange behavior I saw was that it started grooming the hell out of itself, almost manically as if it was on speed, then it proceed to bite at the bottom tip of it's abdomen.  It was freaky; I thought maybe it was pregnant and ready to pop out some eggs or something.  I don't think it was, though.  It was really weird.  I hope he wasn't sick or poisoned.  I named him Mercury.  I got grossed out from lying on the kitchen floor to watch all this and let it go off into the sunset...<br />
+ <br />
+Thanks!</p>
+
+<p>Cheryl Cusimano</p>
+
+<p>*****</p>
+
+<p>Hi Cheryl,</p>
+
+<p>The ant you found was very likely a <a target='new' href="http://www.antweb.org/description.do?rank=species&genus=camponotus&name=pennsylvanicus&project=pennsylvaniaants">carpenter ant</a>, but without a more thorough description or any photographic cues, this might be hard to confirm.  The "narrow thorax" you observed could have been either the petiole of an ant (the small segment joining the mesosoma and gaster that gives all ants and many other hymenopterans the appearance of having a "waist") or the constricted petiolar segment of a parasitoid wasp. <a target='new' href="http://bugguide.net/node/view/14164/bgimage">Ensign wasps</a> (family Evaniidae), for example, superficially resemble black carpenter ants and are familiar (if less common) interlopers in domestic settings given their predatory association with cockroaches.</p>
+
+<p>The jittering movement is likewise difficult to explain without further observation. If the insect was indeed an ensign wasp, you might compare this behavior with descriptions of the wasp's peculiar bobbing movements, which involve jerking its abdomen up and down like a hatchet.</p>
+
+<p>The meticulous grooming behavior you observed is characteristic of almost all insects, especially after a meal. Whether this particular individual was an ant or a wasp, obsessive self-grooming would not be unexpected following close inspection of foreign objects like cookie crumbs or plastic cups.</p>
+
+<p>Hope this helps,</p>
+
+<p>Alexandra Westrich & the AntAsk Team<br />
+</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=parasitic%20wasps&amp;limit=20';return false;" rel="tag">parasitic wasps</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    
+        
+    <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://www.antweb.org/antblog/2011/10/what-can-i-feed-my-odontomachus-colony-phira-singapore.html"
+    trackback:ping="http://www.antweb.org/cgi-bin/mt/mt-tb.cgi/112"
+    dc:title="What can I feed my Odontomachus colony? (Phira, Singapore)"
+    dc:identifier="http://www.antweb.org/antblog/2011/10/what-can-i-feed-my-odontomachus-colony-phira-singapore.html"
+    dc:subject="Ant farms"
+    dc:description=" Hi there! I&apos;m curious as to what you guys feed your captive Odontomachus colonies. I feed mine mealworms because they&apos;re readily available, but they&apos;ll only accept it if I put the mealworm directly in the nest or at the..."
+    dc:creator="AntAsk"
+    dc:date="2011-10-13T22:19:15-08:00" />
+</rdf:RDF>
+-->
+
+<div id="entry-113" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2011/10/what-can-i-feed-my-odontomachus-colony-phira-singapore.html" rel="bookmark">What can I feed my Odontomachus colony? (Phira, Singapore)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2011-10-13T22:19:15-08:00">October 13, 2011 10:19 PM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p><br /><br />
+Hi there!</p>
+
+<p>I'm curious as to what you guys feed your captive Odontomachus colonies. I feed mine mealworms because they're readily available, but they'll only accept it if I put the mealworm directly in the nest or at the nest entrance. Also, is it required to feed them sugary foods?</p>
+
+<p>Another question, have any of you had experience with keeping Camponotus in plaster nests? I've heard that they're able to chew through plaster, has that ever happen to your Camponotus colonies? Thanks!</p>
+
+<p>Regards,<br />
+Phira</p>
+
+<p><br />
+Phira, </p>
+
+<p>Thanks so much for the question, Phira. <em>Odontomachus</em> (sometimes called trap-jaw ants) are one of the coolest ants around. One of the experts on this group, Dr. <a target='new' href="http://www.life.illinois.edu/suarez/research.html">Andy Suarez</a> from the University of Illinois, gives this advice: </p>
+
+<p>"We find that trap jaw ants are most excited about termites but will live happily on crickets and mealworms. Because crickets and mealworms are often infested with mites (because of the high densities that they are reared in at pet stores), we freeze them for a week or two before feeding them to the ants. We also tend to cut them up so the ants can get a bit of hemolymph. In addition to insects for protein, we try to always give trap jaw ants some sugar water or honey water. It is easily provided by making a 20% solution and then soaking a cotton ball in it. The cotton balls can them be removed if they start to mold."<br />
+***<br />
+In my own experience, Odontomachus in the wild will recruit to peanut butter baits (O. simillimus in Palau, and O. bauri in Panama). If you want to get more elaborate about ant colony nutrition, A. Dussutour and S. J. Simpson published<a target='new' href="http://www.springerlink.com/content/gx2437831j186707/"> an article</a> in 2008 formally describing a precisely adjustable diet for ants mixing different protein powders, sugar, and agar. I used one version of that diet as an ant bait in Panama, and found many different ants were attracted to it. </p>
+
+<p>With respect to sugar water, it is important because adult ants actually cannot swallow solid food. That's why you'll never see ants consuming solid food outside of their nest. They have to cut it up into manageable peices and bring it back to the larvae in the nest. The larvae chew and swallow the food, and regurgitate some of it for their adult sisters. So for small ant colonies which might not have many larvae at certain points, liquid foods are very important for the health of the adults. </p>
+
+<p>As for <em>Camponotus</em> and plaster, I actually don't have any experience with that, but it seems like an easy hypothesis to test! Newly mated queens can certainly chew through fabric screening that can contain most other ants. They don't seem to be able to chew through metal screening however. If you like the way plaster regulates humidity, it might be worth trying to reinforce it with some metal screening. </p>
+
+<p>Hope this helps! <br />
+Best, <br />
+Jesse Czekanski-Moir & the AntAsk Team</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=Camponotus&amp;limit=20';return false;" rel="tag">Camponotus</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=captivity&amp;limit=20';return false;" rel="tag">captivity</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=food&amp;limit=20';return false;" rel="tag">food</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=Odontomachus&amp;limit=20';return false;" rel="tag">Odontomachus</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=trap-jaw%20ants&amp;limit=20';return false;" rel="tag">trap-jaw ants</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    
+        
+    <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://www.antweb.org/antblog/2011/09/ant-species-with-woolly-aphids-richard-meagan-new-england-usa.html"
+    trackback:ping="http://www.antweb.org/cgi-bin/mt/mt-tb.cgi/107"
+    dc:title="Ant species with Woolly Aphids (Richard &amp; Meghan, New England, USA)"
+    dc:identifier="http://www.antweb.org/antblog/2011/09/ant-species-with-woolly-aphids-richard-meagan-new-england-usa.html"
+    dc:subject="Ask an Ant Expert"
+    dc:description="I took pictures of 2 Guardian Ants working Woolly Aphids. I am trying to find the name of the ant species that is acting as guardian to this mass of Woolly Aphids, Prociphilus tessellatus, on a growing Alder shrub next..."
+    dc:creator="AntAsk"
+    dc:date="2011-09-19T07:56:21-08:00" />
+</rdf:RDF>
+-->
+
+<div id="entry-108" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2011/09/ant-species-with-woolly-aphids-richard-meagan-new-england-usa.html" rel="bookmark">Ant species with Woolly Aphids (Richard & Meghan, New England, USA)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2011-09-19T07:56:21-08:00">September 19, 2011  7:56 AM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>I took pictures of 2 Guardian Ants working Woolly Aphids. I am trying to find the name of the ant species that is acting as guardian to this mass of Woolly Aphids, <em>Prociphilus tessellatus</em>, on a growing Alder shrub next to a lake. </p>
+
+<p>The area this Speckled Alder is growing in is very sparse during the winter with snow and ice licking at its branches.  Where would these ants keep these aphids over the winter?  Do aphids, and ants have sort of anti-freeze in there system that kicks in during the winter?</p>
+
+<p>Since this was on a lake shore, and at the end of a wooded hill to the lake, do I need to be concerned relative to my plants about 500 feet away?  If so what do you suggest?</p>
+
+<p>Thank you,<br />
+Richard and Meghan<br />
+**********<br />
+<img alt="_MG_1859 - Version 2.jpg" src="http://www.antweb.org/antblog/_MG_1859%20-%20Version%202.jpg" width="288" height="372" class="mt-image-center" style="text-align: center; display: block; margin: 0 auto 20px;" /></p>
+
+<p><img alt="_MG_1855 - Version 2.jpg" src="http://www.antweb.org/antblog/_MG_1855%20-%20Version%202.jpg" width="288" height="372" class="mt-image-center" style="text-align: center; display: block; margin: 0 auto 20px;" /></p>
+
+<p>Dear Richard and Meghan,</p>
+
+<p>Thank you for contacting AntBlog and send such nice photographs.  This certainly helps with identifications.  Since you are in New England, we reached out to an expert in the area, Stefan Cover, for help.  Here is what he said:</p>
+
+<p>"Those ants are <em><a target='new' href="http://www.antweb.org/description.do?rank=species&name=noveboracensis&genus=camponotus&project=nearcticants">Camponotus noveboracensis</a></em>.  The <em>Camponotus</em> are frequent aphid tenders but we know nothing about the relationship between these ants and that particular aphid.  No need to worry about plants 500 feet away, though."</p>
+
+<p>In addition, if you would like to read more about what ants do in the winter, please see our previous post <a target='new' href="http://www.antweb.org/antblog/2010/04/what-do-ants-do-in-the-winter-claude-from-geneva-ny-usa.html">here</a>.  </p>
+
+<p>Best regards,<br />
+Stefan Cover (guest expert), Corrie Moreau & the AntAsk Team</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=ants%20tending%20aphids&amp;limit=20';return false;" rel="tag">ants tending aphids</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=aphids&amp;limit=20';return false;" rel="tag">aphids</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=Camponotus&amp;limit=20';return false;" rel="tag">Camponotus</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=woolly%20aphids&amp;limit=20';return false;" rel="tag">woolly aphids</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    
+        
+    <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://www.antweb.org/antblog/2011/06/winged-ants-in-bathroom-please-help-homeowners-with-ant-problem.html"
+    trackback:ping="http://www.antweb.org/cgi-bin/mt/mt-tb.cgi/84"
+    dc:title="Winged ants in bathroom, Please Help! (Homeowners with Ant Problem)"
+    dc:identifier="http://www.antweb.org/antblog/2011/06/winged-ants-in-bathroom-please-help-homeowners-with-ant-problem.html"
+    dc:subject="Ask an Ant Expert"
+    dc:description="Dear AntWeb, We think there are ant nests in our home but would like to confirm with you first. Please bear with us as we describe the whole situation below. Background: About 3 weeks ago, one morning we saw a..."
+    dc:creator="AntAsk"
+    dc:date="2011-06-24T08:37:40-08:00" />
+</rdf:RDF>
+-->
+
+<div id="entry-85" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2011/06/winged-ants-in-bathroom-please-help-homeowners-with-ant-problem.html" rel="bookmark">Winged ants in bathroom, Please Help! (Homeowners with Ant Problem)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2011-06-24T08:37:40-08:00">June 24, 2011  8:37 AM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>Dear AntWeb,</p>
+
+<p>We think there are ant nests in our home but would like to confirm with you first.  Please bear with us as we describe the whole situation below.</p>
+
+<p>Background: <br />
+About 3 weeks ago, one morning we saw a pile of sawdust at a very small ridgeline crack where the base of the bathtub meets the floor at (on the outside of the tub, there are separate bathtub and shower stall in our bathroom).  There are also about 5 winged ants sluggishly crawling around on the floor.  We thought they could be termites so we check the pictures and verified that they were not termites (pinched waist), probably carpenter ants.  We killed the ants and removed them along with the sawdust pile.  Three days later, we saw the same things, sawdust pile and sluggish winged ants at the same location.  This time, after we killed and removed the winged ants and sawdust, we used the 'Raid Ant & Roach spray' at the crack and all along that area. </p>
+
+<p>A few days passed and there were no more ants so we thought all the ants were gone (mistakenly).  But we still used the same Raid Ant spray evryday to make sure. Then 2 weeks ago, one morning, we saw about  50 winged ants, some dead, some sluggish, on the bathroom floor and along the window sill.  We started to spray more but every morning, we still saw them, but less (about 30).   We sprayed at the crack, around this area and at the window sill.  After reading about the winged males/females mating, we're really worried.</p>
+
+<p>Questions:</p>
+
+<p>1. Does this mean we have a (or more) carpenter ant colony nesting inside somewhere our bathroom? <br />
+2. If there are ant nests in our house, then why do we only see the winged ants (supposedly out for mating), but we do not see the wingless worker ants inside the home? <br />
+3.  Did the winged male ants die right after mating? Or they died because of the 'Raid Ant spray' that we used at the crack and window sill?  <br />
+4. What are your conclusion and suggestions on how to resolve the ant problem.</p>
+
+<p>Please let us know.  Your responses are much appreciated.  :)</p>
+
+<p>Thanks so much for your help,<br />
+Homeowners with Ant Problem     </p>
+
+<p><br />
+*****<br />
+Dear Homeowners with Ant Problem,</p>
+
+<p>Although most ants are happy living outside, there are a few <a target='new' href="http://www.ipm.ucdavis.edu/TOOLS/ANTKEY/index.html">pest ant species </a>that find living in our homes preferable.  Unfortunately this includes carpenter ants!</p>
+
+<p>If what you are seeing are carpenter ants (or termites - check out <a target='new' href="http://www.antweb.org/antblog/2010/04/whats-the-difference-between-an-ant-and-a-termite-eric-from-sheboygan-wi.html">this post</a> to tell the difference) it is important that you contact a pest control group that is familiar with these insects to have them eradicated.  As these insects can cause structural damage to your home it is important that you have an experienced pest control expert exterminate them.  </p>
+
+<p>For general tips about controlling ants in your home, please check out this previous post <a target='new' href="http://www.antweb.org/antblog/2010/07/help-i-have-ants-in-my-home-and-want-them-out-oscar-oakland-ca-usa.html">here</a>.  </p>
+
+<p>One thing to note that since ants live in colonies, unlike most other home pest insects, using insect killing sprays will not really fix the problem.  When you spray the ants you are seeing, you are only making a dent in the colony as a whole.  You need to kill the queen, which is deep in the colony, to insure the death of the whole ant colony.</p>
+
+<p>Regarding your specific questions, I will address each below:  </p>
+
+<p>Q1. Does this mean we have a (or more) carpenter ant colony nesting inside somewhere our bathroom? </p>
+
+<p>A: This is likely, although they could be living outside of your home and only venturing in.  But since you are seeing them in large numbers, I suspect they are living in your home.  </p>
+
+<p>Q2. If there are ant nests in our house, then why do we only see the winged ants (supposedly out for mating), but we do not see the wingless worker ants inside the home? </p>
+
+<p>A: Although carpenter ants like living in our homes, they do not necessarily like to eat the same food we do, which is why you rarely seem them foraging in your home.  The <a target='new' href="mailto:http://www.antweb.org/antblog/2010/04/how-can-you-tell-if-an-ant-is-male-or-female-mary-springfield-illinois.html">sexuals</a> (virgin queens and males) are trying to find a way out to go on their mating flight.  </p>
+
+<p>Q3.  Did the winged male ants die right after mating? Or they died because of the 'Raid Ant spray' that we used at the crack and window sill?  </p>
+
+<p>A: I doubt the ants have had a chance to mate yet (they usually require a mating flight or swarm).  They are likely dying due to the insecticide.  </p>
+
+<p>Q4. What are your conclusion and suggestions on how to resolve the ant problem.</p>
+
+<p>A: As mentioned above, it is good idea to contact a pest control specialist who is familiar with exterminating carpenter ants and termites.</p>
+
+<p>Best of luck,<br />
+Corrie Moreau & the AntAsk Team</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=ants%20in%20your%20home&amp;limit=20';return false;" rel="tag">ants in your home</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=pest%20ants&amp;limit=20';return false;" rel="tag">pest ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=pest%20control&amp;limit=20';return false;" rel="tag">pest control</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    
+        
+    <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://www.antweb.org/antblog/2010/12/on-the-verge-of-a-major-ant-infestation-caroline-sri-lanka.html"
+    trackback:ping="http://www.antweb.org/cgi-bin/mt/mt-tb.cgi/52"
+    dc:title="On the verge of a major ant infestation? (Caroline, Sri Lanka)"
+    dc:identifier="http://www.antweb.org/antblog/2010/12/on-the-verge-of-a-major-ant-infestation-caroline-sri-lanka.html"
+    dc:subject="Ask an Ant Expert"
+    dc:description="Dear Ant Team, I&apos;m hoping you can help me with my ant query. I live in Sri Lanka, and two days ago, out of the blue, we found 14 ants of the type in the photograph on our bathroom floor...."
+    dc:creator="AntAsk"
+    dc:date="2010-12-08T12:15:42-08:00" />
+</rdf:RDF>
+-->
+
+<div id="entry-53" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2010/12/on-the-verge-of-a-major-ant-infestation-caroline-sri-lanka.html" rel="bookmark">On the verge of a major ant infestation? (Caroline, Sri Lanka)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2010-12-08T12:15:42-08:00">December  8, 2010 12:15 PM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>Dear Ant Team,<br />
+I'm hoping you can help me with my ant query. I live in Sri Lanka, and two days ago, out of the blue, we found 14 ants of the type in the photograph on our bathroom floor. They were extremely sluggish but still alive. Having removed those ants, the next day I found about another 10 on the nearby stairs. These were in a similar state. We recently moved here from Egypt and our shipping arrived last week. We are wondering if something could have travelled in one of the many boxes we have been unpacking of late.<br />
+I would be most grateful if you could help me identify them and tell me if I should be worrying about having them in the house. I am concerned I am on the verge of a major ant infestation. <br />
+Many thanks,<br />
+Caroline</p>
+
+<p><br />
+Dear Caroline,<br />
+Thanks for your question.  The winged ants that you are seeing are reproductives.  To learn about ant reproduction check out <a target='new' href="http://www.antweb.org/antblog/2010/04/how-can-you-tell-if-an-ant-is-male-or-female-mary-springfield-illinois.html">this</a>  post.  Unfortunately, it sounds like you may have an ant colony living in your new home, and judging from the picture you sent these ants are probably some kind of carpenter ant in the genus <em>Camponotus</em>.  Winged ants are released from their colonies in swarms at certain times of year and if a colony has a nest entrance somewhere inside your house then when they fly out to find mates they will end up in your house.  I doubt that you brought that many winged ants along in your shipping.  The boxes probably just happened to arrive at the same time that the ants were swarming.  These ants may never bother you again but I would suggest you take a look at <a target='new' href="http://www.antweb.org/antblog/2010/07/help-i-have-ants-in-my-home-and-want-them-out-oscar-oakland-ca-usa.html">this</a> post on discouraging ant pests just in case.  </p>
+
+<p>Good luck!<br />
+Ben Rubin & the AntAsk Team</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=mating&amp;limit=20';return false;" rel="tag">mating</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    
+        
+    <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://www.antweb.org/antblog/2010/08/what-are-these-large-ants-jacksonville-il-usa.html"
+    trackback:ping="http://www.antweb.org/cgi-bin/mt/mt-tb.cgi/34"
+    dc:title="What are these large ants?  (Ed, Jacksonville, IL, USA)"
+    dc:identifier="http://www.antweb.org/antblog/2010/08/what-are-these-large-ants-jacksonville-il-usa.html"
+    dc:subject="Ask an Ant Expert"
+    dc:description="The ants we want to Identify are about 1/2&quot; in length. We are in central Illinois.  They are living in an old pile of wood planks.  They are black, red, gray  (head, thorax, abdomen). Any help would be great.  Ed..."
+    dc:creator="AntAsk"
+    dc:date="2010-08-12T10:15:26-08:00" />
+</rdf:RDF>
+-->
+
+<div id="entry-35" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2010/08/what-are-these-large-ants-jacksonville-il-usa.html" rel="bookmark">What are these large ants?  (Ed, Jacksonville, IL, USA)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2010-08-12T10:15:26-08:00">August 12, 2010 10:15 AM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>The ants we want to Identify are about 1/2" in length. We are in central Illinois.  They are living in an old pile of wood planks.  They are black, red, gray  (head, thorax, abdomen). Any help would be great. <br />
+Ed <br />
+Jacksonville, Illinois</p>
+
+<p><br />
+Ed, </p>
+
+<p>Thanks for your question!  Although a picture would help to give you a positive identification, it is likely that you are looking at a member of the genus <em>Camponotus</em>.  Members of this genus will typically be among the largest ants encountered in North America and Europe (and many other places; in Southeast Asia they have a <a target='new' href="http://www.google.com/imgres?imgurl=http://www.ameisenshop.eu/images/products/cagi0001-2.jpg&imgrefurl=http://www.ameisenshop.eu/Ants-Asia.html&usg=__no4pfjR7akNS2VZrmdXHzqgqU_k=&h=768&w=1024&sz=149&hl=en&start=0&sig2=ufqgH9wlAk6TzzjRKcsPjA&tbnid=NpDqNGVgnkcmgM:&tbnh=158&tbnw=196&ei=1y9kTIulC8WqngfE3MSYDQ&prev=/images%3Fq%3Dcamponotus%2Bgigas%26hl%3Den%26client%3Dsafari%26sa%3DX%26rls%3Den%26biw%3D952%26bih%3D622%26tbs%3Disch:1&itbs=1&iact=hc&vpx=144&vpy=89&dur=2417&hovh=194&hovw=259&tx=150&ty=122&oei=ri9kTMjEDMPnnQev4YmYDQ&esq=9&page=1&ndsp=12&ved=1t:429,r:0,s:0">truly giant species</a>, see <a target='new' href="http://www.antweb.org/antblog/2010/04/what-is-the-largest-ant-in-the-world-luke-from-chicago-il-usa.html">a previous post on giant ants</a> ). These ants often live in rotting wood, including wood that has fallen, and rotten sections in living trees.  Some species even live in rotting sections of people's houses!  The ants commonly called "Carpenter Ants" belong to this genus, but the species in your area that lives up to this name, <em><a target='new' href="http://www.antweb.org/description.do?subfamily=formicinae&genus=camponotus&name=pennsylvanicus&rank=species&project=missouriants">Camponotus pennsylvanicus</a></em> is all black, so it's likely you're looking at a species that prefers the habitat in which you found it.  </p>
+
+<p>Based on your location and the description you gave, a likely candidate is<em> <a target='new' href="http://www.antweb.org/description.do?subfamily=formicinae&genus=camponotus&name=chromaiodes&rank=species&project=illinoisants">Camponotus chromaiodes</a></em> .  But we encourage you to brows the <a target='new' href="http://www.antweb.org/illinois.jsp">Ants of Illinois page</a>  and the<a target='new' href="http://www.antweb.org/missouri.jsp"> Ants of Missouri page</a> to see if you can find a better match!  </p>
+
+<p>Hope this helps!  You're welcome to send us pictures if you want a more positive identification, or if you have any further questions.  </p>
+
+<p>Best, <br />
+Jesse Czekanski-Moir & the AntAsk Team</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=Camponotus&amp;limit=20';return false;" rel="tag">Camponotus</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=identification&amp;limit=20';return false;" rel="tag">identification</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=Illinois&amp;limit=20';return false;" rel="tag">Illinois</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=rotting%20wood&amp;limit=20';return false;" rel="tag">rotting wood</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    
+        
+    <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://www.antweb.org/antblog/2010/07/help-i-have-ants-in-my-home-and-want-them-out-oscar-oakland-ca-usa.html"
+    trackback:ping="http://www.antweb.org/cgi-bin/mt/mt-tb.cgi/26"
+    dc:title="Help!  I have ants in my kitchen and want them out! (Oscar, Oakland, CA, USA)"
+    dc:identifier="http://www.antweb.org/antblog/2010/07/help-i-have-ants-in-my-home-and-want-them-out-oscar-oakland-ca-usa.html"
+    dc:subject="Ask an Ant Expert"
+    dc:description="Help! I have ants in my kitchen and want them out! How do I get rid of the ants in my house? - Oscar, Oakland, CA, USA Thanks for contacting us at AntBlog! Although many ants are quite beautiful and..."
+    dc:creator="AntAsk"
+    dc:date="2010-07-20T05:08:28-08:00" />
+</rdf:RDF>
+-->
+
+<div id="entry-27" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="http://www.antweb.org/antblog/2010/07/help-i-have-ants-in-my-home-and-want-them-out-oscar-oakland-ca-usa.html" rel="bookmark">Help!  I have ants in my kitchen and want them out! (Oscar, Oakland, CA, USA)</a></h2>
+        <div class="asset-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a href="http://www.antweb.org/cgi-bin/mt/mt-cp.cgi?__mode=view&amp;blog_id=1&amp;id=4">AntAsk</a></span> on <abbr class="published" title="2010-07-20T05:08:28-08:00">July 20, 2010  5:08 AM</abbr>
+
+    </span>
+<br />
+
+</div>
+
+
+    </div>
+    <div class="asset-content entry-content">
+
+        <div class="asset-body">
+            <p>Help!  I have ants in my kitchen and want them out!  How do I get rid of the ants in my house?  </p>
+
+<p>- Oscar, Oakland, CA, USA</p>
+
+<p><br />
+Thanks for contacting us at AntBlog! </p>
+
+<p>Although many <a target='new' href="http://www.antweb.org/slideShow.do?rank=genus">ants are quite beautiful</a> and really have no interest in entering our homes, there are a few species that we call "household pests".  Depending on where you live resources to identify the particular ant species you have invading your home may or may not be possible, but knowing which species you are after can help.  A helpful resource to identify common household pest ants can be found <a target='new' href="http://www.ipm.ucdavis.edu/TOOLS/ANTKEY/index.html">here</a>.  </p>
+
+<p>There are several ways to try to control or exterminate these unwelcome ant guests in your kitchen or other parts of your home:</p>
+
+<p><strong>1) Clean.</strong>  If you know where the ants are coming into your home, you could try to discourage them from coming in.  This can be done several ways including making sure their food sources are unavailable (store foods in airtight containers).  Also it is important to keep any areas where you see the ants foraging or coming in very clean which includes wiping down any areas with soapy water.  This is not because the ants are dirty, but because they communicate with each other by laying scent trails (pheromones) where they walk to let others know where to search for food.  </p>
+
+<p><strong>2) Discourage.  </strong>Another option would be to block/exclude them from coming into your home. There are many products available for this at your local hardware store such as caulk or petroleum jelly, but you could also try using a very fine, silty powder (such as cinnamon, cayenne pepper, diatomaceous earth, corn starch, etc.) to plug any holes the ants are using to come into your home.  It will be most effective if you can figure out where they are coming into your home on the inside and outside and block both entrances.  You will have to keep reapplying until you no longer see any ants in your home.  The fine, silty powders get stuck in the small hairs on their legs and body and since the ants do not seem to like this they avoid these areas.  These are also good options if you would prefer not to use chemicals or if you have small children or pets around.  This will not kill the ants, but simply discourage them from entering your home.  </p>
+
+<p><strong>3) Toxic baits.  </strong>If the above methods are not effective, then you may have to move onto using toxic baits.  In most cases sweet sugar baits such as Boric acid (use low concentrations with less than 1% of the active ingredient) will be effective.  Using indoor sprays are not effective.  Although these sprays will kill the individual ant you see foraging in your home, the nest and queen are still nearby and will keep producing ant workers which will find their way into your home.  This is why you need to use a toxic bait, which kill the ants slowly so the ant worker will take the poison back to the nest and will eventually get to the queen and kill the entire colony.  You will want to place the baits in areas where you see the ants foraging or coming into your home and be sure to place them away from areas where children or pets are likely to find them.  </p>
+
+<p>Although most ants we find in our homes are only searching for food or shelter and are really only eyesores and do not really cause much real damage, there are one group of ants that can cause structural damage to your home.  These are carpenter ants.  <a target='new' href="http://www.ipm.ucdavis.edu/TOOLS/ANTKEY/carpenter.html">Identification</a> and <a target='new' href="http://www.ipm.ucdavis.edu/TOOLS/ANTKEY/carpman.html">treatment</a> of carpenter ants is essential with these species.  These ants do not eat wood, but burrow through wood to build their homes.  So as their colonies get larger they need to bore through more wood to make larger cavities, which can damage any of the wooden parts of your home such as windows, doors, internal beams, or subfloors.  </p>
+
+<p>If you are finding winged ants in your home, you may want to read this AntBlog post: <a target='new' href="http://www.antweb.org/antblog/2013/07/flying-ants-in-my-home-or-something-else-tom-usa.html">http://www.antweb.org/antblog/2013/07/flying-ants-in-my-home-or-something-else-tom-usa.html</a></p>
+
+<p>Although ants in our homes can be a nuisance, remember that most ants are actually quite beneficial for the outside environment and local ecosystems.  You can read more about the benefits of ants here: <a target='new' href="http://www.antweb.org/antblog/2012/08/what-good-are-ants-david-panama-city-florida-usa.html">http://www.antweb.org/antblog/2012/08/what-good-are-ants-david-panama-city-florida-usa.html</a></p>
+
+<p>Good luck!<br />
+Corrie Moreau & the AntAsk Team</p>
+        </div>
+
+
+        <div class="entry-tags">
+    <h4 class="entry-tags-header">Tags<span class="delimiter">:</span></h4>
+    <ul class="entry-tags-list">
+        <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=Argentine%20ants&amp;limit=20';return false;" rel="tag">Argentine ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=carpenter%20ants&amp;limit=20';return false;" rel="tag">carpenter ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=household%20ants&amp;limit=20';return false;" rel="tag">household ants</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=pest%20control&amp;limit=20';return false;" rel="tag">pest control</a><span class="delimiter">,</span></li> <li class="entry-tag"><a href="javascript:void(0)" onclick="location.href='http://www.antweb.org/cgi-bin/mt/mt-search.cgi?IncludeBlogs=1&amp;tag=sugar%20ants&amp;limit=20';return false;" rel="tag">sugar ants</a></li>
+    </ul>
+</div>
+
+
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+
+        
+    </div><div class="autopagerize_insert_before"></div>
+        
+    <div class="content-nav">
+        
+        <div id="results-previous-link">
+            
+                &laquo; Previous
+            
+        </div>
+        
+        
+            
+                <div class="results-pages" id="results-current-page">1</div>
+             
+        
+            
+        <div id="results-next-link">
+            Next &raquo;
+        </div>
+            
+            
+    </div>
+</div>
+        
+    
+
+
+
+
+
+
+
+
+</div>
+                    </div>
+
+                    <div id="beta">
+<h3>AntBlog...</h3>
+In collaboration with<br />
+<a href="http://fieldmuseum.org/"><img border="0" src="http://www.antweb.org/antblog/Field-Museum-logo.gif"></a>
+<br />
+
+    <div id="beta-inner">
+<div class="widget-archive widget-archive-category widget">
+<h3>Got a question?</h3> 
+Have a question about ants? <a href="mailto:AskAntWeb@googlegroups.com">Drop us a line!</a>
+</div>
+<br /><br />
+        
+
+        <div class="widget-archive widget-archive-category widget">
+    <h3 class="widget-header">Categories</h3>
+    <div class="widget-content">
+    
+        
+        <ul>
+        
+        
+            <li><a href="http://www.antweb.org/antblog/ant-course/">Ant Course (11)</a>
+        
+        
+            </li>
+        
+    
+        
+        
+            <li><a href="http://www.antweb.org/antblog/antweb/">AntWeb (30)</a>
+        
+        
+            </li>
+        
+    
+        
+        
+            <li><a href="http://www.antweb.org/antblog/ask-an-ant-expert/">Ask an Ant Expert (199)</a>
+        
+        
+        
+        <ul>
+        
+        
+            <li><a href="http://www.antweb.org/antblog/ask-an-ant-expert/ant-behavior/">Ant behavior (85)</a>
+        
+        
+            </li>
+        
+    
+        
+        
+            <li><a href="http://www.antweb.org/antblog/ask-an-ant-expert/ant-biology/">Ant biology (80)</a>
+        
+        
+            </li>
+        
+    
+        
+        
+            <li><a href="http://www.antweb.org/antblog/ask-an-ant-expert/ant-farms/">Ant farms (29)</a>
+        
+        
+            </li>
+        
+    
+        
+        
+            <li><a href="http://www.antweb.org/antblog/ask-an-ant-expert/ant-identification/">Ant identification (79)</a>
+        
+        
+            </li>
+        
+    
+        
+        
+            <li><a href="http://www.antweb.org/antblog/ask-an-ant-expert/ant-queens/">Ant queens (26)</a>
+        
+        
+            </li>
+        
+    
+        
+        
+            <li><a href="http://www.antweb.org/antblog/ask-an-ant-expert/ants-in-your-house-or-yard/">Ants in your house or yard (59)</a>
+        
+        
+            </li>
+        
+    
+        
+        
+            <li><a href="http://www.antweb.org/antblog/ask-an-ant-expert/large-ants/">Large ants (14)</a>
+        
+        
+            </li>
+        
+        </ul>
+        
+    
+            </li>
+        
+    
+        
+        
+            <li><a href="http://www.antweb.org/antblog/how-to/">How to... (8)</a>
+        
+        
+            </li>
+        
+        </ul>
+        
+    
+    </div>
+</div>
+
+<div class="widget-recent-entries widget-archives widget">
+    <h3 class="widget-header">Recent Entries</h3>
+    <div class="widget-content">
+        <ul>
+        
+            <li><a href="http://www.antweb.org/antblog/2015/05/ants-in-johannesburg-south-africa.html">Ants in Johannesburg, South Africa</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2015/01/ant-course-2015-apply-now.html">Ant Course 2015 Apply Now</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/12/ant-mating.html">Ant mating</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/10/weaver-ant-farming.html">Weaver Ant Farming</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/10/poisoned-baits-are-not-eliminating-the-ants-from-my-house.html">Poisoned baits are not eliminating the ants from my house</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/10/brown-ants-moving-in-mass-along-sidewalks.html">Brown ants moving in mass along sidewalks</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/10/ant-formationcircle-in-my-bathroom.html">Ant formation/circle in my bathroom</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/10/ants-in-an-ant-hill.html">Ants in an ant hill</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/09/ants-and-disease.html">Ants and Disease</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/09/ants-in-concrete-foundation.html">Ants in concrete foundation</a></li>
+        
+        </ul>
+    </div>
+</div>
+        
+    
+
+<div class="widget-recent-assets widget">
+    <h3 class="widget-header">Recent Assets</h3>
+    <div class="widget-content">
+        <ul>
+        
+        <li class="item"><a class="asset-image" href="http://www.antweb.org/antblog/dorylusnigricansm_casent0172663_p_1_high.jpg"><img src="http://www.antweb.org/antblog/assets_c/2014/12/dorylusnigricansm_casent0172663_p_1_high-thumb-autox70-446.jpg" class="asset-img-thumb" alt="dorylusnigricansm_casent0172663_p_1_high.jpg" title="dorylusnigricansm_casent0172663_p_1_high.jpg" /></a></li>
+        
+    
+        
+        <li class="item"><a class="asset-image" href="http://www.antweb.org/antblog/cardiocondyla%20obscurior%20males%20fighting_sylvia%20cremer%20photo.jpg"><img src="http://www.antweb.org/antblog/assets_c/2014/12/cardiocondyla obscurior males fighting_sylvia cremer photo-thumb-autox70-449.jpg" class="asset-img-thumb" alt="cardiocondyla obscurior males fighting_sylvia cremer photo.jpg" title="cardiocondyla obscurior males fighting_sylvia cremer photo.jpg" /></a></li>
+        
+    
+        
+        <li class="item"><a class="asset-image" href="http://www.antweb.org/antblog/AZflyer3smallweb.jpg"><img src="http://www.antweb.org/antblog/assets_c/2015/01/AZflyer3smallweb-thumb-autox70-452.jpg" class="asset-img-thumb" alt="AZflyer3smallweb.jpg" title="AZflyer3smallweb.jpg" /></a></li>
+        
+    
+        
+        <li class="item"><a class="asset-image" href="http://www.antweb.org/antblog/Ant%201.jpg"><img src="http://www.antweb.org/antblog/assets_c/2015/05/Ant 1-thumb-autox70-455.jpg" class="asset-img-thumb" alt="Ant 1.jpg" title="Ant 1.jpg" /></a></li>
+        
+    
+        
+        <li class="item"><a class="asset-image" href="http://www.antweb.org/antblog/Ant%20hill%201.jpg"><img src="http://www.antweb.org/antblog/assets_c/2015/05/Ant hill 1-thumb-autox70-458.jpg" class="asset-img-thumb" alt="Ant hill 1.jpg" title="Ant hill 1.jpg" /></a></li>
+        
+    
+        
+        <li class="item"><a class="asset-image" href="http://www.antweb.org/antblog/Ant%20hill%202.jpg"><img src="http://www.antweb.org/antblog/assets_c/2015/05/Ant hill 2-thumb-autox70-461.jpg" class="asset-img-thumb" alt="Ant hill 2.jpg" title="Ant hill 2.jpg" /></a></li>
+        
+    
+        
+        <li class="item"><a class="asset-image" href="http://www.antweb.org/antblog/Ants_egg.jpg"><img src="http://www.antweb.org/antblog/assets_c/2015/05/Ants_egg-thumb-autox70-465.jpg" class="asset-img-thumb" alt="Ants_egg.jpg" title="Ants_egg.jpg" /></a></li>
+        
+    
+        
+        <li class="item"><a class="asset-image" href="http://www.antweb.org/antblog/Ants_flower.jpg"><img src="http://www.antweb.org/antblog/assets_c/2015/05/Ants_flower-thumb-autox70-468.jpg" class="asset-img-thumb" alt="Ants_flower.jpg" title="Ants_flower.jpg" /></a></li>
+        
+    
+        
+        <li class="item"><a class="asset-image" href="http://www.antweb.org/antblog/Ants_insect.jpg"><img src="http://www.antweb.org/antblog/assets_c/2015/05/Ants_insect-thumb-autox70-471.jpg" class="asset-img-thumb" alt="Ants_insect.jpg" title="Ants_insect.jpg" /></a></li>
+        
+    
+        
+        <li class="item"><a class="asset-image" href="http://www.antweb.org/antblog/Major%20worker.jpg"><img src="http://www.antweb.org/antblog/assets_c/2015/05/Major worker-thumb-autox70-474.jpg" class="asset-img-thumb" alt="Major worker.jpg" title="Major worker.jpg" /></a></li>
+        
+        </ul>
+    </div>
+</div>
+        
+    
+
+
+        <div class="widget-archive-monthly widget-archive widget">
+    <h3 class="widget-header">Monthly <a href="http://www.antweb.org/antblog/archives.html">Archives</a></h3>
+    <div class="widget-content">
+        <ul>
+        
+            <li><a href="http://www.antweb.org/antblog/2015/05/">May 2015 (1)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2015/01/">January 2015 (1)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/12/">December 2014 (1)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/10/">October 2014 (5)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/09/">September 2014 (7)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/06/">June 2014 (6)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/02/">February 2014 (1)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2014/01/">January 2014 (3)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2013/10/">October 2013 (2)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2013/09/">September 2013 (7)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2013/08/">August 2013 (3)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2013/07/">July 2013 (6)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2013/06/">June 2013 (3)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2013/05/">May 2013 (4)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2013/04/">April 2013 (2)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2013/03/">March 2013 (11)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2013/02/">February 2013 (8)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2013/01/">January 2013 (7)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/12/">December 2012 (4)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/11/">November 2012 (6)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/10/">October 2012 (7)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/09/">September 2012 (5)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/08/">August 2012 (19)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/07/">July 2012 (12)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/06/">June 2012 (13)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/05/">May 2012 (6)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/04/">April 2012 (8)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/03/">March 2012 (8)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/02/">February 2012 (8)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2012/01/">January 2012 (4)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/12/">December 2011 (4)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/11/">November 2011 (7)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/10/">October 2011 (10)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/09/">September 2011 (9)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/08/">August 2011 (11)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/07/">July 2011 (4)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/06/">June 2011 (7)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/05/">May 2011 (4)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/04/">April 2011 (3)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/03/">March 2011 (3)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/02/">February 2011 (6)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2011/01/">January 2011 (7)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2010/12/">December 2010 (5)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2010/11/">November 2010 (4)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2010/10/">October 2010 (4)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2010/09/">September 2010 (4)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2010/08/">August 2010 (9)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2010/07/">July 2010 (8)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2010/06/">June 2010 (1)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2010/05/">May 2010 (4)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2010/04/">April 2010 (10)</a></li>
+        
+    
+        
+            <li><a href="http://www.antweb.org/antblog/2010/01/">January 2010 (2)</a></li>
+        
+        </ul>
+    </div>
+</div>
+        
+    
+
+
+
+<div class="widget-syndication widget">
+    <div class="widget-content">
+        <ul>
+            <li><img src="http://www.antweb.org/mt-static/images/status_icons/feed.gif" alt="Subscribe to feed" width="9" height="9" /> <a href="http://www.antweb.org/antblog/atom.xml">Subscribe to this blog's feed</a></li>
+
+    
+            <li class="search-results-feed"><img src="http://www.antweb.org/mt-static/images/status_icons/feed.gif" alt="Subscribe to feed" width="9" height="9" /> <a href="http://www.antweb.org/cgi-bin/mt/mt-search.cgi?tag=carpenter%20ants&amp;Template=feed&amp;IncludeBlogs=1&amp;limit=20" title="Subscribe to feed">Feed of results matching &ldquo;carpenter ants&ldquo;</a></li>
+    
+
+        </ul>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+
+
+
+                </div>
+            </div>
+<div class="page_bg">
+            <div id="footer">
+Copyright &copy; 2016. AntBlog is powered by <a href="http://www.movabletype.com/" rel="generator">Movable Type Pro</a>. <br />
+Use of this web site and information available from it is subject to our
+<a class="footer_href" href="http://creativecommons.org/licenses/by-sa/3.0/">Attribution-Share Alike Creative Commons License.</a>  We encourage non-commercial use of ant web images.  Each image must be attributed to its photographer and to <a class="footer_href" href="http://www.antweb.org">www.antweb.org</a>.<br />
+Antweb is funded from private donations and from grants from the National Science Foundation, DEB-0344731 and EF-0431330.<br />
+
+<div class="cas_logo"><a href="http://www.calacademy.org/"><img border="0" src="http://www.antweb.org/images/cas_logo_sm.gif" width="27" height="27" alt="The California Academy of Sciences"></a></div>
+<div class="cas_copy">
+AntWeb is hosted by <a class="footer_href" href="http://www.calacademy.org/">The California Academy of Sciences</a>.
+</div>
+
+
+
+
+                </div>
+<div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>
+
+
+

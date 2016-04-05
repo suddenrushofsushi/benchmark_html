@@ -1,0 +1,485 @@
+
+
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Pursuit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1, user-scalable = no" />
+
+<!--
+html5shiv resolves a bug in older versions of Internet Explorer where arbitrary elements (such as those introduced by HTML5, which the browsers predate) are not stylable by CSS.
+ie9.js attempts to fix certain rendering bugs in older versions of IE and add support for newer CSS3 features.
+-->
+
+<!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<!--[if lt IE 9]>
+<script src="scripts/IE9.js"></script>
+<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="//cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
+<script type="text/javascript" src="/style-guide/wp-content/themes/pursuit/js/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="/style-guide/wp-content/themes/pursuit/js/masonry.min.js"></script>
+<script type="text/javascript" src="/style-guide/wp-content/themes/pursuit/js/jquery.imagesloaded.min.js"></script>
+<script type="text/javascript" src="/style-guide/wp-content/themes/pursuit/js/run.js"></script>
+
+<script type="text/javascript" src="//use.typekit.net/bqu4ysi.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<!-- styles -->
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="/style-guide/wp-content/themes/pursuit/js/fancybox/jquery.fancybox.css" type="text/css" />
+
+<link rel="alternate" type="application/rss+xml" title="Slim Suits Style Guide &raquo; Feed" href="https://www.pursuityourself.com/style-guide/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Slim Suits Style Guide &raquo; Comments Feed" href="https://www.pursuityourself.com/style-guide/comments/feed/" />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='https://www.pursuityourself.com/style-guide/wp-content/themes/pursuit/style.css?ver=4.0.7' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='https://www.pursuityourself.com/style-guide/wp-content/themes/pursuit/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script>
+if (document.location.protocol != "https:") {
+    document.location = document.URL.replace(/^http:/i, "https:");
+}
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.pursuityourself.com/style-guide/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.pursuityourself.com/style-guide/wp-includes/wlwmanifest.xml" /> 
+
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//www.pursuityourself.com/style-guide/?wordfence_logHuman=1&hid=10DC87A37BA2AA0EFE8341C6FA595325');
+</script>
+</head>
+<body class="home blog custom-font-enabled">
+	<div class="menu-btn"><img src="/style-guide/wp-content/themes/pursuit/images/mobile-menu.png" alt="Mobile menu" /></div>
+	<div id="mobile-menu" class="mobile">
+    	<ul>
+        	<li><a href="/home">Home</a></li>
+        	<li><a href="/slim-suits.html">Suits</a></li>
+        	<li><a href="/shirts.html">Shirts</a></li>
+        	<li><a href="/pants.html">Pants</a></li>
+        	<li><a href="/ties.html">Ties</a></li>
+        	<li><a href="/tees.html">Tees</a></li>
+        	<li><a href="/accessories.html">Accessories</a></li>
+        	<br /><br />
+            <li style="font-size: 18px;" class="refer-a-friend"><a href="/refer-a-friend">Refer a Friend &amp; Save!</a></li>
+            <li style="font-size: 18px;"><a href="/customer/account/login/">My Account</a></li>
+        </ul>
+    </div>
+    <div id="page-container">
+      <section id="top-bar">
+            <div class="container960">
+                <div class="left">
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/pursuityourself" target="_blank"><img src="/style-guide/wp-content/themes/pursuit/images/facebook.png" alt="Facebook" /></a></li>
+                        <li><a href="http://www.twitter.com/pursuityourself" target="_blank"><img src="/style-guide/wp-content/themes/pursuit/images/twitter.png" alt="Twitter" /></a></li>
+                        <li><script type="text/javascript" src="//download.skype.com/share/skypebuttons/js/skypeCheck.js"></script><a href="skype:pursuityourself?call"><img src="/style-guide/wp-content/themes/pursuit/images/skype.png" alt="Skype with Pursuit" /></a>
+
+        </li>
+                        <li><a href="http://www.instagram.com/pursuityourself" target="_blank"><img src="/style-guide/wp-content/themes/pursuit/images/instagram.png" alt="Instagram" /></a></li>
+                    </ul>
+
+                    <form id="product-search" method="get" action="https://www.pursuityourself.com/style-guide/">
+						<input type="text" name="s" id="s" class="textbox" placeholder="Search style guide" />
+						<input id="btnSearch" type="image" name="submit" src="/style-guide/wp-content/themes/pursuit/images/search.png" alt="Search" />
+					</form>
+
+
+                </div>
+                <div class="right">
+                    <ul id="account-links">
+                        <li class="refer-a-friend"><a href="/refer-a-friend">Refer a Friend &amp; Save!</a></li>
+                        <li><a href="/customer/account/create">Register</a> |</li>
+                        <li><a href="/customer/account/login/">My Account</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </section><!--/top-bar-->
+
+        <nav id="main-nav">
+            <h1 class="pursuit-logo"><a href="/index.php">Pursuit Yourself. Slim suits for the modern guy.</a></h1>
+            <ul>
+                <li class="shop-li"><a href="/shop/">Shop</a></li>
+                <li class="story-li"><a href="/our-story/">Our Story</a></li>
+                <li class="style-li active"><a href="/style-guide/">Style Guide</a></li>
+                <li class="truck-li"><a href="/suitmobile">suitmobile</a></li>
+            </ul>
+            <div class="clear"></div>
+            <div class="hr"></div>
+        </nav>
+
+        <div class="main-content">
+
+
+
+	
+
+
+	<div id="primary" class="site-content">
+		<div class="style-guide-nav desktop">
+            <div class="tabs">
+            	<a href="/style-guide"><div class="tab" id="active">style tips &amp advice</div></a>
+                <a href="/style-guide/lookbook"><div class="tab">lookbook</div></a>
+                <a href="/style-guide/blog"><div class="tab">blog</div></a>
+            </div>
+        </div>
+
+        <div class="mobile-style-guide-nav mobile">
+               <dl id="style-nav-dd" class="dropdown">
+                    <dt><a><span>Please select</span></a></dt>
+                    <dd>
+                        <ul>
+                            <li><a href="/style-guide/">style tips &amp; advice</a></li>
+                            <li><a href="/style-guide/lookbook">lookbook</a></li>
+                            <li><a href="/style-guide/blog">blog</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+
+
+		<div id="content" role="main" class="style-guide-content">
+			<div class="tips-content">
+				<div class="container960">
+																<div class="post">
+							<p><a href="#fit-guide-link"><img alt="How to wear a suit" src="/style-guide/wp-content/themes/pursuit/images/get-the-basics.png" /></a></p>
+						</div>
+											<div class="post">
+							<p><a href="/style-guide/styling-tips/"><img alt="Men's suits style tips" src="/style-guide/wp-content/themes/pursuit/images/style-tip.png" /></a></p>
+						</div>
+											<div class="post">
+							<p><a href="/style-guide/10-easy-to-avoid-suit-mistakes"><img alt="Men's suit style tips" src="/style-guide/wp-content/themes/pursuit/images/boxy-suit.png" /></a></p>
+						</div>
+											<div class="post">
+							<p><a href="http://www.dispatch.com/content/stories/life_and_entertainment/2012/12/31/tie-one-on.html"><img alt="How to tie a bowtie" src="/style-guide/wp-content/themes/pursuit/images/tie-a-bowtie.png" /></a></p>
+						</div>
+											<div class="post">
+							<p><a href="http://www.pursuityourself.com/style-guide/lookbook/"><img alt="Pursuit lookbook" src="/style-guide/wp-content/themes/pursuit/images/find-the-look.png" /></a></p>
+						</div>
+															<div class="clear"></div>
+				</div>
+			</div><!-- .tips-content -->
+
+			<div class="clear"></div>
+			<div class="fit-guide-content desktop" id="fit-guide-link">
+                	<div class="container960">
+                    	<div class="three-col">
+                        	<div class="fit-guide-copy">
+                                <h2><span>Fit Guide:</span><br/>It's all in the details</h2>
+                                <p>The best way to look like a million bucks is not to spend a million bucks, but to wear a suit that fits well. Once you read these basic tips your eyes will be opened to all the ill-fitting, boxy suits inhabiting the world around you. Use this guide to find your fit, and don&#8217;t be afraid to enlist a tailor to make slight alterations so your Pursuit suit fits just right. If you already own suits from some other store, put them on — do they fit like this? If not, don&#8217;t panic, Pursuit can help!</p>
+                            </div>
+                            <div class="questions">
+                            	<strong>Still have questions?</strong><br/>
+								<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script><a href="skype:pursuityourself?call" class="skype">Skype with us</a> or give us a call: (614) 321-SUIT. 
+                            </div>	
+                            
+                        </div>
+                        <div class="three-col-two-span model">
+                        	
+                            <div class="hotspots-all">
+                            
+                                 <div class="hotspot">
+                                    <div class="hotspot-button" id="one" style="top: 135px; left:148px;"><a href="#">pocket</a></div>
+                                    <div class="hotspot-popup">
+                                        <div class="close"></div>
+                                        <div class="hotspot-container">
+                                            <img width="173" height="242" src="https://www.pursuityourself.com/style-guide/wp-content/uploads/2013/02/pocket-square.png" class="attachment-post-thumbnail wp-post-image" alt="pocket square" />                                            <p><p>You’ve got a pocket, use it. A pocket square will add a subtle bit of style to your look. Some coat pockets come stitched shut. Carefully use a seam ripper to open it up.</p>
+</p>
+                                        </div><!--hot-spot-container-->
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>  
+                                  
+                                <div class="hotspot">
+                                    <div class="hotspot-button" id="two" style="top: 200px; left:55px;"><a href="#">waist</a></div>
+                                    <div class="hotspot-popup">
+                                        <div class="close"></div>
+                                        <div class="hotspot-container">
+                                            <img width="173" height="242" src="https://www.pursuityourself.com/style-guide/wp-content/uploads/2013/02/suit-coat-fit.png" class="attachment-post-thumbnail wp-post-image" alt="How a suit coat should fit" />                                            <p><p>Your coat should gently follow the contour of your midsection with only a little breathing room, but it shouldn&#8217;t be so tight that it strains the buttons. Even if you aren’t a slender guy, wearing a coat that closely follows your shape will make you look more slender than a boxy coat. And remember, with a two-button suit, you only use the top button — don’t make the rookie mistake of buttoning both.</p>
+</p>
+                                        </div><!--hot-spot-container-->
+                                        <div class="clear"></div>
+                                    </div>
+                                </div><!-- end of hot-spot-->
+                                
+                                 <div class="hotspot">
+                                    <div class="hotspot-button" id="three" style="top: 300px; left:135px;"><a href="#">jacket length</a></div>
+                                    <div class="hotspot-popup">
+                                        <div class="close"></div>
+                                        <div class="hotspot-container">
+                                            <img width="173" height="242" src="https://www.pursuityourself.com/style-guide/wp-content/uploads/2013/02/thigh.png" class="attachment-post-thumbnail wp-post-image" alt="thigh" />                                            <p><p>If your coat is the right length, it should fall to the middle of the palm when your arms rest at your sides, just reaching past the bottom of your zipper on a well-fit pair of pants. A sure-fire way to spot an amateur is a coat that hangs to the knee.</p>
+</p>
+                                        </div><!--hot-spot-container-->
+                                        <div class="clear"></div>
+                                    </div>
+                                </div><!-- end of hot-spot-->
+                                
+                                <div class="hotspot">
+                                    <div class="hotspot-button" id="four" style="top: 340px; left:60px;"><a href="#">leg width</a></div>
+                                    <div class="hotspot-popup">
+                                        <div class="close"></div>
+                                        <div class="hotspot-container">
+                                            <img width="173" height="242" src="https://www.pursuityourself.com/style-guide/wp-content/uploads/2013/02/pants.png" class="attachment-post-thumbnail wp-post-image" alt="pants" />                                            <p><p>Flat front pants are the modern look. The alternative, which we DO NOT endorse, are pleats. Pleats are large creases sewn into the pants just below the waist. You won&#8217;t find any pleats at Pursuit — we&#8217;ll leave those for grandpa&#8217;s suit store.</p>
+</p>
+                                        </div><!--hot-spot-container-->
+                                        <div class="clear"></div>
+                                    </div>
+                                </div><!-- end of hot-spot-->
+                                
+                                <div class="hotspot">
+                                    <div class="hotspot-button" id="five" style="top: 85px; left:385px;"><a href="#">shoulder width</a></div>
+                                    <div class="hotspot-popup">
+                                        <div class="close"></div>
+                                        <div class="hotspot-container">
+                                            <img width="173" height="127" src="https://www.pursuityourself.com/style-guide/wp-content/uploads/2013/02/back-coat.png" class="attachment-post-thumbnail wp-post-image" alt="back-coat" />                                            <p><p>A coat should hug your shoulders snugly. If you can do jumping jacks with the coat buttoned, it’s too loose. If you feel you can only move in robot motions (that will get old quickly), it’s too tight!</p>
+</p>
+                                        </div><!--hot-spot-container-->
+                                        <div class="clear"></div>
+                                    </div>
+                                </div><!-- end of hot-spot-->
+                                
+                                <div class="hotspot">
+                                    <div class="hotspot-button" id="six" style="top: 275px; left:280px;"><a href="#">jacket flaps</a></div>
+                                    <div class="hotspot-popup">
+                                        <div class="close"></div>
+                                        <div class="hotspot-container">
+                                            <img width="173" height="242" src="https://www.pursuityourself.com/style-guide/wp-content/uploads/2013/02/vent.png" class="attachment-post-thumbnail wp-post-image" alt="vent" />                                            <p><p>The coat has slits in the back to allow for movement. Be sure your coat isn’t so tight on your backside that the vents are open like a doggy door when you’re standing straight. </p>
+</p>
+                                        </div><!--hot-spot-container-->
+                                        <div class="clear"></div>
+                                    </div>
+                                </div><!-- end of hot-spot-->
+                                
+                                <div class="hotspot">
+                                    <div class="hotspot-button" id="seven" style="top: 390px; left:355px;"><a href="#">pant length</a></div>
+                                    <div class="hotspot-popup">
+                                        <div class="close"></div>
+                                        <div class="hotspot-container">
+                                            <img width="173" height="242" src="https://www.pursuityourself.com/style-guide/wp-content/uploads/2013/02/pants1.png" class="attachment-post-thumbnail wp-post-image" alt="pants" />                                            <p><p>You don’t want pant legs stuck to you like skinny jeans. Even guys with thicker legs will look better if their pants give just enough room to walk and sit, but don’t flap in the breeze.</p>
+</p>
+                                        </div><!--hot-spot-container-->
+                                        <div class="clear"></div>
+                                    </div>
+                                </div><!-- end of hot-spot-->
+                                
+                                <div class="hotspot">
+                                    <div class="hotspot-button" id="eight" style="top: 270px; left:540px;"><a href="#">sleeve length</a></div>
+                                    <div class="hotspot-popup">
+                                        <div class="close"></div>
+                                        <div class="hotspot-container">
+                                            <img width="173" height="242" src="https://www.pursuityourself.com/style-guide/wp-content/uploads/2013/02/sleev.png" class="attachment-post-thumbnail wp-post-image" alt="sleeve" />                                            <p><p>Most guys prefer their sleeve to reach just above the bend of the wrist so they can show ¼” to ½” of shirt sleeve. It’s important you don’t end up with a sleeve hanging around your knuckles or a sleeve so short you need to wear three watches to fill the gap. Many guys have a crippling phobia of short sleeves, so they buy a coat that is sized as a ‘long’ when they need a ‘regular’ or a ‘regular’ when they need a ‘short’. Remember a tailor can tweak the length of sleeves, so don&#8217;t over-size and end up with a coat dragging around your knees. Follow the sizing guide to help find the proper coat length.</p>
+</p>
+                                        </div><!--hot-spot-container-->
+                                        <div class="clear"></div>
+                                    </div>
+                                </div><!-- end of hot-spot-->
+                                
+                                <div class="hotspot">
+                                    <div class="hotspot-button" id="nine" style="top: 510px; left:560px;"><a href="#">sleeve length</a></div>
+                                    <div class="hotspot-popup">
+                                        <div class="close"></div>
+                                        <div class="hotspot-container">
+                                            <img width="173" height="242" src="https://www.pursuityourself.com/style-guide/wp-content/uploads/2013/02/shoes.png" class="attachment-post-thumbnail wp-post-image" alt="shoes" />                                            <p><p>The length of your pants is a matter of preference, but if you have none we recommend a small break like this. You can go little longer if you’re paranoid about showing too much sock when you sit, or a little shorter if you like to show off flashy socks — just be sure you aren’t showing skin when you sit and your pants aren&#8217;t doing a ten-car-pile-up on the top of your shoes. Adjusting the length of your pants (the hem) is one of the most basic and affordable alterations a tailor can do. Many tailors will do it in minutes while you wait. If you’re wondering about a cuff, we tend to steer guys away. While small, tight cuffs are somewhat GQ these days, and most cuffs we see around town are far from magazine-worthy. If you’re indifferent, skip the cuff.</p>
+</p>
+                                        </div><!--hot-spot-container-->
+                                        <div class="clear"></div>
+                                    </div>
+                                </div><!-- end of hot-spot-->
+                            
+                            </div><!-- hotspots-all -->
+                            
+                           
+                        </div><!-- .three-col-two-span#fit-guide-model -->
+                    </div>
+                </div><!-- .fit-guide -->
+
+                <div class="fit-guide-mobile mobile">
+                    <h1>Fit Guide</h1>
+                    
+                    <h2>Coat Width</h2>
+                    <p><p>Your coat should gently follow the contour of your midsection with only a little breathing room, but it shouldn&#8217;t be so tight that it strains the buttons. Even if you aren’t a slender guy, wearing a coat that closely follows your shape will make you look more slender than a boxy coat. And remember, with a two-button suit, you only use the top button — don’t make the rookie mistake of buttoning both.</p>
+</p>
+
+                    <h2>Coat Length</h2>
+                    <p><p>If your coat is the right length, it should fall to the middle of the palm when your arms rest at your sides, just reaching past the bottom of your zipper on a well-fit pair of pants. A sure-fire way to spot an amateur is a coat that hangs to the knee.</p>
+</p>
+
+                    <h2>Shoulder Width</h2>
+                    <p><p>A coat should hug your shoulders snugly. If you can do jumping jacks with the coat buttoned, it’s too loose. If you feel you can only move in robot motions (that will get old quickly), it’s too tight!</p>
+</p>
+
+                    <h2>Sleeve Length</h2>
+                    <p><p>Most guys prefer their sleeve to reach just above the bend of the wrist so they can show ¼” to ½” of shirt sleeve. It’s important you don’t end up with a sleeve hanging around your knuckles or a sleeve so short you need to wear three watches to fill the gap. Many guys have a crippling phobia of short sleeves, so they buy a coat that is sized as a ‘long’ when they need a ‘regular’ or a ‘regular’ when they need a ‘short’. Remember a tailor can tweak the length of sleeves, so don&#8217;t over-size and end up with a coat dragging around your knees. Follow the sizing guide to help find the proper coat length.</p>
+</p>
+
+                    <h2>Pocket Squares</h2>
+                    <p><p>You’ve got a pocket, use it. A pocket square will add a subtle bit of style to your look. Some coat pockets come stitched shut. Carefully use a seam ripper to open it up.</p>
+</p>
+
+                    <h2>Vents</h2>
+                    <p><p>The coat has slits in the back to allow for movement. Be sure your coat isn’t so tight on your backside that the vents are open like a doggy door when you’re standing straight. </p>
+</p>
+
+                    <h2>Flat Front or Pleats</h2>
+                    <p><p>Flat front pants are the modern look. The alternative, which we DO NOT endorse, are pleats. Pleats are large creases sewn into the pants just below the waist. You won&#8217;t find any pleats at Pursuit — we&#8217;ll leave those for grandpa&#8217;s suit store.</p>
+</p>
+
+                    <h2>Pant Fit</h2>
+                    <p><p>You don’t want pant legs stuck to you like skinny jeans. Even guys with thicker legs will look better if their pants give just enough room to walk and sit, but don’t flap in the breeze.</p>
+</p>
+
+                    <h2>Pant Length</h2>
+                    <p><p>The length of your pants is a matter of preference, but if you have none we recommend a small break like this. You can go little longer if you’re paranoid about showing too much sock when you sit, or a little shorter if you like to show off flashy socks — just be sure you aren’t showing skin when you sit and your pants aren&#8217;t doing a ten-car-pile-up on the top of your shoes. Adjusting the length of your pants (the hem) is one of the most basic and affordable alterations a tailor can do. Many tailors will do it in minutes while you wait. If you’re wondering about a cuff, we tend to steer guys away. While small, tight cuffs are somewhat GQ these days, and most cuffs we see around town are far from magazine-worthy. If you’re indifferent, skip the cuff.</p>
+</p>
+
+                    
+                </div>	
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+	</div>
+
+        <div class="clear"></div>
+
+        <section class="mobile mobile-nav">
+            <ul>
+                <li><a href="/shop/">Shop</a></li>
+                <li><a href="/our-story/">Our Story</a></li>
+                <li><a href="./style-guide/">Style Guide</a></li>
+                <li><a href="/customer/account/login/">Account</a></li>
+            </ul>
+        </section>
+
+      <footer id="main-footer">
+            <section id="email-signup">
+                <h4>Let's keep in touch</h4>
+                <h5>Sign up to get the latest news and special offers.</h5>
+                <!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup">
+                <form action="http://careworkstech.us6.list-manage1.com/subscribe/post?u=67487e50417816fb081109a38&amp;id=9abcd56acd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </form>
+                </div>
+                <!--End mc_embed_signup-->
+
+    </section>
+
+            <section class="three-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/our-story/">about us</a></li>
+                    <li><a href="/our-story/#locations">our locations</a></li>
+                    <li><a href="/our-story/#contact">contact us</a></li>
+                    <li><a href="/our-story/#press">press</a></li>
+                    <li><a href="/privacy/">privacy</a></li>
+                </ul>
+            </section>
+
+
+            <section class="three-col">
+                <h4>Account &amp; Help</h4>
+                <ul>
+                    <li><a href="/customer/account/login/">your account</a></li>
+                    <li><a href="/returns/">returns/exchanges</a></li>
+                    <li><a href="/shipping/">shipping</a></li>
+                    <li><a href="/refer-a-friend/">refer a friend</a></li>
+                    <li><a href="/help/">help</a></li>
+                </ul>
+            </section>
+
+            <section class="three-col">
+                <h4>Stay Connected</h4>
+                <ul>
+                    <li><a href="http://www.facebook.com/pursuityourself" target="_blank"><img src="/style-guide/wp-content/themes/pursuit/images/facebook.png" alt="Facebook" />&nbsp;&nbsp;facebook</a></li>
+                    <li><a href="http://www.twitter.com/pursuityourself" target="_blank"><img src="/style-guide/wp-content/themes/pursuit/images/twitter.png" alt="Twitter" />&nbsp;&nbsp;twitter</a></li>
+                    <li><a href="http://www.instagram.com/pursuityourself" target="_blank"><img src="/style-guide/wp-content/themes/pursuit/images/instagram.png" alt="Instagram" />&nbsp;&nbsp;instagram</a></li>
+                    <li><a href="http://www.pursuityourself.tumblr.com/" target="_blank"><img src="/style-guide/wp-content/themes/pursuit/images/tumblr.png" alt="Tumblr" />&nbsp;&nbsp;tumblr</a></li>
+                </ul>
+            </section>
+
+            <div class="clear"></div>
+
+        <div class="copyright">&copy; 2013 PURSUIT all rights reserved</div>
+      </footer>
+    </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-10004358-12']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+<script type='text/javascript' src='https://www.pursuityourself.com/style-guide/wp-content/themes/pursuit/js/navigation.js?ver=1.0'></script>
+
+<script type="text/javascript">
+adroll_adv_id = "JTAI5ZIFOFGZLKBBTUP37B";
+adroll_pix_id = "RS3G2UIOWVEZDJVXMZGJLZ";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+
+
+</body>
+</html>

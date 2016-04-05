@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html id='en' lang='en' xmlns:fb='http://ogp.me/ns/fb#'>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<title>Kim Kardashian Baby Bump Update: It&#39;s Growing! - The Hollywood Gossip</title>
+<link href="http://assets.thehollywoodgossip.com/assets/application-ec51c60e41f389d960481d5ada8264c3.css" media="all" rel="stylesheet" />
+<script type="text/javascript">
+var windowWidth = Math.min(window.innerWidth || Infinity, screen.width);
+var is_mobile = navigator.userAgent.match(/(iPad|iPhone|iPod|Android)/g) ? true : false;
+</script>
+
+<script type="text/javascript">
+!function(n,t){"undefined"!=typeof module&&module.exports?module.exports=t():"function"==typeof define&&define.amd?define(t):this[n]=t()}("$script",function(){function n(n,t){for(var e=0,o=n.length;o>e;++e)if(!t(n[e]))return c;return 1}function t(t,e){n(t,function(n){return!e(n)})}function e(r,u,f){function c(n){return n.call?n():s[n]}function l(){if(!--y){s[v]=1,g&&g();for(var e in m)n(e.split("|"),c)&&!t(m[e],c)&&(m[e]=[])}}r=r[a]?r:[r];var d=u&&u.call,g=d?u:f,v=d?r.join(""):u,y=r.length;return setTimeout(function(){t(r,function n(t,e){return null===t?l():(t=e||-1!==t.indexOf(".js")||/^https?:\/\//.test(t)||!i?t:i+t+".js",p[t]?(v&&(h[v]=1),2==p[t]?l():setTimeout(function(){n(t,!0)},0)):(p[t]=1,v&&(h[v]=1),o(t,l),void 0))})},0),e}function o(n,t){var e,o=u.createElement("script");o.onload=o.onerror=o[d]=function(){o[l]&&!/^c|loade/.test(o[l])||e||(o.onload=o[d]=null,e=1,p[n]=2,t())},o.async=1,o.src=r?n+(-1===n.indexOf("?")?"?":"&")+r:n,f.insertBefore(o,f.lastChild)}var i,r,u=document,f=u.getElementsByTagName("head")[0],c=!1,a="push",l="readyState",d="onreadystatechange",s={},h={},m={},p={};return e.get=o,e.order=function(n,t,o){!function i(r){r=n.shift(),n.length?e(r,i):e(r,t,o)}()},e.path=function(n){i=n},e.urlArgs=function(n){r=n},e.ready=function(o,i,r){o=o[a]?o:[o];var u=[];return!t(o,function(n){s[n]||u[a](n)})&&n(o,function(n){return s[n]})?i():!function(n){m[n]=m[n]||[],m[n][a](i),r&&r(u)}(o.join("|")),e},e.done=function(n){e([null],n)},e});
+</script>
+
+<script type="text/javascript">
+function $css(e){$script.ready("jquery",function(){document.createStyleSheet?document.createStyleSheet(e):jQuery('<link rel="stylesheet" type="text/css" href="'+e+'" />').appendTo("head")})}
+</script>
+
+<script>
+var already_ran_defined = false;
+var no_atf_ads = true;
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+
+var mediavine = {};
+mediavine.openx_ready = false;
+mediavine.partners = ['gpt'];
+mediavine.adunit = 'thehollywoodgossip';
+
+mediavine.dom_ready = function(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', fn);
+  } else {
+    document.attachEvent('onreadystatechange', function() {
+      if (document.readyState != 'loading')
+        fn();
+    });
+  }
+}
+
+mediavine.start_time = new Date().getTime();
+mediavine.log_time = function(desc) {
+  if (window.location.href.match(/debug/)) {
+    console.log(desc + ": " + String(new Date().getTime() - mediavine.start_time));
+  }
+}
+
+mediavine.google_push = function(o){window.googletag.cmd.push(o);}
+
+function display_ad(slot, id, options) {
+  mediavine.log_time('display_ad: ' + id);
+  if (options.yieldbot_slot) {
+    ybotq.push(function () {
+      yieldbot.setSlotTargeting(options.yieldbot_slot, slot);
+    });
+  }
+  if (mediavine.aol_bids && mediavine.aol_bids[id]) {
+    slot.setTargeting('mpcpm', mediavine.aol_bids[id]);
+    slot.setTargeting('mpalias', id);
+  }
+  if (window.sbi_trinity && window.sbi_trinity[id]) {
+    for (var key in window.sbi_trinity[id]) {
+      slot.setTargeting(key, window.sbi_trinity[id][key]);
+    }
+  }
+  pbjs.que.push(function() {
+    var ptargeting = pbjs.getAdserverTargetingForAdUnitCode(id);
+    if (typeof(ptargeting) !== 'undefined') {
+      if (typeof(ptargeting.hb_bidder) !== 'undefined') {
+        slot.setTargeting('hb_bidder', ptargeting.hb_bidder);
+      }
+      if (typeof(ptargeting.hb_adid) !== 'undefined') {
+        slot.setTargeting('hb_adid', ptargeting.hb_adid);
+      }
+      if (typeof(ptargeting.hb_pb) !== 'undefined') {
+        var bid = ptargeting.hb_pb;
+        if (parseFloat(bid) > 12.0) {
+          bid = '12.00';
+        }
+        slot.setTargeting('hb_pb', bid);
+      }
+    }
+  });
+  if (mediavine.openx_ready && window.OX && window.OX.dfp_bidder) {
+    // Get the price map and apply the pricing values to each ad unit
+    var openx_price = window.OX.dfp_bidder.getPriceMap()[id];
+    if (openx_price) {
+      slot.setTargeting('ox'+openx_price.size, openx_price.price);
+    }
+  }
+  window.googletag.display(id);
+  window.googletag.pubads().refresh([slot], {changeCorrelator: false} );
+}
+
+function atf_ad(id, options) {
+  mediavine.google_push(function() {
+    var slot = window.googletag.defineSlot('/1030006/' + mediavine.adunit + '_' + id, options.sizes, id).addService(window.googletag.pubads());
+    display_ad(slot, id, options);
+  });
+}
+
+function lazy_ad(id, options) {
+  $script.ready(['waypoints','initialads'], function() {
+    new Waypoint({
+      element: document.getElementById(id + '_wrapper'),
+      handler: function(direction) {
+        mediavine.google_push(function() {
+          var slot = googletag.defineSlot('/1030006/' + mediavine.adunit + '_' + id, options.sizes, id).addService(googletag.pubads());
+          display_ad(slot, id, options);
+        });
+        this.destroy();
+      },
+      offset: function() {
+        var offset_buffer;
+        if (options.offset) {
+          offset_buffer = options.offset;
+        }
+        else {
+           offset_buffer = is_mobile ? 700 : 350;
+        }
+
+        return this.context.innerHeight() + offset_buffer;
+      }
+    });
+  });
+}
+
+
+$script('http://www.googletagservices.com/tag/js/gpt.js', 'gpt');
+$script("https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/noframework.waypoints.min.js",'waypoints');
+
+var ybotq = window.ybotq || [];
+mediavine.partners.push('yieldbot');
+
+$script('http://cdn.yldbt.com/js/yieldbot.intent.js');
+
+// Yieldbot
+ybotq.push(function () {
+  if (windowWidth >= 481) {
+    yieldbot.pub('f07f');
+  }
+  else {
+    yieldbot.pub('d025');
+  }
+
+  if (windowWidth >= 728) {
+    yieldbot.defineSlot('leaderboard');
+  }
+  if (windowWidth >= 992) {
+    yieldbot.defineSlot('rectangle-flex', { sizes: [
+      [300, 250],
+      [300, 600]
+    ]});
+  }
+  if (windowWidth < 481) {
+    yieldbot.defineSlot('adhesion');
+    yieldbot.defineSlot('rectangle', { sizes: [
+      [300, 250],
+      [300, 200]
+    ]});
+  } else {
+    yieldbot.defineSlot('rectangle');
+  }
+
+  yieldbot.enableAsync();
+  yieldbot.go();
+});
+ybotq.push(function () {
+  mediavine.log_time('yieldbot');
+  $script.done('yieldbot');
+});
+
+mediavine.partners.push('amazon');
+
+$script('http://c.amazon-adsystem.com/aax2/amzn_ads.js', function() {
+  try {
+    amznads.getAdsCallback('3229', function() {
+      amznads.setTargetingForGPTAsync('amznslots');
+      mediavine.log_time('amazon');
+      $script.done('amazon');
+    });
+  } catch(e) { /*ignore*/}
+});
+
+mediavine.partners.push('criteo');
+
+var crtg_nid = '4006';
+var crtg_cookiename = 'crtg_rta';
+var crtg_varname = 'crtg_content';
+function crtg_getCookie(c_name){
+  var i,x,y,ARRcookies=document.cookie.split(";");
+  for(i=0;i<ARRcookies.length;i++){
+    x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+    y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+    x=x.replace(/^\s+|\s+$/g,"");
+    if(x==c_name){
+      return unescape(y);}
+    }
+  return '';
+}
+var crtg_content = crtg_getCookie(crtg_cookiename);
+var crtg_rnd=Math.floor(Math.random()*99999999999);
+var crtg_url=location.protocol+'//rtax.criteo.com/delivery/rta/rta.js?netId='+escape(crtg_nid);
+crtg_url +='&cookieName='+escape(crtg_cookiename);
+crtg_url +='&rnd='+crtg_rnd;
+crtg_url +='&varName=' + escape(crtg_varname);
+
+$script(crtg_url, 'criteo', function() {
+  mediavine.log_time('criteo');
+
+  mediavine.google_push(function() {
+    if (typeof(crtg_content) == 'undefined') {
+      crtg_content = '';
+    }
+    var s = crtg_content.split(';');
+    s.pop();
+    if (s.length > 0) {
+      googletag.pubads().setTargeting('crtRTA', s);
+    }
+  });
+});
+
+
+// Define ATF ads
+mediavine.atf_ads = mediavine.atf_ads || {};
+if (windowWidth >= 970) {
+  mediavine.atf_ads['leaderboard_atf'] = { sizes: [[728,90],[970,90],[970,66],[970,250]], yieldbot_slot: 'leaderboard', aol_placement: 3671625, openx_sizes: ["728x90"], sonobi_placement: 'a2c457ce805617474e98', sovrn_id: '316464' };
+}
+else if (windowWidth >= 728){
+  mediavine.atf_ads['leaderboard_atf'] = { sizes: [728,90], yieldbot_slot: 'leaderboard', aol_placement: 3671625, openx_sizes: ["728x90"], sonobi_placement: 'a2c457ce805617474e98', sovrn_id: '316464' };
+}
+if (windowWidth >= 992) {
+  mediavine.atf_ads['sidebar_atf'] = { sizes: [[300,250],[300,600],[300,1050]], yieldbot_slot: 'rectangle-flex', aol_placement: 3671630, openx_sizes: ["300x250","300x600"], sonobi_placement: '9253f15a0a8a36754e39', sovrn_id: '316465' };
+}
+if (windowWidth <= 480) {
+  mediavine.atf_ads['adhesion_mobile'] = { sizes: [320,50], yieldbot_slot: 'adhesion', aol_placement: 3671628, openx_sizes: ["320x50"], sonobi_placement: 'b336da26bb9f0c1aa5b2', sovrn_id: '316466' };
+}
+if (is_mobile || windowWidth <= 480) {
+  mediavine.atf_ads['content_mobile'] = { sizes: [300,250], yieldbot_slot: 'rectangle', aol_placement: 3671626, openx_sizes: ["300x250"], sonobi_placement: 'f9b87fd7af25f3399269', sovrn_id: '316469' };
+}
+
+// Define potential Lazy load BTF ads. Let apps hook in to these
+mediavine.lazy_ads = mediavine.lazy_ads || {};
+if (is_mobile || windowWidth <= 480) {
+  mediavine.lazy_ads['content_2_mobile'] = { sizes: [300,250], yieldbot_slot: 'rectangle', aol_placement: 3671626, openx_sizes: ["300x250"], sonobi_placement: 'f9b87fd7af25f3399269', sovrn_id: '316468' };
+  mediavine.lazy_ads['content_3_mobile'] = { sizes: [300,250], yieldbot_slot: 'rectangle', aol_placement: 3671626, openx_sizes: ["300x250"], sonobi_placement: 'f9b87fd7af25f3399269', sovrn_id: '316470' };
+} else {
+  mediavine.lazy_ads['content_btf'] = { sizes: [300,250], yieldbot_slot: 'rectangle', aol_placement: 3671629, openx_sizes: ["300x250"], sonobi_placement: '5e619063fb5d5fc26dab', sovrn_id: '316471' };
+  mediavine.lazy_ads['content_2_btf'] = { sizes: [300,250], yieldbot_slot: 'rectangle', aol_placement: 3671629, openx_sizes: ["300x250"], sonobi_placement: '5e619063fb5d5fc26dab', sovrn_id: '316472' };
+  mediavine.lazy_ads['content_3_btf'] = { sizes: [300,250], yieldbot_slot: 'rectangle', aol_placement: 3671629, openx_sizes: ["300x250"], sonobi_placement: '5e619063fb5d5fc26dab', sovrn_id: '316473' };
+}
+
+// Define potential OOP placements
+mediavine.oop_ads = ['interstitial'];
+if (is_mobile || windowWidth <= 480) {
+  mediavine.oop_ads.push('content_oop_mobile');
+} else {
+  mediavine.oop_ads.push('content_oop_desktop');
+}
+
+
+mediavine.partners.push('prebid');
+
+// Little less time than overall timeout (1200ms) so we're back in time
+var PREBID_TIMEOUT = 1150;
+
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
+
+// Make sure we set multiple keys for DFP reports
+// pbjs.bidderSettings = {
+//   standard: {
+//     alwaysUseBid: true
+//   }
+// };
+
+$script('//acdn.adnxs.com/prebid/static/0.4.1/prebid.js');
+
+mediavine.dom_ready(function() {
+
+  var prebid_adunits = [];
+
+  // For now shoot off all units at once. Split ATF / BTF later
+  for (var slot_id in mediavine.atf_ads) {
+    var my_ad = mediavine.atf_ads[slot_id];
+    if ((typeof(my_ad.sovrn_id) !== 'undefined') && (document.getElementById(slot_id) !== null)) {
+      prebid_adunits.push({
+        code: slot_id,
+        sizes: my_ad.sizes,
+        bids: [{
+          bidder: 'sovrn',
+          params: { tagid: my_ad.sovrn_id }
+        }]
+      });
+    }
+  }
+  for (var slot_id in mediavine.lazy_ads) {
+    var my_ad = mediavine.lazy_ads[slot_id];
+    if ((typeof(my_ad.sovrn_id) !== 'undefined') && (document.getElementById(slot_id) !== null)) {
+      prebid_adunits.push({
+        code: slot_id,
+        sizes: my_ad.sizes,
+        bids: [{
+          bidder: 'sovrn',
+          params: { tagid: my_ad.sovrn_id }
+        }]
+      });
+    }
+  }
+
+  pbjs.que.push(function() {
+    pbjs.addAdUnits(prebid_adunits);
+    pbjs.requestBids({
+      bidsBackHandler: function(bidResponses) {
+        $script.done('prebid');
+        mediavine.log_time('prebid');
+      }
+    })
+  });
+});
+
+// Wrap OpenX in dom_ready. Needs to look if units available
+mediavine.partners.push('openx');
+mediavine.dom_ready(function() {
+  var openx_ads = []
+
+  for (var slot_id in mediavine.atf_ads) {
+    var my_ad = mediavine.atf_ads[slot_id];
+    if ((typeof(my_ad.openx_sizes) !== 'undefined') && (document.getElementById(slot_id) !== null)) {
+      openx_ads.push(["/1030006/" + mediavine.adunit + '_' + slot_id, my_ad.openx_sizes, slot_id]);
+    }
+  }
+  for (var slot_id in mediavine.lazy_ads) {
+    var my_ad = mediavine.lazy_ads[slot_id];
+    if ((typeof(my_ad.openx_sizes) !== 'undefined') && (document.getElementById(slot_id) !== null)) {
+      openx_ads.push(["/1030006/" + mediavine.adunit + '_' + slot_id, my_ad.openx_sizes, slot_id]);
+    }
+  }
+  window.OX_dfp_ads = openx_ads;
+  window.OX_dfp_options = {
+    'callback': function() {
+      mediavine.log_time('openx');
+      mediavine.openx_ready = true;
+      $script.done('openx');
+    }
+  };
+  $script('http://ox-d.mediavine.servedbyopenx.com/w/1.0/jstag?nc=1030006-hollywoodgossip');
+});
+
+$script('http://aka-cdn.adtechus.com/dt/common/DAC.js','dac');
+
+// Wrap AOL in dom_ready. Needs to look if units available
+mediavine.partners.push('aol');
+mediavine.aol_bids = {};
+
+function aol_run_btf_units() {
+  for (var slot_id in window.mediavine.lazy_ads) {
+    if (document.getElementById(slot_id) !== null) {
+      ADTECH.loadPubAd(slot_id);
+    }
+  }
+}
+
+mediavine.dom_ready(function() {
+  window.first_aol_bid = true;
+  $script.ready('dac', function() {
+    mediavine.log_time('dac ready');
+    function pubTagLibHandler(response) {
+      if (response.cpm) {
+        mediavine.aol_bids[response.alias] = response.pubApiHelper.getCPMInCents();
+      }
+
+      if (window.first_aol_bid) {
+        window.first_aol_bid = false;
+        mediavine.log_time('aol');
+        $script.done('aol');
+
+        // Now Run BTF auctions
+        aol_run_btf_units();
+      }
+    }
+
+    var bidRequestConfig = {
+      server: 'adserver.adtechus.com',
+      network: '9560.1',
+      loadAd: pubTagLibHandler,
+      adjustment: -15,
+    };
+
+    var dacBidRequestConfigs = [];
+    // Define ATF units
+    for (var slot_id in mediavine.atf_ads) {
+      if (document.getElementById(slot_id) !== null) {
+        var my_ad = mediavine.atf_ads[slot_id];
+        dacBidRequestConfigs.push({placement: my_ad.aol_placement, alias: slot_id, adContainerId: slot_id});
+      }
+    }
+    // Define BTF units
+    for (var slot_id in mediavine.lazy_ads) {
+      if (document.getElementById(slot_id) !== null) {
+        var my_ad = mediavine.lazy_ads[slot_id];
+        dacBidRequestConfigs.push({placement: my_ad.aol_placement, alias: slot_id, adContainerId: slot_id});
+      }
+    }
+
+    (function(u,h){function q(a){var b=g.getDacBidReqConfig(a),f=0<b.pubApiConfig.roundingConfig.length?!0:!1,d=b.pubApiHelper,b=c.adjustment||0,d=f?d.getRoundedCPM():d.getCPM();if(isNaN(d))console.log("cpm is null for: ",a);else return a=d+b/100*d,c.formatCpmToDecimal?f?a/100:Math.round(100*a)/100:a;return null}function n(a){clearTimeout(a.alias);l[a.alias]=setTimeout(function(){m(a)},c.loadAdTimeout)}function r(a){l[a]&&(clearTimeout(l[a]),delete l[a])}function m(a){a&&(a.success=!1);c.loadAd(a||{success:!1})}
+    function v(a,b,f){function d(d,e){f&&(f.style.width=d+"px",f.style.height=e+"px");a.width=d;a.height=e;b&&b.complete&&b.complete()}var c=b&&b.width?b.width:1,e=b&&b.height?b.height:1;1>=c||1>=e?a.contentWindow.document.body.onload=function(){var b=a.contentWindow.document.getElementById("ath");d(b.offsetWidth,b.offsetHeight)}:d(c,e)}function p(a){a=a.data;if(a.match("adtech_pub_page::")){var b=a.split("adtech_pub_page::")[1];if(a=g.getDacBidReqConfig(b)){var f=a.pubApiHelper,d=a.adContainerId,c=0,
+    e=0;document.getElementById(d).innerHTML="";f&&(c=f.getAdWidth(),e=f.getAdHeight(),f.getCreative()?(b=f.getCreative(),c={width:c,height:e},e=document.createElement("iframe"),e.seamless="seamless",e.id="adtpub-frame-"+d,e.name=e.id,e.style.border="0px",e.scrolling="no",e.frameborder=0,e.width=1,e.height=1,e.allowtransparency=!0,e.setAttribute("allowFullScreen","true"),e.setAttribute("mozallowFullScreen","true"),e.setAttribute("webkitAllowFullScreen","true"),d=document.getElementById(d),d.appendChild(e),
+    b="<head></head><body><style>body,html{margin:0;padding:0;}</style><script>var inFiF=inDapIF=true;\x3c/script>"+b+"</body>",e.contentWindow.document.open(),e.contentWindow.document.write(b),e.contentWindow.document.close(),v(e,c,d)):console.log("No creative for alias: ",b),a.pubApiHelper=null)}}}var g=window.ADTECH,c=u||{};c.loadAd=c.loadAd||function(){console.log("loadAd not defined.")};c.formatCpmToDecimal=!1===c.formatCpmToDecimal?!1:!0;c.loadAdTimeout=c.loadAdTimeout||800;var w={roundingConfig:c.roundingConfig||
+    [],defaultKey:c.bidKey||"",pubApiOK:function(a,b){var f=b.alias?b.alias:b.placement;r(f);var d=g.getDacBidReqConfig(f);d.pubApiHelper=a;d.cpm=q(f);d.cpm?(d.success=!0,c.loadAd(d)):m(d)},pubApiER:function(a,b){console.log("PubApi config Err handler: "+a);var c=b.alias?b.alias:b.placement;r(c);l[c]&&(clearTimeout(l[c]),delete l[c]);var d=g.getDacBidReqConfig(c);d.pubApiHelper=pubApiHelper;d.cpm=q(c);m(d)}},k=[],l={},t=function(a){for(var b=0;b<k.length;b++)if(k[b].alias==a)return!0};g.loadPubAd=function(a){var b=
+    g.getDacBidReqConfig(a);b&&(b.adContainerId=b.adContainerId||"adt-div-"+(new Date).getTime(),b.pubApiHelper=null,b.cpm=null,b.refreshed=!1,t(a)||k.push(b),n(b),g.loadAd(b))};g.refreshPubAd=function(a){t(a)&&(a=g.getDacBidReqConfig(a))&&(a.pubApiHelper=null,a.cpm=null,a.refreshed=!0,n(a),g.loadAd(a))};g.refreshPubAds=function(){for(var a=0;a<k.length;a++){var b=k[a];b.pubApiHelper=null;b.cpm=null;k[a].refreshed=!0;n(k[a]);g.loadAd(k[a])}};g.getDacBidReqConfig=function(a){for(var b=0;b<h.length;b++)if(h[b].alias==
+    a)return h[b]};(function(){for(var a=0;a<h.length;a++)h[a].serviceType="pubapi",h[a].server=c.server,h[a].network=c.network,h[a].bidKey=c.bidKey,h[a].mpAliasKey="mpalias",h[a].pubApiConfig=w,h[a].params={cmd:"bid",cors:"yes"};"function"==typeof window.postMessage?(a=window,a.addEventListener?a.addEventListener("message",p,!1):a.attachEvent?a.attachEvent("onmessage",p):a.onmessage=p):m()})()})(bidRequestConfig,dacBidRequestConfigs);
+
+    // Run ATF units now
+    if (Object.keys(mediavine.atf_ads).length > 0) {
+      mediavine.log_time('aol atf units running');
+      for (var slot_id in mediavine.atf_ads) {
+        if (document.getElementById(slot_id) !== null) {
+          ADTECH.loadPubAd(slot_id);
+        }
+      }
+    }
+    else {
+      aol_run_btf_units();
+    }
+  });
+});
+
+mediavine.partners.push('sonobi');
+
+mediavine.dom_ready(function() {
+  var sonobi_test = window.location.search.match(/sonobi/) ? '-test' : '';
+  var sonobi_placements = {}
+
+  // Sonobi ATF units
+  for (var slot_id in mediavine.atf_ads) {
+    var my_ad = mediavine.atf_ads[slot_id];
+    if ((typeof(my_ad.sonobi_placement) !== 'undefined') && (document.getElementById(slot_id) !== null)) {
+      sonobi_placements[slot_id] = my_ad.sonobi_placement + sonobi_test;
+    }
+  }
+  // Sonobi Lazy units
+  for (var slot_id in mediavine.lazy_ads) {
+    var my_ad = mediavine.lazy_ads[slot_id];
+    if ((typeof(my_ad.sonobi_placement) !== 'undefined') && (document.getElementById(slot_id) !== null)) {
+      sonobi_placements[slot_id] = my_ad.sonobi_placement + sonobi_test;
+    }
+  }
+
+  var sonobi_url = 'http://apex.go.sonobi.com/trinity.js?key_maker=' + JSON.stringify(sonobi_placements) + '&s=' + Math.floor(Math.random() * 1000);;
+  $script(sonobi_url, 'sonobi', function() {
+    mediavine.log_time('sonobi');
+    mediavine.google_push(function() {
+      googletag.pubads().setTargeting("sbi_dc", window.sbi_dc);
+    });
+  });
+});
+
+
+// Initiate pubads. No actual loading/defining of ads yet..
+mediavine.google_push(function() {
+  googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+    // Make Ad visible
+    if (!event.isEmpty) {
+      document.getElementById(event.slot.getSlotElementId()).style.display = 'block';
+    }
+
+    // Make correct sidebar ad unit sticky
+    var sticky_ad_name;
+    if ((typeof(mediavine.lazy_ads.sidebar_btf) !== 'undefined') && (document.getElementById('sidebar_btf') != null)) {
+      sticky_ad_name = '/1030006/' + mediavine.adunit + '_sidebar_btf'
+    } else {
+      sticky_ad_name = '/1030006/' + mediavine.adunit + '_sidebar_atf'
+    }
+
+    if (!event.isEmpty && (event.slot.getName() == sticky_ad_name)) {
+      var placeholder_height;
+      if (document.getElementById('sidebar_bottom')) {
+        placeholder_height = event.size[1] + document.getElementById('sidebar_bottom').offsetHeight;
+      } else {
+        placeholder_height = event.size[1];
+      }
+      var sidebar_placeholder = document.getElementById('sticky_sidebar_placeholder')
+
+      sidebar_placeholder.setAttribute('style', 'height:' + String(placeholder_height) + 'px;')
+      sidebar_placeholder.style.height = String(placeholder_height) + 'px';
+    }
+
+    // Mobile adhesion
+    if (!event.isEmpty && (event.slot.getName() == ('/1030006/' + mediavine.adunit + '_adhesion'))) {
+      // Make white background.
+      document.getElementById('adhesion_mobile').style.backgroundColor = '#ffffff';
+    }
+
+    // Initialads are loaded. Can do btf now.
+    if (!window.initial_ads_loaded) {
+      window.initial_ads_loaded = true;
+      mediavine.log_time('initialads');
+      $script.done('initialads');
+    }
+    window.initial_ads_loaded = true;
+  });
+  googletag.pubads().setTargeting("path","/2015/08/kim-kardashian-baby-bump-update-its-growing/");
+  googletag.pubads().collapseEmptyDivs();
+  googletag.pubads().enableSingleRequest();
+
+  //Disable initial load since we use refresh to display new ads
+  googletag.pubads().disableInitialLoad();
+
+  googletag.enableServices();
+});
+
+// Set 1200 ms timeout for all partners
+mediavine.dom_ready(function() {
+  setTimeout((function() {
+    if (!window.already_ran_defined) {
+      mediavine.log_time('partner timeout');
+      for (var i = 0; i < mediavine.partners.length; ++i) {
+        $script.done(mediavine.partners[i]);
+      }
+    }
+  }), 1200);
+});
+
+// Define ATF Slots, Display Ads and Create Lazy Waypoints. Need dom ready
+mediavine.dom_ready(function() {
+  mediavine.log_time('dom_ready');
+  $script.ready(mediavine.partners, function() {
+    mediavine.log_time('script.ready(mediavine.partners)');
+    if (!already_ran_defined) { // Mutex so we only define once
+      already_ran_defined = true;
+      mediavine.google_push(function() {
+
+        // Create atf ads
+        for (var slot_id in mediavine.atf_ads) {
+          if ((slot_id != 'adhesion_mobile') && (document.getElementById(slot_id) !== null)) {
+            var my_ad = mediavine.atf_ads[slot_id];
+            atf_ad(slot_id, { sizes: my_ad.sizes, yieldbot_slot: my_ad.yieldbot_slot});
+            no_atf_ads = false;
+          }
+        }
+
+        // If no atf ads, trigger initialads immeditately
+        if (no_atf_ads) {
+          if (!window.initial_ads_loaded) {
+            window.initial_ads_loaded = true;
+            mediavine.log_time('no_atf_ads - initialads');
+            $script.done('initialads');
+          }
+        } else {
+          // Set 5 s timeout for initialads head start
+          setTimeout((function() {
+            if (!window.initial_ads_loaded) {
+              window.initial_ads_loaded = true;
+              mediavine.log_time('timeout - initialads');
+              $script.done('initialads');
+            }
+          }), 5000);
+        }
+
+        // Adhesion & OOP placements fire after initialads
+        $script.ready('initialads', function() {
+          var adhesion_ad;
+          if (adhesion_ad = mediavine.atf_ads['adhesion_mobile']) {
+            atf_ad('adhesion_mobile', { sizes: adhesion_ad.sizes, yieldbot_slot: adhesion_ad.yieldbot_slot});
+          }
+
+          // Loop through OOP ads
+          for (var i = 0; i < mediavine.oop_ads.length; ++i) {
+            var oop_ad = mediavine.oop_ads[i];
+            if (document.getElementById(oop_ad) !== null) {
+              var oop_slot = googletag.defineOutOfPageSlot('/1030006/' + mediavine.adunit + '_' + oop_ad, oop_ad).addService(googletag.pubads());
+              googletag.display(oop_ad);
+              googletag.pubads().refresh([oop_slot], {changeCorrelator: false} );
+            }
+          }
+
+        });
+      });
+
+      // Create lazy ads from defined lazy slots
+      for (var slot_id in mediavine.lazy_ads) {
+        if (document.getElementById(slot_id) !== null) {
+          var my_ad = mediavine.lazy_ads[slot_id];
+          lazy_ad(slot_id, { sizes: my_ad.sizes, yieldbot_slot: my_ad.yieldbot_slot});
+        }
+      }
+    }
+  });
+});
+</script>
+
+<script>
+  $script('http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', 'jquery');
+  $script.ready('jquery', function() {
+    $script('http://assets.thehollywoodgossip.com/assets/lazyimg-09eed03148a408a0658c9565360bce85.js');
+    $script('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js','bootstrap');
+  });
+  $script.ready('bootstrap', function() {
+    $script('http://assets.thehollywoodgossip.com/assets/application-238e566742aee11ef761a0a7f4c3f09f.js','application');
+  });
+  $css('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+</script>
+<link href="http://assets.thehollywoodgossip.com/assets/favicon-0b26342f491de9bc87cc5897bb511805.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link href="http://www.thehollywoodgossip.com/2015/08/kim-kardashian-baby-bump-update-its-growing/" rel="canonical" />
+
+
+<!--[if lt IE 9]>
+<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<link href='http://assets.thehollywoodgossip.com/respond-proxy.html' id='respond-proxy' rel='respond-proxy'>
+<link href='/respondjs/respond.proxy.gif' id='respond-redirect' rel='respond-redirect'>
+<script src='/respondjs/respond.proxy.js'></script>
+<![endif]-->
+<link href="http://www.thehollywoodgossip.com/rss.xml" rel="alternate" title="The Hollywood Gossip Feed" type="application/atom+xml" />
+<script type="text/javascript">
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
+ga.l=+new Date;
+$script.ready("application",function() {
+  $script('//www.google-analytics.com/analytics.js');
+});
+ga('create', 'UA-2410076-1', 'auto');
+ga('set', 'dimension1', 'Kim Kardashian');
+ga('set', 'dimension2', 'Hilton Hater');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
+
+<meta content='277650442346327' property='fb:app_id'>
+<meta content='The Hollywood Gossip' property='og:site_name'>
+<meta content='article' property='og:type'>
+<meta content='http://www.thehollywoodgossip.com/2015/08/kim-kardashian-baby-bump-update-its-growing/' property='og:url'>
+<meta content="Kim Kardashian Baby Bump Update: It's Growing!" property='og:title'>
+<meta content="Kim Kardashian shows off her baby bump in this Instagram photo. It's not small, people. Not small at all!" property='og:description'>
+<meta content='http://images.thehollywoodgossip.com/iu/s--w2umsc9C--/t_full/f_auto,fl_lossy,q_75/v1439814487/kim-kardashian-baby-bumping.png' property='og:image'>
+<meta content='image/png' property='og:image:type'>
+<meta content='630' property='og:image:width'>
+<meta content='660' property='og:image:height'>
+<meta content='http://images.thehollywoodgossip.com/iu/s--wmjqRwlw--/t_full/f_auto,fl_lossy,q_75/v1395421287/kim-kardashian-vogue-cover.jpg' property='og:image'>
+<meta content='image/jpeg' property='og:image:type'>
+<meta content='630' property='og:image:width'>
+<meta content='883' property='og:image:height'>
+<meta content='2015-08-17T08:52:29-04:00' property='article:published_time'>
+<meta content='2015-08-17T08:52:29-04:00' property='article:modified_time'>
+<meta content='Kim Kardashian' property='article:tag'>
+<meta content='Baby Bump' property='article:tag'>
+<meta content='Celebrity Gossip' property='article:tag'>
+<meta content='Hilton Hater' property='article:author'>
+
+<meta content='thgossip' name='twitter:site'>
+<meta content='summary_large_image' name='twitter:card'>
+<meta content="Kim Kardashian Baby Bump Update: It's Growing!" name='twitter:title'>
+<meta content="Kim Kardashian shows off her baby bump in this Instagram photo. It's not small, people. Not small at all!" name='twitter:description'>
+<meta content='http://images.thehollywoodgossip.com/iu/s--w2umsc9C--/t_full/f_auto,fl_lossy,q_75/v1439814487/kim-kardashian-baby-bumping.png' name='twitter:image:src'>
+
+<meta content="Kim Kardashian shows off her baby bump in this Instagram photo. It&#39;s not small, people. Not small at all!" name="description"></meta>
+
+<link href='http://assets.thehollywoodgossip.com/assets/icons/apple-touch-icon-144-db175fef8bc015b5c1886cdf2c3b5667.png' rel='apple-touch-icon' sizes='144x144'>
+<link href='http://assets.thehollywoodgossip.com/assets/icons/apple-touch-icon-114-d0c5ee418a73884a0205170a6628a5d5.png' rel='apple-touch-icon' sizes='114x114'>
+<link href='http://assets.thehollywoodgossip.com/assets/icons/apple-touch-icon-72-20520c96cbd629d8e5394376d8f265ff.png' rel='apple-touch-icon' sizes='72x72'>
+<link href='http://assets.thehollywoodgossip.com/assets/icons/apple-touch-icon-57-91da33dfe6093d31b1bb39a87bd597f2.png' rel='apple-touch-icon'>
+<link href='https://plus.google.com/+hollywoodgossip' rel='publisher'>
+
+<script type="text/javascript">
+$script.ready('application',function() {
+  $script("//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=277650442346327", 'facebook');
+});
+</script>
+
+<script type="text/javascript">
+$css('//fonts.googleapis.com/css?family=Merriweather:400,700|Raleway:400,700');
+</script>
+
+<!-- Begin comScore Tag -->
+<script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "19265279" });
+  $script.ready('application',function() {
+    $script("http://b.scorecardresearch.com/beacon.js");
+  });
+</script>
+<!-- End comScore Tag -->
+
+<script>
+var ggv2id='2f3788fd';
+$script.ready('initialads',function() {
+  $script("http://g2.gumgum.com/javascripts/ggv2.js");
+});
+</script>
+
+<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "http://www.thehollywoodgossip.com",
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "http://www.thehollywoodgossip.com/search/?q={search_term_string}",
+     "query-input": "required name=search_term_string"
+   }
+}
+</script>
+
+<script type="text/javascript">
+  var addthis_share = {
+    url: 'http://www.thehollywoodgossip.com/2015/08/kim-kardashian-baby-bump-update-its-growing/',
+    templates: {
+      twitter: "{{title}} {{url}} via @thgossip"
+    }
+  }
+  var addthis_config = {
+    data_ga_property: 'UA-2410076-1'
+  }
+</script>
+<script type="text/javascript">
+$script.ready('application',function() {
+  $script("http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530cd2b027aa2325");
+});
+</script>
+
+<script type="text/javascript">
+var _qevents = _qevents || [];
+_qevents.push({
+  qacct:"p-bdt0MfHeMCXww"
+});
+$script.ready('application',function() {
+  $script("http://edge.quantserve.com/quant.js");
+});
+</script>
+
+<script>
+window._taboola = window._taboola || [];
+_taboola.push({article:'auto'});
+
+
+$script.ready('initialads', function() {
+  $script('//cdn.taboola.com/libtrc/mediavine-network/loader.js');
+});
+ </script>
+
+<!-- start boomtrain -->
+<script type="text/javascript">
+  $script.ready('application', function() {
+    $script("http://cdn.boomtrain.com/analyticstrain/fe3d1b4f09f60315d2bbfb27557a10e3/analyticstrain.min.js", function() {
+      _bt.track("viewed", {
+        model: "post",
+        id: "75160"
+      });
+
+    });
+  });
+</script>
+<!-- end boomtrain -->
+
+<div id="boomtrain" data-model="post" data-id="75160"></div>
+
+</head>
+<body itemscope itemtype='http://schema.org/WebPage'>
+<div id='fb-root'></div>
+<nav class='navbar navbar-default navbar-static-top' id='navbar' itemscope itemtype='schema.org/WPHeader' role='navigation'>
+<div class='navbar-header'>
+<div class='dropdown navbar-button'>
+<button class='btn btn-link' data-toggle='dropdown'>
+<i class="fa fa-search"></i>
+</button>
+<div class='dropdown-menu search-dropdown'>
+<form action='/search' role='search'>
+<div class='input-group'>
+<input class="form-control" id="q" name="q" placeholder="Search" type="search" />
+<div class='input-group-btn'><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></div>
+</div>
+</form>
+</div>
+</div>
+<div class='dropdown navbar-button'>
+<button class='btn btn-link' data-toggle='dropdown'>
+<i class="fa fa-user"></i>
+</button>
+<ul class='dropdown-menu user-dropdown dropdown-menu-right'></ul>
+</div>
+<button class='btn btn-link' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+<span class='sr-only'>Toggle navigation</span>
+<i class="fa fa-bars"></i>
+</button>
+<div class='navbar-center'>
+<a href="/"><img alt="The Hollywood Gossip" src="http://assets.thehollywoodgossip.com/assets/logo-white-f3722fb745c3b082c326348168212bc3.png" /></a>
+</div>
+</div>
+<div class='navbar-collapse collapse'>
+<ul class='nav navbar-nav'>
+<li><a href="/categories/celebrity-gossip/">Celebrity Gossip</a></li>
+<li><a href="/categories/celebrity-fashion/">Fashion</a></li>
+<li><a href="/categories/celebrity-weddings/">Weddings</a></li>
+<li><a href="/categories/celebrity-babies/">Babies</a></li>
+<li><a href="/categories/celebrity-hairstyles/">Hair</a></li>
+<li><a href="/categories/pets/">Pets</a></li>
+<li><a href="/categories/news/">News</a></li>
+<li><a href="/categories/sports/">Sports</a></li>
+<li><a href="/categories/politics/">Politics</a></li>
+<li><a href="/categories/tv/">TV</a></li>
+<li><a href="/categories/movies/">Movies</a></li>
+</ul>
+</div>
+</nav>
+
+<div class='container-fluid' id='wrapper'>
+<div class='adunit' id='leaderboard_atf'></div>
+<div class='row'>
+<div class='col-lg-8' id='content'>
+<div id='flash'></div>
+<meta content='true' itemprop='mainContentOfPage'>
+<div class='visible-print-block' id='print_logo'><img alt="The Hollywood Gossip" itemprop="image" src="http://assets.thehollywoodgossip.com/assets/logo-white-f3722fb745c3b082c326348168212bc3.png" /></div>
+<div id='post' itemscope itemtype='schema.org/Article'>
+<article>
+<header class='header'><h1 itemprop='name'>Kim Kardashian Baby Bump Update: It's Growing!</h1>
+<small>
+by
+<a href="/authors/levi1132/" rel="author">Hilton Hater</a>
+at
+<time datetime="2015-08-17T08:52:29-04:00" itemprop="datePublished">August 17, 2015  8:52 am</time>.
+<a href="javascript:smoothScrollTo(&quot;#comments-tabs&quot;)"><i class="fa fa-comment"></i> Comments</a>
+
+</small>
+<div class='hidden-print'><div class='addthis_jumbo_share' data-image='http://images.thehollywoodgossip.com/iu/s--w2umsc9C--/t_full/f_auto,fl_lossy,q_75/v1439814487/kim-kardashian-baby-bumping.png' data-title="Kim Kardashian Baby Bump Update: It's Growing!" data-url='http://www.thehollywoodgossip.com/2015/08/kim-kardashian-baby-bump-update-its-growing/'></div>
+</div>
+</header>
+<div class='body' itemprop='articleBody'>
+<p>
+	Kim Kardashian is most definitely pregnant.</p><div id="content_mobile_wrapper" class="remove_padding"><div id="content_mobile" class="adunit content_mobile"></div></div><p>
+	We know this, of course, due to the latest <a href="http://www.thehollywoodgossip.com/slideshows/kim-kardashian-nude-photos/">Kim Kardashian nude photo</a> that made its way around the Internet.</p><div style="max-width:446px;margin:0 auto 10px;text-align:center;" class="thumbnail">
+	<span><a href="/gallery/kim-kardashian-baby-bumping/"><div class="image_wrapper loading" style="padding-bottom:104.93273542600896%;"><img src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" data-pin-media="http://images.thehollywoodgossip.com/iu/s--w2umsc9C--/t_full/f_auto,fl_lossy,q_75/v1439814487/kim-kardashian-baby-bumping.png" data-pin-description="Kim Kardashian Baby Bump Update: It's Growing!" data-pin-url="http://www.thehollywoodgossip.com/2015/08/kim-kardashian-baby-bump-update-its-growing/" data-src="http://images.thehollywoodgossip.com/iu/s--yFkqj4xj--/t_xlarge_l/f_auto,fl_lossy,q_75/v1439814487/kim-kardashian-baby-bumping.png" alt="Kim Kardashian: Baby Bumping!" itemprop="image"></div></a></span>
+</div><div id="content_btf_wrapper"><div id="content_btf" class="content_btf adunit content_float_right"></div></div><p>
+	But we also know it because the reality star just shared a new picture on Instagram.</p><div id="content_2_mobile_wrapper" class="remove_padding"><div id="content_2_mobile" class="adunit content_mobile"></div></div><p>
+	We're sorry to say the 34-year old is fully clothed this time around, but she's still showing off her growing baby bump, this time by standing alongside Roberto Cavalli Creative Director Peter Dundas.</p><div id="content_oop_mobile"></div><p>
+	"Lunch for 3," Kim captioned the image, making a cute reference to her impending child.</p><div class="clearfix"></div><p>
+	The occasional model and husband Kanye West are already parents to a two-year old named <a href="http://www.thehollywoodgossip.com/stars/north-west/">North West</a>, of course.</p><p>
+	Before the year flips to 2016, they are expected to welcome a son into their famous immediate family.</p><div id="content_3_mobile_wrapper" class="remove_padding"><div id="content_3_mobile" class="adunit content_mobile"></div></div><p>
+	This means we'll be hearing plenty from Kim and company over the next several months, as they make plans to add another relative and then as they gush over him once he's here.</p><p>
+	In other words: <a href="http://www.thehollywoodgossip.com/videos/news-anchor-goes-off-on-kardashians-storms-off-set-watch/">this news anchor</a> should maybe go live under a rock. It's gonna be a rough year ahead.</p><p>
+	<div class="slideshow_teaser image_outter_wrapper ggnoads" style="max-width : 660px;">
+<a data-event-action="teaser" data-event-label="Kim Kardashian Magazine Kovers: She's Everywhere!" data-event="slideshow" href="/slideshows/kim-kardashian-magazine-kovers-shes-everywhere/"><div class="image_wrapper loading" style="padding-bottom: 62.5%">
+<img alt="Loader" data-src="http://images.thehollywoodgossip.com/iu/s---oo69Ygd--/c_fill,h_200,w_320/c_fill,h_200,l_upload:kim-kardashian-vogue-brazil-cover,w_320,x_324/c_fill,h_200,l_upload:kim-kardashian-as-marilyn-monroe,w_320,x_-162,y_204/c_fill,h_200,l_upload:kim-kardashian-glamour-cover,w_320,x_162,y_102/f_auto,fl_lossy,q_75/v1395421287/kim-kardashian-vogue-cover.jpg" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif"><noscript><img alt="Kim kardashian vogue cover" src="http://images.thehollywoodgossip.com/iu/s---oo69Ygd--/c_fill,h_200,w_320/c_fill,h_200,l_upload:kim-kardashian-vogue-brazil-cover,w_320,x_324/c_fill,h_200,l_upload:kim-kardashian-as-marilyn-monroe,w_320,x_-162,y_204/c_fill,h_200,l_upload:kim-kardashian-glamour-cover,w_320,x_162,y_102/f_auto,fl_lossy,q_75/v1395421287/kim-kardashian-vogue-cover.jpg"></noscript>
+</div>
+<div class="title">
+Kim Kardashian Magazine Kovers: She's Everywhere!
+</div>
+<div class="start">Start Gallery <i class="fa fa-long-arrow-right"></i>
+</div>
+</a>
+</div>
+</p>
+</div>
+
+<div class="buttons admin edit_object_links" data-user-id="15"><a class="btn btn-primary" href="/admin/post/75160/edit" rel="nofollow"><i class="fa fa-pencil"></i> Edit</a> <a class="btn btn-danger" href="/admin/post/75160/delete" rel="nofollow"><i class="fa fa-trash-o"></i> Delete</a> </div>
+</article>
+<div addthis:image='http://images.thehollywoodgossip.com/iu/v1439814487/kim-kardashian-baby-bumping.png' addthis:title="Kim Kardashian Baby Bump Update: It's Growing!" addthis:url='http://www.thehollywoodgossip.com/2015/08/kim-kardashian-baby-bump-update-its-growing/' class='row addthis_toolbox share_large'>
+<div class='col-xs-4'>
+<a class='addthis_button_facebook btn btn-facebook btn-lg btn-block margin-bottom'>
+<span>
+<i class="fa fa-facebook fa-lg"></i>
+<span class='hidden-xs'>Share</span>
+</span>
+</a>
+</div>
+<div class='col-xs-4'>
+<a class='addthis_button_twitter btn btn-twitter btn-lg btn-block margin-bottom'>
+<span>
+<i class="fa fa-twitter fa-lg"></i>
+<span class='hidden-xs'>Tweet</span>
+</span>
+</a>
+</div>
+<div class='col-xs-4'>
+<a class='addthis_button_email btn btn-default btn-lg btn-block margin-bottom'>
+<span>
+<i class="fa fa-envelope fa-lg"></i>
+<span class='hidden-xs'>Email</span>
+</span>
+</a>
+</div>
+</div>
+<div addthis:url='http://www.facebook.com/kimkardashianthg' class='likeus_content clearfix addthis_toolbox'>
+<a class='addthis_button_facebook_like' fb:like:href='http://www.facebook.com/kimkardashianthg' fb:like:layout='standard' fb:like:width='300'></a>
+</div>
+
+
+
+<div class='hidden-print'>
+<div class='related_content' itemscope itemtype='schema.org/WPAdBlock'>
+<div class='ggnoads' id='partners_content'>
+<div id='taboola-below-article-thumbnails'></div>
+<script>
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'thumbnails-a',
+    container: 'taboola-below-article-thumbnails',
+    placement: 'Below Article Thumbnails',
+    target_type: 'mix',
+    read_more: { boxSelector: '.body', minimizedSize:'800'}
+  });
+</script>
+</div>
+</div>
+<div class='well well-small text-center newsletter_signup'>
+<h2>Follow Kim Kardashian?</h2>
+<div addthis:url='http://www.facebook.com/kimkardashianthg' class='likeus_content clearfix addthis_toolbox'>
+<a class='addthis_button_facebook_like' fb:like:href='http://www.facebook.com/kimkardashianthg' fb:like:layout='standard' fb:like:width='300'></a>
+</div>
+
+<form action='' class='newsletter_signup form-inline' id='newsletter_below_content'>
+<div class='alert alert-danger error' style='display:none;margin:10px;'></div>
+<div class='input-group input-group-lg'>
+<input class='email form-control input-lg' placeholder='Your Email Address' type='email'>
+<span class='input-group-btn'>
+<input class='btn btn-lg btn-primary' name='subscribe' type='submit' value='Follow'>
+</span>
+</div>
+</form>
+
+</div>
+
+</div>
+
+<div class='margin-top' id='comments-tabs'>
+<ul class='nav nav-tabs'>
+<li class='active' role='presentation'>
+<a data-toggle="tab" href="#facebook_comments" id="facebook_comments_tab" role="tab">Facebook</a>
+</li>
+<li role='presentation'>
+<a data-toggle="tab" href="#disqus_comments" id="disqus_comments_tab" role="tab">Disqus</a>
+</li>
+</ul>
+<div class='tab-content'>
+<div class='tab-pane active' id='facebook_comments' role='tabpanel'>
+<div class='fb-comments' data-href='http://www.thehollywoodgossip.com/2015/08/kim-kardashian-baby-bump-update-its-growing/' data-version='v2.3' data-width='100%'></div>
+</div>
+<div class='tab-pane' id='disqus_comments' role='tabpanel'>
+<div data-disqus-identifier='post-75160' data-disqus-url='http://www.thehollywoodgossip.com/2015/08/kim-kardashian-baby-bump-update-its-growing/' id='disqus_thread'>
+
+<div class="text-center">
+</div>
+
+
+</div>
+<script>
+  var get_disqus_sso = function() {
+    if(document.cookie.indexOf('user_id') != -1) {
+      jQuery.getScript('/disqus/sso.js')
+    };
+  };
+  
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = "thgossip"; // Required - Replace example with your forum shortname
+  var disqus_identifier = "post-75160";
+  var disqus_url = "http://www.thehollywoodgossip.com/2015/08/kim-kardashian-baby-bump-update-its-growing/";
+  var disqus_title = "Kim Kardashian Baby Bump Update: It\'s Growing!";
+  var disqus_config = function () {
+    this.sso = {
+      name:    "The Hollywood Gossip",
+      button:  "http://www.thehollywoodgossip.com/assets/disqus_button.png",
+      icon:    "http://www.thehollywoodgossip.com/assets/favicon.ico",
+      url:     "http://www.thehollywoodgossip.com/users/sign_in?close=true&css_layout=true",
+      logout:  "http://www.thehollywoodgossip.com/users/sign_out",
+      width:   "800",
+      height:  "400"
+    };
+  
+    this.callbacks.onNewComment = [function() {
+      try {
+        _gaq.push(["_trackEvent", 'Comment', 'New', "Kim Kardashian Baby Bump Update: It\'s Growing!"]);
+      } catch (_error) {}
+    }];
+  
+    // Let apps hop in with callback(s)
+    if (typeof(app.disqusOnNewComment) == 'function') {
+      this.callbacks.onNewComment.push(app.disqusOnNewComment);
+    }
+  
+    if (typeof(app.disqusOnPaginate) == 'function') {
+      this.callbacks.onPaginate = [app.disqusOnPaginate];
+    }
+  
+    if (typeof(app.disqusAfterRender) == 'function') {
+      this.callbacks.afterRender = [app.disqusAfterRender];
+    }
+  };
+</script>
+
+</div>
+</div>
+</div>
+
+<small class='hidden-print'>
+Tags:
+<a href="/stars/kim-kardashian.html" rel="tag">Kim Kardashian</a>, <a href="/categories/baby-bump/" rel="tag">Baby Bump</a>, <a href="/categories/celebrity-gossip/" rel="tag">Celebrity Gossip</a>
+</small>
+</div>
+
+
+<div class='row'>
+<div class='col-sm-6'><div class='widget'>
+<h4><a href="/stars/kim-kardashian/bio.html">Kim Kardashian Biography</a></h4>
+<div class='clearfix' itemscope itemtype='http://schema.org/Person'>
+<meta content='/stars/kim-kardashian.html' itemprop='url'>
+<div class='pull-left' style='margin-right:10px;width:60px;'>
+<a href="/2015/08/kim-kardashian-baby-bump-update-its-growing/"><div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="A Kim Kardashian Selfie" data-pin-media="http://images.thehollywoodgossip.com/iu/s--kC2zl7Dh--/t_full/f_auto,fl_lossy,q_75/v1405252073/a-kim-kardashian-selfie.jpg" data-pin-url="http://www.thehollywoodgossip.com/gallery/a-kim-kardashian-selfie/" data-src="http://images.thehollywoodgossip.com/iu/s--_hoSUN-d--/t_thumb/f_auto,fl_lossy,q_75/v1405252073/a-kim-kardashian-selfie.jpg" itemprop="image" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="A Kim Kardashian Selfie" itemprop="image" src="http://images.thehollywoodgossip.com/iu/s--_hoSUN-d--/t_thumb/f_auto,fl_lossy,q_75/v1405252073/a-kim-kardashian-selfie.jpg" /></noscript></div></div></a>
+</div>
+Kim Kardashian is the ex-girlfriend of Nick Cannon, Reggie Bush and Ray J. She had intercourse on camera with the former, which is what...
+<a href="/stars/kim-kardashian/bio.html">More &raquo;</a>
+<dl>
+<dt>Born</dt>
+<dd itemprop='birthDate'><time datetime="1980-10-21">October 21, 1980</time></dd>
+<dt>Birthplace</dt>
+<dd itemprop='nationality'>Los Angeles, California</dd>
+<dt>Full Name</dt>
+<dd itemprop='name'>Kimberly Noel Kardashian</dd>
+</dl>
+</div>
+<div class="buttons admin edit_object_links" data-user-id=""><a class="btn btn-primary" href="/admin/star/386/edit" rel="nofollow"><i class="fa fa-pencil"></i> Edit</a> <a class="btn btn-danger" href="/admin/star/386/delete" rel="nofollow"><i class="fa fa-trash-o"></i> Delete</a> </div>
+
+</div>
+</div>
+<div class='col-sm-6'><div class='widget'>
+<h4><a href="/stars/kim-kardashian.html">Kim Kardashian</a></h4>
+<ul class='nav'>
+<li>
+<a class="clearfix" href="/2015/12/19-most-kontroversial-kardashian-pictures-of-all-time/"><div style='margin:0 10px 0 0;float:left;width:60px;'>
+<div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="19 Most Kontroversial Kardashian Pictures of All-Time" data-pin-media="http://images.thehollywoodgossip.com/iu/s--2-jbr4c6--/t_full/f_auto,fl_lossy,q_75/v1449014236/kylie-jenner-in-a-wheelchair.png" data-pin-url="http://www.thehollywoodgossip.com/2015/12/19-most-kontroversial-kardashian-pictures-of-all-time/" data-src="http://images.thehollywoodgossip.com/iu/s--eZOg3M5L--/t_thumb/f_auto,fl_lossy,q_75/v1449014236/kylie-jenner-in-a-wheelchair.png" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="19 Most Kontroversial Kardashian Pictures of All-Time" src="http://images.thehollywoodgossip.com/iu/s--eZOg3M5L--/t_thumb/f_auto,fl_lossy,q_75/v1449014236/kylie-jenner-in-a-wheelchair.png" /></noscript></div></div>
+</div>
+19 Most Kontroversial Kardashian Pictures of All-Time
+</a></li>
+<li>
+<a class="clearfix" href="/2015/12/kanye-west-banning-kris-jenner-from-kim-kardashians-delivery-roo/"><div style='margin:0 10px 0 0;float:left;width:60px;'>
+<div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="Kanye West: BANNING Kris Jenner From Kim Kardashian&#39;s Delivery Room?!" data-pin-media="http://images.thehollywoodgossip.com/iu/s--LqiHKG1R--/t_full/f_auto,fl_lossy,q_75/v1443530557/pregnant-kim-kardashian-and-kanye.jpg" data-pin-url="http://www.thehollywoodgossip.com/2015/12/kanye-west-banning-kris-jenner-from-kim-kardashians-delivery-roo/" data-src="http://images.thehollywoodgossip.com/iu/s--qilCC6lE--/t_thumb/f_auto,fl_lossy,q_75/v1443530557/pregnant-kim-kardashian-and-kanye.jpg" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Kanye West: BANNING Kris Jenner From Kim Kardashian&#39;s Delivery Room?!" src="http://images.thehollywoodgossip.com/iu/s--qilCC6lE--/t_thumb/f_auto,fl_lossy,q_75/v1443530557/pregnant-kim-kardashian-and-kanye.jpg" /></noscript></div></div>
+</div>
+Kanye West: BANNING Kris Jenner From Kim Kardashian's Delivery Room?!
+</a></li>
+<li>
+<a class="clearfix" href="/2015/12/kim-kardashian-kanye-west-plotting-to-end-kylie-jenner-and-tyga/"><div style='margin:0 10px 0 0;float:left;width:60px;'>
+<div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="Kim Kardashian, Kanye West: Plotting to End Kylie Jenner &amp; Tyga Relationship?!" data-pin-media="http://images.thehollywoodgossip.com/iu/s--0c7zzrqp--/t_full/f_auto,fl_lossy,q_75/v1448193385/very-happy-kimye.png" data-pin-url="http://www.thehollywoodgossip.com/2015/12/kim-kardashian-kanye-west-plotting-to-end-kylie-jenner-and-tyga/" data-src="http://images.thehollywoodgossip.com/iu/s--MprAtaHV--/t_thumb/f_auto,fl_lossy,q_75/v1448193385/very-happy-kimye.png" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Kim Kardashian, Kanye West: Plotting to End Kylie Jenner &amp; Tyga Relationship?!" src="http://images.thehollywoodgossip.com/iu/s--MprAtaHV--/t_thumb/f_auto,fl_lossy,q_75/v1448193385/very-happy-kimye.png" /></noscript></div></div>
+</div>
+Kim Kardashian, Kanye West: Plotting to End Kylie Jenner &amp; Tyga Relationship?!
+</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-6'><div class='widget'>
+<h4><a href="/gallery/stars/kim-kardashian/">Kim Kardashian Photos</a></h4>
+<div class='row'>
+<div class='col-xs-4'>
+<a class="thumbnail" href="/gallery/klassic-kimye/"><div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="Klassic Kimye" data-pin-media="http://images.thehollywoodgossip.com/iu/s--C863rOe4--/t_full/f_auto,fl_lossy,q_75/v1449140601/klassic-kimye.png" data-pin-url="http://www.thehollywoodgossip.com/gallery/klassic-kimye/" data-src="http://images.thehollywoodgossip.com/iu/s--vtwjO7ur--/t_thumb/f_auto,fl_lossy,q_75/v1449140601/klassic-kimye.png" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Klassic Kimye" src="http://images.thehollywoodgossip.com/iu/s--vtwjO7ur--/t_thumb/f_auto,fl_lossy,q_75/v1449140601/klassic-kimye.png" /></noscript></div></div>
+</a></div>
+<div class='col-xs-4'>
+<a class="thumbnail" href="/gallery/kim-kardashian-domestic-violence-campaign/"><div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="Kim Kardashian Domestic Violence Campaign" data-pin-media="http://images.thehollywoodgossip.com/iu/s--qI8TDyb9--/t_full/f_auto,fl_lossy,q_75/v1449071336/kim-kardashian-domestic-violence-campaign.jpg" data-pin-url="http://www.thehollywoodgossip.com/gallery/kim-kardashian-domestic-violence-campaign/" data-src="http://images.thehollywoodgossip.com/iu/s--c1QhxVKk--/t_thumb/f_auto,fl_lossy,q_75/v1449071336/kim-kardashian-domestic-violence-campaign.jpg" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Kim Kardashian Domestic Violence Campaign" src="http://images.thehollywoodgossip.com/iu/s--c1QhxVKk--/t_thumb/f_auto,fl_lossy,q_75/v1449071336/kim-kardashian-domestic-violence-campaign.jpg" /></noscript></div></div>
+</a></div>
+<div class='col-xs-4'>
+<a class="thumbnail" href="/gallery/kim-kardashian-desert-photo/"><div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="Kim Kardashian Desert Photo" data-pin-media="http://images.thehollywoodgossip.com/iu/s--UFU3q0tY--/t_full/t_blur/f_auto,fl_lossy,q_75/v1448967546/kim-kardashian-desert-photo.png" data-pin-url="http://www.thehollywoodgossip.com/gallery/kim-kardashian-desert-photo/" data-src="http://images.thehollywoodgossip.com/iu/s--Y7h-BejX--/t_thumb/t_blur/f_auto,fl_lossy,q_75/v1448967546/kim-kardashian-desert-photo.png" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Kim Kardashian Desert Photo" src="http://images.thehollywoodgossip.com/iu/s--Y7h-BejX--/t_thumb/t_blur/f_auto,fl_lossy,q_75/v1448967546/kim-kardashian-desert-photo.png" /></noscript></div></div>
+</a></div>
+<div class='col-xs-4'>
+<a class="thumbnail" href="/gallery/kim-kardashian-nude-in-the-desert/"><div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="Kim Kardashian: Nude in the Desert" data-pin-media="http://images.thehollywoodgossip.com/iu/s--tXkLPQ6m--/t_full/t_blur/f_auto,fl_lossy,q_75/v1448967492/kim-kardashian-nude-in-the-desert.png" data-pin-url="http://www.thehollywoodgossip.com/gallery/kim-kardashian-nude-in-the-desert/" data-src="http://images.thehollywoodgossip.com/iu/s--nl_rTpmY--/t_thumb/t_blur/f_auto,fl_lossy,q_75/v1448967492/kim-kardashian-nude-in-the-desert.png" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Kim Kardashian: Nude in the Desert" src="http://images.thehollywoodgossip.com/iu/s--nl_rTpmY--/t_thumb/t_blur/f_auto,fl_lossy,q_75/v1448967492/kim-kardashian-nude-in-the-desert.png" /></noscript></div></div>
+</a></div>
+<div class='col-xs-4'>
+<a class="thumbnail" href="/gallery/kim-kardashian-on-black-friday/"><div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="Kim Kardashian on Black Friday" data-pin-media="http://images.thehollywoodgossip.com/iu/s--_TEPDa-o--/t_full/f_auto,fl_lossy,q_75/v1448967396/kim-kardashian-on-black-friday.png" data-pin-url="http://www.thehollywoodgossip.com/gallery/kim-kardashian-on-black-friday/" data-src="http://images.thehollywoodgossip.com/iu/s--zxENagT2--/t_thumb/f_auto,fl_lossy,q_75/v1448967396/kim-kardashian-on-black-friday.png" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Kim Kardashian on Black Friday" src="http://images.thehollywoodgossip.com/iu/s--zxENagT2--/t_thumb/f_auto,fl_lossy,q_75/v1448967396/kim-kardashian-on-black-friday.png" /></noscript></div></div>
+</a></div>
+<div class='col-xs-4'>
+<a class="thumbnail" href="/gallery/kim-kardashian-pregnancy-boobs-image/"><div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="Kim Kardashian: Pregnancy Boobs Image" data-pin-media="http://images.thehollywoodgossip.com/iu/s--Hace_M1W--/t_full/f_auto,fl_lossy,q_75/v1448920206/kim-kardashian-pregnancy-boobs-image.jpg" data-pin-url="http://www.thehollywoodgossip.com/gallery/kim-kardashian-pregnancy-boobs-image/" data-src="http://images.thehollywoodgossip.com/iu/s--YkWWGNhl--/t_thumb/f_auto,fl_lossy,q_75/v1448920206/kim-kardashian-pregnancy-boobs-image.jpg" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Kim Kardashian: Pregnancy Boobs Image" src="http://images.thehollywoodgossip.com/iu/s--YkWWGNhl--/t_thumb/f_auto,fl_lossy,q_75/v1448920206/kim-kardashian-pregnancy-boobs-image.jpg" /></noscript></div></div>
+</a></div>
+</div>
+
+</div>
+</div>
+<div class='col-sm-6'><div class='widget'>
+<h4><a href="/quotes/stars/kim-kardashian/">Kim Kardashian Quotes</a></h4>
+<blockquote itemscope itemtype='http://schema.org/Thing'>
+<p> So far, designing is the most exciting thing Iâ€™ve done... I have a vision of what I want [the clothes] to look like in my mind and itâ€™s fun to see it come alive on paper.</p>
+<small>Kim Kardashian</small>
+<ul class='details hidden-print'>
+<li><i class="fa fa-link"></i> Permalink: <a href="/quotes/so-far-designing-is-the-most-exciting-thing-ive-done-i-have-a-v/" itemprop="url"><span itemprop="name">So far, designing is the most exciting thing Iâ€™ve done... I h...</span></a></li>
+<li><i class="fa fa-calendar"></i> Added: <time datetime="2008-05-02">May 02, 2008</time></li>
+</ul>
+</blockquote>
+<blockquote itemscope itemtype='http://schema.org/Thing'>
+<p> He just seemed very firm about the change, and thatâ€™s, like, his motto.<br></p>
+<small>Kim Kardashian [on Barack Obama]</small>
+<ul class='details hidden-print'>
+<li><i class="fa fa-link"></i> Permalink: <a href="/quotes/he-just-seemed-very-firm-about-the-change-and-thats-like-his-mo/" itemprop="url"><span itemprop="name">He just seemed very firm about the change, and thatâ€™s, like, ...</span></a></li>
+<li><i class="fa fa-calendar"></i> Added: <time datetime="2008-04-27">April 27, 2008</time></li>
+</ul>
+</blockquote>
+
+
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-6'><div class='widget'>
+<h4><a href="/videos/stars/kim-kardashian/">Kim Kardashian Videos</a></h4>
+<div class='row'>
+<div class='col-xs-12'>
+<a class="thumbnail" href="/videos/kris-jenner-i-think-kim-kardashian-should-name-her-baby/"><div class="image_outter_wrapper" style="max-width:313px;"><div class="image_wrapper loading" style="padding-bottom:61.66134185303515%;"><img alt="Kris Jenner: I Think Kim Kardashian Should Name Her Baby..." data-pin-media="http://images.thehollywoodgossip.com/iu/s--1EpXxs4P--/t_v_full/f_auto,fl_lossy,q_75/v1448983188/video/kris-jenner-i-think-kim-kardashian-should-name-her-baby.jpg" data-pin-url="http://www.thehollywoodgossip.com/videos/kris-jenner-i-think-kim-kardashian-should-name-her-baby/" data-src="http://images.thehollywoodgossip.com/iu/s--8sxZak4d--/t_v_large_l/f_auto,fl_lossy,q_75/v1448983188/video/kris-jenner-i-think-kim-kardashian-should-name-her-baby.jpg" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Kris Jenner: I Think Kim Kardashian Should Name Her Baby..." src="http://images.thehollywoodgossip.com/iu/s--8sxZak4d--/t_v_large_l/f_auto,fl_lossy,q_75/v1448983188/video/kris-jenner-i-think-kim-kardashian-should-name-her-baby.jpg" /></noscript></div></div>
+<div class='caption'>Kris Jenner: I Think Kim Kardashian Should Name Her Baby...</div>
+</a></div>
+</div>
+<div class='row videos'>
+<div class='col-xs-6'>
+<a class="thumbnail" href="/videos/kutw-preview-kris-fat-shames-kim/"><div class="image_outter_wrapper" style="max-width:150px;"><div class="image_wrapper loading" style="padding-bottom:62.0%;"><img alt="KUWTK Preview: Kris Fat-Shames Kim" data-pin-media="http://images.thehollywoodgossip.com/iu/s--caOkwinE--/t_v_full/f_auto,fl_lossy,q_75/v1448386093/video/kutw-preview-kris-fat-shames-kim.png" data-pin-url="http://www.thehollywoodgossip.com/videos/kutw-preview-kris-fat-shames-kim/" data-src="http://images.thehollywoodgossip.com/iu/s--6Vgvhv_G--/t_v_small_l/f_auto,fl_lossy,q_75/v1448386093/video/kutw-preview-kris-fat-shames-kim.png" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="KUWTK Preview: Kris Fat-Shames Kim" src="http://images.thehollywoodgossip.com/iu/s--6Vgvhv_G--/t_v_small_l/f_auto,fl_lossy,q_75/v1448386093/video/kutw-preview-kris-fat-shames-kim.png" /></noscript></div></div>
+<div class='caption'>KUWTK Preview: Kris Fat-Shames Kim</div>
+</a></div>
+<div class='col-xs-6'>
+<a class="thumbnail" href="/videos/kylie-jenner-on-living-with-kim-kardashian-id-rather-with-stab-m/"><div class="image_outter_wrapper" style="max-width:150px;"><div class="image_wrapper loading" style="padding-bottom:62.0%;"><img alt="Kylie Jenner on Living With Kim Kardashian: I&#39;d Rather Stab Myself!" data-pin-media="http://images.thehollywoodgossip.com/iu/s--fvc33ZlG--/t_v_full/f_auto,fl_lossy,q_75/v1447885880/video/kylie-jenner-on-living-with-kim-kardashian-id-rather-with-stab-m.jpg" data-pin-url="http://www.thehollywoodgossip.com/videos/kylie-jenner-on-living-with-kim-kardashian-id-rather-with-stab-m/" data-src="http://images.thehollywoodgossip.com/iu/s--mU45BPg---/t_v_small_l/f_auto,fl_lossy,q_75/v1447885880/video/kylie-jenner-on-living-with-kim-kardashian-id-rather-with-stab-m.jpg" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Kylie Jenner on Living With Kim Kardashian: I&#39;d Rather Stab Myself!" src="http://images.thehollywoodgossip.com/iu/s--mU45BPg---/t_v_small_l/f_auto,fl_lossy,q_75/v1447885880/video/kylie-jenner-on-living-with-kim-kardashian-id-rather-with-stab-m.jpg" /></noscript></div></div>
+<div class='caption'>Kylie Jenner on Living With Kim Kardashian: I'd Rather Stab Myself!</div>
+</a></div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class='col-lg-4 visible-lg' id='sidebar' itemscope itemtype='schema.org/WPSideBar'>
+<div id='sticky_sidebar_placeholder'>
+<div id='sticky_sidebar_wrapper'>
+<div class='adunit' id='sidebar_atf'></div>
+<div id='sidebar_recommendations'>
+<div id='sidebar_partners'></div>
+<div class='recommendation clearfix'>
+<a data-event-action="internal" data-event-label="19 Most Kontroversial Kardashian Pictures of All-Time" data-event="sidebar" href="/2015/12/19-most-kontroversial-kardashian-pictures-of-all-time/"><div class='image'><div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="19 Most Kontroversial Kardashian Pictures of All-Time" data-pin-no-hover="true" data-src="http://images.thehollywoodgossip.com/iu/s--eZOg3M5L--/t_thumb/f_auto,fl_lossy,q_75/v1449014236/kylie-jenner-in-a-wheelchair.png" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="19 Most Kontroversial Kardashian Pictures of All-Time" src="http://images.thehollywoodgossip.com/iu/s--eZOg3M5L--/t_thumb/f_auto,fl_lossy,q_75/v1449014236/kylie-jenner-in-a-wheelchair.png" /></noscript></div></div></div>
+<h5 class='title'>19 Most Kontroversial Kardashian Pictures of All-Time</h5>
+</a></div>
+<div class='recommendation clearfix'>
+<a data-event-action="internal" data-event-label="Kanye West: BANNING Kris Jenner From Kim Kardashian&#39;s Delivery Room?!" data-event="sidebar" href="/2015/12/kanye-west-banning-kris-jenner-from-kim-kardashians-delivery-roo/"><div class='image'><div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="Kanye West: BANNING Kris Jenner From Kim Kardashian&#39;s Delivery Room?!" data-pin-no-hover="true" data-src="http://images.thehollywoodgossip.com/iu/s--qilCC6lE--/t_thumb/f_auto,fl_lossy,q_75/v1443530557/pregnant-kim-kardashian-and-kanye.jpg" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Kanye West: BANNING Kris Jenner From Kim Kardashian&#39;s Delivery Room?!" src="http://images.thehollywoodgossip.com/iu/s--qilCC6lE--/t_thumb/f_auto,fl_lossy,q_75/v1443530557/pregnant-kim-kardashian-and-kanye.jpg" /></noscript></div></div></div>
+<h5 class='title'>Kanye West: BANNING Kris Jenner From Kim Kardashian's Delivery Room?!</h5>
+</a></div>
+<div class='recommendation clearfix'>
+<a data-event-action="internal" data-event-label="Scott Disick: Moving Back in With Kourtney Kardashian?!" data-event="sidebar" href="/2015/12/scott-disick-moving-back-in-with-kourtney-kardashian/"><div class='image'><div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="Scott Disick: Moving Back in With Kourtney Kardashian?!" data-pin-no-hover="true" data-src="http://images.thehollywoodgossip.com/iu/s--YW8NxZqw--/t_thumb/f_auto,fl_lossy,q_75/v1431524042/kourtney-disick.png" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Scott Disick: Moving Back in With Kourtney Kardashian?!" src="http://images.thehollywoodgossip.com/iu/s--YW8NxZqw--/t_thumb/f_auto,fl_lossy,q_75/v1431524042/kourtney-disick.png" /></noscript></div></div></div>
+<h5 class='title'>Scott Disick: Moving Back in With Kourtney Kardashian?!</h5>
+</a></div>
+<div class='recommendation clearfix'>
+<a data-event-action="internal" data-event-label="Kris Jenner to Kylie: Cover Your A--!" data-event="sidebar" href="/2015/12/kris-jenner-to-kylie-cover-your-a/"><div class='image'><div class="image_outter_wrapper" style="max-width:90px;"><div class="image_wrapper loading" style="padding-bottom:100.0%;"><img alt="Kris Jenner to Kylie: Cover Your A--!" data-pin-no-hover="true" data-src="http://images.thehollywoodgossip.com/iu/s--QEqAIAos--/t_thumb/f_auto,fl_lossy,q_75/v1449149936/kylie-and-kris-jenner-the-gallows-premiere.jpg" src="http://assets.thehollywoodgossip.com/assets/loader-7d9ee07501a9b4d6eebbebd5b1585e57.gif" /><noscript><img alt="Kris Jenner to Kylie: Cover Your A--!" src="http://images.thehollywoodgossip.com/iu/s--QEqAIAos--/t_thumb/f_auto,fl_lossy,q_75/v1449149936/kylie-and-kris-jenner-the-gallows-premiere.jpg" /></noscript></div></div></div>
+<h5 class='title'>Kris Jenner to Kylie: Cover Your A--!</h5>
+</a></div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class='row'>
+<div id='footer' itemscope itemtype='http://schema.org/WPFooter'>
+<ol class="breadcrumb" itemprop="breadcrumb"><li><a href="/stars/">Stars</a></li> <li><a href="/stars/kim-kardashian.html">Kim Kardashian</a></li> <li>Kim Kardashian Baby Bump Update: It&#39;s Growing!</li></ol>
+<p class='hidden-print'>Submissions? Questions? Looking to advertise?</p>
+<p class='hidden-print'>
+<a href="/about-us/">About Us | Advertising Info | Copyright Inquiry | Privacy Policy | Contact Us</a>
+</p>
+<hr class='visible-print-block'>
+<p>&copy; 2015 The Hollywood Gossip - Celebrity Gossip and Entertainment News</p>
+<p>Food Innovation Group: Bon Appetit and Epicurious</p>
+<ul class='hidden-print nav nav-pills'>
+<li><a href="/2015/12/">December 2015</a></li>
+<li><a href="/2015/11/">November 2015</a></li>
+<li><a href="/2015/10/">October 2015</a></li>
+<li><a href="/2015/09/">September 2015</a></li>
+<li><a href="/2015/08/">August 2015</a></li>
+<li><a href="/2015/07/">July 2015</a></li>
+<li><a href="/2015/06/">June 2015</a></li>
+<li><a href="/2015/05/">May 2015</a></li>
+<li><a href="/2015/04/">April 2015</a></li>
+<li><a href="/2015/03/">March 2015</a></li>
+<li><a href="/2015/02/">February 2015</a></li>
+<li><a href="/2015/01/">January 2015</a></li>
+<li><a href="/2014/">2014 Archives</a></li>
+<li><a href="/2013/">2013 Archives</a></li>
+<li><a href="/2012/">2012 Archives</a></li>
+<li><a href="/2011/">2011 Archives</a></li>
+<li><a href="/2010/">2010 Archives</a></li>
+<li><a href="/2009/">2009 Archives</a></li>
+<li><a href="/2008/">2008 Archives</a></li>
+<li><a href="/2007/">2007 Archives</a></li>
+<li><a href="/2006/">2006 Archives</a></li>
+</ul>
+
+</div>
+</div>
+
+</div>
+<div id='interstitial'></div>
+<div id='adhesion_mobile'></div>
+
+<div class='modal' data-slug='kim-kardashian' id='newsletter-modal'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='image-holder'>
+<div class='image_wrapper'>
+<img class='ggnoads' data-src='http://images.thehollywoodgossip.com/iu/s--txlsQJGO--/c_fill,g_faces,h_550,w_800/e_gradient_fade,y_-0.6/f_auto,fl_lossy,q_75/v1439814487/kim-kardashian-baby-bumping.jpg'>
+</div>
+<div class='image-title'>
+The Hollywood Gossip Newsletter
+</div>
+<form>
+<div class='instructions hidden-xs'>
+Never miss an update! Sign up for The Hollywood Gossip
+<b>FREE</b>
+Daily Newsletter.
+</div>
+<input autocomplete='on' class='email' name='email' placeholder='Enter Your E-Mail Address' type='email'>
+<button class='submit' type='submit'>Follow Kim Kardashian</button>
+<div class='nothanks' data-dismiss='modal'>No Thanks.</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,935 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" itemscope itemtype="http://schema.org/Article">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>fosiki: foswiki consulting, development and support</title>
+
+	<meta name="generator" content="WordPress 4.3" /> <!-- leave this for stats please -->
+
+	<link rel="stylesheet" type="text/css" href="http://fosiki.com/blog/wp-content/themes/fosiki-theme/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="http://fosiki.com/blog/wp-content/themes/fosiki-theme/expose-mf.css" media="screen" />
+
+	<!-- Dustismo font-face support.. -->
+	<link rel="stylesheet" href="http://fosiki.com/blog/wp-content/themes/fosiki-theme/Dustismo/stylesheet.css" type="text/css" charset="utf-8">
+    
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://fosiki.com/blog/feed/" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="http://fosiki.com/blog/feed/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://fosiki.com/blog/feed/atom/" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="pingback" href="http://fosiki.com/blog/xmlrpc.php" />
+		<link rel='archives' title='August 2015' href='http://fosiki.com/blog/2015/08/' />
+	<link rel='archives' title='April 2015' href='http://fosiki.com/blog/2015/04/' />
+	<link rel='archives' title='February 2015' href='http://fosiki.com/blog/2015/02/' />
+	<link rel='archives' title='October 2014' href='http://fosiki.com/blog/2014/10/' />
+	<link rel='archives' title='September 2014' href='http://fosiki.com/blog/2014/09/' />
+	<link rel='archives' title='March 2014' href='http://fosiki.com/blog/2014/03/' />
+	<link rel='archives' title='December 2013' href='http://fosiki.com/blog/2013/12/' />
+	<link rel='archives' title='November 2013' href='http://fosiki.com/blog/2013/11/' />
+	<link rel='archives' title='October 2013' href='http://fosiki.com/blog/2013/10/' />
+	<link rel='archives' title='August 2013' href='http://fosiki.com/blog/2013/08/' />
+	<link rel='archives' title='June 2013' href='http://fosiki.com/blog/2013/06/' />
+	<link rel='archives' title='March 2013' href='http://fosiki.com/blog/2013/03/' />
+	<link rel='archives' title='January 2013' href='http://fosiki.com/blog/2013/01/' />
+	<link rel='archives' title='October 2012' href='http://fosiki.com/blog/2012/10/' />
+	<link rel='archives' title='September 2012' href='http://fosiki.com/blog/2012/09/' />
+	<link rel='archives' title='June 2012' href='http://fosiki.com/blog/2012/06/' />
+	<link rel='archives' title='April 2012' href='http://fosiki.com/blog/2012/04/' />
+	<link rel='archives' title='March 2012' href='http://fosiki.com/blog/2012/03/' />
+	<link rel='archives' title='February 2012' href='http://fosiki.com/blog/2012/02/' />
+	<link rel='archives' title='November 2011' href='http://fosiki.com/blog/2011/11/' />
+	<link rel='archives' title='October 2011' href='http://fosiki.com/blog/2011/10/' />
+	<link rel='archives' title='May 2011' href='http://fosiki.com/blog/2011/05/' />
+	<link rel='archives' title='April 2011' href='http://fosiki.com/blog/2011/04/' />
+	<link rel='archives' title='March 2011' href='http://fosiki.com/blog/2011/03/' />
+	<link rel='archives' title='February 2011' href='http://fosiki.com/blog/2011/02/' />
+	<link rel='archives' title='December 2010' href='http://fosiki.com/blog/2010/12/' />
+	<link rel='archives' title='August 2010' href='http://fosiki.com/blog/2010/08/' />
+	<link rel='archives' title='May 2010' href='http://fosiki.com/blog/2010/05/' />
+	<link rel='archives' title='April 2010' href='http://fosiki.com/blog/2010/04/' />
+	<link rel='archives' title='March 2010' href='http://fosiki.com/blog/2010/03/' />
+	<link rel='archives' title='December 2009' href='http://fosiki.com/blog/2009/12/' />
+	<link rel='archives' title='November 2009' href='http://fosiki.com/blog/2009/11/' />
+	<link rel='archives' title='October 2009' href='http://fosiki.com/blog/2009/10/' />
+	<link rel='archives' title='September 2009' href='http://fosiki.com/blog/2009/09/' />
+	<link rel='archives' title='August 2009' href='http://fosiki.com/blog/2009/08/' />
+	<link rel='archives' title='May 2009' href='http://fosiki.com/blog/2009/05/' />
+	<link rel='archives' title='April 2009' href='http://fosiki.com/blog/2009/04/' />
+	<link rel='archives' title='March 2009' href='http://fosiki.com/blog/2009/03/' />
+	<link rel='archives' title='January 2009' href='http://fosiki.com/blog/2009/01/' />
+	<link rel='archives' title='December 2008' href='http://fosiki.com/blog/2008/12/' />
+	<link rel='archives' title='November 2008' href='http://fosiki.com/blog/2008/11/' />
+	<link rel='archives' title='October 2008' href='http://fosiki.com/blog/2008/10/' />
+	<link rel='archives' title='September 2008' href='http://fosiki.com/blog/2008/09/' />
+	<link rel='archives' title='August 2008' href='http://fosiki.com/blog/2008/08/' />
+	<link rel='archives' title='July 2008' href='http://fosiki.com/blog/2008/07/' />
+	<link rel='archives' title='June 2008' href='http://fosiki.com/blog/2008/06/' />
+	<link rel='archives' title='May 2008' href='http://fosiki.com/blog/2008/05/' />
+	<link rel='archives' title='April 2008' href='http://fosiki.com/blog/2008/04/' />
+	<link rel='archives' title='February 2008' href='http://fosiki.com/blog/2008/02/' />
+	<link rel='archives' title='January 2008' href='http://fosiki.com/blog/2008/01/' />
+	<link rel='archives' title='December 2007' href='http://fosiki.com/blog/2007/12/' />
+	<link rel='archives' title='November 2007' href='http://fosiki.com/blog/2007/11/' />
+	<link rel='archives' title='October 2007' href='http://fosiki.com/blog/2007/10/' />
+	<link rel='archives' title='July 2007' href='http://fosiki.com/blog/2007/07/' />
+	<link rel='archives' title='May 2007' href='http://fosiki.com/blog/2007/05/' />
+	<link rel='archives' title='April 2007' href='http://fosiki.com/blog/2007/04/' />
+	<link rel='archives' title='March 2007' href='http://fosiki.com/blog/2007/03/' />
+	<link rel='archives' title='September 2006' href='http://fosiki.com/blog/2006/09/' />
+		
+<!-- All in One SEO Pack 2.2.7.1 by Michael Torbert of Semper Fi Web Design[388,401] -->
+<meta name="description"  content="Sven Dowideit&#039;s development work" />
+
+<meta name="keywords"  content="sven dowideit,foswiki,consulting,support,wiki,datawiki,collaboration,javascript,installers,perl" />
+<link rel='next' href='http://fosiki.com/blog/page/2/' />
+
+<link rel="canonical" href="http://fosiki.com/blog/" />
+<!-- /all in one seo pack -->
+<meta name="microid" content="mailto+http:sha1:d29293c28789f8cab1bd36e441f99d23849a2ecb" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/fosiki.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='jetpack_css-css'  href='http://fosiki.com/blog/wp-content/plugins/jetpack/css/jetpack.css?ver=3.6.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://fosiki.com/blog/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://fosiki.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fosiki.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://fosiki.com/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.3" />
+<link rel='shortlink' href='http://wp.me/1tZ4y' />
+<link rel="openid.server" href="http://fosiki.com/blog/?openidserver=1" />
+<!-- Facebook Open Graph metatags added by WordPress plugin - Network Publisher. Get it at: http://wordpress.org/extend/plugins/network-publisher/ -->
+<meta property="og:site_name" content="fosiki" />
+<meta property="og:title" content="fosiki" />
+<meta property="og:url" content="http://fosiki.com/blog" />
+<meta property="og:description" content="Sven Dowideit - Software Engineer" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_us" />
+<!-- End Facebook Open Graph metatags-->
+
+<!-- Google Plus metatags added by WordPress plugin - Network Publisher. Get it at: http://wordpress.org/extend/plugins/network-publisher/ -->
+<meta itemprop="name"  content="fosiki" />
+<meta itemprop="description" content="Sven Dowideit - Software Engineer" />
+<meta itemprop="type" content="Article" />
+<!-- End Google Plus metatags-->
+<style type="text/css">#spsfooter { text-align: center; }</style>
+<link rel='dns-prefetch' href='//jetpack.wordpress.com'>
+<link rel='dns-prefetch' href='//s0.wp.com'>
+<link rel='dns-prefetch' href='//s1.wp.com'>
+<link rel='dns-prefetch' href='//s2.wp.com'>
+<link rel='dns-prefetch' href='//public-api.wordpress.com'>
+<link rel='dns-prefetch' href='//0.gravatar.com'>
+<link rel='dns-prefetch' href='//1.gravatar.com'>
+<link rel='dns-prefetch' href='//2.gravatar.com'>
+	<!--[if lte IE 6]>
+	<script type="text/javascript" src="/supersleight-min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+<div id="container">
+
+<ul class="skip">
+<li><a href="#wrapper">Skip to content</a></li>
+<li><a href="#menu">Skip to menu</a></li>
+</ul>
+
+<hr />
+
+    <div id="header">
+    <div id="headerlogo"><a href="http://fosiki.com/blog/"><img src="http://fosiki.com/blog/wp-content/themes/fosiki-theme/images/fosiki-logo.png" /></a></div>
+    <h1><a href="http://fosiki.com/blog/">fosiki</a></h1>
+    <p class="payoff">Sven Dowideit &#8211; Software Engineer</p>
+   
+   <form id="searchform" method="get" action="http://fosiki.com/blog">
+	<div>
+    	<label for="s">Search</label>
+		<input type="search" name="s" id="s" size="16" value="search..." onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';"/>
+		<button type="submit"><img src="http://fosiki.com/blog/wp-content/themes/fosiki-theme/images/magnifier.png" alt="search" /></button><!--<input type="submit" value="Search" />-->
+	</div>
+	</form>
+    
+    <p id="rss"><a href="http://fosiki.com/blog/feed/" title="Subscribe to this site!"><img src="http://fosiki.com/blog/wp-content/themes/fosiki-theme/images/feed.png" alt="Rss 2.0" /></a></p>
+
+        <div id="menu1">
+        <ul>
+        <li class="page_item current_page_item"><a href="http://fosiki.com/blog/" title="Homepage">Home</a></li>
+		<li class="page_item page-item-2 page_item_has_children"><a href="http://fosiki.com/blog/about/">Consulting</a></li>
+<li class="page_item page-item-14"><a href="http://fosiki.com/blog/foswiki/">Foswiki Support</a></li>
+        </ul>
+        </div>
+    </div><!-- end header -->
+
+<hr />
+
+<div id="wrapper">
+<div id="content">
+<div class="post" id="post-644">
+	    <div class="date" title="24-08-2015">
+    <p>
+         <span class="mese">Aug</span>
+         <span class="giorno">24</span>
+         <span class="anno">2015</span>
+    </p>
+    </div>
+	 <h2 class="storytitle"><a href="http://fosiki.com/blog/2015/08/24/docker-on-windows-server-preview-tp3-with-wifi/" rel="bookmark">Docker on Windows Server Preview TP3 with wifi</a></h2>
+	<div class="meta"><span class="tags">Tag: <a href="http://fosiki.com/blog/category/docker/" rel="category tag">Docker</a>,<a href="http://fosiki.com/blog/category/uncategorized/" rel="category tag">new</a>,<a href="http://fosiki.com/blog/category/virtualisation/" rel="category tag">virtualisation</a>,<a href="http://fosiki.com/blog/category/windows/" rel="category tag">windows</a></span> &#8212; <span class="user">Sven Dowideit @ 11:43 am</span> </div>
+
+	<div class="storycontent">
+		<div class='microid-mailto+http:sha1:4309c353d1144b3ff16e7308a25d65f3db92071f'><p>Doesn&#8217;t work. Especially if, like me, you have a docking station usb 3 ethernet, an on-board ethernet, use wifi on many different access-points, and use your mobile phone for network connectivity.</p>
+<p>The Docker daemon is started by running
+<pre>net start docker</pre>
+<p>, which runs
+<pre>C:\ProgramData\docker\runDockerDaemon.cmd</pre>
+<p>.</p>
+<p>In that script, you&#8217;ll see the &#8220;virtual switch&#8221; (
+<pre>docker daemon -D -b "Virtual Switch"</pre>
+<p>) is used for networking &#8211; and that (at least in my case) appears to be bound to the ethernet I had when I installed.</p>
+<p>Same pain point as trying to use Hyper-V VM&#8217;s for roaming development.</p>
+<p>Uninstalling Hyper-V leaves us in an interesting place:</p>
+<pre>
+ending build context to Docker daemon 2.048 kB
+Step 0 : FROM windowsservercore
+ ---> 0d53944cb84d
+Step 1 : RUN @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"
+ ---> Running in ad8fb58ba732
+HCSShim::CreateComputeSystem - Win32 API call returned error r1=3224830464 err=A virtual switch with the given name was not found. id=ad8fb58ba732880aaace7b4e3288212aa9493083848cf0324de310520b523d21 configuration={"SystemType":"Container","Name":"ad8fb58ba732880aaace7b4e3288212aa9493083848cf0324de310520b523d21","Owner":"docker","IsDummy":false,"VolumePath":"\\\\?\\Volume{63828c05-49f4-11e5-89c2-005056c00008}","Devices":[{"DeviceType":"Network","Connection":{"NetworkName":"Virtual Switch","EnableNat":false,"Nat":{"Name":"ContainerNAT","PortBindings":null}},"Settings":null}],"IgnoreFlushesDuringBoot":true,"LayerFolderPath":"C:\\ProgramData\\docker\\windowsfilter\\ad8fb58ba732880aaace7b4e3288212aa9493083848cf0324de310520b523d21","Layers":[{"ID":"f0d4aaa3-c43d-59c1-8ad0-44e6b3381efc","Path":"C:\\ProgramData\\Microsoft\\Windows\\Images\\CN=Microsoft_WindowsServerCore_10.0.10514.0"}]}
+</pre>
+<p>looks like the virtual switch made for containers was removed at some point (might have been when I installed Hyper-V, I&#8217;m not sure)</p>
+<p>Running
+<pre>Get-VMSwitch</pre>
+<p> returns nothing.</p>
+<p>So I installed VMWare Workstation and made a Boot2Docker VM with both NAT and private networking &#8211; both vmware based virtual networks continue to work when moving between wifi and ethernet.</p>
+<p>So lets see if we can make one in powershell, using the VMWare NAT adaptor (see http://blogs.technet.com/b/heyscriptingguy/archive/2013/10/09/use-powershell-to-create-virtual-switches.aspx)</p>
+<pre>
+PS C:\Users\sven\src\WindowsDocker> Get-NetAdapter
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+VMware Network Adapte...8 VMware Virtual Ethernet Adapter for ...      28 Up           00-50-56-C0-00-08       100 Mbps
+VMware Network Adapte...1 VMware Virtual Ethernet Adapter for ...      27 Up           00-50-56-C0-00-01       100 Mbps
+Wi-Fi                     Intel(R) Dual Band Wireless-AC 7260           4 Disabled     5C-51-4F-BA-12-6F          0 bps
+Ethernet                  Intel(R) Ethernet Connection I218-LM          3 Up           28-D2-44-4D-B6-64         1 Gbps
+</per>
+
+VMWare helpfully provides a Virtual Network editor, so I can see that "Get-NetAdapter  -Name "VMware Network Adapter VMnet8" is the NAT one. I'm not sure if creating a Hyper-V External vswitch will make exclusive use of the adaptor, but if so, we can always create another :)
+
+<pre>
+PS C:\Users\sven\src\WindowsDocker> New-VMSwitch  -Name "VMwareNat" -NetAdapterName "VMware Network Adapter VMnet8" -AllowManagementOS $true -Notes "Use VMnet8 to create a roamable Docker daemon network"
+
+Name      SwitchType NetAdapterInterfaceDescription
+----      ---------- ------------------------------
+VMwareNat External   VMware Virtual Ethernet Adapter for VMnet8
+
+</pre>
+<p>now to edit the runDockerDaemon.cmd, and restart the Docker Daemon.</p>
+<p>FAIL. the docker containers still have no network. At this point, I'm not sure if I've totally broken my Windows Docker networking, hopefully some more playing later will turn up something.</p>
+<p>Playing some more, there seems to be a new switchtype Nat - see https://raw.githubusercontent.com/Microsoft/Virtualization-Documentation/master/windows-server-container-tools/Install-ContainerHost/Install-ContainerHost.ps1</p>
+<p>So re-running the command they use when installing gets us something new to try:</p>
+<pre>
+PS C:\Users\sven\src\WindowsDocker> new-vmswitch -Name nat -SwitchType NAT -NatSubnetAddress "172.16.0.0/12"
+
+Name SwitchType NetAdapterInterfaceDescription
+---- ---------- ------------------------------
+nat  NAT
+
+
+PS C:\Users\sven\src\WindowsDocker> Get-VMSwitch
+
+Name      SwitchType NetAdapterInterfaceDescription
+----      ---------- ------------------------------
+VMwareNat External   VMware Virtual Ethernet Adapter for VMnet8
+nat       NAT
+
+</pre>
+<p>it works when the ethernet is plugged in, but not on wifi.</p>
+<p>yup - bleeding edge dev <img src="http://fosiki.com/blog/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+</div>
+<span class="slashdigglicious">
+<a href="http://slashdot.org/bookmark.pl?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F24%2Fdocker-on-windows-server-preview-tp3-with-wifi%2F&amp;title=Docker+on+Windows+Server+Preview+TP3+with+wifi" title="Slashdot It!"><img src="http://slashdot.org/favicon.ico" height="16" width="16" alt="[Slashdot]" /></a>
+<a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F24%2Fdocker-on-windows-server-preview-tp3-with-wifi%2F&amp;title=Docker+on+Windows+Server+Preview+TP3+with+wifi" title="Digg This Story"><img src="http://digg.com/favicon.ico" width="16" height="16" alt="[Digg]" /></a>
+<a href="http://reddit.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F24%2Fdocker-on-windows-server-preview-tp3-with-wifi%2F&amp;title=Docker+on+Windows+Server+Preview+TP3+with+wifi" title="Reddit"><img src="http://reddit.com/favicon.ico" width="16" height="16" alt="[Reddit]" /></a>
+<a href="http://del.icio.us/post?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F24%2Fdocker-on-windows-server-preview-tp3-with-wifi%2F&amp;title=Docker+on+Windows+Server+Preview+TP3+with+wifi" title="Save to del.icio.us" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F24%2Fdocker-on-windows-server-preview-tp3-with-wifi%2F&amp;title=Docker+on+Windows+Server+Preview+TP3+with+wifi', 'delicious', 'toolbar=no,width=700,height=400'); return false;"><img src="http://images.del.icio.us/static/img/delicious.small.gif" width="16" height="16" alt="[del.icio.us]" /></a>
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F24%2Fdocker-on-windows-server-preview-tp3-with-wifi%2F" title="Share on Facebook"><img src="http://www.facebook.com/favicon.ico" width="16" height="16" alt="[Facebook]" /></a>
+<a href="http://technorati.com/faves?add=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F24%2Fdocker-on-windows-server-preview-tp3-with-wifi%2F" title="Add to my Technorati Favorites"><img src="http://technorati.com/favicon.ico" width="16" height="16" alt="[Technorati]" /></a>
+<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F24%2Fdocker-on-windows-server-preview-tp3-with-wifi%2F&amp;title=Docker+on+Windows+Server+Preview+TP3+with+wifi" title="Save to Google Bookmarks"><img src="http://www.google.com/favicon.ico" width="16" height="16" alt="[Google]" /></a>
+<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F24%2Fdocker-on-windows-server-preview-tp3-with-wifi%2F&amp;title=Docker+on+Windows+Server+Preview+TP3+with+wifi" title="Stumble it!"><img src="http://www.stumbleupon.com/favicon.ico" width="16" height="16" alt="[StumbleUpon]" /></a>
+</span>	</div>
+	<div class="feedback">
+				<p><a href="http://fosiki.com/blog/2015/08/24/docker-on-windows-server-preview-tp3-with-wifi/#respond">Comments (0)</a></p>
+	</div>
+
+</div>
+<hr />
+
+<div class="post" id="post-636">
+	    <div class="date" title="21-08-2015">
+    <p>
+         <span class="mese">Aug</span>
+         <span class="giorno">21</span>
+         <span class="anno">2015</span>
+    </p>
+    </div>
+	 <h2 class="storytitle"><a href="http://fosiki.com/blog/2015/08/21/docker-on-windows-server-2016-tech-preview-3/" rel="bookmark">Docker on Windows Server 2016 tech preview 3</a></h2>
+	<div class="meta"><span class="tags">Tag: <a href="http://fosiki.com/blog/category/devops/" rel="category tag">devops</a>,<a href="http://fosiki.com/blog/category/docker/" rel="category tag">Docker</a>,<a href="http://fosiki.com/blog/category/enterprise/" rel="category tag">enterprise</a>,<a href="http://fosiki.com/blog/category/uncategorized/" rel="category tag">new</a>,<a href="http://fosiki.com/blog/category/open-source/" rel="category tag">open source</a>,<a href="http://fosiki.com/blog/category/virtualisation/" rel="category tag">virtualisation</a>,<a href="http://fosiki.com/blog/category/windows/" rel="category tag">windows</a></span> &#8212; <span class="user">Sven Dowideit @ 10:22 pm</span> </div>
+
+	<div class="storycontent">
+		<div class='microid-mailto+http:sha1:c4ff9711118e288eb985add96f8fe5d6f0b49b84'><p>First thing is to install Windows 2016 &#8211; I started in a VM, but I&#8217;m rapidly thinking i might try it on my notebook &#8211; Windows 10 is getting old already <img src="http://fosiki.com/blog/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Then goto&nbsp;https://msdn.microsoft.com/virtualization/windowscontainers/quick_start/inplace_setup . Note that the powershell script will download another 3GB.</p>
+<p><img class="alignright size-full wp-image-640" src="http://fosiki.com/blog/wp-content/uploads/2015/08/Windows-system32-docker.png" alt="Windows-system32-docker" width="350"  /></p>
+<p>And now &#8211; you can run `docker info` from either cmd.exe, or powershell.</p>
+<p>There&#8217;s only a limited set of images you can download from Microsoft &#8211; `docker search` seems to always reply with the same set:</p>
+<pre>PS C:\Users\Administrator&gt; docker search anything
+NAME DESCRIPTION STARS OFFICIAL AUTOMATED
+microsoft/iis Internet Information Services (IIS) instal... 1 [OK] [OK]
+microsoft/dnx-clr .NET Execution Environment (DNX) installed... 1 [OK] [OK]
+microsoft/ruby Ruby installed in a Windows Server Contain... 1 [OK]
+microsoft/rubyonrails Ruby on Rails installed in a Windows Serve... 1 [OK]
+microsoft/python Python installed in a Windows Server Conta... 1 [OK]
+microsoft/go Go Programming Language installed in a Win... 1 [OK]
+microsoft/mongodb MongoDB installed in a Windows Server Cont... 1 [OK]
+microsoft/redis Redis installed in a Windows Server Contai... 1 [OK]
+microsoft/sqlite SQLite installed in a Windows Server Conta... 1 [OK]</pre>
+<p>I downloaded two, and this shows&#8217;s they&#8217;re re-using the `windowsservercore` image as their common base image:</p>
+<pre>PS C:\Users\Administrator&gt; docker images -a
+REPOSITORY TAG IMAGE ID CREATED VIRTUAL SIZE
+microsoft/go latest 33cac80f92ea 2 days ago 10.09 GB
+  8daec63ffb52 2 days ago 9.75 GB
+  fbab9eccc1e7 2 days ago 9.697 GB
+microsoft/dnx-clr latest 156a0b59c5a8 2 days ago 9.712 GB
+  28473be483a9 2 days ago 9.707 GB
+  56b7e372f76a 2 days ago 9.697 GB
+windowsservercore 10.0.10514.0 0d53944cb84d 6 days ago 9.697 GB
+windowsservercore latest 0d53944cb84d 6 days ago 9.697 GB
+
+PS C:\Users\Administrator&gt; docker history microsoft/dnx-clr
+IMAGE CREATED CREATED BY SIZE COMMENT
+156a0b59c5a8 2 days ago cmd /S /C setx PATH "%PATH%;C:\dnx-clr-win-x6 5.558 MB
+28473be483a9 2 days ago cmd /S /C REM (nop) ADD dir:729777dc7e07ff03f 9.962 MB
+56b7e372f76a 2 days ago cmd /S /C REM (nop) LABEL Description=.NET Ex 41.41 kB
+0d53944cb84d 6 days ago 9.697 GB
+PS C:\Users\Administrator&gt; docker history microsoft/go
+IMAGE CREATED CREATED BY SIZE COMMENT
+33cac80f92ea 2 days ago cmd /S /C C:\build\install.cmd 335 MB
+8daec63ffb52 2 days ago cmd /S /C REM (nop) ADD dir:898a4194b45d1cc66 53.7 MB
+fbab9eccc1e7 2 days ago cmd /S /C REM (nop) LABEL Description=GO Prog 41.41 kB
+0d53944cb84d 6 days ago 9.697 GB
+</pre>
+<p>And so the fun begins.</p>
+<pre>PS C:\Users\Administrator&gt; docker run --rm -it windowsservercore cmd</pre>
+<p>gives you a containerized shell.</p>
+<p>Lets try to build an image that has the chocolatey installer:</p>
+<pre>FROM windowsservercore
+
+RUN @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"
+
+CMD powershell
+</pre>
+<p>and then use that image to install&#8230;. <b>vim</b></p>
+<pre>FROM chocolatey
+
+RUN choco install -y vim
+</pre>
+<p>It works!</p>
+<pre> docker run --rm -it vim cmd</pre>
+<p>and then run</p>
+<pre>C:\Program Files (x86)\vim\vim74\vim.exe</pre>
+<p>Its not currently usable, I suspect because the ANSI terminal driver is really really new code &#8211; but BOOM!</p>
+<p>I haven&#8217;t worked out how to get the Dockerfile</p>
+<pre>CMD</pre>
+<p>or</p>
+<pre>ENTRYPOINT</pre>
+<p>to work with paths that have spaces &#8211; it doesn&#8217;t seem to support the array form yet&#8230;</p>
+<p>I&#8217;m going to keep playing, and put the Dockerfiles into https://github.com/SvenDowideit/WindowsDocker</p>
+<p>Don&#8217;t forget to read the documentation at https://msdn.microsoft.com/en-us/virtualization/windowscontainers/containers_welcome</p>
+</div>
+<span class="slashdigglicious">
+<a href="http://slashdot.org/bookmark.pl?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F21%2Fdocker-on-windows-server-2016-tech-preview-3%2F&amp;title=Docker+on+Windows+Server+2016+tech+preview+3" title="Slashdot It!"><img src="http://slashdot.org/favicon.ico" height="16" width="16" alt="[Slashdot]" /></a>
+<a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F21%2Fdocker-on-windows-server-2016-tech-preview-3%2F&amp;title=Docker+on+Windows+Server+2016+tech+preview+3" title="Digg This Story"><img src="http://digg.com/favicon.ico" width="16" height="16" alt="[Digg]" /></a>
+<a href="http://reddit.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F21%2Fdocker-on-windows-server-2016-tech-preview-3%2F&amp;title=Docker+on+Windows+Server+2016+tech+preview+3" title="Reddit"><img src="http://reddit.com/favicon.ico" width="16" height="16" alt="[Reddit]" /></a>
+<a href="http://del.icio.us/post?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F21%2Fdocker-on-windows-server-2016-tech-preview-3%2F&amp;title=Docker+on+Windows+Server+2016+tech+preview+3" title="Save to del.icio.us" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F21%2Fdocker-on-windows-server-2016-tech-preview-3%2F&amp;title=Docker+on+Windows+Server+2016+tech+preview+3', 'delicious', 'toolbar=no,width=700,height=400'); return false;"><img src="http://images.del.icio.us/static/img/delicious.small.gif" width="16" height="16" alt="[del.icio.us]" /></a>
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F21%2Fdocker-on-windows-server-2016-tech-preview-3%2F" title="Share on Facebook"><img src="http://www.facebook.com/favicon.ico" width="16" height="16" alt="[Facebook]" /></a>
+<a href="http://technorati.com/faves?add=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F21%2Fdocker-on-windows-server-2016-tech-preview-3%2F" title="Add to my Technorati Favorites"><img src="http://technorati.com/favicon.ico" width="16" height="16" alt="[Technorati]" /></a>
+<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F21%2Fdocker-on-windows-server-2016-tech-preview-3%2F&amp;title=Docker+on+Windows+Server+2016+tech+preview+3" title="Save to Google Bookmarks"><img src="http://www.google.com/favicon.ico" width="16" height="16" alt="[Google]" /></a>
+<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F08%2F21%2Fdocker-on-windows-server-2016-tech-preview-3%2F&amp;title=Docker+on+Windows+Server+2016+tech+preview+3" title="Stumble it!"><img src="http://www.stumbleupon.com/favicon.ico" width="16" height="16" alt="[StumbleUpon]" /></a>
+</span>	</div>
+	<div class="feedback">
+				<p><a href="http://fosiki.com/blog/2015/08/21/docker-on-windows-server-2016-tech-preview-3/#respond">Comments (0)</a></p>
+	</div>
+
+</div>
+<hr />
+
+<div class="post" id="post-610">
+	    <div class="date" title="28-04-2015">
+    <p>
+         <span class="mese">Apr</span>
+         <span class="giorno">28</span>
+         <span class="anno">2015</span>
+    </p>
+    </div>
+	 <h2 class="storytitle"><a href="http://fosiki.com/blog/2015/04/28/slim-application-containers-using-docker/" rel="bookmark">Slim application containers (using Docker)</a></h2>
+	<div class="meta"><span class="tags">Tag: <a href="http://fosiki.com/blog/category/centos/" rel="category tag">centos</a>,<a href="http://fosiki.com/blog/category/debian/" rel="category tag">debian</a>,<a href="http://fosiki.com/blog/category/devops/" rel="category tag">devops</a>,<a href="http://fosiki.com/blog/category/docker/" rel="category tag">Docker</a>,<a href="http://fosiki.com/blog/category/enterprise/" rel="category tag">enterprise</a>,<a href="http://fosiki.com/blog/category/uncategorized/" rel="category tag">new</a>,<a href="http://fosiki.com/blog/category/open-source/" rel="category tag">open source</a>,<a href="http://fosiki.com/blog/category/redhat/" rel="category tag">redhat</a>,<a href="http://fosiki.com/blog/category/rpm/" rel="category tag">RPM</a>,<a href="http://fosiki.com/blog/category/virtualisation/" rel="category tag">virtualisation</a></span> &#8212; <span class="user">Sven Dowideit @ 6:59 pm</span> </div>
+
+	<div class="storycontent">
+		<div class='microid-mailto+http:sha1:c6f7bb0121618e94519a052e40b378bb4f8e78a8'><p>Another talk I gave at Linux.conf.au, was about <a href="https://www.youtube.com/watch?v=c5GZC3KYtLQ">making slim containers (youtube) </a>–  ones that contain only the barest essentials needed to run an application.</p>
+<p>And I thought I&#8217;d do it from source, as most “Built from source” images also contain the tools used to build the software.</p>
+<h2>1. Make the Docker base image you&#8217;re going to use to build the software</h2>
+<p>In January 2015, the main base images and their sizes looked like:</p>
+<pre style="overflow: auto; font-size: 15px; font-variant: normal; font-weight: 200; color: #222222; font-style: normal; widows: 1; line-height: 1.3; background-color: #f7f7f7; border-radius: 3px; border: #dddddd 1px solid; padding: 6px 10px 6px 10px;"><code style="overflow: auto; background: none transparent scroll repeat 0% 0%; margin: 0px; border-radius: 3px; padding: 0px;">scratch             latest              511136ea3c5a        19 months ago       0 B
+busybox             latest              4986bf8c1536        10 days ago         2.433 MB
+debian              7.7                 479215127fa7        10 days ago         85.1 MB
+ubuntu              15.04               b12dbb6f7084        10 days ago         117.2 MB
+centos              centos7             acc1b23376ec        10 days ago         224 MB
+fedora              21                  834629358fe2        10 days ago         250.2 MB
+crux                3.1                 7a73a3cc03b3        10 days ago         313.5 MB</code></pre>
+<p>I&#8217;ll pick Debian, as I know it, and it has the fewest restrictions on what contents you&#8217;re permitted to redistribute (and because bootstrapping busybox would be an amazing talk on its own).</p>
+<p>Because I&#8217;m experimenting, I&#8217;m starting by seeing how small I can make a new Debian base image –  starting with:</p>
+<pre style="overflow: auto; font-size: 15px; font-variant: normal; font-weight: 200; color: #222222; font-style: normal; widows: 1; line-height: 1.3; background-color: #f7f7f7; border-radius: 3px; border: #dddddd 1px solid; padding: 6px 10px 6px 10px;"><code style="overflow: auto; background: none transparent scroll repeat 0% 0%; margin: 0px; border-radius: 3px; padding: 0px;">FROM debian:7.7
+
+RUN rm -r /usr/share/doc /usr/share/doc-base \
+          /usr/share/man /usr/share/locale /usr/share/zoneinfo
+
+CMD ["/bin/sh"]</code></pre>
+<p>Then make a new single layer (squashed image) by running `docker export` and `docker import`</p>
+<pre style="overflow: auto; font-size: 15px; font-variant: normal; font-weight: 200; color: #222222; font-style: normal; widows: 1; line-height: 1.3; background-color: #f7f7f7; border-radius: 3px; border: #dddddd 1px solid; padding: 6px 10px 6px 10px;"><code style="overflow: auto; background: none transparent scroll repeat 0% 0%; margin: 0px; border-radius: 3px; padding: 0px;">REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+debian              7.7                 479215127fa7        10 days ago         85.1 MB
+our/debian:jessie   latest              cba1d00c3dc0        1 seconds ago       46.6 MB</code></pre>
+<p>Ok, not quite half, but you get the idea.</p>
+<p>Its well worth continuing this exercise using things like `dpkg —get-selections` to remove anything else you won&#8217;t need.</p>
+<p><strong>Importantly, once you&#8217;ve made your smaller base image, you should use it consistently for <em>ALL</em> the containers you use</strong>. This means that whenever there are important security fixes, that base image will be downloadable as quickly as possible –  and all your related images can be restarted quickly.</p>
+<p>This also means that you do <em><strong>NOT</strong> want to squish your images to one or two layers, but rather into some logical set of layers that match your deployment update risks –  a common root base, and then layers based on common infrastructure, and lastly application and customisation layers.</em></p>
+<h2>2. Build static binaries –  or not</h2>
+<p>Building a static binary of your application (in typical `Go` style) makes some things simpler –  but in the end, I&#8217;m not really convinced it makes a useful difference.</p>
+<p>But in my talk, I did it anyway.</p>
+<p>Make a Dockerfile that installs all the tools needed, builds nginx, and then output&#8217;s a tar file that is a <em>new</em> build context for another Docker image (and contains the libraries ldd tells us we need):</p>
+<pre style="overflow: auto; font-size: 15px; font-variant: normal; font-weight: 200; color: #222222; font-style: normal; widows: 1; line-height: 1.3; background-color: #f7f7f7; border-radius: 3px; border: #dddddd 1px solid; padding: 6px 10px 6px 10px;"><code style="overflow: auto; background: none transparent scroll repeat 0% 0%; margin: 0px; border-radius: 3px; padding: 0px;">cat Dockerfile.build-static-nginx | docker build -t build-nginx.static -
+docker run --rm build-nginx.static cat /opt/nginx.tar &gt; nginx.tar
+cat nginx.tar | docker import - micronginx
+docker run --rm -it -p 80:80 micronginx /opt/nginx/sbin/nginx -g "daemon off;"
+nginx: [emerg] getpwnam("nobody") failed (2: No such file or directory)</code></pre>
+<p>oh. I need more than just libraries?</p>
+<h2>3. Use inotify to find out what files nginx actually needs!</h2>
+<p>Use the same image, but start it with Bash –  use that to install and run inotify, and then use `docker exec` to start nginx:</p>
+<pre style="overflow: auto; font-size: 15px; font-variant: normal; font-weight: 200; color: #222222; font-style: normal; widows: 1; line-height: 1.3; background-color: #f7f7f7; border-radius: 3px; border: #dddddd 1px solid; padding: 6px 10px 6px 10px;"><code style="overflow: auto; background: none transparent scroll repeat 0% 0%; margin: 0px; border-radius: 3px; padding: 0px;">docker run --rm build-nginx.static bash
+$ apt-get install -yq inotify-tools iwatch
+# inotifywait -rm /etc /lib /usr/lib /var
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+/lib/x86_64-linux-gnu/ CLOSE_NOWRITE,CLOSE libnss_files-2.13.so
+/lib/x86_64-linux-gnu/ CLOSE_NOWRITE,CLOSE libnss_nis-2.13.so
+/lib/x86_64-linux-gnu/ CLOSE_NOWRITE,CLOSE ld-2.13.so
+/lib/x86_64-linux-gnu/ CLOSE_NOWRITE,CLOSE libc-2.13.so
+/lib/x86_64-linux-gnu/ CLOSE_NOWRITE,CLOSE libnsl-2.13.so
+/lib/x86_64-linux-gnu/ CLOSE_NOWRITE,CLOSE libnss_compat-2.13.so
+/etc/ OPEN passwd
+/etc/ OPEN group
+/etc/ ACCESS passwd
+/etc/ ACCESS group
+/etc/ CLOSE_NOWRITE,CLOSE group
+/etc/ CLOSE_NOWRITE,CLOSE passwd
+/etc/ OPEN localtime
+/etc/ ACCESS localtime
+/etc/ CLOSE_NOWRITE,CLOSE localtime</code></pre>
+<p>Perhaps it shouldn&#8217;t be too surprising that nginx expects to rifle through your user password files when it starts <img src="http://fosiki.com/blog/wp-includes/images/smilies/frownie.png" alt=":(" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<h2>4. Generate a new minimal Dockerfile and tar file Docker build context, and pass that to a new `docker build`</h2>
+<p>The trick is that the build container Dockerfile can generate the minimal Dockerfile and tar context, which can then be used to build a new minimal Docker image.</p>
+<p>The excerpt from the Dockerfile that does it looks like:</p>
+<pre style="overflow: auto; font-size: 15px; font-variant: normal; font-weight: 200; color: #222222; font-style: normal; widows: 1; line-height: 1.3; background-color: #f7f7f7; border-radius: 3px; border: #dddddd 1px solid; padding: 6px 10px 6px 10px;"><code style="overflow: auto; background: none transparent scroll repeat 0% 0%; margin: 0px; border-radius: 3px; padding: 0px;">
+# Add a Dockerfile to the tar file
+RUN echo "FROM busybox" &gt; /Dockerfile \
+    &amp;&amp; echo "ADD * /" &gt;&gt; /Dockerfile \
+    &amp;&amp; echo "EXPOSE 80 443" &gt;&gt; /Dockerfile \
+    &amp;&amp; echo 'CMD ["/opt/nginx/sbin/nginx", "-g", "daemon off;"]' &gt;&gt; /Dockerfile
+
+RUN tar cf /opt/nginx.tar \
+           /Dockerfile \
+           /opt/nginx \
+           /etc/passwd /etc/group /etc/localtime /etc/nsswitch.conf /etc/ld.so.cache \
+           /lib/x86_64-linux-gnu</code></pre>
+<p>This tar file can then be passed on using</p>
+<pre style="overflow: auto; font-size: 15px; font-variant: normal; font-weight: 200; color: #222222; font-style: normal; widows: 1; line-height: 1.3; background-color: #f7f7f7; border-radius: 3px; border: #dddddd 1px solid; padding: 6px 10px 6px 10px;"><code style="overflow: auto; background: none transparent scroll repeat 0% 0%; margin: 0px; border-radius: 3px; padding: 0px;">cat nginx.tar | docker build -t busyboxnginx .</code></pre>
+<h2>Result</h2>
+<p>Comparing the sizes, our build container is about 1.4GB, the Official nginx image about 100MB, and our minimal nginx container, 21MB to 24MB –  depending if we add busybox to it or not:</p>
+<pre style="overflow: auto; font-size: 15px; font-variant: normal; font-weight: 200; color: #222222; font-style: normal; widows: 1; line-height: 1.3; background-color: #f7f7f7; border-radius: 3px; border: #dddddd 1px solid; padding: 6px 10px 6px 10px;"><code style="overflow: auto; background: none transparent scroll repeat 0% 0%; margin: 0px; border-radius: 3px; padding: 0px;">REPOSITORY          TAG            IMAGE ID            CREATED              VIRTUAL SIZE
+micronginx          latest         52ec332b65fc        53 seconds ago       21.13 MB
+nginxbusybox        latest         80a526b043fd        About a minute ago   23.56 MB
+build-nginx.static  latest         4ecdd6aabaee        About a minute ago   1.392 GB
+nginx               latest         1822529acbbf        8 days ago           91.75 MB</code></pre>
+<p>Its interesting to remember that we rely heavily on `I know this, its a UNIX system` –  application services can have all sorts of hidden assumptions that won&#8217;t be revealed without putting them into more constrained environments.</p>
+<p>In the same way that we don&#8217;t ship the VM / filesystem of our build server, you should not be shipping the container you&#8217;re building from source.</p>
+<p>This analysis doesn&#8217;t try to restrict nginx to only opening certain network ports, devices, or IPC mechanisms – so there&#8217;s more to be done…</p>
+</div>
+<span class="slashdigglicious">
+<a href="http://slashdot.org/bookmark.pl?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F04%2F28%2Fslim-application-containers-using-docker%2F&amp;title=Slim+application+containers+%28using+Docker%29" title="Slashdot It!"><img src="http://slashdot.org/favicon.ico" height="16" width="16" alt="[Slashdot]" /></a>
+<a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F04%2F28%2Fslim-application-containers-using-docker%2F&amp;title=Slim+application+containers+%28using+Docker%29" title="Digg This Story"><img src="http://digg.com/favicon.ico" width="16" height="16" alt="[Digg]" /></a>
+<a href="http://reddit.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F04%2F28%2Fslim-application-containers-using-docker%2F&amp;title=Slim+application+containers+%28using+Docker%29" title="Reddit"><img src="http://reddit.com/favicon.ico" width="16" height="16" alt="[Reddit]" /></a>
+<a href="http://del.icio.us/post?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F04%2F28%2Fslim-application-containers-using-docker%2F&amp;title=Slim+application+containers+%28using+Docker%29" title="Save to del.icio.us" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F04%2F28%2Fslim-application-containers-using-docker%2F&amp;title=Slim+application+containers+%28using+Docker%29', 'delicious', 'toolbar=no,width=700,height=400'); return false;"><img src="http://images.del.icio.us/static/img/delicious.small.gif" width="16" height="16" alt="[del.icio.us]" /></a>
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F04%2F28%2Fslim-application-containers-using-docker%2F" title="Share on Facebook"><img src="http://www.facebook.com/favicon.ico" width="16" height="16" alt="[Facebook]" /></a>
+<a href="http://technorati.com/faves?add=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F04%2F28%2Fslim-application-containers-using-docker%2F" title="Add to my Technorati Favorites"><img src="http://technorati.com/favicon.ico" width="16" height="16" alt="[Technorati]" /></a>
+<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F04%2F28%2Fslim-application-containers-using-docker%2F&amp;title=Slim+application+containers+%28using+Docker%29" title="Save to Google Bookmarks"><img src="http://www.google.com/favicon.ico" width="16" height="16" alt="[Google]" /></a>
+<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F04%2F28%2Fslim-application-containers-using-docker%2F&amp;title=Slim+application+containers+%28using+Docker%29" title="Stumble it!"><img src="http://www.stumbleupon.com/favicon.ico" width="16" height="16" alt="[StumbleUpon]" /></a>
+</span>	</div>
+	<div class="feedback">
+				<p><a href="http://fosiki.com/blog/2015/04/28/slim-application-containers-using-docker/#respond">Comments (0)</a></p>
+	</div>
+
+</div>
+<hr />
+
+<div class="post" id="post-614">
+	    <div class="date" title="20-02-2015">
+    <p>
+         <span class="mese">Feb</span>
+         <span class="giorno">20</span>
+         <span class="anno">2015</span>
+    </p>
+    </div>
+	 <h2 class="storytitle"><a href="http://fosiki.com/blog/2015/02/20/kickstart-new-developers-using-docker-linux-conf-au-2015/" rel="bookmark">Kickstart new developers using Docker &#8211; Linux.conf.au 2015</a></h2>
+	<div class="meta"><span class="tags">Tag: <a href="http://fosiki.com/blog/category/apache/" rel="category tag">apache</a>,<a href="http://fosiki.com/blog/category/devops/" rel="category tag">devops</a>,<a href="http://fosiki.com/blog/category/docker/" rel="category tag">Docker</a>,<a href="http://fosiki.com/blog/category/enterprise/" rel="category tag">enterprise</a>,<a href="http://fosiki.com/blog/category/perl/" rel="category tag">perl</a>,<a href="http://fosiki.com/blog/category/virtualisation/" rel="category tag">virtualisation</a></span> &#8212; <span class="user">Sven Dowideit @ 4:12 pm</span> </div>
+
+	<div class="storycontent">
+		<div class='microid-mailto+http:sha1:041992a2ea88aea27c60aed571e5340dcb49eb18'><p>One of the talks I gave at Linux.conf.au this year was a quick-start guide to using Docker.</p>
+<p>The slides begin with building Apache from source on your local host, using their documentation, and then how much simpler it is if instead of documentation, the project provides a <code>Dockerfile</code>. I quickly gloss over making a slim production container from that large development container &#8211; see my other talk, which I&#8217;ll blog about a little later.</p>
+<p>The second example, is using a <code>Dockerfile</code> to create and execute a test environment, so everyone can replicate identical test results.</p>
+<p>Finally, I end with a quite example of fig (Docker Compose), and running GUI applications in containers.</p>
+<p><a href="http://fosiki.com/blog/wp-content/uploads/2015/02/Kickstart-developers-with-Docker.html">the Slides</a></p>
+<p><span class='embed-youtube' style='text-align:center; display: block;'><iframe class='youtube-player' type='text/html' width='640' height='390' src='http://www.youtube.com/embed/yE-MDb-JWSQ?version=3&#038;rel=1&#038;fs=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' frameborder='0' allowfullscreen='true'></iframe></span></p>
+</div>
+<span class="slashdigglicious">
+<a href="http://slashdot.org/bookmark.pl?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F02%2F20%2Fkickstart-new-developers-using-docker-linux-conf-au-2015%2F&amp;title=Kickstart+new+developers+using+Docker+%26%238211%3B+Linux.conf.au+2015" title="Slashdot It!"><img src="http://slashdot.org/favicon.ico" height="16" width="16" alt="[Slashdot]" /></a>
+<a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F02%2F20%2Fkickstart-new-developers-using-docker-linux-conf-au-2015%2F&amp;title=Kickstart+new+developers+using+Docker+%26%238211%3B+Linux.conf.au+2015" title="Digg This Story"><img src="http://digg.com/favicon.ico" width="16" height="16" alt="[Digg]" /></a>
+<a href="http://reddit.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F02%2F20%2Fkickstart-new-developers-using-docker-linux-conf-au-2015%2F&amp;title=Kickstart+new+developers+using+Docker+%26%238211%3B+Linux.conf.au+2015" title="Reddit"><img src="http://reddit.com/favicon.ico" width="16" height="16" alt="[Reddit]" /></a>
+<a href="http://del.icio.us/post?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F02%2F20%2Fkickstart-new-developers-using-docker-linux-conf-au-2015%2F&amp;title=Kickstart+new+developers+using+Docker+%26%238211%3B+Linux.conf.au+2015" title="Save to del.icio.us" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F02%2F20%2Fkickstart-new-developers-using-docker-linux-conf-au-2015%2F&amp;title=Kickstart+new+developers+using+Docker+%26%238211%3B+Linux.conf.au+2015', 'delicious', 'toolbar=no,width=700,height=400'); return false;"><img src="http://images.del.icio.us/static/img/delicious.small.gif" width="16" height="16" alt="[del.icio.us]" /></a>
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F02%2F20%2Fkickstart-new-developers-using-docker-linux-conf-au-2015%2F" title="Share on Facebook"><img src="http://www.facebook.com/favicon.ico" width="16" height="16" alt="[Facebook]" /></a>
+<a href="http://technorati.com/faves?add=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F02%2F20%2Fkickstart-new-developers-using-docker-linux-conf-au-2015%2F" title="Add to my Technorati Favorites"><img src="http://technorati.com/favicon.ico" width="16" height="16" alt="[Technorati]" /></a>
+<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F02%2F20%2Fkickstart-new-developers-using-docker-linux-conf-au-2015%2F&amp;title=Kickstart+new+developers+using+Docker+%26%238211%3B+Linux.conf.au+2015" title="Save to Google Bookmarks"><img src="http://www.google.com/favicon.ico" width="16" height="16" alt="[Google]" /></a>
+<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2015%2F02%2F20%2Fkickstart-new-developers-using-docker-linux-conf-au-2015%2F&amp;title=Kickstart+new+developers+using+Docker+%26%238211%3B+Linux.conf.au+2015" title="Stumble it!"><img src="http://www.stumbleupon.com/favicon.ico" width="16" height="16" alt="[StumbleUpon]" /></a>
+</span>	</div>
+	<div class="feedback">
+				<p><a href="http://fosiki.com/blog/2015/02/20/kickstart-new-developers-using-docker-linux-conf-au-2015/#respond">Comments (0)</a></p>
+	</div>
+
+</div>
+<hr />
+
+<div class="post" id="post-603">
+	    <div class="date" title="10-10-2014">
+    <p>
+         <span class="mese">Oct</span>
+         <span class="giorno">10</span>
+         <span class="anno">2014</span>
+    </p>
+    </div>
+	 <h2 class="storytitle"><a href="http://fosiki.com/blog/2014/10/10/using-the-official-go-docker-image-to-try-out-a-library/" rel="bookmark">Using the official Go Docker image to try out a library</a></h2>
+	<div class="meta"><span class="tags">Tag: <a href="http://fosiki.com/blog/category/devops/" rel="category tag">devops</a>,<a href="http://fosiki.com/blog/category/docker/" rel="category tag">Docker</a></span> &#8212; <span class="user">Sven Dowideit @ 3:44 pm</span> </div>
+
+	<div class="storycontent">
+		<div class='microid-mailto+http:sha1:c543d95693b573efa207f2c59eb4235014683322'><p>We received a Pull Request to add Swagger support to document the Docker API, and @proppy asked if we could make sure we could load the schema in a standard json schema loader, for example <a href="http://github.com/xeipuuv/gojsonschema">gojsonschema</a></p>
+<p>The answer is no, not yet &#8211; but we&#8217;ll work towards it <img src="http://fosiki.com/blog/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>But to find out, I added 3 files, a Dockerfile:</p>
+<p><code><br />
+FROM golang:onbuild<br />
+</code></p>
+<p>a Makefile:<br />
+<code><br />
+default:<br />
+ docker build -t loadschema .<br />
+ docker run --rm loadschema<br />
+</code></p>
+<p>and a tiny 13 line go program:<br />
+<code><br />
+package main</p>
+<p>import (<br />
+ "github.com/xeipuuv/gojsonschema"<br />
+)</p>
+<p>func main() {</p>
+<p> _, err := gojsonschema.NewJsonSchemaDocument("file:///go/src/app/docker-v1.14.json")<br />
+ if err != nil {<br />
+ panic(err.Error())<br />
+ }<br />
+}<br />
+</code></p>
+<p>The <code>golang:onbuild</code> image has ONBUILD instructions to COPY the current context, download the dependencies, build the code, and then sets that application as the default CMD.</p>
+<p>AWE.</p>
+</div>
+<span class="slashdigglicious">
+<a href="http://slashdot.org/bookmark.pl?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F10%2F10%2Fusing-the-official-go-docker-image-to-try-out-a-library%2F&amp;title=Using+the+official+Go+Docker+image+to+try+out+a+library" title="Slashdot It!"><img src="http://slashdot.org/favicon.ico" height="16" width="16" alt="[Slashdot]" /></a>
+<a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F10%2F10%2Fusing-the-official-go-docker-image-to-try-out-a-library%2F&amp;title=Using+the+official+Go+Docker+image+to+try+out+a+library" title="Digg This Story"><img src="http://digg.com/favicon.ico" width="16" height="16" alt="[Digg]" /></a>
+<a href="http://reddit.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F10%2F10%2Fusing-the-official-go-docker-image-to-try-out-a-library%2F&amp;title=Using+the+official+Go+Docker+image+to+try+out+a+library" title="Reddit"><img src="http://reddit.com/favicon.ico" width="16" height="16" alt="[Reddit]" /></a>
+<a href="http://del.icio.us/post?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F10%2F10%2Fusing-the-official-go-docker-image-to-try-out-a-library%2F&amp;title=Using+the+official+Go+Docker+image+to+try+out+a+library" title="Save to del.icio.us" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F10%2F10%2Fusing-the-official-go-docker-image-to-try-out-a-library%2F&amp;title=Using+the+official+Go+Docker+image+to+try+out+a+library', 'delicious', 'toolbar=no,width=700,height=400'); return false;"><img src="http://images.del.icio.us/static/img/delicious.small.gif" width="16" height="16" alt="[del.icio.us]" /></a>
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F10%2F10%2Fusing-the-official-go-docker-image-to-try-out-a-library%2F" title="Share on Facebook"><img src="http://www.facebook.com/favicon.ico" width="16" height="16" alt="[Facebook]" /></a>
+<a href="http://technorati.com/faves?add=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F10%2F10%2Fusing-the-official-go-docker-image-to-try-out-a-library%2F" title="Add to my Technorati Favorites"><img src="http://technorati.com/favicon.ico" width="16" height="16" alt="[Technorati]" /></a>
+<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F10%2F10%2Fusing-the-official-go-docker-image-to-try-out-a-library%2F&amp;title=Using+the+official+Go+Docker+image+to+try+out+a+library" title="Save to Google Bookmarks"><img src="http://www.google.com/favicon.ico" width="16" height="16" alt="[Google]" /></a>
+<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F10%2F10%2Fusing-the-official-go-docker-image-to-try-out-a-library%2F&amp;title=Using+the+official+Go+Docker+image+to+try+out+a+library" title="Stumble it!"><img src="http://www.stumbleupon.com/favicon.ico" width="16" height="16" alt="[StumbleUpon]" /></a>
+</span>	</div>
+	<div class="feedback">
+				<p><a href="http://fosiki.com/blog/2014/10/10/using-the-official-go-docker-image-to-try-out-a-library/#respond">Comments (0)</a></p>
+	</div>
+
+</div>
+<hr />
+
+<div class="post" id="post-594">
+	    <div class="date" title="26-09-2014">
+    <p>
+         <span class="mese">Sep</span>
+         <span class="giorno">26</span>
+         <span class="anno">2014</span>
+    </p>
+    </div>
+	 <h2 class="storytitle"><a href="http://fosiki.com/blog/2014/09/26/cpan-contributions-docker-perl-language-stack-image/" rel="bookmark">Speeding up CPAN module contributions using the Docker language stack images</a></h2>
+	<div class="meta"><span class="tags">Tag: <a href="http://fosiki.com/blog/category/devops/" rel="category tag">devops</a>,<a href="http://fosiki.com/blog/category/docker/" rel="category tag">Docker</a>,<a href="http://fosiki.com/blog/category/enterprise/" rel="category tag">enterprise</a>,<a href="http://fosiki.com/blog/category/uncategorized/" rel="category tag">new</a>,<a href="http://fosiki.com/blog/category/open-source/" rel="category tag">open source</a>,<a href="http://fosiki.com/blog/category/perl/" rel="category tag">perl</a></span> &#8212; <span class="user">Sven Dowideit @ 5:11 pm</span> </div>
+
+	<div class="storycontent">
+		<div class='microid-mailto+http:sha1:67d9094bab2ea2a799c6fedd7a268b0b88bd23b5'><p>Docker Inc. just released our first set of programming language images on the Docker Hub. They cover c/c++ (gcc), clojure, go (golang), hy (hylang), java, node, perl, php, python, rails, and ruby. </p>
+<p>As I need to do some work on API testing when I come back from holidays, I thought I&#8217;d look at the Net:Docker CPAN module &#8211; and of course, there is no Perl on my Boot2Docker image, so its a perfect opportunity to see what I should do.</p>
+<p>After forking and cloning the Git repository, I created the following initial Dockerfile:</p>
+<p><code><br />
+FROM perl:5.20<br />
+MAINTAINER Sven Dowideit <SvenDowideit@home.org.au></p>
+<p>COPY . /docker-perl<br />
+WORKDIR /docker-perl</p>
+<p>RUN cpanm --installdeps .<br />
+RUN perl Build.PL<br />
+RUN ./Build build<br />
+RUN ./Build test<br />
+</code></p>
+<p>It fails to build during the &#8216;test&#8217; step: </p>
+<p><code><br />
+$ docker build -t docker-perl .</p>
+<p>... snip ...</p>
+<p>Step 6 : RUN ./Build test<br />
+ ---> Running in 367afe04c77e<br />
+Can't open socket var/run/docker.sock: No such file or directory at /usr/local/lib/perl5/site_perl/5.20.0/LWP/Protocol/http/SocketUnixAlt.pm line 27. at t/docker-api.t line 9.<br />
+# Tests were run but no plan was declared and done_testing() was not seen.<br />
+# Looks like your test exited with 255 just after 1.<br />
+t/docker-api.t ....<br />
+Dubious, test returned 255 (wstat 65280, 0xff00)<br />
+All 1 subtests passed<br />
+Can't locate IO/String.pm in @INC (you may need to install the IO::String module) (@INC contains: /docker-perl/blib/arch /docker-perl/blib/lib /usr/local/lib/perl5/site_perl/5.20.0/x86_64-linux /usr/local/lib/perl5/site_perl/5.20.0 /usr/local/lib/perl5/5.20.0/x86_64-linux /usr/local/lib/perl5/5.20.0 .) at t/docker-start.t line 3.<br />
+BEGIN failed--compilation aborted at t/docker-start.t line 3.<br />
+t/docker-start.t ..<br />
+Dubious, test returned 2 (wstat 512, 0x200)<br />
+No subtests run </p>
+<p>Test Summary Report<br />
+-------------------<br />
+t/docker-api.t  (Wstat: 65280 Tests: 1 Failed: 0)<br />
+  Non-zero exit status: 255<br />
+  Parse errors: No plan found in TAP output<br />
+t/docker-start.t (Wstat: 512 Tests: 0 Failed: 0)<br />
+  Non-zero exit status: 2<br />
+  Parse errors: No plan found in TAP output<br />
+Files=2, Tests=1,  0 wallclock secs ( 0.02 usr  0.00 sys +  0.21 cusr  0.03 csys =  0.26 CPU)<br />
+Result: FAIL<br />
+2014/09/26 16:08:19 The command [/bin/sh -c ./Build test] returned a non-zero code: 1<br />
+</code></p>
+<p>I&#8217;m going to have to give this Dockerfile a DOCKER_HOST (incorrectly using http://) setting (to one of my insecure plain text tcp based servers :), and add IO::String and JSON:XS to the cpanfile.</p>
+<p>Unfortunately, because <code>cpanm --installdeps .</code> uses the files in the build context, this way does not use the build cache &#8211; so its slow. Its worth duplicating the contents of the cpanfile before the COPY instruction for speed.</p>
+<p>So the working Dockerfile looks like:</p>
+<p><code><br />
+FROM perl:5.20<br />
+MAINTAINER Sven Dowideit <SvenDowideit@home.org.au></p>
+<p>RUN cpanm Module::Build::Tiny<br />
+RUN cpanm Moo<br />
+#', '1.002000';<br />
+RUN cpanm JSON<br />
+RUN cpanm JSON::XS<br />
+RUN cpanm LWP::UserAgent<br />
+RUN cpanm LWP::Protocol::http::SocketUnixAlt<br />
+RUN cpanm URI<br />
+RUN cpanm AnyEvent<br />
+RUN cpanm AnyEvent::HTTP<br />
+RUN cpanm IO::String</p>
+<p>COPY . /docker-perl<br />
+WORKDIR /docker-perl</p>
+<p>RUN cpanm --installdeps .<br />
+RUN perl Build.PL<br />
+RUN ./Build build</p>
+<p># This is a terrible cheat.<br />
+ENV DOCKER_HOST http://10.10.10.4:2375</p>
+<p>RUN ./Build test<br />
+RUN ./Build install</p>
+<p>CMD ["docker.pl", "ps"]<br />
+</code></p>
+<p>and then <code>docker build -t docker-perl .</code> results in:</p>
+<p><code><br />
+bash-3.2$ docker build -t docker-perl .<br />
+Sending build context to Docker daemon 138.8 kB<br />
+Sending build context to Docker daemon<br />
+Step 0 : FROM perl:5.20<br />
+ ---> 4d4674548e76<br />
+Step 1 : MAINTAINER Sven Dowideit <SvenDowideit@home.org.au><br />
+ ---> Using cache<br />
+ ---> 4ad0946e76aa<br />
+Step 2 : RUN cpanm Module::Build::Tiny<br />
+ ---> Using cache<br />
+ ---> f1b94d36a51c<br />
+Step 3 : RUN cpanm Moo<br />
+ ---> Using cache<br />
+ ---> 98de8c3a19a8<br />
+Step 4 : RUN cpanm JSON<br />
+ ---> Using cache<br />
+ ---> 73debd4ee367<br />
+Step 5 : RUN cpanm JSON::XS<br />
+ ---> Using cache<br />
+ ---> 89378a425f0b<br />
+Step 6 : RUN cpanm LWP::UserAgent<br />
+ ---> Using cache<br />
+ ---> 252fe329cf22<br />
+Step 7 : RUN cpanm LWP::Protocol::http::SocketUnixAlt<br />
+ ---> Using cache<br />
+ ---> a77d289faf19<br />
+Step 8 : RUN cpanm URI<br />
+ ---> Using cache<br />
+ ---> 6804b418778d<br />
+Step 9 : RUN cpanm AnyEvent<br />
+ ---> Using cache<br />
+ ---> c595f66bcf73<br />
+Step 10 : RUN cpanm AnyEvent::HTTP<br />
+ ---> Using cache<br />
+ ---> 31b25b2da3c4<br />
+Step 11 : RUN cpanm IO::String<br />
+ ---> Using cache<br />
+ ---> e54cd3d01988<br />
+Step 12 : COPY . /docker-perl<br />
+ ---> 4d4801209a79<br />
+Removing intermediate container c42897136186<br />
+Step 13 : WORKDIR /docker-perl<br />
+ ---> Running in 36575a59e465<br />
+ ---> 7042c67cf1b7<br />
+Removing intermediate container 36575a59e465<br />
+Step 14 : RUN cpanm --installdeps .<br />
+ ---> Running in c1b5cbb75c4a<br />
+--> Working on .<br />
+Configuring Net-Docker-0.002005 ... OK<br />
+<== Installed dependencies for .. Finishing.
+ ---> 071f9caca472<br />
+Removing intermediate container c1b5cbb75c4a<br />
+Step 15 : RUN perl Build.PL<br />
+ ---> Running in fae9bbce142f<br />
+Creating new 'Build' script for 'Net-Docker' version '0.002005'<br />
+ ---> 2800182bd0ff<br />
+Removing intermediate container fae9bbce142f<br />
+Step 16 : RUN ./Build build<br />
+ ---> Running in a98cb6c7a808<br />
+cp lib/Net/Docker.pm blib/lib/Net/Docker.pm<br />
+cp script/docker.pl blib/script/docker.pl<br />
+ ---> f5ba5be85f9d<br />
+Removing intermediate container a98cb6c7a808<br />
+Step 17 : ENV DOCKER_HOST http://10.10.10.4:2375<br />
+ ---> Running in 1e8b3273974c<br />
+ ---> fffb42d69011<br />
+Removing intermediate container 1e8b3273974c<br />
+Step 18 : RUN ./Build test<br />
+ ---> Running in 3baacccbf17e<br />
+t/docker-api.t .... ok<br />
+t/docker-start.t .. ok<br />
+All tests successful.<br />
+Files=2, Tests=41,  5 wallclock secs ( 0.02 usr  0.02 sys +  0.26 cusr  0.06 csys =  0.36 CPU)<br />
+Result: PASS<br />
+ ---> f5d371cdc1fa<br />
+Removing intermediate container 3baacccbf17e<br />
+Step 19 : RUN ./Build install<br />
+ ---> Running in 60cd90714e02<br />
+Installing /usr/local/lib/perl5/site_perl/5.20.0/Net/Docker.pm<br />
+Installing /usr/local/bin/docker.pl<br />
+ ---> 62c6368a2fb0<br />
+Removing intermediate container 60cd90714e02<br />
+Step 20 : CMD ["docker.pl", "ps"]<br />
+ ---> Running in cb5ade11e146<br />
+ ---> 94984ed5756d<br />
+Removing intermediate container cb5ade11e146<br />
+Successfully built 94984ed5756d<br />
+</code></p>
+<p>So that I can use it:</p>
+<p><code><br />
+bash-3.2$ docker run --rm -it docker-perl<br />
+ID                  IMAGE               COMMAND                CREATED             STATUS              PORTS<br />
+e619112eae2f        10.10.10.2:5001/sve bash                   1411104597          Up 7 days           ARRAY(0x2b84a48)<br />
+363ec1c45841        10.10.10.2:5001/sve bash                   1411104470          Up 7 days           ARRAY(0x29bae20)<br />
+</code></p>
+<p>You can also run the container with bash &#8211; <code>docker run --rm -it docker-perl bash</code> so you can do some more testing, or try out more complex examples.</p>
+<p>In this case, the `./Build test` step probably needs to happen in the `docker run` phase, as it needs access to a working Docker daemon &#8211; this issue will be true for modules that talk to external resources.</p>
+<p>I&#8217;ve made a <a href="https://github.com/pstuifzand/docker-perl/pull/8">pull request</a> for the tiny changes to get me this far. Perhaps Dockerfiles like this could be a gateway into the world of contributing quick fixes for open source libraries.</p>
+</div>
+<span class="slashdigglicious">
+<a href="http://slashdot.org/bookmark.pl?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F09%2F26%2Fcpan-contributions-docker-perl-language-stack-image%2F&amp;title=Speeding+up+CPAN+module+contributions+using+the+Docker+language+stack+images" title="Slashdot It!"><img src="http://slashdot.org/favicon.ico" height="16" width="16" alt="[Slashdot]" /></a>
+<a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F09%2F26%2Fcpan-contributions-docker-perl-language-stack-image%2F&amp;title=Speeding+up+CPAN+module+contributions+using+the+Docker+language+stack+images" title="Digg This Story"><img src="http://digg.com/favicon.ico" width="16" height="16" alt="[Digg]" /></a>
+<a href="http://reddit.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F09%2F26%2Fcpan-contributions-docker-perl-language-stack-image%2F&amp;title=Speeding+up+CPAN+module+contributions+using+the+Docker+language+stack+images" title="Reddit"><img src="http://reddit.com/favicon.ico" width="16" height="16" alt="[Reddit]" /></a>
+<a href="http://del.icio.us/post?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F09%2F26%2Fcpan-contributions-docker-perl-language-stack-image%2F&amp;title=Speeding+up+CPAN+module+contributions+using+the+Docker+language+stack+images" title="Save to del.icio.us" onclick="window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F09%2F26%2Fcpan-contributions-docker-perl-language-stack-image%2F&amp;title=Speeding+up+CPAN+module+contributions+using+the+Docker+language+stack+images', 'delicious', 'toolbar=no,width=700,height=400'); return false;"><img src="http://images.del.icio.us/static/img/delicious.small.gif" width="16" height="16" alt="[del.icio.us]" /></a>
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F09%2F26%2Fcpan-contributions-docker-perl-language-stack-image%2F" title="Share on Facebook"><img src="http://www.facebook.com/favicon.ico" width="16" height="16" alt="[Facebook]" /></a>
+<a href="http://technorati.com/faves?add=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F09%2F26%2Fcpan-contributions-docker-perl-language-stack-image%2F" title="Add to my Technorati Favorites"><img src="http://technorati.com/favicon.ico" width="16" height="16" alt="[Technorati]" /></a>
+<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F09%2F26%2Fcpan-contributions-docker-perl-language-stack-image%2F&amp;title=Speeding+up+CPAN+module+contributions+using+the+Docker+language+stack+images" title="Save to Google Bookmarks"><img src="http://www.google.com/favicon.ico" width="16" height="16" alt="[Google]" /></a>
+<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffosiki.com%2Fblog%2F2014%2F09%2F26%2Fcpan-contributions-docker-perl-language-stack-image%2F&amp;title=Speeding+up+CPAN+module+contributions+using+the+Docker+language+stack+images" title="Stumble it!"><img src="http://www.stumbleupon.com/favicon.ico" width="16" height="16" alt="[StumbleUpon]" /></a>
+</span>	</div>
+	<div class="feedback">
+				<p><a href="http://fosiki.com/blog/2014/09/26/cpan-contributions-docker-perl-language-stack-image/#respond">Comments (0)</a></p>
+	</div>
+
+</div>
+<hr />
+
+
+<a href="http://fosiki.com/blog/page/2/" >Next Page &raquo;</a>
+<!-- begin footer -->
+</div><!-- end content -->
+</div><!-- end wrapper -->
+
+<hr />
+
+
+<!-- begin sidebar -->
+<div id="menu">
+
+<ul>
+<li id="pages-2" class="widget widget_pages">Pages		<ul>
+			<li class="page_item page-item-2 page_item_has_children"><a href="http://fosiki.com/blog/about/">Consulting</a>
+<ul class='children'>
+	<li class="page_item page-item-349"><a href="http://fosiki.com/blog/about/purchase/">Purchase</a></li>
+</ul>
+</li>
+<li class="page_item page-item-14"><a href="http://fosiki.com/blog/foswiki/">Foswiki Support</a></li>
+		</ul>
+		</li>		<li id="new-tag-cloud" class="widget print_newtagcloud">		<h2></h2><ul id="newtagcloud"><li><a style="font-size:10px" href="http://fosiki.com/blog/tag/debian/" target="_self">debian</a> <a style="font-size:10px" href="http://fosiki.com/blog/tag/dtrace/" target="_self">dtrace</a> <a style="font-size:10px" href="http://fosiki.com/blog/tag/enterprise-wiki/" target="_self">enterprise wiki</a> <a style="font-size:14px" href="http://fosiki.com/blog/tag/foswiki/" target="_self">foswiki</a> <a style="font-size:10px" href="http://fosiki.com/blog/tag/osx/" target="_self">osx</a> <a style="font-size:16px" href="http://fosiki.com/blog/tag/perl/" target="_self">perl</a> <a style="font-size:10px" href="http://fosiki.com/blog/tag/solaris/" target="_self">solaris</a> <a style="font-size:18px" href="http://fosiki.com/blog/tag/twiki/" target="_self">twiki</a> <a style="font-size:10px" href="http://fosiki.com/blog/tag/twiki42/" target="_self">twiki4.2</a> <a style="font-size:12px" href="http://fosiki.com/blog/tag/windows/" target="_self">windows</a></li></ul>		</li><li id="text-205241771" class="widget widget_text">			<div class="textwidget"><div id="hcard-Sven-Dowideit" class="vcard microid-mailto+http:sha1:ae11fea07f69ba3aef72e8601bc63ee96270a6e4">
+ <a class="url fn" rel="me" href="http://fosiki.com">Sven Dowideit</a>
+ <div class="org">fosiki</div>
+ <a class="url fn" rel="me" href="http://uwiki.org">uwiki development</a>
+ <a class="url fn" rel="me" href="http://inkchilli.com">Foswiki & TWiki to Sharepoint migration tool</a>
+ <div class="org">uwiki</div>
+ <a class="email" rel="me" href="mailto:SvenDowideit@fosiki.com">SvenDowideit@fosiki.com</a>
+ <div class="adr">
+  <span class="locality">Brisbane</span>
+, 
+  <span class="region">QLD</span>
+, 
+  <span class="postal-code">4053</span>
+
+  <span class="country-name">Australia</span>
+
+<a class="url" rel="me" href="http://svendowideit.home.org.au">OpenID</a>
+<a class="url" rel="me" href="http://home.org.au">Personal Site</a>
+<a class="url" rel="me" href="http://foswiki.org/Main/SvenDowideit">Foswiki Site</a>
+
+<a href='https://www.ohloh.net/accounts/15069?ref=Detailed'>
+  <img alt='Ohloh profile for SvenDowideit' height='35' src='https://www.ohloh.net/accounts/15069/widgets/account_detailed.gif' width='191' />
+</a></div>
+		</li><li id="lijit-search" class="widget lijit_std_widget">Lijit Search<script type="text/javascript" src="http://www.lijit.com/informers/wijits?uri=http%3A%2F%2Fwww.lijit.com%2Fusers%2FSvenDowideit&amp;js=1"></script><a style="color: #999" href="http://www.lijit.com" id="lijit_wijit_pvs_link">Lijit Search</a></li>		<li id="recent-posts-2" class="widget widget_recent_entries">		Recent Posts		<ul>
+					<li>
+				<a href="http://fosiki.com/blog/2015/08/24/docker-on-windows-server-preview-tp3-with-wifi/">Docker on Windows Server Preview TP3 with wifi</a>
+						</li>
+					<li>
+				<a href="http://fosiki.com/blog/2015/08/21/docker-on-windows-server-2016-tech-preview-3/">Docker on Windows Server 2016 tech preview 3</a>
+						</li>
+					<li>
+				<a href="http://fosiki.com/blog/2015/04/28/slim-application-containers-using-docker/">Slim application containers (using Docker)</a>
+						</li>
+					<li>
+				<a href="http://fosiki.com/blog/2015/02/20/kickstart-new-developers-using-docker-linux-conf-au-2015/">Kickstart new developers using Docker &#8211; Linux.conf.au 2015</a>
+						</li>
+					<li>
+				<a href="http://fosiki.com/blog/2014/10/10/using-the-official-go-docker-image-to-try-out-a-library/">Using the official Go Docker image to try out a library</a>
+						</li>
+					<li>
+				<a href="http://fosiki.com/blog/2014/09/26/cpan-contributions-docker-perl-language-stack-image/">Speeding up CPAN module contributions using the Docker language stack images</a>
+						</li>
+					<li>
+				<a href="http://fosiki.com/blog/2014/03/31/docker-containers-and-simplicity/">Docker, containers and simplicity.</a>
+						</li>
+					<li>
+				<a href="http://fosiki.com/blog/2013/12/16/boot2docker-dom0-and-more-docker-magic/">Boot2Docker dom0 and more docker orchestration magic.</a>
+						</li>
+					<li>
+				<a href="http://fosiki.com/blog/2013/12/09/boot2docker/">Boot2Docker for orchestration.</a>
+						</li>
+					<li>
+				<a href="http://fosiki.com/blog/2013/12/05/docker-container-network-portability/">Docker container network portability</a>
+						</li>
+				</ul>
+		</li><li id="text-184149131" class="widget widget_text">			<div class="textwidget"><!-- Start BlogNetworks code -->
+<style>
+.bn_widget {margin:20px 5px;padding:0px;padding-top:3px;font-family:'Lucida Grande',Verdana,Arial,Sans-Serif;font-size:11px;font-weight:normal;text-decoration:none;background:#3B5998 none repeat scroll 0% 0%;border:none;}
+.bn_widget .bn_header {padding:1px;font-size:11px;font-weight:bold;color:#FFFFFF;text-align:center;}
+.bn_widget .bn_footer {padding:1px;font-size:9px;font-weight:bold;color:#FFFFFF;text-align:center;}
+.bn_widget .bn_body {background-color:#FFFFFF;color:#444444;padding:4px;border-left:1px solid #D8DFEA;border-right:1px solid #D8DFEA;text-align:center;font-size:1.1em;}
+.bn_widget a {text-decoration:underline;color:#666666;font-weight:bold;}
+.bn_widget .bn_footer a {text-decoration:none;color:#FFFFFF;font-weight:bold;}
+</style>
+<div class='bn_widget'><div class='bn_header' style='height:2px;'></div><div class='bn_body'><a aid="637071272" target="_blank" href="http://apps.facebook.com/blognetworks/blogpage.php?blogid=21725">Join my blog network<br/> on Facebook</a></div><div class='bn_footer'><a href='http://apps.facebook.com/blognetworks/'>Blog Networks</a></div></div>
+<!-- End BlogNetworks code -->
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1068966-1");
+pageTracker._trackPageview();
+</script></div>
+		</li>
+</ul>
+
+</div>
+<!-- end sidebar -->
+
+<hr />
+
+    <div id="footer">
+    <p class="up"><a href="#header" title="Jump to the top of the page">top</a></p>
+        <span class="credit">
+                Copyright (C) 2005 - 2012
+            <a class="fn org url currentTopic currentWebHome twikiLink" href="http://fosiki.com" >fosiki&trade;</a>
+            . ABN: <span class="ABN">92 552 727 007</span>
+            . Email: 
+            <a class="email" href="mailto&#58;SvenDowideit&#64;fosiki&#46;com">SvenDowideit&#64;fosiki&#46;com</a>
+             . a 
+            <img src="http://distributedinformation.com/blog/wp-content/themes/wordpress-theme/images/wikiring.png" /> 
+            <a href="http://WikiRing.com">WikiRing</a> founding partner
+        </span>
+        
+        
+      
+        
+    </div>
+
+</div><!-- end container -->
+
+Positions by <a href="http://www.Seo-Watcher.net">Seo-Watcher</a>	<div style="display:none">
+	</div>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201536'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2015Sepaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fosiki.com/blog/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.3'></script>
+<div id="spsfooter">Statistical data collected by <a href="http://blogcraft.de/wordpress-plugins/statpress-seolution/">Statpress SEOlution</a> (<strong><a href="http://blogcraft.de/">blogcraft</a></strong>).</div><script type='text/javascript' src='http://stats.wp.com/e-201536.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.6.1',blog:'21922614',post:'0',tz:'10',srv:'fosiki.com'} ]);
+	_stq.push([ 'clickTrackerInit', '21922614', '0' ]);
+</script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 2.341 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-09-03 02:35:18 -->
+
+<!-- super cache -->

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+
+	
+
+	
+
+
+<head>
+	<meta name="fragment" content="!" />
+	<link rel="shortcut icon" href="https://d2ed0w4q03gsmw.cloudfront.net/s3/assets/0750915/images/icons/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="https://d2ed0w4q03gsmw.cloudfront.net/s3/core/v1.1.96/aboutme.core.css" />
+	<link rel="stylesheet" type="text/css" href="https://d2ed0w4q03gsmw.cloudfront.net/s3/assets/0750915/css/aboutme.min.css" />
+	<script type="text/javascript" src="https://d2ed0w4q03gsmw.cloudfront.net/s3/assets/0750915/js/amd/vendor/modernizr-custom.js"></script>
+	<script src="https://d2ed0w4q03gsmw.cloudfront.net/s3/assets/0750915/js/amd-compiled/bower/requirejs/require.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raven.js/1.0.8/raven.min.js"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+    if (window.Raven){ Raven.config("//85b9f4c0acbc4c749ea43615ea3b577d@sentry2.aboutme-cloud.net/5", {}).install(); }
+    //]]>
+    </script>
+<script type="text/javascript" id="requirejs-config">
+//<![CDATA[
+/* About.me Require Config */
+(function(requirejs) {
+	var config = {
+		baseUrl: 'https://d2ed0w4q03gsmw.cloudfront.net/s3/assets/0750915/js/amd-compiled/',
+		paths: {
+			'easyxdm': 'https://d2ed0w4q03gsmw.cloudfront.net/s3/core/easyxdm/easyXDM.min',
+			'carousel': 'https://d2ed0w4q03gsmw.cloudfront.net/s3/core/plugins/carousel3.4',
+			'log': 'lib/log',
+			'globals': 'lib/globals',
+			// bower modules:
+			'text': 'bower/requirejs-text/text',
+			'backbone': 'bower/backbone/backbone',
+			'marionette': 'bower/marionette/lib/backbone.marionette',
+			'radio': 'bower/backbone.radio/build/backbone.radio',
+			'backbone.associations': 'bower/backbone-associations/backbone-associations',
+			'underscore': 'bower/underscore/underscore',
+			'medium_editor': 'bower/medium-editor/dist/js/medium-editor',
+			'requestAnimationFrame': 'bower/requestAnimationFrame/app/requestAnimationFrame',
+			'tinycolor': 'bower/tinycolor/tinycolor',
+			'parsleyjs': 'bower/parsleyjs/dist/parsley',
+			'polyglot': 'bower/polyglot/build/polyglot',
+			'addPrefixedClass': 'bower/jquery.add-prefixed-class/jquery.addPrefixedClass',
+			'jquery.ui.widget': 'bower/jquery-file-upload/js/vendor/jquery.ui.widget',
+			'jquery-file-upload': 'bower/jquery-file-upload/js/jquery.fileupload',
+            'resize-sensor': 'bower/jquery-elementresize/dist/jquery.elementresize.min',
+            'jquery.elementquery': 'bower/jquery-elementquery/src/jquery.elementquery',
+			// vendor modules
+			'chartjs': 'vendor/Chart',//will be bower eventually, one hopes
+			'backbone.collectionsubset': 'vendor/backbone.collectionsubset',
+			// external modules
+			'facebook_sdk': '//connect.facebook.net/en_US/all',
+			'google_jsapi': '//www.google.com/jsapi?',
+			'mapquest': '//open.mapquestapi.com/sdk/js/v7.1.0/mqa.toolkit.js?key=Amjtd%7Cluua2908ng%2Ca5%3Do5-lzblu'
+		},
+		waitSeconds: 15,
+		shim: {
+			'underscore': {
+				exports: '_'
+			},
+            'lib/template_settings': {
+                deps: ['underscore']
+            },
+			'backbone': {
+                deps: ['lib/template_settings'],
+				exports: 'Backbone'
+			},
+			'marionette': {
+				exports: 'Marionette'
+			},
+			'backbone.collectionsubset': {
+				deps: ['backbone']
+			},
+            'vendor/Markdown.Sanitizer': {
+				deps: ['vendor/Markdown.Converter'],
+				exports: 'Markdown'
+			},
+			'facebook_sdk': {
+				exports: 'FB'
+			},
+			'google_jsapi': {
+				exports: 'google'
+			},
+			'jquery-file-upload': {
+				deps: ['bower/jquery-file-upload/js/jquery.iframe-transport']
+			},
+            'jquery.elementquery': {
+                deps: ['resize-sensor']
+            }
+		}
+	}
+//]]>
+//<![CDATA[
+	requirejs.config(config);
+})(requirejs);
+//]]>
+</script>
+<meta name="page" content="user" />
+<script type="text/json" class="json globals">
+{"PAGE_USER_RENAMED": false, "AMD_COMPILED": true, "JS_DEBUG": false, "SSL_DOMAIN": "https://about.me", "ENVIRONMENT": "production", "AWS_IMAGES": "https://d13pix9kaak6wt.cloudfront.net", "SERVER_MESSAGE": {"status": "ok", "message": null}, "JS_LOGS_IGNORE": ["amd", "metric", "event", "viewport"], "WINDOWS_APP_PROMO": true, "IOS_APP_PROMO": true, "USE_IMGIX": false, "NODE_API": "https://about.me/n/3", "DOMAIN_NAME": "about.me", "VIEWER_USERNAME": false, "IMGIX_URL": "aboutme.imgix.net", "FEED_DEBUG": false, "AWS_THUMBNAIL": "https://d3mod6n032mdiz.cloudfront.net", "NAV_HEIGHT": 50, "OPTIMIZELY_ANON_ID": "2382370467", "THUMBNAIL_SIZES": ["840x560", "540x360", "300x200", "210x140", "105x70"], "ANDROID_APP_PROMO": true, "MAPPED": false, "STORE_KEY": "pk_live_RlI4aulcrfnDp0vi1aZHyc8y", "AWS_FAVICON": "d15rluch0y3zzq.cloudfront.net", "SHOW_ALL_CTAS": false, "FRAMED": false, "STATIC_HOSTNAME": "https://d2ed0w4q03gsmw.cloudfront.net/s3/assets/0750915", "GOOGLE_PLACES_API_KEY": "AIzaSyBgUmEPxB1iuVULD_aPf1UQBdVQNcIrs6U", "AUTH_TOKEN": "45341552852130777971275850475773907422", "UNSUPPORTED": false, "DOMAIN_NAME_URL": "https://about.me", "GOOGLE_RECAPTCHA_SITE_KEY": "6Ld_fv0SAAAAAFt85HWlNA5Z4waHu8q2nLtyL19v", "FACEBOOK_APP_ID": 249413078192, "PROFILE_WALKTHROUGH_DISABLED": false, "PAGE": "user", "PAGE_USER_NAME": "NormanVanAken"}
+</script>
+<script type="text/javascript">
+define('data/analytics', function() {
+    var userId = '',
+        trackingId = "UA-17228769-1",
+        sampleRate = "",
+        cookieDomain = "",
+        config = {};
+    // No trackingId? We're done here.
+    if (!trackingId) return {};
+    config.trackingId = trackingId;
+    if (userId) config.userId = userId;
+    if (sampleRate) config.sampleRate = sampleRate;
+    if (cookieDomain) config.cookieDomain = cookieDomain;
+    return config;
+});
+</script>
+	<script src="https://d2ed0w4q03gsmw.cloudfront.net/s3/core/jquery/jquery1.8.3-jqueryui1.9.2.js"></script>
+	<script src="//cdn.optimizely.com/js/176651799.js"></script>
+	<script type="text/javascript">
+		var AboutMe;
+		// load compiled dependencies and then load the app
+		require(['compiled/common'], function() {
+			require(['app']);
+		});
+	</script>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+			<meta name="robots" content="index" />
+	<title>Norman Van Aken - Florida, Diamond Lake Il, Self Taught | about.me</title><link rel="canonical" id="page_url" href="http://about.me/NormanVanAken" /><meta name="description" content="View Norman Van Aken on about.me. About.me makes it easy for you to learn about Norman Van Aken’s background and interests." /><meta name="keywords" content="Norman Van Aken NormanVanAken about.me page" /><meta name="author" content="Norman Van Aken (NormanVanAken)" /><meta name="thumbnail" content="https://d3mod6n032mdiz.cloudfront.net/thumb2/n/o/r/normanvanaken/normanvanaken-300x200.jpg" /><meta property="og:site_name" content="about.me" /><meta property="og:locale" content="en_US" /><meta property="og:url" content="http://about.me/NormanVanAken" /><meta property="og:title" content="Norman Van Aken (NormanVanAken) on about.me" /><meta property="og:description" content="View Norman Van Aken on about.me. About.me makes it easy for you to learn about Norman Van Aken’s background and interests." /><meta property="og:image" content="http://o.aolcdn.com/dims-global/dims/ABOUTME/5/200/200/100/http://d3mod6n032mdiz.cloudfront.net/thumb2/n/o/r/normanvanaken/normanvanaken-840x560.jpg" /><meta property="og:type" content="aboutme_prod:page" /><meta property="fb:app_id" content="249413078192" /><meta name="twitter:card" content="photo" /><meta name="twitter:site" content="@aboutdotme" /><meta name="twitter:creator" content="@normanvanaken" /><meta name="twitter:url" content="http://about.me/NormanVanAken" /><meta name="twitter:title" content="Norman Van Aken (NormanVanAken) on about.me" /><meta name="twitter:description" content="View Norman Van Aken on about.me. About.me makes it easy for you to learn about Norman Van Aken’s background and interests." /><meta name="twitter:image" content="http://o.aolcdn.com/dims-global/dims/ABOUTME/5/435/290/100/http://d3mod6n032mdiz.cloudfront.net/thumb2/n/o/r/normanvanaken/normanvanaken-840x560.jpg" /><meta name="twitter:image:width" content="435" /><meta name="twitter:image:height" content="290" /><script type="text/javascript">
+		window.prerenderReady = false;
+	</script>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, minimum-scale=1, maximum-scale=1" />
+	<meta http-equiv="cleartype" content="on" />
+</head>
+<body class="profilepage layout-mobile layout-tablet layout-desktop layout-desktop-wide has-fixednav">
+<noscript>
+	<iframe src="//www.googletagmanager.com/ns.html?id=GTM-MRXCQL" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+//<![CDATA[
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MRXCQL');
+//]]>
+</script>
+<div class="page-container"></div>
+<div class="trailing-content">
+</div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!-- Application: cms -->
+<!-- Page: main/Login -->
+<!-- Generated: Thu Jan 28 11:05:30 EST 2016 -->
+<html>
+<head>
+<meta name="generator" content="Tapestry Application Framework, version 4.0.1"/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<title>Teen Health and Wellness</title>
+
+
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+
+
+
+    <meta name="google-translate-customization" content="772abb6374e1ce65-b792d5b47fa6a7bc-g66e00f98861503cc-1e"/>
+    <meta name="google-signin-client_id" content="876283641096-jp8q4no0jv9nofb6tt3elvmj6opfeg7j.apps.googleusercontent.com"/>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"></script>
+<script type="text/javascript" src="/js/swfobject.js"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+<script src="http://f1.na.readspeaker.com/script/5410/ReadSpeaker.js?pids=embhl" type="text/javascript"></script>
+<!--<script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>-->
+<script type="text/javascript">
+    window.rsConf = {
+        general: {
+            popupHref: "http://app.na.readspeaker.com/cgi-bin/rsent?customerid=5410&lang=en_us&voice=Paul&readid=textToSpeechBlock&url=" + encodeURIComponent(document.location.href)
+        }
+    };
+</script>
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script>
+  var googleUser = {};
+  var startApp = function() {
+    gapi.load('auth2', function(){
+      // Retrieve the singleton for the GoogleAuth library and set up the client.
+      auth2 = gapi.auth2.init({
+        client_id: '876283641096-jp8q4no0jv9nofb6tt3elvmj6opfeg7j.apps.googleusercontent.com',
+        cookiepolicy: 'single_host_origin',
+        // Request scopes in addition to 'profile' and 'email'
+        //scope: 'additional_scope'
+      });
+      attachSignin(document.getElementById('customBtn'));
+    });
+  };
+
+  function attachSignin(element) {
+    auth2.attachClickHandler(element, {},
+        function(googleUser) {
+             onSignIn(googleUser);
+        }, function(error) {
+          alert(JSON.stringify(error, undefined, 2));
+        });
+  }
+  </script>
+
+<script type="text/javascript">
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+
+    }
+    function onSignIn(googleUser) {
+      var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/main/GoogleSignIn.html');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send('idtoken=' + googleUser.getAuthResponse().id_token);
+        xhr.onload = function() {
+         if (xhr.status == 200) {
+            window.location.replace("/");
+         } else {
+            auth2.disconnect();
+            signInFailure();
+         }
+       }
+      }
+    function signInFailure() {
+        window.location.replace("/login?autherror=access");
+    }
+
+
+</script>
+
+
+
+
+<link rel="icon" type="image/ico" href="/images/favicon.ico">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,400italic' rel='stylesheet' type='text/css'>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png" />
+
+<style type="text/css" media="all">
+	@import "/css/style.css";
+
+	
+        @import "/css/nonsubscriber.css";
+    
+
+</style>
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="/css/ie.css" />
+<![endif]-->
+<script src="/js/thw-banner.js" type="text/javascript"></script>
+</head>
+
+
+
+
+<body class="noleft">
+<script type="text/javascript" src="/app;jsessionid=4165F494B64D8772166412429A2FC3FF?digest=557f2081d45a7528f898e7e384717596&amp;path=%2Forg%2Fapache%2Ftapestry%2Fform%2FForm.js&amp;service=asset"></script>
+<script type="text/javascript"><!--
+
+
+   	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-45201068-1']);
+	_gaq.push(['_setDomainName', 'teenhealthandwellness.com']);
+
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+
+// --></script>
+<!-- the page class name. used to determine the current page in testing -->
+<form action="/" name="pageclassnameform" id="pageclassnameform">
+<input value="main/Login" id="pageclassname" type="hidden"></input>
+</form>
+
+
+<div class="page">
+
+	<div class="header">
+		<div class="topbarA">
+		    <div class="logo-thw">
+		        <a href="/"><img src="/images/logo_top.png" alt="Teen Health & Wellness" /></a>
+		    </div>
+            <div class="tools">
+                
+	<ul>
+		<!-- <li><a jwcid="@StaticPageLink" name="ognl:@com.ifactory.cms.admin.Pages@EXPLORE" class="explore" id="_explore"><ins jwcid="@Insert" value="message:home.explore" /></a>&nbsp;&nbsp;|</li> -->
+		<li><a href="/static/hotlines" id="_hotlines" class="hotlines">Hotlines</a>&nbsp;&nbsp;|</li>
+		
+		<li><a href="/glossary" id="masterglossary">Glossary</a>&nbsp;&nbsp;|</li>
+		<li><a href="/static/sitehelp" id="_sitehelp">Site Help</a>&nbsp;&nbsp;|</li>
+        
+    </ul>
+
+            </div>
+            <div class="logo-rosen"><img src="/images/logo_rosen.gif" alt="" /></div>
+			<div class="clear">&nbsp;</div>
+		</div>
+		<div class="searchbar gradient">
+			
+	<a href="/" class="link-home"><span class="icon-home"></span>Home</a>
+
+    <div id="instant_menu" class="hide">
+        <a class="instant_login_button notranslate" href="#" onclick="toggle_visibility('instant_login')">Instant Login <span class="instant_login_triangle"></span></a>
+        <script>startApp();</script>
+        <ul id="instant_login"  class="instant_login_links">
+            <div id="gSignInWrapper">
+                <div id="customBtn" class="customGPlusSignIn">
+                    <span class="buttonText"><img class="glogo" src="/images/glogo.png"/> Log in with Google</span>
+                </div>
+            </div>
+        </ul>
+    </div>
+<!--
+	<div class="mid">
+			<ins jwcid="@Insert" value="message:label.browse-by" /> 
+			<a jwcid="@GenericLink" href="/browse" id="browsecategories" class="button"><ins jwcid="@Insert" value="message:label.subject" /></a> 
+			<a jwcid="@GenericLink" href="/browseaz" id="browseaz" class="button"><ins jwcid="@Insert" value="message:label.a-z" /></a>
+	</div>
+-->
+    <form id="searchform" method="get" action="/search" class="search-form">
+        <input id="q" name="q" class="search-input" type="text"></input>
+    </form>
+
+			<div class="clear">&nbsp;</div>
+		</div>
+	</div>
+	<div class="main">
+        
+
+		<div class="pagecontent">
+            
+    
+
+
+
+<h2 id="pagetitle" class="static-page__title">Login</h2>
+    <script>
+        document.getElementById("instant_menu").className = "instant_login_menu instant_login_page";
+    </script>
+
+    <script type="text/javascript">
+        function onPageLoad() {
+           if (window.location.href.toQueryParams()["autherror"] == "access"){
+                document.getElementById("google-error").className = "google-error";
+            }
+        }
+        window.onload = onPageLoad;
+    </script>
+
+	<div class="static-page__text">
+	    
+
+
+        <div class="hide" id=google-error>
+            User account doesn't have permission to access.
+        </div>
+	    
+        <p>
+            
+
+<form method="post" action="/app;jsessionid=4165F494B64D8772166412429A2FC3FF" name="Form" id="Form">
+<div style="display:none;"><input type="hidden" name="formids" value="redirecturl,If,username,If_0,password,If_1,formSubmit"/>
+<input type="hidden" name="component" value="formPage.$Form"/>
+<input type="hidden" name="page" value="main/Login"/>
+<input type="hidden" name="service" value="direct"/>
+<input type="hidden" name="session" value="T"/>
+<input type="hidden" name="submitmode" value=""/>
+<input type="hidden" name="submitname" value=""/>
+<input type="hidden" name="redirecturl" value="S/app?service=externalpagemethod&amp;page=main/ViewDocument&amp;method=view&amp;sp=80&amp;sp=Sback&amp;sp=1"/>
+<input type="hidden" name="If" value="T"/>
+<input type="hidden" name="If_0" value="T"/>
+<input type="hidden" name="If_1" value="T"/>
+</div>
+<table class="form">
+	
+                
+                <input value="/app?service=externalpagemethod&amp;page=main/ViewDocument&amp;method=view&amp;sp=80&amp;sp=Sback&amp;sp=1" type="hidden" name="url"></input>
+            
+                <tr>
+	<th>
+	
+
+	<span class="required">*</span>&nbsp;<label for="username">Username</label>:
+
+
+
+	</th>
+	<td><input type="text" name="username" value="" id="username"/></td>
+</tr>
+
+                <tr>
+	<th>
+	
+
+	<span class="required">*</span>&nbsp;<label for="password">Password</label>:
+
+
+
+	</th>
+	<td><input type="password" name="password" value="" id="password"/></td>
+</tr>
+
+
+
+            
+</table>
+
+
+	<div class="formsubmit">
+	<input type="submit" name="formSubmit" value="Log in" id="formSubmit" class="button"/>
+	</div>
+
+
+</form>
+
+
+
+        </p>
+
+        <p><a href="/page/main/LibraryLogin.html">Do you want to log in with your library card?</a></p>
+        <p>Your IP address is: 23.20.206.131</p>
+        <p>If you are a Teen Health &amp; Wellness subscriber and are unable to access the site, please contact your system administrator or contact Teen Health &amp; Wellness Customer Care via <a href="/page/main/ContactUs.html">email</a> or phone at (800) 237-9932.</p>
+	</div>
+
+
+
+
+			
+
+		</div><!-- rightcol -->
+		<div class="clear">&nbsp;</div>
+	</div> <!-- main -->
+</div> <!-- page -->
+
+<div class="footer">
+    <ul>
+        
+            <li class="footer__links"><a href="/static/publicabout" class="_footer_page">About Us</a>&nbsp;|&nbsp;</li>
+        
+            <li class="footer__links"><a href="/static/publicpolicy" class="_footer_page">Editorial Policy</a>&nbsp;|&nbsp;</li>
+        
+            <li class="footer__links"><a href="/static/educatorresources" class="_footer_page">Librarian/Educator Resources</a>&nbsp;|&nbsp;</li>
+        
+            <li class="footer__links"><a href="/static/reviews" class="_footer_page">Awards and Reviews</a>&nbsp;|&nbsp;</li>
+        
+            <li class="footer__links"><a href="/static/publicsubscribe" class="_footer_page">Subscribe</a>&nbsp;|&nbsp;</li>
+        
+            <li class="footer__links"><a href="/static/privacy" class="_footer_page">Privacy Policy</a>&nbsp;|&nbsp;</li>
+        
+            <li class="footer__links"><a href="/static/terms" class="_footer_page">Terms of Use</a>&nbsp;|&nbsp;</li>
+        
+        <li class="footer__links"><a href="/page/main/ContactUs.html" id="_contactus">Contact Us</a>&nbsp;|&nbsp;</li>
+        <li class="footer__links"><a href="/static/rss">RSS Feeds</a></li>
+    </ul>
+    <p class="disclaimer">All information on Teen Health & Wellness is for educational purposes only. For specific medical advice, diagnoses, and treatment, consult your doctor.</p>
+    <p class="copyright">&reg; The Rosen Publishing Group, Inc. <script type="text/javascript"> var d = new Date();document.write(d.getFullYear().toString()); </script>.</p>
+</div><!-- footer -->
+
+
+
+
+
+<script type="text/javascript">
+
+function openExitPage(url) {
+	var newUrl = '/app?service=externalpagemethod&page=main/ExitPage&method=view&sp=S' + encodeURIComponent(url);
+	var newWindow = window.open(newUrl, '_blank', 'width=600,height=600,toolbar=1,location=1,scrollbars=1,menubar=1,resizable=1');
+	newWindow.focus();
+}
+
+function rewriteExitLinks() {
+	var links = document.getElementsByTagName('a');
+	var hostname = document.location.hostname;
+	var pattern = /^http/i;
+	for(var i=0; i<links.length; i++) {
+		var link = links[i];
+		// if it's not a relative link and it's not at the same host then rewrite
+		// also ignore links with 'internal' in the class
+		if (pattern.test(link.href) && link.href.indexOf(hostname) == -1 &&
+			link.className.indexOf('internal') == -1) {
+			link.onclick = function() { openExitPage(this.href); return false; };
+			link.className = (link.className.length == 0 ? '' : link.className + ' ') + 'externalurl';
+		}
+	}
+}
+rewriteExitLinks();
+
+</script>
+
+
+
+
+
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" + "js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","bam.nr-data.net","58748484fe","2319345","Nl1RMENVWxJQBUVRCg8XfQtDWVQNWBxUXDATURwFQ0BcAl0DHhJKA1lQDx4eGhNUFV5NFwJdQA==",0,12,new Date().getTime(),"","","","",""]);</script>
+<script language="JavaScript" type="text/javascript"><!--
+Tapestry.register_form('Form');
+Tapestry.set_focus('username');
+
+// --></script></body>
+</html>
+<!-- Render time: ~ 6 ms -->
+
