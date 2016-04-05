@@ -18,14 +18,16 @@ public class Soupy {
     System.out.println(dir.toString());
     File[] directoryListing = dir.listFiles();
     StringBuilder buf = new StringBuilder();
+    String path;
+    Document doc;
+    Elements links;
     if (directoryListing != null) {
       for (File child : directoryListing) {
         buf.setLength(0);
-        String path = child.getAbsolutePath();
-        String content = readFile(path, StandardCharsets.UTF_8);
-        Document doc = Jsoup.parse(content);
+        path = child.getAbsolutePath();
+        doc = Jsoup.parse(readFile(path, StandardCharsets.UTF_8));
         doc.outputSettings(new Document.OutputSettings().prettyPrint(false));
-        Elements links = doc.select("a");
+        links = doc.select("a");
         for(Element a : links) {
           buf.append(a.toString());
           buf.append("\n");
